@@ -1,69 +1,100 @@
+/* FormCheckbox */
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as UI_ACTIONS from '../../redux/ui_actions';
+import { Form, Input } from 'antd';
+
+const FormItem = Form.Item;
+
 class FormInput extends React.Component {
-    state = {
-        Child: 1,
-        Value: 1
-    }
 
-    onChangeHandler = (e) => {
-        this.setState({Value: e.currentTarget.value})
-    }
+    onInputChange = (e) => {
+        const QuestionValue = e.target.value;
 
-    handleChange = (e) => {
-        var InputText = e.target.value;
-        if(this.timeout) clearTimeout(this.timeout);
-        
-        this.timeout = setTimeout(() => {
-            const QuestionId = this.props.question.Id;
-            const QuestionName = this.props.question.Name;
-            const QuestionValue = InputText;
-                        
-            const Hospital = this.props.hospitalization[0].Hospital;
-            const Patient = this.props.hospitalization[0].Patient;
-            const Hospitalization = this.props.hospitalization[0].Hospitalization;
-            const Reception = this.props.hospitalization[0].Reception;
+        // Формируем список параметров для передачи на сервер
+        const data = {
+            'Owner': QuestionId,
+            'Hospital': Hospital,
+            'Patient': Patient,
+            'Hospitalization': Hospitalization,
+            'Reception': Reception,
+            'Question': QuestionId,
+            'Field': QuestionName,
+            'Value': QuestionValue
+        };
 
-            $.ajax({
-                url: 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue',
-                method: 'POST',
-                data: { 
-                    'Owner': QuestionId,
-                    'Hospital': Hospital,
-                    'Patient': Patient,
-                    'Hospitalization': Hospitalization,
-                    'Reception': Reception,
-                    'Question': QuestionId,
-                    'Field': QuestionName,
-                    'Value': QuestionValue
-                },
-                success: function(result) {
-                    //this.setState({Child: result});
-                    console.log(result);
-                }.bind(this)
-            });
+        // Формируем URL строку с параметрами для отправки на сервер
+        let DataStr = "";
+        for (var key in data) {
+            if (DataStr != "") {
+                DataStr += "&";
+            }
+            DataStr += key + "=" + encodeURIComponent(data[key]);
+        };
 
-        }, 1000);
-    }
+        // Отправляем данные на сервер
+        fetch("https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue", {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: DataStr
+        })
+            .then((response) => {
+                if (response.status !== 200) {
+                    console.log('Помилка сервера: ' + response.status);
+                    return;
+                }
 
-    componentDidUpdate () {
-        
+                response.json().then((data) => {
+                    console.log(data);
+                });
+            })
+            .catch((err) => {
+                console.log('Fetch Error :-S', err);
+            })
     }
 
     render() {
-        const {question, isOpen} = this.props
-        
-        //console.log(question.Owner+' -> '+question.OwnerName);
-        return(
-            <input 
-                type = 'text'
-                id = {question.Name}     
-                className='InputField'
-                //onChange={this.onChangeHandler}
-                defaultValue={question.Checked ? question.Checked : ''}
-                //style={question.Width!==null ? {width: question.Width+"px"} : ''}
-                onChange={this.handleChange.bind(this)}
-                owner={question.Owner}
-                placeholder = 'Введіть текст'
-            />
+        const { question, isOpen } = this.props.ui;
+
+        return (
+
+            <FormItem
+                label="Field A"
+                {...formItemLayout}
+            >
+
+                <input
+                    type='text'
+                    id={question.Name}
+                    className='InputField'
+                    //onChange={this.onChangeHandler}
+                    defaultValue={question.Checked ? question.Checked : ''}
+                    //style={question.Width!==null ? {width: question.Width+"px"} : ''}
+                    onChange={this.onInputChange}
+                    owner={question.Owner}
+                    placeholder='Введіть текст'
+                />
+
+                <Input placeholder="input placeholder" />
+
+            </FormItem>
         )
     }
-}
+};
+
+function mapDispatchToProps(dispatch) {
+    return {
+        uiActions: bindActionCreators(UI_ACTIONS, dispatch),
+    }
+};
+
+function mapStateToProps(state) {
+    return {
+        ui: state.ui,
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormInput);

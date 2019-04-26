@@ -3,54 +3,63 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Checkbox } from 'antd';
+import { Form, Checkbox } from 'antd';
 
+const FormItem = Form.Item;
 const checkboxRequesURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue';
+const checkboxRequestHeaders = {
+    "Content-Type": "application/json",
+    "Access-Control-Origin": "*"
+};
 
 class FormCheckbox extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         Name: null,
-    //         Child: null,
-    //         Value: null,
-    //     };
-    // };
 
     onChange(e) {
 
-        const QuestionId = this.props.question.Id;
-        const QuestionName = this.props.question.Name;
-        const QuestionValue = this.props.question.Value;
+        this.props.uiActions.checkboxUpdate(e.target.value)
 
-        const Hospital = this.props.hospitalization[0].Hospital;
-        const Patient = this.props.hospitalization[0].Patient;
-        const Hospitalization = this.props.hospitalization[0].Hospitalization;
-        const Reception = this.props.hospitalization[0].Reception;
+        const { data } = this.props.ui;
+        const checkboxRequestBody = {
+            'Owner':            data.question.Id,
+            'Hospital':         data.hospitalization[0].Hospital,
+            'Patient':          data.hospitalization[0].Patient,
+            'Hospitalization':  data.hospitalization[0].Hospitalization,
+            'Reception':        data.hospitalization[0].Reception,
+            'Question':         data.question.Id,
+            'Field':            data.question.Name,
+            'Value':            data.question.Value,
+        };
+        const checkboxRequestOptions = {
+            method: "POST",
+            headers: checkboxRequestHeaders,
+            body: JSON.stringify(checkboxRequestBody),
+        };
 
-        fetch( checkboxRequesURL, {
-            method: 'POST',
-            data: { 
-                'Owner': QuestionId,
-                'Hospital': Hospital,
-				'Patient': Patient,
-                'Hospitalization': Hospitalization,
-                'Reception': Reception,
-				'Question': QuestionId,
-				'Field': QuestionName,
-				'Value': e.target.checked ? QuestionValue : false
-            }})
-            .then( response => response.json() )
-            .then( data => this.setState({ Child: data }) )
-    }
-    
+        fetch(checkboxRequesURL, checkboxRequestOptions)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.info('checkbox fetched data: ', data)
+            })
+    };
+
     render() {
-        const 
+        const formItemLayout = {
+            labelCol: { span: 4 },
+            wrapperCol: { span: 14 },
+        };
+        const prefix = 'prefix';
 
         return (
-            <Checkbox onChange={uiActions.checkboxUpdate}>
-                {question.Value}
-            </Checkbox>
+            <FormItem
+                label="Checkbox"
+                {...formItemLayout}
+            >
+                <Checkbox onChange={uiActions.checkboxUpdate}>
+                    {`${prefix} ${question.Value}`}
+                </Checkbox>
+            </FormItem>
         );
     }
 };

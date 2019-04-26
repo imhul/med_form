@@ -1,81 +1,89 @@
+// Hospitalization Form Constructor
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, Input, Button, Radio, Icon } from 'antd';
+import { Form, Button, Pagination } from 'antd';
 
-const FormItem = Form.Item;
+// Components
+import FormCheckbox from './FormCheckbox';
+import FormInput from './FormInput';
+import FormRadio from './FormRadio';
+import FormTextarea from './FormTextarea';
+
 const mainRequestURL = 'https://med.uax.co/API.php?Unit=Hospital&Section=HospitalPatients&Special=HospitalizationReception&Patient=2190&Hospitalization=8&Thread=Call&Object=Hospitalization&Method=GetQuestionnaireQuestions';
-const mainRequestOptions = {
-    'Data': {
-        'Hospital': 1,
-        'Patient': 2190,
-        'Hospitalization': 8,
-        'Reception': 6,
-        'Page': 1
-    }
+const mainRequestHeaders = {
+    "Content-Type": "application/json",
+    "Access-Control-Origin": "*"
 };
 
 class HospitalizationForm extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         formData: null
-    //     }
-    // };
 
     componentDidMount() {
         this.props.uiActions.initialize();
-        // fetch( mainRequestURL, mainRequestOptions )
-        // .then( response => response.json() )
-        // .then( data => uiActions.loadData(data) )
+
+        const mainRequestOptions = {
+            'Hospital': 1,
+            'Patient': 2190,
+            'Hospitalization': 8,
+            'Reception': 6,
+            'Page': 1
+        };
+
+        fetch("https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue", {
+            method: "POST",
+            headers: mainRequestHeaders,
+            body: JSON.stringify(mainRequestOptions)
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                this.props.uiActions.loadData(data)
+            })
     };
-
-
-    handleFormLayoutChange = (e) => {
-        this.props.uiActions.formUpdate(e.target.value)
-    }
 
     render() {
 
         const { formData } = this.props.ui;
-        const formItemLayout = formData === 'horizontal' ? {
-            labelCol: { span: 4 },
-            wrapperCol: { span: 14 },
-        } : null;
-        const buttonItemLayout = formData === 'horizontal' ? {
+
+        const buttonItemLayout = {
             wrapperCol: { span: 14, offset: 4 },
-        } : null;
+        };
 
         return (
             <div>
-                <Form className="HospitalizationForm" layout={formData}>
-                    <FormItem
-                        label="Form Layout"
-                        {...formItemLayout}
-                        >
-                        <Radio.Group defaultValue="horizontal" onChange={this.handleFormLayoutChange}>
-                            <Radio.Button value="horizontal">Horizontal</Radio.Button>
-                            <Radio.Button value="vertical">Vertical</Radio.Button>
-                            <Radio.Button value="inline">Inline</Radio.Button>
-                        </Radio.Group>
-                    </FormItem>
-                    <FormItem
-                        label="Field A"
-                        {...formItemLayout}
-                        >
-                        <Input placeholder="input placeholder" />
-                    </FormItem>
-                    <FormItem
-                        label="Field B"
-                        {...formItemLayout}
-                        >
-                        <Input placeholder="input placeholder" />
-                    </FormItem>
+                <Form
+                    className="HospitalizationForm"
+                    onFieldsChange={uiActions.formUpdate}
+                >
+                    {
+                        formData.map((item) => {
+                            switch (item.type) {
+                                case 'text':
+                                    return <FormInput />
+
+                                case 'textarea':
+                                    return <FormTextarea />
+
+                                case 'radio':
+                                    return <FormRadio />
+
+                                case 'checkbox':
+                                    return <FormCheckbox />
+
+                                default:
+                                    return <span>field type is empty!</span>
+                            }
+                        })
+                    }
+
                     <FormItem {...buttonItemLayout}>
                         <Button type="primary">Submit</Button>
                     </FormItem>
+                    <Pagination defaultCurrent={6} total={500} />
                 </Form>
+
             </div>
         );
     }

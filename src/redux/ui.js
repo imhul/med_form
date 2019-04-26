@@ -3,9 +3,9 @@ import { typesUI as types } from './types';
 const initState = { 
 
     isInit: false,
-    data: [],
+    formData: [],
     isCheckboxChecked: false,
-    formData: null,
+    // formData: null,
 };
 
 export default (state = initState, action) => {
@@ -20,7 +20,7 @@ export default (state = initState, action) => {
         case types.LOAD_DATA:
             return { 
                 ...state,
-                data: action.payload,
+                formData: action.payload,
             };
 
         case types.CHECKBOX_UPDATE:
@@ -29,11 +29,11 @@ export default (state = initState, action) => {
                 isCheckboxChecked: action.payload,
             };
 
-        case types.FORM_UPDATE:
-            return { 
-                ...state,
-                formData: action.payload,
-            };
+        // case types.FORM_UPDATE:
+        //     return { 
+        //         ...state,
+        //         formData: action.payload,
+        //     };
 
         default:
             return state;

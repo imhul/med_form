@@ -1,26 +1,14 @@
 /* FormRadio */
-class FormRadio extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            Name: null,
-            Child: null,
-            Value: null,
-            Checked: false,
-            showChild: false
-        };
-    }
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as UI_ACTIONS from '../../redux/ui_actions';
+import { Form, Radio } from 'antd';
 
-    componentDidMount()
-    {
-       //this.setState({'Name': this.props.question.Name})
-       //console.log(this.props.question.Name)
-    }
+const FormItem = Form.Item;
 
-    componentWillUnmount(){
-        //console.log('Unmount');
-    }
-    
+class FormRadio extends Component {
+
     handleClick() {
         const QuestionId = this.props.question.Id;
         const QuestionName = this.props.question.Name;
@@ -34,35 +22,32 @@ class FormRadio extends React.Component {
         $.ajax({
             url: 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue',
             method: 'POST',
-            data: { 
+            data: {
                 'Owner': QuestionId,
                 'Hospital': Hospital,
-				'Patient': Patient,
+                'Patient': Patient,
                 'Hospitalization': Hospitalization,
                 'Reception': Reception,
-				'Question': QuestionId,
-				'Field': QuestionName,
-				'Value': QuestionValue
+                'Question': QuestionId,
+                'Field': QuestionName,
+                'Value': QuestionValue
             },
-            success: function(result) {
+            success: function (result) {
                 console.log(result);
             }.bind(this)
         });
     }
 
-    render()
-    {
-        const {question, isOpen} = this.props
+    render() {
+        const { question, isOpen } = this.props
 
         FieldsOut = ''
-        
-        if(this.state.Clear)
-        {
-            
+
+        if (this.state.Clear) {
+
         }
 
-        if(this.state.Child)
-        {
+        if (this.state.Child) {
             //window.location.reload(); 
             var Response = JSON.parse(this.state.Child);
             var FieldsList = JSON.parse(Response['Data']);
@@ -76,19 +61,46 @@ class FormRadio extends React.Component {
 
         return (
             <span>
-                <input 
-                    type='radio' 
-                    id={question.Name+'_'+question.Id} 
-                    name={question.Name} 
+
+                <FormItem
+                    label="Form Layout"
+                    {...formItemLayout}
+                >
+                    <Radio.Group defaultValue="horizontal" >
+                        <Radio.Button value="horizontal">Horizontal</Radio.Button>
+                        <Radio.Button value="vertical">Vertical</Radio.Button>
+                        <Radio.Button value="inline">Inline</Radio.Button>
+                    </Radio.Group>
+                </FormItem>
+
+
+                <input
+                    type='radio'
+                    id={question.Name + '_' + question.Id}
+                    name={question.Name}
                     value={question.Value}
                     owner={question.Owner}
                     defaultChecked={question.Value === question.Checked}
                     onClick={this.handleClick.bind(this)}
                 />
-                <label htmlFor={question.Name+'_'+question.Id}>{question.Value}</label>
+                <label htmlFor={question.Name + '_' + question.Id}>{question.Value}</label>
                 {question.Value === question.Checked ? '' : ''}
                 {this.state.showChild && FieldsOut}
             </span>
-        );
+        )
     }
-}
+};
+
+function mapDispatchToProps(dispatch) {
+    return {
+        uiActions: bindActionCreators(UI_ACTIONS, dispatch),
+    }
+};
+
+function mapStateToProps(state) {
+    return {
+        ui: state.ui,
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormRadio);
