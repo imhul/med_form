@@ -1,11 +1,14 @@
 import { typesUI as types } from './types';
+import testData from '../helpers/testData';
 
 const initState = { 
 
     isInit: false,
-    formData: [],
+    formData: testData, // FOR TEST ONLY. NEEDED VALUE IS []
     isCheckboxChecked: false,
-    // formData: null,
+    currentPage: 1,
+    textBefore: 'textBefore',
+    textAfter: 'textAfter',
 };
 
 export default (state = initState, action) => {
@@ -29,11 +32,30 @@ export default (state = initState, action) => {
                 isCheckboxChecked: action.payload,
             };
 
-        // case types.FORM_UPDATE:
+        // TODO: разобраться, что делать при изменении конкретного инпута
+        // case types.RADIO_BUTTON_UPDATE:
         //     return { 
         //         ...state,
-        //         formData: action.payload,
+        //         isRadioChecked: action.payload,
         //     };
+
+        // case types.INPUT_UPDATE:
+        //     return { 
+        //         ...state,
+        //         isInputUpdated: action.payload,
+        //     };
+
+        // case types.TEXTAREA_UPDATE:
+        //     return { 
+        //         ...state,
+        //         isCheckboxChecked: action.payload,
+        //     };
+
+        case types.PAGINATION_UPDATE:
+            return { 
+                ...state,
+                currentPage: action.payload,
+            };
 
         default:
             return state;

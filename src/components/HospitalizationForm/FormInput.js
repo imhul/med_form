@@ -1,63 +1,65 @@
-/* FormCheckbox */
+/* input */
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
 import { Form, Input } from 'antd';
 
+// Helpers
+import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
+
 const FormItem = Form.Item;
 
-class FormInput extends React.Component {
+class FormInput extends Component {
 
-    onInputChange = (e) => {
-        const QuestionValue = e.target.value;
+    componentDidMount() {
+        this.onInputUpdate = this.onInputUpdate.bind(this)
+    };
+
+    onInputUpdate(e) {
+        this.props.uiActions.inputUpdate(e.target.value);
+        const { formData } = this.props.ui;
 
         // Формируем список параметров для передачи на сервер
-        const data = {
-            'Owner': QuestionId,
-            'Hospital': Hospital,
-            'Patient': Patient,
-            'Hospitalization': Hospitalization,
-            'Reception': Reception,
-            'Question': QuestionId,
-            'Field': QuestionName,
-            'Value': QuestionValue
-        };
-
-        // Формируем URL строку с параметрами для отправки на сервер
-        let DataStr = "";
-        for (var key in data) {
-            if (DataStr != "") {
-                DataStr += "&";
-            }
-            DataStr += key + "=" + encodeURIComponent(data[key]);
+        const inputRequestBody = {
+            'Owner':            formData.question.Id,
+            'Hospital':         formData.hospitalization[0].Hospital,
+            'Patient':          formData.hospitalization[0].Patient,
+            'Hospitalization':  formData.hospitalization[0].Hospitalization,
+            'Reception':        formData.hospitalization[0].Reception,
+            'Question':         formData.question.Id,
+            'Field':            formData.question.Name,
+            'Value':            formData.question.Value,
         };
 
         // Отправляем данные на сервер
-        fetch("https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue", {
-            method: 'post',
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            body: DataStr
+        fetch( requestURL, {
+            method: 'post',  
+            headers: requestHeader,
+            body: requestBody( inputRequestBody )
         })
-            .then((response) => {
-                if (response.status !== 200) {
-                    console.log('Помилка сервера: ' + response.status);
-                    return;
-                }
+        .then( (response) => {  
+                if (response.status !== 200) {  
+                    console.info(`input server error: ${response.status}`);  
+                    return
+                };
 
-                response.json().then((data) => {
-                    console.log(data);
-                });
-            })
-            .catch((err) => {
-                console.log('Fetch Error :-S', err);
-            })
-    }
+                response.json().then( (data) => {  
+                    console.info(`input fetched data: ${data}`)  
+                })
+            }  
+        )  
+        .catch( (error) => {  
+            console.info(`input fetch error: ${error}`)
+        })
+    };
 
     render() {
-        const { question, isOpen } = this.props.ui;
+
+        const formItemLayout = {
+            labelCol: { span: 4 },
+            wrapperCol: { span: 14 },
+        };
 
         return (
 
@@ -70,7 +72,6 @@ class FormInput extends React.Component {
                     type='text'
                     id={question.Name}
                     className='InputField'
-                    //onChange={this.onChangeHandler}
                     defaultValue={question.Checked ? question.Checked : ''}
                     //style={question.Width!==null ? {width: question.Width+"px"} : ''}
                     onChange={this.onInputChange}

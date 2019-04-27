@@ -1,64 +1,65 @@
-/* FormRadio */
+/* Radio Button */
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
 import { Form, Radio } from 'antd';
 
+// Helpers
+import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
+
 const FormItem = Form.Item;
 
 class FormRadio extends Component {
 
-    handleClick() {
-        const QuestionId = this.props.question.Id;
-        const QuestionName = this.props.question.Name;
-        const QuestionValue = this.props.question.Value;
+    componentDidMount() {
+        this.onRadioUpdate = this.onRadioUpdate.bind(this)
+    };
 
-        const Hospital = this.props.hospitalization[0].Hospital;
-        const Patient = this.props.hospitalization[0].Patient;
-        const Hospitalization = this.props.hospitalization[0].Hospitalization;
-        const Reception = this.props.hospitalization[0].Reception;
+    onRadioUpdate(e) {
+        this.props.uiActions.radioUpdate(e.target.value);
+        const { formData } = this.props.ui;
 
-        $.ajax({
-            url: 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue',
-            method: 'POST',
-            data: {
-                'Owner': QuestionId,
-                'Hospital': Hospital,
-                'Patient': Patient,
-                'Hospitalization': Hospitalization,
-                'Reception': Reception,
-                'Question': QuestionId,
-                'Field': QuestionName,
-                'Value': QuestionValue
-            },
-            success: function (result) {
-                console.log(result);
-            }.bind(this)
-        });
-    }
+        // Формируем список параметров для передачи на сервер
+        const radioRequestBody = {
+            'Owner':            formData.question.Id,
+            'Hospital':         formData.hospitalization[0].Hospital,
+            'Patient':          formData.hospitalization[0].Patient,
+            'Hospitalization':  formData.hospitalization[0].Hospitalization,
+            'Reception':        formData.hospitalization[0].Reception,
+            'Question':         formData.question.Id,
+            'Field':            formData.question.Name,
+            'Value':            formData.question.Value,
+        };
+
+        // Отправляем данные на сервер
+        fetch( requestURL, {
+            method: 'post',  
+            headers: requestHeader,
+            body: requestBody( radioRequestBody )
+        })
+        .then( (response) => {  
+                if (response.status !== 200) {  
+                    console.info(`radio server error: ${response.status}`);  
+                    return
+                };
+
+                response.json().then( (data) => {  
+                    console.info(`radio fetched data: ${data}`)  
+                })
+            }  
+        )  
+        .catch( (error) => {  
+            console.info(`radio fetch error: ${error}`)
+        })
+    };
 
     render() {
-        const { question, isOpen } = this.props
-
-        FieldsOut = ''
-
-        if (this.state.Clear) {
-
-        }
-
-        if (this.state.Child) {
-            //window.location.reload(); 
-            var Response = JSON.parse(this.state.Child);
-            var FieldsList = JSON.parse(Response['Data']);
-
-            var FieldsOut = <div className='Child'><QuestionnaireOptionList questions={FieldsList} hospitalization={this.props.hospitalization} /></div>
-        }
-
-        var ChildId = 'Child';
-
-        //console.log(QuestionnaireQuestion.showChild);
-
+        const formItemLayout = {
+            labelCol: { span: 4 },
+            wrapperCol: { span: 14 },
+        };
+ 
         return (
             <span>
 

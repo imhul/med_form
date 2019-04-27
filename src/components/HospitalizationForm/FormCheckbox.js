@@ -1,47 +1,57 @@
-/* FormCheckbox */
+/* Checkbox */
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
 import { Form, Checkbox } from 'antd';
 
+// Helpers
+import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
+
 const FormItem = Form.Item;
-const checkboxRequesURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue';
-const checkboxRequestHeaders = {
-    "Content-Type": "application/json",
-    "Access-Control-Origin": "*"
-};
 
 class FormCheckbox extends Component {
 
-    onChange(e) {
+    componentDidMount() {
+        this.onCheckboxUpdate = this.onCheckboxUpdate.bind(this)
+    };
 
-        this.props.uiActions.checkboxUpdate(e.target.value)
+    onCheckboxUpdate(e) {
+        this.props.uiActions.checkboxUpdate(e.target.value);
+        const { formData } = this.props.ui;
 
-        const { data } = this.props.ui;
+        // Формируем список параметров для передачи на сервер
         const checkboxRequestBody = {
-            'Owner':            data.question.Id,
-            'Hospital':         data.hospitalization[0].Hospital,
-            'Patient':          data.hospitalization[0].Patient,
-            'Hospitalization':  data.hospitalization[0].Hospitalization,
-            'Reception':        data.hospitalization[0].Reception,
-            'Question':         data.question.Id,
-            'Field':            data.question.Name,
-            'Value':            data.question.Value,
-        };
-        const checkboxRequestOptions = {
-            method: "POST",
-            headers: checkboxRequestHeaders,
-            body: JSON.stringify(checkboxRequestBody),
+            'Owner':            formData.question.Id,
+            'Hospital':         formData.hospitalization[0].Hospital,
+            'Patient':          formData.hospitalization[0].Patient,
+            'Hospitalization':  formData.hospitalization[0].Hospitalization,
+            'Reception':        formData.hospitalization[0].Reception,
+            'Question':         formData.question.Id,
+            'Field':            formData.question.Name,
+            'Value':            formData.question.Value,
         };
 
-        fetch(checkboxRequesURL, checkboxRequestOptions)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                console.info('checkbox fetched data: ', data)
-            })
+        // Отправляем данные на сервер
+        fetch( requestURL, {
+            method: 'post',  
+            headers: requestHeader,
+            body: requestBody( checkboxRequestBody )
+        })
+        .then( (response) => {  
+                if (response.status !== 200) {  
+                    console.info(`checkbox server error: ${response.status}`);  
+                    return
+                };
+
+                response.json().then( (data) => {  
+                    console.info(`checkbox fetched data: ${data}`)  
+                })
+            }  
+        )  
+        .catch( (error) => {  
+            console.info(`checkbox fetch error: ${error}`)
+        })
     };
 
     render() {
@@ -52,11 +62,8 @@ class FormCheckbox extends Component {
         const prefix = 'prefix';
 
         return (
-            <FormItem
-                label="Checkbox"
-                {...formItemLayout}
-            >
-                <Checkbox onChange={uiActions.checkboxUpdate}>
+            <FormItem label="Checkbox" {...formItemLayout}>
+                <Checkbox onChange={this.onCheckboxUpdate}>
                     {`${prefix} ${question.Value}`}
                 </Checkbox>
             </FormItem>
