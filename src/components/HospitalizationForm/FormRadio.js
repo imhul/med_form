@@ -61,33 +61,40 @@ class FormRadio extends Component {
         };
  
         return (
-            <span>
+            // <span>
 
-                <FormItem
-                    label="Form Layout"
-                    {...formItemLayout}
-                >
-                    <Radio.Group defaultValue="horizontal" >
-                        <Radio.Button value="horizontal">Horizontal</Radio.Button>
-                        <Radio.Button value="vertical">Vertical</Radio.Button>
-                        <Radio.Button value="inline">Inline</Radio.Button>
-                    </Radio.Group>
-                </FormItem>
+            //     <FormItem
+            //         label="Form Layout"
+            //         {...formItemLayout}
+            //     >
+            //         <Radio.Group defaultValue="horizontal">
+            //             <Radio.Button value="horizontal">Horizontal</Radio.Button>
+            //             <Radio.Button value="vertical">Vertical</Radio.Button>
+            //             <Radio.Button value="inline">Inline</Radio.Button>
+            //         </Radio.Group>
+            //     </FormItem>
+
+            <FormItem
+                label="Radio Button"
+                {...formItemLayout}
+            >
+                <Radio.Button value="vertical" onChange={this.onRadioUpdate}>question.Value</Radio.Button>
+            </FormItem>
 
 
-                <input
-                    type='radio'
-                    id={question.Name + '_' + question.Id}
-                    name={question.Name}
-                    value={question.Value}
-                    owner={question.Owner}
-                    defaultChecked={question.Value === question.Checked}
-                    onClick={this.handleClick.bind(this)}
-                />
-                <label htmlFor={question.Name + '_' + question.Id}>{question.Value}</label>
-                {question.Value === question.Checked ? '' : ''}
-                {this.state.showChild && FieldsOut}
-            </span>
+            // <input
+            //         type='radio'
+            //         id={question.Name + '_' + question.Id}
+            //         name={question.Name}
+            //         value={question.Value}
+            //         owner={question.Owner}
+            //         defaultChecked={question.Value === question.Checked}
+            //         onClick={this.handleClick.bind(this)}
+            //     />
+            //     <label htmlFor={question.Name + '_' + question.Id}>{question.Value}</label>
+            //     {question.Value === question.Checked ? '' : ''}
+            //     {this.state.showChild && FieldsOut}
+            // </span>
         )
     }
 };

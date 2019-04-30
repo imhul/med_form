@@ -18,40 +18,40 @@ class FormInput extends Component {
 
     onInputUpdate(e) {
         this.props.uiActions.inputUpdate(e.target.value);
-        const { formData } = this.props.ui;
+        // const { formData } = this.props.ui;
 
-        // Формируем список параметров для передачи на сервер
-        const inputRequestBody = {
-            'Owner':            formData.question.Id,
-            'Hospital':         formData.hospitalization[0].Hospital,
-            'Patient':          formData.hospitalization[0].Patient,
-            'Hospitalization':  formData.hospitalization[0].Hospitalization,
-            'Reception':        formData.hospitalization[0].Reception,
-            'Question':         formData.question.Id,
-            'Field':            formData.question.Name,
-            'Value':            formData.question.Value,
-        };
+        // // Формируем список параметров для передачи на сервер
+        // const inputRequestBody = {
+        //     'Owner':            formData.question.Id,
+        //     'Hospital':         formData.hospitalization[0].Hospital,
+        //     'Patient':          formData.hospitalization[0].Patient,
+        //     'Hospitalization':  formData.hospitalization[0].Hospitalization,
+        //     'Reception':        formData.hospitalization[0].Reception,
+        //     'Question':         formData.question.Id,
+        //     'Field':            formData.question.Name,
+        //     'Value':            formData.question.Value,
+        // };
 
-        // Отправляем данные на сервер
-        fetch( requestURL, {
-            method: 'post',  
-            headers: requestHeader,
-            body: requestBody( inputRequestBody )
-        })
-        .then( (response) => {  
-                if (response.status !== 200) {  
-                    console.info(`input server error: ${response.status}`);  
-                    return
-                };
+        // // Отправляем данные на сервер
+        // fetch( requestURL, {
+        //     method: 'post',  
+        //     headers: requestHeader,
+        //     body: requestBody( inputRequestBody )
+        // })
+        // .then( (response) => {  
+        //         if (response.status !== 200) {  
+        //             console.info(`input server error: ${response.status}`);  
+        //             return
+        //         };
 
-                response.json().then( (data) => {  
-                    console.info(`input fetched data: ${data}`)  
-                })
-            }  
-        )  
-        .catch( (error) => {  
-            console.info(`input fetch error: ${error}`)
-        })
+        //         response.json().then( (data) => {  
+        //             console.info(`input fetched data: ${data}`)  
+        //         })
+        //     }  
+        // )  
+        // .catch( (error) => {  
+        //     console.info(`input fetch error: ${error}`)
+        // })
     };
 
     render() {
@@ -64,22 +64,21 @@ class FormInput extends Component {
         return (
 
             <FormItem
-                label="Field A"
+                label="Input"
                 {...formItemLayout}
             >
 
-                <input
+                {/* <input
                     type='text'
                     id={question.Name}
                     className='InputField'
-                    defaultValue={question.Checked ? question.Checked : ''}
                     //style={question.Width!==null ? {width: question.Width+"px"} : ''}
-                    onChange={this.onInputChange}
+                    
                     owner={question.Owner}
                     placeholder='Введіть текст'
-                />
+                /> */}
 
-                <Input placeholder="input placeholder" />
+                <Input id="" placeholder="input placeholder" onChange={this.onInputUpdate} />
 
             </FormItem>
         )

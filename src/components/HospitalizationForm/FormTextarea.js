@@ -19,40 +19,40 @@ class FormTextarea extends Component {
 
     onTextAreaUpdate(e) {
         this.props.uiActions.textareaUpdate(e.target.value);
-        const { formData } = this.props.ui;
+        // const { formData } = this.props.ui;
 
-        // Формируем список параметров для передачи на сервер
-        const textareaRequestBody = {
-            'Owner':            formData.question.Id,
-            'Hospital':         formData.hospitalization[0].Hospital,
-            'Patient':          formData.hospitalization[0].Patient,
-            'Hospitalization':  formData.hospitalization[0].Hospitalization,
-            'Reception':        formData.hospitalization[0].Reception,
-            'Question':         formData.question.Id,
-            'Field':            formData.question.Name,
-            'Value':            formData.question.Value,
-        };
+        // // Формируем список параметров для передачи на сервер
+        // const textareaRequestBody = {
+        //     'Owner':            formData.question.Id,
+        //     'Hospital':         formData.hospitalization[0].Hospital,
+        //     'Patient':          formData.hospitalization[0].Patient,
+        //     'Hospitalization':  formData.hospitalization[0].Hospitalization,
+        //     'Reception':        formData.hospitalization[0].Reception,
+        //     'Question':         formData.question.Id,
+        //     'Field':            formData.question.Name,
+        //     'Value':            formData.question.Value,
+        // };
 
-        // Отправляем данные на сервер
-        fetch( requestURL, {
-            method: 'post',  
-            headers: requestHeader ,
-            body: requestBody( textareaRequestBody )
-        })
-        .then( (response) => {  
-                if (response.status !== 200) {  
-                    console.info(`textarea server error: ${response.status}`);  
-                    return
-                };
+        // // Отправляем данные на сервер
+        // fetch( requestURL, {
+        //     method: 'post',  
+        //     headers: requestHeader ,
+        //     body: requestBody( textareaRequestBody )
+        // })
+        // .then( (response) => {  
+        //         if (response.status !== 200) {  
+        //             console.info(`textarea server error: ${response.status}`);  
+        //             return
+        //         };
 
-                response.json().then( (data) => {  
-                    console.info(`textarea fetched data: ${data}`)  
-                })
-            }  
-        )  
-        .catch( (error) => {  
-            console.info(`textarea fetch error: ${error}`)
-        })
+        //         response.json().then( (data) => {  
+        //             console.info(`textarea fetched data: ${data}`)  
+        //         })
+        //     }  
+        // )  
+        // .catch( (error) => {  
+        //     console.info(`textarea fetch error: ${error}`)
+        // })
     };
 
     render() {
@@ -64,13 +64,12 @@ class FormTextarea extends Component {
         return (
 
             <FormItem
-                label="Field A"
+                label="TextArea"
                 {...formItemLayout}
             >
                 <TextArea
-                    id={question.Name}
+                    id="TextArea_1"
                     className='InputField'
-                    defaultValue={question.Checked ? question.Checked : ''}
                     onChange={this.onTextAreaUpdate}
                     placeholder='Введіть текст'
                 />

@@ -1,14 +1,14 @@
 import { typesUI as types } from './types';
 import testData from '../helpers/testData';
 
-const initState = { 
+const initState = {
 
     isInit: false,
     formData: testData, // FOR TEST ONLY. NEEDED VALUE IS []
     isCheckboxChecked: false,
     currentPage: 1,
-    textBefore: 'textBefore',
-    textAfter: 'textAfter',
+    formTextBefore: 'formTextBefore',
+    formTextAfter: 'formTextAfter',
 };
 
 export default (state = initState, action) => {
@@ -27,29 +27,43 @@ export default (state = initState, action) => {
             };
 
         case types.CHECKBOX_UPDATE:
-            return { 
+            const checkboxResult = state.formData.map(currentInput => {
+                if (currentInput.Id === action.id) {
+                return action.payload;
+                }
+                return currentInput;
+            });
+            return checkboxResult;
+        
+        case types.RADIO_BUTTON_UPDATE:
+            const radioResult = state.formData.map(currentInput => {
+                if (currentInput.Id === action.id) {
+                    return action.payload;
+                }
+                return currentInput;
+            });
+            return radioResult;
+
+        case types.INPUT_UPDATE:
+            const inputResult = state.formData.map(currentInput => {
+                if (currentInput.Id === action.id) {
+                    return action.payload;
+                }
+                return currentInput;
+            });
+            return inputResult;
+
+        case types.TEXTAREA_UPDATE:
+            const textareaResult = state.formData.map(currentInput => {
+                if (currentInput.Id === action.id) {
+                    return action.payload;
+                }
+                return currentInput;
+            });
+            return {
                 ...state,
-                isCheckboxChecked: action.payload,
+                formData: textareaResult,
             };
-
-        // TODO: разобраться, что делать при изменении конкретного инпута
-        // case types.RADIO_BUTTON_UPDATE:
-        //     return { 
-        //         ...state,
-        //         isRadioChecked: action.payload,
-        //     };
-
-        // case types.INPUT_UPDATE:
-        //     return { 
-        //         ...state,
-        //         isInputUpdated: action.payload,
-        //     };
-
-        // case types.TEXTAREA_UPDATE:
-        //     return { 
-        //         ...state,
-        //         isCheckboxChecked: action.payload,
-        //     };
 
         case types.PAGINATION_UPDATE:
             return { 

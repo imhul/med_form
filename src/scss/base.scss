@@ -56,13 +56,17 @@ body {
 /* App */
 
 #HospitalizationReception { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height: 100%;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        max-width: 800px;
+        margin: 25px auto;
+    }
 
     svg {
         -webkit-tap-highlight-color: $transparent !important;
