@@ -9,6 +9,7 @@ const initState = {
     currentPage: 1,
     formTextBefore: 'formTextBefore',
     formTextAfter: 'formTextAfter',
+    newFormData: [],
 };
 
 export default (state = initState, action) => {
@@ -27,42 +28,39 @@ export default (state = initState, action) => {
             };
 
         case types.CHECKBOX_UPDATE:
-            const checkboxResult = state.formData.map(currentInput => {
-                if (currentInput.Id === action.id) {
-                return action.payload;
-                }
-                return currentInput;
-            });
-            return checkboxResult;
+            return {
+                ...state,
+                ...action.paylod,
+            };
         
         case types.RADIO_BUTTON_UPDATE:
-            const radioResult = state.formData.map(currentInput => {
-                if (currentInput.Id === action.id) {
-                    return action.payload;
-                }
-                return currentInput;
-            });
-            return radioResult;
+            return {
+                ...state,
+                ...action.paylod,
+            };
 
         case types.INPUT_UPDATE:
-            const inputResult = state.formData.map(currentInput => {
-                if (currentInput.Id === action.id) {
-                    return action.payload;
-                }
-                return currentInput;
-            });
-            return inputResult;
+            return {
+                ...state,
+                ...action.paylod,
+            };
 
         case types.TEXTAREA_UPDATE:
-            const textareaResult = state.formData.map(currentInput => {
-                if (currentInput.Id === action.id) {
-                    return action.payload;
-                }
-                return currentInput;
+            return {
+                ...state,
+                ...action.paylod,
+            };
+
+        case types.FORM_UPDATE:
+            console.log("reducer: action.payload", action.payload);
+            const newData = state.formData.filter(item => item.Id == action.payload.id);
+            console.log("reducer: newData", newData);
+            newData.map(item => {
+                item.Value = action.payload.value
             });
             return {
                 ...state,
-                formData: textareaResult,
+                newFormData: newData,
             };
 
         case types.PAGINATION_UPDATE:

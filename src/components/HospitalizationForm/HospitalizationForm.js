@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, DatePicker, Radio, Input, Button, Pagination } from 'antd';
-
-// Components
-// import FormCheckbox from './FormCheckbox';
-// import FormInput from './FormInput';
-// import FormRadio from './FormRadio';
-// import FormTextarea from './FormTextarea';
+import {
+    Form,
+    DatePicker,
+    Radio,
+    Input,
+    Button,
+    Pagination,
+    Row,
+    Col,
+} from 'antd';
 
 // Helpers
 import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
@@ -25,7 +28,7 @@ class HospitalizationForm extends Component {
     loadAllData(currentPage) {
 
         // Формируем список параметров для передачи на сервер
-        const mainRequestURL = 'https://med.uax.co/API.php?Unit=Hospital&Section=HospitalPatients&Special=HospitalizationReception&Patient=2190&Hospitalization=8&Thread=Call&Object=Hospitalization&Method=GetQuestionnaireQuestions';
+        const mainRequestURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=GetOptions';
         const data = {
             'Hospital': 1,
             'Patient': 2190,
@@ -35,20 +38,20 @@ class HospitalizationForm extends Component {
         };
 
         // Отправляем данные на сервер
-       fetch(mainRequestURL, {
+        fetch(mainRequestURL, {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
             body: requestBody(data)
         })
-        .then((response) => response.json() )
-        .then((data) => {
-            console.info("main response data: ", data)
-        })
-        .catch((error) => {
-            console.info('main fetch error: ', error)
-        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.info("main response data: ", data)
+            })
+            .catch((error) => {
+                console.info('main fetch error: ', error)
+            })
     };
 
     componentDidMount() {
@@ -62,6 +65,19 @@ class HospitalizationForm extends Component {
         // this.loadAllData(1); // First data loading
     };
 
+    // onRadioUpdate(e) {
+    //     this.props.uiActions.radioUpdate(e.target.value)
+    // };
+    // onInputUpdate(e) {
+    //     this.props.uiActions.inputUpdate(e.target.value)
+    // };
+    // onCheckboxUpdate(e) {
+    //     this.props.uiActions.checkboxUpdate(e.target.value)
+    // };
+    // onTextAreaUpdate(e) {
+    //     this.props.uiActions.textareaUpdate(e.target.value)
+    // };
+
     onPaginationUpdate(page) {
         this.props.uiActions.paginationUpdate(page)
         // this.loadAllData(this.props.ui.currentPage) // data reloading
@@ -74,10 +90,14 @@ class HospitalizationForm extends Component {
         // this.props.uiActions.formUpdate(e.target.value);
     };
 
+    
+
     render() {
-        const { formData, currentPage, formTextBefore, formTextAfter, } = this.props.ui;
+        const { formData, currentPage, formTextBefore, formTextAfter, newFormData, } = this.props.ui;
+        const { uiActions } = this.props;
 
         console.info("formData: ", formData);
+        console.info("newformData: ", newFormData);
 
         const buttonItemLayout = {
             wrapperCol: {
@@ -102,96 +122,106 @@ class HospitalizationForm extends Component {
             },
         };
         const textInputPlaceholder = "Введіть текст";
+        const filteredByPage = formData.filter(item => item.Page == currentPage);
 
         return (
             <div className="flex-container">
-                <Form className="HospitalizationForm" onSubmit={this.onFormSubmit}>
-                    { formTextBefore }
+                <Form 
+                    className="HospitalizationForm" 
+                    onSubmit={ this.onFormSubmit } 
+                    onChange={ uiActions.formUpdate }>
+
+                    {formTextBefore}
 
                     {
-                        formData.map(item => {
-                            
-                            switch (item.Type) {
+                        filteredByPage.map(inputData => {
+
+                            const ownerDetect = (inputId) => {
+                                return filteredByPage.filter(item => item.Owner == inputId)
+                            };
+
+                            switch (inputData.Type) {
                                 case 'date':
                                     return (
-                                        <FormItem label={ item.TextBefore } { ...formItemLayout } key={ item.Id }>
+                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                                             <DatePicker showTime format="DD-MM-YYYY HH:mm:ss" />
-                                        </FormItem> 
+                                        </FormItem>
                                     );
 
-
                                 case 'text':
-                                    return ( 
-                                        <FormItem label={ item.TextBefore } { ...formItemLayout } key={ item.Id }>
-                                            <Input 
-                                                id={ item.Name } 
-                                                placeholder={ textInputPlaceholder } 
-                                                // onChange={ this.onInputUpdate }
-                                                />
-                                                { item.textAfter }
-                                        </FormItem> 
+                                    return (
+                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                                            <Input
+                                                id={inputData.Name}
+                                                placeholder={textInputPlaceholder}
+                                                // onChange={ uiActions.inputUpdate }
+                                            />
+                                            {inputData.textAfter}
+                                        </FormItem>
                                     );
 
                                 case 'textarea':
-                                    return ( 
-                                        <FormItem label={ item.TextBefore } { ...formItemLayout } key={ item.Id }>
+                                    return (
+                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                                             <TextArea
-                                                id={ item.Id }
-                                                className={ `text-area ${item.Name }` }
-                                                // onChange={ this.onTextAreaUpdate }
+                                                id={inputData.Id}
+                                                className={`text-area ${inputData.Name}`}
+                                                // onChange={ uiActions.textAreaUpdate }
                                                 placeholder='Введіть текст'
                                             />
-                                            { item.textAfter }
+                                            {inputData.textAfter}
                                         </FormItem>
                                     );
 
-                                case 'radio':
+                                case 'parent-radio':
                                     return (
-                                        <FormItem label={ item.TextBefore } { ...formItemLayout } key={ item.Id }>
-                                            <RadioGroup 
-                                                key={ item.Id }
-                                                defaultValue={ 0 }
-                                                name={ item.Name }
+                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                                            <RadioGroup
+                                                defaultValue={0}
+                                                name={inputData.Name}
                                                 // onChange={ uiActions.radioUpdate }
                                             >
-                                                
-                                                { 
-                                                    item.Options.map(subitem => (
-                                                        <RadioButton key={ subitem.Id }>
-                                                            { subitem.Value }
+
+                                                {
+                                                    ownerDetect(inputData.Id).map(subitem => (
+                                                        <RadioButton key={subitem.Id}>
+                                                            {subitem.Value}
                                                         </RadioButton>
-                                                    )) 
+                                                    ))
                                                 }
                                             </RadioGroup>
-                                            { item.textAfter }
+                                            {inputData.textAfter}
                                         </FormItem>
                                     );
-                                        
 
-                                case 'checkbox':
+
+                                case 'parent-checkbox':
                                     return (
-                                        <FormItem label={ item.TextBefore } { ...buttonItemLayout } key={ item.Id }>
-                                            <FormCheckbox id={ item.Name } />
-                                            { item.textAfter }
+                                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                                            <FormCheckbox id={inputData.Name} />
+                                            {inputData.textAfter}
                                         </FormItem>
                                     );
+
+                                case 'checkbox', 'radio': 
+                                    return null;
 
                                 default:
-                                    return <span key="error" style={{ 'display':'block' }}>field type is empty!</span>
+                                    return <span key="error" style={{ 'display': 'block' }}>field type is empty or have another type: {inputData.Type}!</span>
                             }
                         })
                     }
 
-                    { formTextAfter }
+                    {formTextAfter}
 
-                    <FormItem { ...buttonItemLayout }>
+                    <FormItem {...buttonItemLayout}>
                         <Button type="primary" htmlType="submit">Submit</Button>
                     </FormItem>
-                    <Pagination 
-                        defaultCurrent={ currentPage } 
-                        total={ 500 } 
-                        pageSize={ 10 } 
-                        onChange={ this.onPaginationUpdate } 
+                    <Pagination
+                        defaultCurrent={currentPage}
+                        total={500}
+                        pageSize={10}
+                        onChange={this.onPaginationUpdate}
                     />
                 </Form>
 

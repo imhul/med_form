@@ -53,6 +53,15 @@ export function textareaUpdate(inputId) {
   }
 };
 
+export function formUpdate(payload) {
+  return (dispatch) => {
+    dispatch({
+      type: types.FORM_UPDATE,
+      payload: payload.target,
+    })
+  }
+};
+
 export function paginationUpdate(payload) {
   return (dispatch) => {
     dispatch({

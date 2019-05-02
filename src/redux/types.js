@@ -7,5 +7,6 @@ export const typesUI = {
     INPUT_UPDATE:         'INPUT_UPDATE',
     RADIO_BUTTON_UPDATE:  'RADIO_BUTTON_UPDATE',
     PAGINATION_UPDATE:    'PAGINATION_UPDATE',
+    FORM_UPDATE:          'FORM_UPDATE',
   
   };
