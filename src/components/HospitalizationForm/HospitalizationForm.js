@@ -6,6 +6,7 @@ import * as UI_ACTIONS from '../../redux/ui_actions';
 import {
     Form,
     DatePicker,
+    Checkbox,
     Radio,
     Input,
     Button,
@@ -80,25 +81,25 @@ class HospitalizationForm extends Component {
 
     onPaginationUpdate(page) {
         this.props.uiActions.paginationUpdate(page)
-        // this.loadAllData(this.props.ui.currentPage) // data reloading
     };
 
     onFormSubmit(e) {
-        console.info("onFormUpdate event: ", e);
-        console.info("onFormUpdate event.target: ", e.target);
-        console.info("onFormUpdate event.target.value: ", e.target.value);
-        // this.props.uiActions.formUpdate(e.target.value);
+        e.preventDefault();
+        this.formSubmit(this.props.ui.formData)
     };
 
-    
+    formSubmit(newData) {
+        console.info("newData object for submit: ", newData);
+        // Тут будет функция отправки новых данных формы, внутри которой 
+        // будет вызываться action, указывающий на изменение состояния isSubmitted,
+        // в случае успешной отправки формы на сервер
+    };
 
     render() {
-        const { formData, currentPage, formTextBefore, formTextAfter, newFormData, } = this.props.ui;
+        // Props to constants
+        const { formData, currentPage, formTextBefore, formTextAfter, } = this.props.ui;
         const { uiActions } = this.props;
-
-        console.info("formData: ", formData);
-        console.info("newformData: ", newFormData);
-
+        // Decorative options
         const buttonItemLayout = {
             wrapperCol: {
                 xs: {
@@ -122,98 +123,115 @@ class HospitalizationForm extends Component {
             },
         };
         const textInputPlaceholder = "Введіть текст";
-        const filteredByPage = formData.filter(item => item.Page == currentPage);
+        // Filtering inputs by current value of pagination component
+        const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
+        console.info("dataFilteredByPage: ", dataFilteredByPage);
+        // Inputs initialization by types
+        const typeDetector = (inputData) => {
+            switch (inputData.Type) {
+                case 'date':
+                    return dateInput(inputData);
+                case 'text':
+                    return textInput(inputData);
+                case 'textarea':
+                    return textareaInput(inputData);
+                case 'parent-radio':
+                    return radioGroup(inputData);
+                case 'parent-checkbox':
+                    return checkboxGroup(inputData);
+                case 'checkbox':
+                    return checkboxInput(inputData);
+                case 'radio': 
+                    return radioInput(inputData);
+                default:
+                    return console.warn(`unknown field type: ${inputData.Type}!`)
+            }
+        };
+        // Filtering children by parent Id
+        const ownerDetector = (inputId) => {
+            return dataFilteredByPage.filter(item => item.Owner == inputId)
+        };
+        // Inputs
+        const dateInput = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                <DatePicker mode="year" format="YYYY" />
+                {/* <DatePicker showTime format="DD-MM-YYYY HH:mm:ss" /> */}
+                {/* TODO: Определиться с типами инпутов для ввода даты и времени */}
+            </FormItem>
+        );
+        const textInput = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                <Input
+                    id={inputData.Name}
+                    placeholder={textInputPlaceholder}
+                />
+                {inputData.textAfter}
+            </FormItem>
+        );
+        const textareaInput = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                <TextArea
+                    id={inputData.Id}
+                    className={`text-area ${inputData.Name}`}
+                    placeholder='Введіть текст'
+                />
+                {inputData.textAfter}
+            </FormItem>
+        );
+        const radioInput = (inputData) => { 
+            const filteredByOwner = inputData.filter(item => item.Owner !== null);
+            // TODO:
+            return ( <RadioButton
+                key={filteredByOwner.Id} 
+                id={filteredByOwner.Id} 
+                buttonStyle="solid"
+                value={filteredByOwner.Value}
+            >
+                { filteredByOwner.Value }
+            </RadioButton>
+        )};
+        const radioGroup = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                <RadioGroup
+                    
+                    defaultValue={null}
+                    name={inputData.Name}
+                    id={inputData.Id}
+                    // onChange={ uiActions.radioUpdate }
+                >
+                    {
+                        ownerDetector(inputData.Id).map(subitem => typeDetector(subitem))
+                    }
+                </RadioGroup>
+                {inputData.textAfter}
+            </FormItem>
+        );
+        const checkboxInput = (inputData) => (
+            <Checkbox key={inputData.Id} id={inputData.Id}>
+                    {`...`}
+            </Checkbox>
+        );
+        const checkboxGroup = (inputData) => (
+            <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                <FormCheckbox id={inputData.Name} />
+                {inputData.textAfter}
+            </FormItem>
+        );
 
         return (
             <div className="flex-container">
                 <Form 
                     className="HospitalizationForm" 
                     onSubmit={ this.onFormSubmit } 
-                    onChange={ uiActions.formUpdate }>
-
-                    {formTextBefore}
+                    onChange={ uiActions.formUpdate }
+                >
+                    <FormItem label={formTextBefore} {...formItemLayout} />
 
                     {
-                        filteredByPage.map(inputData => {
-
-                            const ownerDetect = (inputId) => {
-                                return filteredByPage.filter(item => item.Owner == inputId)
-                            };
-
-                            switch (inputData.Type) {
-                                case 'date':
-                                    return (
-                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                                            <DatePicker showTime format="DD-MM-YYYY HH:mm:ss" />
-                                        </FormItem>
-                                    );
-
-                                case 'text':
-                                    return (
-                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                                            <Input
-                                                id={inputData.Name}
-                                                placeholder={textInputPlaceholder}
-                                                // onChange={ uiActions.inputUpdate }
-                                            />
-                                            {inputData.textAfter}
-                                        </FormItem>
-                                    );
-
-                                case 'textarea':
-                                    return (
-                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                                            <TextArea
-                                                id={inputData.Id}
-                                                className={`text-area ${inputData.Name}`}
-                                                // onChange={ uiActions.textAreaUpdate }
-                                                placeholder='Введіть текст'
-                                            />
-                                            {inputData.textAfter}
-                                        </FormItem>
-                                    );
-
-                                case 'parent-radio':
-                                    return (
-                                        <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                                            <RadioGroup
-                                                defaultValue={0}
-                                                name={inputData.Name}
-                                                // onChange={ uiActions.radioUpdate }
-                                            >
-
-                                                {
-                                                    ownerDetect(inputData.Id).map(subitem => (
-                                                        <RadioButton key={subitem.Id}>
-                                                            {subitem.Value}
-                                                        </RadioButton>
-                                                    ))
-                                                }
-                                            </RadioGroup>
-                                            {inputData.textAfter}
-                                        </FormItem>
-                                    );
-
-
-                                case 'parent-checkbox':
-                                    return (
-                                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                                            <FormCheckbox id={inputData.Name} />
-                                            {inputData.textAfter}
-                                        </FormItem>
-                                    );
-
-                                case 'checkbox', 'radio': 
-                                    return null;
-
-                                default:
-                                    return <span key="error" style={{ 'display': 'block' }}>field type is empty or have another type: {inputData.Type}!</span>
-                            }
-                        })
+                        dataFilteredByPage.map(inputData => typeDetector(inputData))
                     }
 
-                    {formTextAfter}
-
+                    <FormItem label={formTextAfter} {...formItemLayout} />
                     <FormItem {...buttonItemLayout}>
                         <Button type="primary" htmlType="submit">Submit</Button>
                     </FormItem>

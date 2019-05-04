@@ -26,11 +26,11 @@ export function checkboxUpdate(inputId) {
   }
 };
 
-export function radioUpdate(inputId) {
+export function radioUpdate(payload) {
   return (dispatch) => {
     dispatch({
       type: types.RADIO_BUTTON_UPDATE,
-      payload: inputId,
+      payload: payload.target,
     })
   }
 };

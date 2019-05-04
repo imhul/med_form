@@ -10,7 +10,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "1"
     },
@@ -25,7 +25,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "1"
     },
@@ -40,7 +40,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "1"
     },
@@ -55,7 +55,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "parent-radio",
         "Page": "1"
     },
@@ -70,8 +70,8 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
-        "Type": "text",
+        "Checked": false,
+        "Type": "date",
         "Page": "1"
     },
     {
@@ -85,7 +85,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "radio",
         "Page": "1"
     },
@@ -100,7 +100,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "radio",
         "Page": "1"
     },
@@ -115,7 +115,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "2"
     },
@@ -130,7 +130,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "2"
     },
@@ -145,7 +145,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "textarea",
         "Page": "2"
     },
@@ -160,7 +160,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "parent-radio",
         "Page": "3"
     },
@@ -175,7 +175,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "text",
         "Page": "3"
     },
@@ -190,7 +190,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "radio",
         "Page": "3"
     },
@@ -205,7 +205,7 @@ const testData = [
         "InLine": null,
         "Width": null,
         "Padding": null,
-        "Checked": 0,
+        "Checked": false,
         "Type": "radio",
         "Page": "3"
     }
