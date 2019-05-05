@@ -12,6 +12,7 @@ import {
     Button,
     Pagination,
     Popconfirm,
+    Icon,
     Row,
     Col,
 } from 'antd';
@@ -228,11 +229,11 @@ class HospitalizationForm extends Component {
                     onSubmit={ this.onFormSubmit } 
                     onChange={ uiActions.formUpdate }
                 >
-                    <FormItem label={formTextBefore} {...formItemLayout} />
+                    <FormItem label={formTextBefore} />
 
                     { dataFilteredByPage.map(inputData => typeDetector(inputData)) }
 
-                    <FormItem label={formTextAfter} {...formItemLayout} />
+                    <FormItem label={formTextAfter} />
                     <FormItem {...buttonItemLayout}>
                         <Button type="primary" htmlType="submit">Зберегти</Button>
                     </FormItem>
@@ -244,6 +245,7 @@ class HospitalizationForm extends Component {
                         okText="Так" 
                         cancelText="Hі"
                         visible={ !isSubmitted && isPopupVisible }
+                        icon={<Icon type="alert" theme="twoTone" twoToneColor="#faad14" style={{fontSize: '40px'}} />}
                     >
 
                     <Pagination

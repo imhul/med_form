@@ -6,8 +6,8 @@ const initState = {
     isInit: false,
     formData: testData, // FOR TEST ONLY. NEEDED VALUE IS []
     currentPage: 1,
-    formTextBefore: 'formTextBefore',
-    formTextAfter: 'formTextAfter',
+    formTextBefore: 'Тут має бути якийсь текст...',
+    formTextAfter: 'Тут також має бути якийсь текст...',
     isSubmitted: false,
     isPopupVisible: false,
     nextPage: null,
