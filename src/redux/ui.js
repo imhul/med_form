@@ -48,20 +48,9 @@ export default (state = initState, action) => {
                 ...state,
             };
 
-        // case types.INPUT_UPDATE:
-        //     return {
-        //         ...state,
-        //         ...action.paylod,
-        //     };
-
-        // case types.TEXTAREA_UPDATE:
-        //     return {
-        //         ...state,
-        //         ...action.paylod,
-        //     };
-
         case types.FORM_UPDATE:
             console.info("form reducer action.payload: ", action.payload);
+            
             state.formData.filter(items => items.Id === action.payload.id).map(item => {
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
                     item.Value = action.payload.value
@@ -95,7 +84,6 @@ export default (state = initState, action) => {
             };
 
         case types.PAGINATION_UPDATE:
-            console.info("PAGINATION_UPDATE payload: ", action.payload);
             return { 
                 ...state,
                 currentPage: action.payload,

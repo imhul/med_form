@@ -68,10 +68,9 @@ class HospitalizationForm extends Component {
 
     onPaginationUpdate(page) {
         const { uiActions, ui } = this.props;
-        if(ui.Submitted) {
-            uiActions.paginationUpdate(page)
-        } else {
-            uiActions.confirmPopupShow(page);
+        switch(ui.isSubmitted) {
+            case true: uiActions.paginationUpdate(page);
+            case false: uiActions.confirmPopupShow(page);
         }
     };
 
