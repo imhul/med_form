@@ -11,6 +11,7 @@ import {
     Input,
     Button,
     Pagination,
+    Popconfirm,
     Row,
     Col,
 } from 'antd';
@@ -26,7 +27,7 @@ const { RangePicker } = DatePicker;
 
 class HospitalizationForm extends Component {
 
-    loadAllData(currentPage) {
+    loadAllData() {
 
         // Формируем список параметров для передачи на сервер
         const mainRequestURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=GetOptions';
@@ -35,7 +36,6 @@ class HospitalizationForm extends Component {
             'Patient': 2190,
             'Hospitalization': 8,
             'Reception': 6,
-            'Page': currentPage,
         };
 
         // Отправляем данные на сервер
@@ -45,42 +45,33 @@ class HospitalizationForm extends Component {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
             body: requestBody(data)
-        })
+            })
             .then((response) => response.json())
             .then((data) => {
-                console.info("main response data: ", data)
+                this.props.uiActions.loadData(data);
             })
             .catch((error) => {
-                console.info('main fetch error: ', error)
+                console.warn('main fetch error: ', error)
             })
     };
 
     componentDidMount() {
-        // this.onRadioUpdate = this.onRadioUpdate.bind(this);
-        // this.onInputUpdate = this.onInputUpdate.bind(this);
-        // this.onCheckboxUpdate = this.onCheckboxUpdate.bind(this);
-        // this.onTextAreaUpdate = this.onTextAreaUpdate.bind(this);
+        this.loadAllData = this.loadAllData.bind(this);
+        this.onPopupConfirm = this.onPopupConfirm.bind(this);
+        this.onPopupCancel = this.onPopupCancel.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
         this.props.uiActions.initialize();
-        // this.loadAllData(1); // First data loading
+        // this.loadAllData(); // First data loading
     };
 
-    // onRadioUpdate(e) {
-    //     this.props.uiActions.radioUpdate(e.target.value)
-    // };
-    // onInputUpdate(e) {
-    //     this.props.uiActions.inputUpdate(e.target.value)
-    // };
-    // onCheckboxUpdate(e) {
-    //     this.props.uiActions.checkboxUpdate(e.target.value)
-    // };
-    // onTextAreaUpdate(e) {
-    //     this.props.uiActions.textareaUpdate(e.target.value)
-    // };
-
     onPaginationUpdate(page) {
-        this.props.uiActions.paginationUpdate(page)
+        const { uiActions, ui } = this.props;
+        if(ui.Submitted) {
+            uiActions.paginationUpdate(page)
+        } else {
+            uiActions.confirmPopupShow(page);
+        }
     };
 
     onFormSubmit(e) {
@@ -90,14 +81,28 @@ class HospitalizationForm extends Component {
 
     formSubmit(newData) {
         console.info("newData object for submit: ", newData);
-        // Тут будет функция отправки новых данных формы, внутри которой 
-        // будет вызываться action, указывающий на изменение состояния isSubmitted,
-        // в случае успешной отправки формы на сервер
+        // Тут будет функция отправки новых данных формы(newData), 
+        // внутри которой будет вызван action formSubmit(),
+        // указывающий на изменение состояния isSubmitted,
+        // в случае успешной отправки формы на сервер: 
+        this.props.uiActions.formSubmit()
+    };
+
+    onPopupCancel() {
+        const { uiActions, ui } = this.props;
+        uiActions.confirmPopupHide();
+        uiActions.paginationUpdate(ui.currentPage);
+    };
+
+    onPopupConfirm() {
+        const { uiActions, ui } = this.props;
+        uiActions.confirmPopupHide();
+        uiActions.paginationUpdate(ui.nextPage);
     };
 
     render() {
         // Props to constants
-        const { formData, currentPage, formTextBefore, formTextAfter, } = this.props.ui;
+        const { formData, currentPage, formTextBefore, formTextAfter, isSubmitted, isPopupVisible, } = this.props.ui;
         const { uiActions } = this.props;
         // Decorative options
         const buttonItemLayout = {
@@ -125,7 +130,6 @@ class HospitalizationForm extends Component {
         const textInputPlaceholder = "Введіть текст";
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
-        console.info("dataFilteredByPage: ", dataFilteredByPage);
         // Inputs initialization by types
         const typeDetector = (inputData) => {
             switch (inputData.Type) {
@@ -149,7 +153,7 @@ class HospitalizationForm extends Component {
         };
         // Filtering children by parent Id
         const ownerDetector = (inputId) => {
-            return dataFilteredByPage.filter(item => item.Owner == inputId)
+            return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
         // Inputs
         const dateInput = (inputData) => (
@@ -179,21 +183,20 @@ class HospitalizationForm extends Component {
             </FormItem>
         );
         const radioInput = (inputData) => { 
-            const filteredByOwner = inputData.filter(item => item.Owner !== null);
-            // TODO:
-            return ( <RadioButton
-                key={filteredByOwner.Id} 
-                id={filteredByOwner.Id} 
-                buttonStyle="solid"
-                value={filteredByOwner.Value}
-            >
-                { filteredByOwner.Value }
-            </RadioButton>
-        )};
+            ownerDetector(inputData.Id).map(subitem => ( 
+                <RadioButton
+                    key={subitem.Id} 
+                    id={subitem.Id} 
+                    buttonStyle="solid"
+                    value={subitem.Value}
+                >
+                    { subitem.Value }
+                </RadioButton>
+            ))
+        };
         const radioGroup = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 <RadioGroup
-                    
                     defaultValue={null}
                     name={inputData.Name}
                     id={inputData.Id}
@@ -227,24 +230,34 @@ class HospitalizationForm extends Component {
                 >
                     <FormItem label={formTextBefore} {...formItemLayout} />
 
-                    {
-                        dataFilteredByPage.map(inputData => typeDetector(inputData))
-                    }
+                    { dataFilteredByPage.map(inputData => typeDetector(inputData)) }
 
                     <FormItem label={formTextAfter} {...formItemLayout} />
                     <FormItem {...buttonItemLayout}>
-                        <Button type="primary" htmlType="submit">Submit</Button>
+                        <Button type="primary" htmlType="submit">Зберегти</Button>
                     </FormItem>
+
+                    <Popconfirm 
+                        title="Внесені дані не були збережені. Ви впевнені, що хочете перейти на іншу сторінку?" 
+                        onConfirm={ this.onPopupConfirm } 
+                        onCancel={ this.onPopupCancel }
+                        okText="Так" 
+                        cancelText="Hі"
+                        visible={ !isSubmitted && isPopupVisible }
+                    >
+
                     <Pagination
-                        defaultCurrent={currentPage}
-                        total={500}
-                        pageSize={10}
-                        onChange={this.onPaginationUpdate}
+                        current={ currentPage }
+                        total={ formData.length }
+                        pageSize={ 10 }
+                        onChange={ this.onPaginationUpdate }
+                        showTotal={ total => `Всього ${ total } питань` }
                     />
+                    </Popconfirm>
                 </Form>
 
             </div>
-        );
+        )
     }
 };
 
