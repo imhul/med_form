@@ -17,11 +17,11 @@ export function loadData(payload) {
   }
 };
 
-export function checkboxUpdate(inputId) {
+export function checkboxUpdate(payload) {
   return (dispatch) => {
     dispatch({
       type: types.CHECKBOX_UPDATE,
-      payload: inputId,
+      payload: payload.target,
     })
   }
 };
@@ -31,24 +31,6 @@ export function radioUpdate(payload) {
     dispatch({
       type: types.RADIO_BUTTON_UPDATE,
       payload: payload.target,
-    })
-  }
-};
-
-export function inputUpdate(inputId) {
-  return (dispatch) => {
-    dispatch({
-      type: types.INPUT_UPDATE,
-      payload: inputId,
-    })
-  }
-};
-
-export function textareaUpdate(inputId) {
-  return (dispatch) => {
-    dispatch({
-      type: types.TEXTAREA_UPDATE,
-      payload: inputId,
     })
   }
 };

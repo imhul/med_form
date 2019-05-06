@@ -182,6 +182,7 @@ class HospitalizationForm extends Component {
                 {inputData.textAfter}
             </FormItem>
         );
+
         const radioInput = (inputData) => { 
             ownerDetector(inputData.Id).map(subitem => ( 
                 <RadioButton
@@ -203,12 +204,27 @@ class HospitalizationForm extends Component {
                     // onChange={ uiActions.radioUpdate }
                 >
                     {
+                        ownerDetector(inputData.Id).map(subitem => ( 
+                            <RadioButton
+                                key={subitem.Id} 
+                                id={subitem.Id} 
+                                buttonStyle="solid"
+                                value={subitem.Value}
+                            >
+                                { subitem.Value }
+                                { console.warn("on render radioInput: subitem: ", subitem) }
+                            </RadioButton>
+                        ))
+                    }
+
+                    {
                         ownerDetector(inputData.Id).map(subitem => typeDetector(subitem))
                     }
                 </RadioGroup>
                 {inputData.textAfter}
             </FormItem>
         );
+
         const checkboxInput = (inputData) => (
             <Checkbox key={inputData.Id} id={inputData.Id}>
                     {`...`}
