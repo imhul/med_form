@@ -17,7 +17,7 @@ Based on [`React`](https://reactjs.org/) and [`Parcel Bundler`](https://parceljs
 * `antd`
 * `SCSS`
 
-### TODO:
+### HOW TO:
 
 
 1. Install [`node`](https://nodejs.org/)
