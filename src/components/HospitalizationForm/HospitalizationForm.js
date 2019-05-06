@@ -4,28 +4,30 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
 import moment from 'moment';
+import locale from 'antd/lib/date-picker/locale/uk_UA';
+import 'moment/locale/uk';
 import {
     Form,
     DatePicker,
     Checkbox,
     Radio,
     Input,
+    InputNumber,
+    Switch,
     Button,
     Pagination,
     Popconfirm,
     Icon,
-    Row,
-    Col,
 } from 'antd';
 
 // Helpers
 import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
 
+const { TextArea } = Input;
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
-const { TextArea } = Input;
-const { RangePicker } = DatePicker;
+const CheckboxGroup = Checkbox.Group;
 
 class HospitalizationForm extends Component {
 
@@ -128,7 +130,6 @@ class HospitalizationForm extends Component {
                 sm: { span: 16 },
             },
         };
-        const textInputPlaceholder = "Введіть текст";
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
         // Inputs initialization by types
@@ -140,6 +141,10 @@ class HospitalizationForm extends Component {
                     return textInput(inputData);
                 case 'textarea':
                     return textareaInput(inputData);
+                case 'number':
+                    return numberInput(inputData);
+                case 'switch':
+                    return switchInput(inputData);
                 case 'parent-radio':
                     return radioGroup(inputData);
                 case 'parent-checkbox':
@@ -159,31 +164,38 @@ class HospitalizationForm extends Component {
         // Inputs
         const dateInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                <DatePicker mode="year" format="YYYY" />
-                {/* <DatePicker showTime format="DD-MM-YYYY HH:mm:ss" /> */}
-                {/* TODO: Определиться с типами инпутов для ввода даты и времени */}
+                {inputData.TextBefore}
+                <DatePicker 
+                    id={inputData.Id}
+                    showTime={inputData.Mode.ShowTime} // boolean
+                    mode={inputData.Mode.Mode} 
+                    format={inputData.Mode.Format}
+                    placeholder={inputData.Placeholder} // Наприклад, 'введіть рік' або 'введіть дату'
+                    locale={locale}
+                />
+                {inputData.textAfter}
             </FormItem>
         );
         const textInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                {inputData.TextBefore}
                 <Input
-                    id={inputData.Name}
-                    placeholder={textInputPlaceholder}
+                    id={inputData.Id}
+                    placeholder={inputData.Placeholder}
                 />
                 {inputData.textAfter}
             </FormItem>
         );
         const textareaInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                {inputData.TextBefore}
                 <TextArea
                     id={inputData.Id}
-                    className={`text-area ${inputData.Name}`}
-                    placeholder='Введіть текст'
+                    placeholder={inputData.Placeholder}
                 />
                 {inputData.textAfter}
             </FormItem>
         );
-
         const radioInput = (inputData) => { 
             ownerDetector(inputData.Id).map(subitem => ( 
                 <RadioButton
@@ -198,11 +210,11 @@ class HospitalizationForm extends Component {
         };
         const radioGroup = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                {inputData.TextBefore}
                 <RadioGroup
                     defaultValue={null}
                     name={inputData.Name}
                     id={inputData.Id}
-                    // onChange={ uiActions.radioUpdate }
                 >
                     {
                         ownerDetector(inputData.Id).map(subitem => ( 
@@ -213,7 +225,6 @@ class HospitalizationForm extends Component {
                                 value={subitem.Value}
                             >
                                 { subitem.Value }
-                                { console.warn("on render radioInput: subitem: ", subitem) }
                             </RadioButton>
                         ))
                     }
@@ -226,14 +237,51 @@ class HospitalizationForm extends Component {
             </FormItem>
         );
 
-        const checkboxInput = (inputData) => (
-            <Checkbox key={inputData.Id} id={inputData.Id}>
-                    {`...`}
-            </Checkbox>
+        const checkboxInput = (inputData) => <Checkbox key={inputData.Id} id={inputData.Id} />;
+        const checkboxGroup = (inputData) => {
+            const plainOptions = ownerDetector(inputData.Id).
+                map(subitem => <Checkbox 
+                    key={subitem.Id} 
+                    id={subitem.Id} 
+                    label={subitem.Value}
+                    value={subitem.Value}
+                    /> 
+                );
+            return (
+                <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                    {inputData.TextBefore}
+                    <CheckboxGroup 
+                        id={inputData.Id} 
+                        options={plainOptions} 
+                    />
+                    {inputData.textAfter}
+                </FormItem>
+            )
+        };
+
+        const numberInput = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                {inputData.TextBefore}
+                <InputNumber
+                    defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
+                    formatter={value => `${inputData.Mode.Prefix}${value}${inputData.Mode.Suffix}`.replace(inputData.Mode.Format, ',')}
+                    parser={value => value.replace(inputData.Mode.Parser, '')}
+                    step={inputData.Mode.Step}
+                    min={inputData.Mode.Min} 
+                    max={inputData.Mode.Max}
+                />
+                {inputData.textAfter}
+            </FormItem>
         );
-        const checkboxGroup = (inputData) => (
-            <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                <FormCheckbox id={inputData.Name} />
+
+        const switchInput = (inputData) => (
+            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                {inputData.TextBefore}
+                <Switch 
+                    checked={inputData.Value} // boolean
+                    checkedChildren={inputData.Mode.TextChecked} // 'Так'
+                    unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
+                />
                 {inputData.textAfter}
             </FormItem>
         );
