@@ -16,16 +16,11 @@ const initState = {
 export default (state = initState, action) => {
     switch (action.type) {
 
-        case types.INITIALIZE:
-            return { 
-                ...state,
-                isInit: true,
-            };
-
         case types.LOAD_DATA:
             return { 
                 ...state,
                 formData: action.payload,
+                isInit: true,
             };
 
         case types.FORM_UPDATE:

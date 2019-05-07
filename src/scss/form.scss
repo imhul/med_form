@@ -5,6 +5,21 @@
     padding: 25px;
     width: 90%;
     max-width: 900px;
+    .ant-input-number {
+        width: 50%;
+    }
+    .form-text-before, .form-text-after {
+        label {
+            &::after {
+                content: ''
+            }
+        }
+    }
+    .form-icon {
+        float: right;
+        font-size: 36px;
+        color: #1890ff;
+    }
 }
 
 // Confirm Popup

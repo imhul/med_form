@@ -1,13 +1,5 @@
 import { typesUI as types } from './types';
 
-export function initialize() {
-  return (dispatch) => {
-    dispatch({
-      type: types.INITIALIZE,
-    })
-  }
-};
-
 export function loadData(payload) {
   return (dispatch) => {
     dispatch({

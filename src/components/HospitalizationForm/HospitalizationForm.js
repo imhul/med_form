@@ -28,6 +28,7 @@ const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 const CheckboxGroup = Checkbox.Group;
+const editIcon = <Icon type="form" />;
 
 class HospitalizationForm extends Component {
 
@@ -65,7 +66,6 @@ class HospitalizationForm extends Component {
         this.onPopupCancel = this.onPopupCancel.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
-        this.props.uiActions.initialize();
         // this.loadAllData(); // First data loading
     };
 
@@ -182,6 +182,8 @@ class HospitalizationForm extends Component {
                 <Input
                     id={inputData.Id}
                     placeholder={inputData.Placeholder}
+                    addonAfter={inputData.TextAfter}
+                    addonBefore={editIcon}
                 />
                 {inputData.textAfter}
             </FormItem>
@@ -262,14 +264,20 @@ class HospitalizationForm extends Component {
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
-                <InputNumber
+                <Input
+                    id={inputData.Id}
+                    placeholder={inputData.Placeholder}
+                    addonAfter={inputData.TextAfter}
+                    addonBefore={editIcon}
+                />
+                {/* <InputNumber
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
                     formatter={value => `${inputData.Mode.Prefix}${value}${inputData.Mode.Suffix}`.replace(inputData.Mode.Format, ',')}
-                    parser={value => value.replace(inputData.Mode.Parser, '')}
+                    parser={value => value.replace(inputData.Mode.Prefix, '').replace(inputData.Mode.Suffix, '')}
                     step={inputData.Mode.Step}
                     min={inputData.Mode.Min} 
                     max={inputData.Mode.Max}
-                />
+                /> */}
                 {inputData.textAfter}
             </FormItem>
         );
@@ -292,12 +300,12 @@ class HospitalizationForm extends Component {
                     className="HospitalizationForm" 
                     onSubmit={ this.onFormSubmit } 
                     onChange={ uiActions.formUpdate }
-                >
-                    <FormItem label={formTextBefore} />
+                >   <Icon type="solution" className="form-icon" />
+                    <FormItem className="form-text-before" label={formTextBefore} />
 
                     { dataFilteredByPage.map(inputData => typeDetector(inputData)) }
 
-                    <FormItem label={formTextAfter} />
+                    <FormItem className="form-text-after" label={formTextAfter} />
                     <FormItem {...buttonItemLayout}>
                         <Button type="primary" htmlType="submit">Зберегти</Button>
                     </FormItem>
