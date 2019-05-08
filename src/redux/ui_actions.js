@@ -18,11 +18,12 @@ export function checkboxUpdate(payload) {
   }
 };
 
-export function radioUpdate(payload) {
+export function dateUpdate(payload, mode, id) {
   return (dispatch) => {
     dispatch({
-      type: types.RADIO_BUTTON_UPDATE,
-      payload: payload.target,
+      type: types.DATE_UPDATE,
+      payload: payload,
+      meta: id,
     })
   }
 };

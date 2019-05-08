@@ -2,12 +2,11 @@ import { typesUI as types } from './types';
 import testData from '../helpers/testData';
 
 const initState = {
-
     isInit: false,
-    formData: testData, // FOR TEST ONLY. NEEDED VALUE IS []
+    formData: testData.Data, // FOR TEST ONLY. NEEDED VALUE IS []
+    formOptions: testData.Options, // FOR TEST ONLY. NEEDED VALUE IS []
+    formErrors: testData.Error, // FOR TEST ONLY. NEEDED VALUE IS []
     currentPage: 1,
-    formTextBefore: 'Тут має бути якийсь текст...',
-    formTextAfter: 'Тут також має бути якийсь текст...',
     isSubmitted: false,
     isPopupVisible: false,
     nextPage: null,
@@ -19,15 +18,28 @@ export default (state = initState, action) => {
         case types.LOAD_DATA:
             return { 
                 ...state,
-                formData: action.payload,
+                formData: action.payload.Data,
+                formOptions: action.payload.Options,
+                formErrors: action.payload.Error,
                 isInit: true,
+            };
+
+        case types.DATE_UPDATE:
+            state.formData.filter(items => items.Id === action.meta).map(item => {
+                item.Value = action.payload;
+                item.Checked = !action.payload.checked
+            });
+            return {
+                ...state,
             };
 
         case types.FORM_UPDATE:
             console.info("form reducer action.payload: ", action.payload);
             state.formData.filter(items => items.Id === action.payload.id).map(item => {
+                
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
-                    item.Value = action.payload.value
+                    item.Value = action.payload.value;
+                    item.Checked = !action.payload.checked
                 } else {
                     item.Value = action.payload.value;
                     item.Checked = action.payload.checked

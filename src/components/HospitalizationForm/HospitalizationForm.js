@@ -69,7 +69,7 @@ class HospitalizationForm extends Component {
         // this.loadAllData(); // First data loading
     };
 
-    onPaginationUpdate(page) {
+    onPaginationUpdate = (page) => {
         const { uiActions, ui } = this.props;
         switch(ui.isSubmitted) {
             case true: uiActions.paginationUpdate(page);
@@ -83,12 +83,14 @@ class HospitalizationForm extends Component {
     };
 
     formSubmit(newData) {
-        console.info("newData object for submit: ", newData);
+        const { uiActions, ui } = this.props;
+        const currentPage = newData.filter(item => item.Page == ui.currentPage);
+        console.info("currentPage - object for submit: ", currentPage);
         // Тут будет функция отправки новых данных формы(newData), 
         // внутри которой будет вызван action formSubmit(),
         // указывающий на изменение состояния isSubmitted,
         // в случае успешной отправки формы на сервер: 
-        this.props.uiActions.formSubmit()
+        uiActions.formSubmit(currentPage)
     };
 
     onPopupCancel() {
@@ -105,7 +107,7 @@ class HospitalizationForm extends Component {
 
     render() {
         // Props to constants
-        const { formData, currentPage, formTextBefore, formTextAfter, isSubmitted, isPopupVisible, } = this.props.ui;
+        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, } = this.props.ui;
         const { uiActions } = this.props;
         // Decorative options
         const buttonItemLayout = {
@@ -148,11 +150,25 @@ class HospitalizationForm extends Component {
                 case 'parent-radio':
                     return radioGroup(inputData);
                 case 'parent-checkbox':
-                    return checkboxGroup(inputData);
+                    return (
+                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                            {inputData.TextBefore}
+                            <CheckboxGroup>{checkboxGroup(inputData)}</CheckboxGroup>
+                            {inputData.textAfter}
+                        </FormItem>
+                    );
                 case 'checkbox':
-                    return checkboxInput(inputData);
+                    return (
+                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                            {inputData.TextBefore}
+                                <CheckboxGroup name={inputData.Name}>
+                                    {checkboxGroup(inputData)}
+                                </CheckboxGroup>
+                            {inputData.textAfter}
+                        </FormItem>
+                    );
                 case 'radio': 
-                    return radioInput(inputData);
+                    return null;
                 default:
                     return console.warn(`unknown field type: ${inputData.Type}!`)
             }
@@ -162,20 +178,37 @@ class HospitalizationForm extends Component {
             return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
         // Inputs
-        const dateInput = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
+        const dateInput = (inputData) => {
+            const DateInput = () => (
                 <DatePicker 
+                    key={inputData.Id}
                     id={inputData.Id}
-                    showTime={inputData.Mode.ShowTime} // boolean
+                    showTime={inputData.Mode.ShowTime} 
                     mode={inputData.Mode.Mode} 
                     format={inputData.Mode.Format}
-                    placeholder={inputData.Placeholder} // Наприклад, 'введіть рік' або 'введіть дату'
+                    placeholder={inputData.Placeholder} 
                     locale={locale}
+                    onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
+                    onPanelChange={(date, mode) => uiActions.dateUpdate(date, mode, inputData.Id)}
+                    value={inputData.Value}
                 />
-                {inputData.textAfter}
-            </FormItem>
-        );
+            );
+            if(inputData.Owner === null) {
+                return (
+                    <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                        {inputData.TextBefore}
+                        <DateInput 
+                            key={`${inputData.Id}_${inputData.Name}`} 
+                            className={`parent ${inputData.Mode.Mode}-picker`} />
+                        {inputData.textAfter}
+                    </FormItem>
+                )
+            } else if(inputData.Selected) {
+                return <DateInput 
+                    key={`${inputData.Id}_${inputData.Name}`} 
+                    className={`child ${inputData.Mode.Mode}-picker`} />
+            }  
+        };
         const textInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
@@ -198,68 +231,76 @@ class HospitalizationForm extends Component {
                 {inputData.textAfter}
             </FormItem>
         );
-        const radioInput = (inputData) => { 
-            ownerDetector(inputData.Id).map(subitem => ( 
-                <RadioButton
-                    key={subitem.Id} 
-                    id={subitem.Id} 
-                    buttonStyle="solid"
-                    value={subitem.Value}
-                >
-                    { subitem.Value }
-                </RadioButton>
-            ))
+        const radioGroup = (inputData) => {
+            const owner = ownerDetector(inputData.Id);
+            return (
+                <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
+                    {inputData.TextBefore}
+                    <RadioGroup
+                        defaultValue={null}
+                        name={inputData.Name}
+                        id={inputData.Id}
+                        buttonStyle="solid"
+                    >
+                        {
+                            inputData.Type !== 'radio' ? owner.map(subitem => (
+                                <RadioButton
+                                    key={subitem.Id} 
+                                    id={subitem.Id} 
+                                    value={subitem.Value}
+                                >
+                                    { subitem.Value }
+                                </RadioButton>
+                            )) : null
+                        }
+                        {
+                            (inputData.Type !== 'radio' && inputData.Checked) ? 
+                                owner.map(subitem => typeDetector(subitem)) : null
+                        }
+                    </RadioGroup>
+                    {inputData.textAfter}
+                </FormItem>
+            )
         };
-        const radioGroup = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
-                <RadioGroup
-                    defaultValue={null}
-                    name={inputData.Name}
-                    id={inputData.Id}
-                >
-                    {
-                        ownerDetector(inputData.Id).map(subitem => ( 
-                            <RadioButton
-                                key={subitem.Id} 
-                                id={subitem.Id} 
-                                buttonStyle="solid"
-                                value={subitem.Value}
-                            >
-                                { subitem.Value }
-                            </RadioButton>
-                        ))
-                    }
-
-                    {
-                        ownerDetector(inputData.Id).map(subitem => typeDetector(subitem))
-                    }
-                </RadioGroup>
-                {inputData.textAfter}
-            </FormItem>
-        );
-
         const checkboxInput = (inputData) => <Checkbox key={inputData.Id} id={inputData.Id} />;
         const checkboxGroup = (inputData) => {
             const plainOptions = ownerDetector(inputData.Id).
-                map(subitem => <Checkbox 
-                    key={subitem.Id} 
-                    id={subitem.Id} 
-                    label={subitem.Value}
-                    value={subitem.Value}
-                    /> 
-                );
+                // filter(item => item.Id === inputData.Id).
+                map(subitem => subitem.Title);
+                //     <Checkbox 
+                //         key={subitem.Id} 
+                //         id={subitem.Id} 
+                //         checked={subitem.Checked}
+                //     />
+                // );
+            // console.info("plainOptions: ", inputData);
             return (
                 <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
                     {inputData.TextBefore}
                     <CheckboxGroup 
                         id={inputData.Id} 
                         options={plainOptions} 
+                        name={inputData.Name}
                     />
                     {inputData.textAfter}
                 </FormItem>
             )
         };
+        // const checkboxGroup = (inputData) => {
+        //     return ( 
+        //         <Checkbox 
+        //             key={inputData.Id} 
+        //             id={inputData.Id} 
+        //             checked={inputData.Checked}
+        //         />
+        //     )
+        // };
+
+        // {
+        //         (inputData.Type !== 'checkbox' && inputData.Checked) ? 
+        //         ownerDetector(inputData.Id).map(subitem => typeDetector(subitem)) : null 
+        // }
+
 
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
@@ -300,12 +341,13 @@ class HospitalizationForm extends Component {
                     className="HospitalizationForm" 
                     onSubmit={ this.onFormSubmit } 
                     onChange={ uiActions.formUpdate }
-                >   <Icon type="solution" className="form-icon" />
-                    <FormItem className="form-text-before" label={formTextBefore} />
+                >   
+                    <Icon type="solution" className="form-icon" />
+                    <FormItem className="form-text-before" label={formOptions.formTextBefore} />
 
-                    { dataFilteredByPage.map(inputData => typeDetector(inputData)) }
+                    { dataFilteredByPage.map(inputs => typeDetector(inputs)) }
 
-                    <FormItem className="form-text-after" label={formTextAfter} />
+                    <FormItem className="form-text-after" label={formOptions.formTextAfter} />
                     <FormItem {...buttonItemLayout}>
                         <Button type="primary" htmlType="submit">Зберегти</Button>
                     </FormItem>
@@ -317,9 +359,13 @@ class HospitalizationForm extends Component {
                         okText="Так" 
                         cancelText="Hі"
                         visible={ !isSubmitted && isPopupVisible }
-                        icon={<Icon type="alert" theme="twoTone" twoToneColor="#faad14" style={{fontSize: '40px'}} />}
-                    >
-
+                        icon={<Icon
+                            type="alert" 
+                            theme="twoTone" 
+                            twoToneColor="#faad14" 
+                            style={{fontSize: '40px'}} 
+                        />}
+                    />
                     <Pagination
                         current={ currentPage }
                         total={ formData.length }
@@ -327,9 +373,7 @@ class HospitalizationForm extends Component {
                         onChange={ this.onPaginationUpdate }
                         showTotal={ total => `Всього ${ total } питань` }
                     />
-                    </Popconfirm>
                 </Form>
-
             </div>
         )
     }
