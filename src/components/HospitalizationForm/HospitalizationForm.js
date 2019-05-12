@@ -158,15 +158,7 @@ class HospitalizationForm extends Component {
                         </FormItem>
                     );
                 case 'checkbox':
-                    return (
-                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                            {inputData.TextBefore}
-                                <CheckboxGroup name={inputData.Name}>
-                                    {checkboxGroup(inputData)}
-                                </CheckboxGroup>
-                            {inputData.textAfter}
-                        </FormItem>
-                    );
+                    return checkboxInput(inputData);
                 case 'radio': 
                     return null;
                 default:
@@ -262,47 +254,21 @@ class HospitalizationForm extends Component {
                 </FormItem>
             )
         };
-        const checkboxInput = (inputData) => <Checkbox key={inputData.Id} id={inputData.Id} />;
-        const checkboxGroup = (inputData) => {
-            const plainOptions = ownerDetector(inputData.Id).
-                // filter(item => item.Id === inputData.Id).
-                map(subitem => 
-                    <Checkbox 
-                        key={subitem.Id} 
-                        id={subitem.Id} 
-                        checked={subitem.Checked}
-                        value={subitem.Title}
-                    />
-                );
-            console.info("plainOptions: ", inputData);
+        const checkboxInput = (inputData) => {
+            console.log("checkboxInput inputData: ", inputData);
             return (
-                <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                    {inputData.TextBefore}
-                    <CheckboxGroup 
+                <div className="check-box-wrapper" key={inputData.Id}>
+                    <Checkbox 
+                        checked={inputData.Checked} 
                         id={inputData.Id} 
-                        // options={plainOptions} 
+                        value={inputData.Value}
                         name={inputData.Name}
-                    />
-                    {inputData.textAfter}
-                </FormItem>
+                    >
+                        {inputData.Value}
+                    </Checkbox>
+                </div>
             )
         };
-        // const checkboxGroup = (inputData) => {
-        //     return ( 
-        //         <Checkbox 
-        //             key={inputData.Id} 
-        //             id={inputData.Id} 
-        //             checked={inputData.Checked}
-        //         />
-        //     )
-        // };
-
-        // {
-        //         (inputData.Type !== 'checkbox' && inputData.Checked) ? 
-        //         ownerDetector(inputData.Id).map(subitem => typeDetector(subitem)) : null 
-        // }
-
-
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
@@ -323,7 +289,6 @@ class HospitalizationForm extends Component {
                 {inputData.textAfter}
             </FormItem>
         );
-
         const switchInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
@@ -335,6 +300,7 @@ class HospitalizationForm extends Component {
                 {inputData.textAfter}
             </FormItem>
         );
+
 
         return (
             <div className="flex-container">
