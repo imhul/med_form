@@ -135,7 +135,7 @@ class HospitalizationForm extends Component {
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
         // Inputs initialization by types
-        const typeDetector = (inputData) => {
+        const typeDetector = (inputData, isChild) => {
             switch (inputData.Type) {
                 case 'date':
                     return dateInput(inputData);
@@ -149,16 +149,21 @@ class HospitalizationForm extends Component {
                     return switchInput(inputData);
                 case 'parent-radio':
                     return radioGroup(inputData);
-                case 'parent-checkbox':
-                    return (
-                        <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                            {inputData.TextBefore}
-                            <CheckboxGroup>{checkboxGroup(inputData)}</CheckboxGroup>
-                            {inputData.textAfter}
-                        </FormItem>
-                    );
+                // case 'parent-checkbox':
+                //     return (
+                //         <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
+                //             {inputData.TextBefore}
+                //             <CheckboxGroup>{checkboxGroup(inputData)}</CheckboxGroup>
+                //             {inputData.textAfter}
+                //         </FormItem>
+                //     );
                 case 'checkbox':
+                if(isChild) {
                     return checkboxInput(inputData);
+                } else {
+                    return null
+                };
+                    
                 case 'radio': 
                     return null;
                 default:
@@ -224,7 +229,7 @@ class HospitalizationForm extends Component {
             </FormItem>
         );
         const radioGroup = (inputData) => {
-            const owner = ownerDetector(inputData.Id);
+            const child = ownerDetector(inputData.Id);
             return (
                 <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                     {inputData.TextBefore}
@@ -235,7 +240,7 @@ class HospitalizationForm extends Component {
                         buttonStyle="solid"
                     >
                         {
-                            inputData.Type !== 'radio' ? owner.map(subitem => (
+                            child.map(subitem => (
                                 <RadioButton
                                     key={subitem.Id} 
                                     id={subitem.Id} 
@@ -243,11 +248,12 @@ class HospitalizationForm extends Component {
                                 >
                                     { subitem.Value }
                                 </RadioButton>
-                            )) : null
+                            ))
                         }
                         {
-                            (inputData.Type !== 'radio' && inputData.Checked) ? 
-                                owner.map(subitem => typeDetector(subitem)) : null
+                            child.map(subitem => ownerDetector(subitem.Id).map(item => {
+                                return subitem.Checked === true ? typeDetector(item, true) : null
+                            }))
                         }
                     </RadioGroup>
                     {inputData.textAfter}
@@ -255,7 +261,7 @@ class HospitalizationForm extends Component {
             )
         };
         const checkboxInput = (inputData) => {
-            console.log("checkboxInput inputData: ", inputData);
+            const child = ownerDetector(inputData.Id);
             return (
                 <div className="check-box-wrapper" key={inputData.Id}>
                     <Checkbox 
@@ -265,7 +271,15 @@ class HospitalizationForm extends Component {
                         name={inputData.Name}
                     >
                         {inputData.Value}
+                        {
+                            inputData.Checked ? 
+                                child.map(subitem => {
+                                    console.log("checkboxInput subitem: ", subitem);
+                                    return typeDetector(subitem)
+                                }) : null
+                        }
                     </Checkbox>
+                    
                 </div>
             )
         };

@@ -45,9 +45,11 @@ export default (state = initState, action) => {
                     item.Checked = action.payload.checked
                 }
             });
-            state.formData.filter(items => items.Id !== action.payload.id).map(item => {
-                if(item.Type === 'radio' || item.Type === 'checkbox') {
-                    item.Checked = false
+            state.formData.filter(items => (items.Id !== action.payload.id) && (items.Type === action.payload.type)).map(item => {
+                if(item.Type === 'radio') {
+                    item.Checked = false 
+                } else if(item.Type !== 'checkbox') {
+                    item.Checked = action.payload.checked
                 }
             });
             return {
