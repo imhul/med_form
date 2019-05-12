@@ -266,20 +266,21 @@ class HospitalizationForm extends Component {
         const checkboxGroup = (inputData) => {
             const plainOptions = ownerDetector(inputData.Id).
                 // filter(item => item.Id === inputData.Id).
-                map(subitem => subitem.Title);
-                //     <Checkbox 
-                //         key={subitem.Id} 
-                //         id={subitem.Id} 
-                //         checked={subitem.Checked}
-                //     />
-                // );
-            // console.info("plainOptions: ", inputData);
+                map(subitem => 
+                    <Checkbox 
+                        key={subitem.Id} 
+                        id={subitem.Id} 
+                        checked={subitem.Checked}
+                        value={subitem.Title}
+                    />
+                );
+            console.info("plainOptions: ", inputData);
             return (
                 <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
                     {inputData.TextBefore}
                     <CheckboxGroup 
                         id={inputData.Id} 
-                        options={plainOptions} 
+                        // options={plainOptions} 
                         name={inputData.Name}
                     />
                     {inputData.textAfter}
