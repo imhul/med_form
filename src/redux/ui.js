@@ -36,7 +36,7 @@ export default (state = initState, action) => {
         case types.FORM_UPDATE:
             console.info("form reducer action.payload: ", action.payload);
             state.formData.filter(items => items.Id === action.payload.id).map(item => {
-                
+                // TODO: Пофиксить баги в работе радиогрупп, если их больше одной на странице!
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
                     item.Value = action.payload.value;
                     item.Checked = !action.payload.checked

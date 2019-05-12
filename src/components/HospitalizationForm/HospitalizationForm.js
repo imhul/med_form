@@ -86,7 +86,7 @@ class HospitalizationForm extends Component {
         const { uiActions, ui } = this.props;
         const currentPage = newData.filter(item => item.Page == ui.currentPage);
         console.info("currentPage - object for submit: ", currentPage);
-        // Тут будет функция отправки новых данных формы(newData), 
+        // TODO: Тут будет функция отправки новых данных формы(newData), 
         // внутри которой будет вызван action formSubmit(),
         // указывающий на изменение состояния isSubmitted,
         // в случае успешной отправки формы на сервер: 
@@ -138,7 +138,11 @@ class HospitalizationForm extends Component {
         const typeDetector = (inputData, isChild) => {
             switch (inputData.Type) {
                 case 'date':
-                    return dateInput(inputData);
+                    if(isChild) {
+                        return dateInput(inputData);
+                    } else {
+                        return null
+                    };
                 case 'text':
                     return textInput(inputData);
                 case 'textarea':
@@ -158,11 +162,11 @@ class HospitalizationForm extends Component {
                 //         </FormItem>
                 //     );
                 case 'checkbox':
-                if(isChild) {
-                    return checkboxInput(inputData);
-                } else {
-                    return null
-                };
+                    if(isChild) {
+                        return checkboxInput(inputData);
+                    } else {
+                        return null
+                    };
                     
                 case 'radio': 
                     return null;
@@ -175,36 +179,30 @@ class HospitalizationForm extends Component {
             return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
         // Inputs
-        const dateInput = (inputData) => {
+        const dateInput = (inputData, ) => {
             const DateInput = () => (
                 <DatePicker 
-                    key={inputData.Id}
-                    id={inputData.Id}
-                    showTime={inputData.Mode.ShowTime} 
-                    mode={inputData.Mode.Mode} 
-                    format={inputData.Mode.Format}
-                    placeholder={inputData.Placeholder} 
-                    locale={locale}
                     onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
                     onPanelChange={(date, mode) => uiActions.dateUpdate(date, mode, inputData.Id)}
+                    className={`child ${inputData.Mode.Mode}-picker`}
+                    placeholder={inputData.Placeholder}
+                    showTime={inputData.Mode.ShowTime}
+                    format={inputData.Mode.Format}
+                    mode={inputData.Mode.Mode}
                     value={inputData.Value}
+                    id={inputData.Id}
+                    locale={locale}
                 />
             );
             if(inputData.Owner === null) {
                 return (
                     <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                         {inputData.TextBefore}
-                        <DateInput 
-                            key={`${inputData.Id}_${inputData.Name}`} 
-                            className={`parent ${inputData.Mode.Mode}-picker`} />
+                        <DateInput key={`${inputData.Id}_${inputData.Name}`} />
                         {inputData.textAfter}
                     </FormItem>
                 )
-            } else if(inputData.Selected) {
-                return <DateInput 
-                    key={`${inputData.Id}_${inputData.Name}`} 
-                    className={`child ${inputData.Mode.Mode}-picker`} />
-            }  
+            } else return <DateInput key={`${inputData.Id}_${inputData.Name}`} />
         };
         const textInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
@@ -234,17 +232,20 @@ class HospitalizationForm extends Component {
                 <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                     {inputData.TextBefore}
                     <RadioGroup
+                        key={`${inputData.Id}_${inputData.Name}`}
                         defaultValue={null}
                         name={inputData.Name}
                         id={inputData.Id}
                         buttonStyle="solid"
+                        className={inputData.Owner === null ? "parent" : "child"}
                     >
                         {
                             child.map(subitem => (
                                 <RadioButton
-                                    key={subitem.Id} 
+                                    key={`${subitem.Id}_${subitem.Name}`}
                                     id={subitem.Id} 
                                     value={subitem.Value}
+                                    className="parent child"
                                 >
                                     { subitem.Value }
                                 </RadioButton>
@@ -263,23 +264,21 @@ class HospitalizationForm extends Component {
         const checkboxInput = (inputData) => {
             const child = ownerDetector(inputData.Id);
             return (
-                <div className="check-box-wrapper" key={inputData.Id}>
+                <div className="check-box-wrapper" >
                     <Checkbox 
                         checked={inputData.Checked} 
                         id={inputData.Id} 
                         value={inputData.Value}
                         name={inputData.Name}
+                        key={inputData.Id}
+                        className={inputData.Owner === null ? "parent" : "child"}
                     >
                         {inputData.Value}
                         {
                             inputData.Checked ? 
-                                child.map(subitem => {
-                                    console.log("checkboxInput subitem: ", subitem);
-                                    return typeDetector(subitem)
-                                }) : null
+                                child.map(subitem => typeDetector(subitem, true)) : null
                         }
                     </Checkbox>
-                    
                 </div>
             )
         };

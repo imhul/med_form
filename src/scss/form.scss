@@ -20,9 +20,13 @@
         font-size: 36px;
         color: #1890ff;
     }
-    // .check-box-wrapper {
-    //     display: inline;
-    // }
+    .parent {
+        .child {
+            &.year-picker {
+                margin-left: 25px;
+            }
+        }
+    }
 }
 
 // Confirm Popup
