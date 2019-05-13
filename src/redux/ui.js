@@ -34,9 +34,10 @@ export default (state = initState, action) => {
             };
 
         case types.FORM_UPDATE:
-            console.info("form reducer action.payload: ", action.payload);
-            state.formData.filter(items => items.Id === action.payload.id).map(item => {
-                // TODO: Пофиксить баги в работе радиогрупп, если их больше одной на странице!
+            const targets = state.formData.filter(items => items.Id === action.payload.id);
+            const untargets = state.formData.filter(items => items.Id !== action.payload.id);
+            const targetOwner = `${targets.map(item => item.Owner)[0]}`;
+            targets.map(item => {
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
                     item.Value = action.payload.value;
                     item.Checked = !action.payload.checked
@@ -45,13 +46,14 @@ export default (state = initState, action) => {
                     item.Checked = action.payload.checked
                 }
             });
-            state.formData.filter(items => (items.Id !== action.payload.id) && (items.Type === action.payload.type)).map(item => {
-                if(item.Type === 'radio') {
-                    item.Checked = false 
-                } else if(item.Type !== 'checkbox') {
-                    item.Checked = action.payload.checked
+            untargets.filter(items => items.Owner === targetOwner).map(item => {
+                    if(item.Type === 'radio') {
+                        item.Checked = false 
+                    } else if(item.Type !== 'checkbox') {
+                        item.Checked = action.payload.checked
+                    }
                 }
-            });
+            );
             return {
                 ...state,
             };

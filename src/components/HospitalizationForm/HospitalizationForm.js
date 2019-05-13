@@ -179,7 +179,7 @@ class HospitalizationForm extends Component {
             return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
         // Inputs
-        const dateInput = (inputData, ) => {
+        const dateInput = (inputData) => {
             const DateInput = () => (
                 <DatePicker 
                     onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
@@ -232,7 +232,7 @@ class HospitalizationForm extends Component {
                 <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                     {inputData.TextBefore}
                     <RadioGroup
-                        key={`${inputData.Id}_${inputData.Name}`}
+                        key={`${inputData.Name}_${inputData.Id}`}
                         defaultValue={null}
                         name={inputData.Name}
                         id={inputData.Id}
@@ -242,10 +242,11 @@ class HospitalizationForm extends Component {
                         {
                             child.map(subitem => (
                                 <RadioButton
-                                    key={`${subitem.Id}_${subitem.Name}`}
+                                    key={subitem.Id}
                                     id={subitem.Id} 
                                     value={subitem.Value}
                                     className="parent child"
+                                    title={subitem.Owner}
                                 >
                                     { subitem.Value }
                                 </RadioButton>
@@ -264,7 +265,7 @@ class HospitalizationForm extends Component {
         const checkboxInput = (inputData) => {
             const child = ownerDetector(inputData.Id);
             return (
-                <div className="check-box-wrapper" >
+                <div className="check-box-wrapper" key={`${inputData.Name}_${inputData.Id}`}>
                     <Checkbox 
                         checked={inputData.Checked} 
                         id={inputData.Id} 

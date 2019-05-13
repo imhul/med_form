@@ -15,6 +15,15 @@
             }
         }
     }
+    .ant-radio-group {
+        .ant-radio-button-wrapper {
+            &:last-child {
+                &:not(.check-box-wrapper) {
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+        }
+    }
     .form-icon {
         float: right;
         font-size: 36px;

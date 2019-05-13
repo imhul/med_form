@@ -9,15 +9,6 @@ export function loadData(payload) {
   }
 };
 
-export function checkboxUpdate(payload) {
-  return (dispatch) => {
-    dispatch({
-      type: types.CHECKBOX_UPDATE,
-      payload: payload.target,
-    })
-  }
-};
-
 export function dateUpdate(payload, mode, id) {
   return (dispatch) => {
     dispatch({
