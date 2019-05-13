@@ -33,11 +33,6 @@ export default (state = initState, action) => {
                 ...state,
             };
 
-        if(true)
-        {
-            
-        }
-
         case types.FORM_UPDATE:
             const targets = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);
