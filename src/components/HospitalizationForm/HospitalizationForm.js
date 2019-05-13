@@ -3,16 +3,13 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import moment from 'moment';
 import locale from 'antd/lib/date-picker/locale/uk_UA';
-import 'moment/locale/uk';
 import {
     Form,
     DatePicker,
     Checkbox,
     Radio,
     Input,
-    InputNumber,
     Switch,
     Button,
     Pagination,
@@ -21,13 +18,12 @@ import {
 } from 'antd';
 
 // Helpers
-import { requestBody, requestURL, requestHeader } from '../../helpers/requestBody';
+import { requestBody, requestURL, requestHeader } from '../../helpers';
 
 const { TextArea } = Input;
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
-const CheckboxGroup = Checkbox.Group;
 const editIcon = <Icon type="form" />;
 
 class HospitalizationForm extends Component {
@@ -35,7 +31,6 @@ class HospitalizationForm extends Component {
     loadAllData() {
 
         // Формируем список параметров для передачи на сервер
-        const mainRequestURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=GetOptions';
         const data = {
             'Hospital': 1,
             'Patient': 2190,
@@ -44,7 +39,7 @@ class HospitalizationForm extends Component {
         };
 
         // Отправляем данные на сервер
-        fetch(mainRequestURL, {
+        fetch(requestURL, {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -245,7 +240,7 @@ class HospitalizationForm extends Component {
                                     key={subitem.Id}
                                     id={subitem.Id} 
                                     value={subitem.Value}
-                                    className="parent child"
+                                    className={`${subitem.Owner === null ? "parent child" : "child"}`}
                                     title={subitem.Owner}
                                 >
                                     { subitem.Value }
@@ -266,6 +261,7 @@ class HospitalizationForm extends Component {
             const child = ownerDetector(inputData.Id);
             return (
                 <div className="check-box-wrapper" key={`${inputData.Name}_${inputData.Id}`}>
+                    {inputData.TextBefore}
                     <Checkbox 
                         checked={inputData.Checked} 
                         id={inputData.Id} 
@@ -280,6 +276,7 @@ class HospitalizationForm extends Component {
                                 child.map(subitem => typeDetector(subitem, true)) : null
                         }
                     </Checkbox>
+                    {inputData.textAfter}
                 </div>
             )
         };

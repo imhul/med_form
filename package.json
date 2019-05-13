@@ -6,8 +6,8 @@
   "email": "blashirk@gmail.com",
   "version": "1.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html --no-cache",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /"
+    "start": "cross-env NODE_ENV=development parcel index.html --no-cache --no-source-maps",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url /"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.4",

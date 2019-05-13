@@ -16,12 +16,8 @@
         }
     }
     .ant-radio-group {
-        .ant-radio-button-wrapper {
-            &:last-child {
-                &:not(.check-box-wrapper) {
-                    border-radius: 0 4px 4px 0;
-                }
-            }
+        label.ant-radio-button-wrapper {
+            border-radius: 4px;
         }
     }
     .form-icon {

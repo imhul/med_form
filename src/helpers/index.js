@@ -9,7 +9,7 @@ export const requestBody = (data) => {
     }
 };
 
-export const requestURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=EditReceptionValue';
+export const requestURL = 'https://med.uax.co/API.php?Thread=Call&Object=Hospitalization&Method=GetOptions';
 
 export const requestHeader = {
     "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
