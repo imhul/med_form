@@ -37,6 +37,9 @@ export default (state = initState, action) => {
             const targets = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);
             const targetOwner = `${targets.map(item => item.Owner)[0]}`;
+            console.info("FORM_UPDATE targets: ", targets);
+            console.info("FORM_UPDATE untargets: ", untargets);
+            console.info("FORM_UPDATE targetOwner: ", targetOwner);
             targets.map(item => {
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
                     item.Value = action.payload.value;
