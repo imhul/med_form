@@ -44,7 +44,7 @@ const testData = {
             "InLine": null,
             "Width": null,
             "Padding": null,
-            "Checked": true,
+            "Checked": false,
             "Type": "textarea",
             "Placeholder": null,
             "Mode": null,

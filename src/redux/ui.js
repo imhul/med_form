@@ -34,13 +34,10 @@ export default (state = initState, action) => {
             };
 
         case types.FORM_UPDATE:
-            const targets = state.formData.filter(items => items.Id === action.payload.id);
+            const target = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);
-            const targetOwner = `${targets.map(item => item.Owner)[0]}`;
-            console.info("FORM_UPDATE targets: ", targets);
-            console.info("FORM_UPDATE untargets: ", untargets);
-            console.info("FORM_UPDATE targetOwner: ", targetOwner);
-            targets.map(item => {
+            const targetOwner = `${target.map(item => item.Owner)[0]}`;
+            target.map(item => {
                 if(item.Type !== 'radio' && item.Type !== 'checkbox') {
                     item.Value = action.payload.value;
                     item.Checked = !action.payload.checked
@@ -49,14 +46,18 @@ export default (state = initState, action) => {
                     item.Checked = action.payload.checked
                 }
             });
-            untargets.filter(items => items.Owner === targetOwner).map(item => {
-                    if(item.Type === 'radio') {
-                        item.Checked = false 
-                    } else if(item.Type !== 'checkbox') {
-                        item.Checked = action.payload.checked
-                    }
+
+            untargets.filter(item => item.Owner === targetOwner).map(item => {
+                untargets.filter(items => items.Owner === item.Id).map(subitem => {
+                    subitem.Checked = false
+                });
+
+                if(item.Type === 'radio') {
+                    item.Checked = false 
+                } else if(item.Type !== 'checkbox') {
+                    item.Checked = action.payload.checked
                 }
-            );
+            });
             return {
                 ...state,
             };
