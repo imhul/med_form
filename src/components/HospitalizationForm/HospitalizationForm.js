@@ -32,10 +32,11 @@ class HospitalizationForm extends Component {
 
         // Формируем список параметров для передачи на сервер
         const data = {
-            'Hospital': 1,
-            'Patient': 2190,
-            'Hospitalization': 8,
-            'Reception': 6,
+            'Hospital': document.getElementById("Hospital").value,
+            'Patient': document.getElementById("Patient").value,
+            'Hospitalization': document.getElementById("Hospitalization").value,
+            'Reception': document.getElementById("Reception").value,
+            'Department': document.getElementById("Department").value,
         };
 
         // Отправляем данные на сервер
