@@ -103,7 +103,6 @@ class HospitalizationForm extends Component {
     };
 
     onNumberUpdate = (value, id) => {
-        console.info("onNumberUpdate event: ", value, id);
         this.props.uiActions.numberUpdate(value, id)
     };
 
