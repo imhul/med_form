@@ -10,6 +10,7 @@ import {
     Checkbox,
     Radio,
     Input,
+    InputNumber,
     Switch,
     Button,
     Pagination,
@@ -99,6 +100,11 @@ class HospitalizationForm extends Component {
         const { uiActions, ui } = this.props;
         uiActions.confirmPopupHide();
         uiActions.paginationUpdate(ui.nextPage);
+    };
+
+    onNumberUpdate = (value, id) => {
+        console.info("onNumberUpdate event: ", value, id);
+        this.props.uiActions.numberUpdate(value, id)
     };
 
     render() {
@@ -284,20 +290,21 @@ class HospitalizationForm extends Component {
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
-                <Input
+                {/* <Input
                     id={inputData.Id}
                     placeholder={inputData.Placeholder}
                     addonAfter={inputData.TextAfter}
                     addonBefore={editIcon}
-                />
-                {/* <InputNumber
+                /> */}
+                <InputNumber
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
-                    formatter={value => `${inputData.Mode.Prefix}${value}${inputData.Mode.Suffix}`.replace(inputData.Mode.Format, ',')}
-                    parser={value => value.replace(inputData.Mode.Prefix, '').replace(inputData.Mode.Suffix, '')}
+                    // formatter={value => `${value}`.replace(inputData.Mode.Format, ',')}
+                    // parser={value => value.replace(inputData.Mode.Prefix, '').replace(inputData.Mode.Suffix, '')}
                     step={inputData.Mode.Step}
                     min={inputData.Mode.Min} 
                     max={inputData.Mode.Max}
-                /> */}
+                    onChange={(value) => this.onNumberUpdate(value, inputData.Id)}
+                />
                 {inputData.textAfter}
             </FormItem>
         );

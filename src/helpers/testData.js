@@ -318,7 +318,11 @@ const testData = {
             "Checked": false,
             "Type": "number",
             "Placeholder": "Введіть температуру",
-            "Mode": null,
+            "Mode": {
+                "Spep": 0.1,
+                "Min": 14,
+                "Max": 45,
+            },
             "Page": "1"
         }
     ]

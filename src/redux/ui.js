@@ -33,6 +33,15 @@ export default (state = initState, action) => {
                 ...state,
             };
 
+        case types.NUMBER_UPDATE:
+            state.formData.filter(items => items.Id === action.meta).map(item => {
+                item.Value = action.payload;
+                item.Checked = !action.payload.checked
+            });
+            return {
+                ...state,
+            };
+
         case types.FORM_UPDATE:
             const target = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);

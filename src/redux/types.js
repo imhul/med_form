@@ -2,6 +2,7 @@ export const typesUI = {
 
     LOAD_DATA:            'LOAD_DATA',
     DATE_UPDATE:          'DATE_UPDATE',
+    NUMBER_UPDATE:        'NUMBER_UPDATE',
     CHECKBOX_UPDATE:      'CHECKBOX_UPDATE',
     TEXTAREA_UPDATE:      'TEXTAREA_UPDATE',
     INPUT_UPDATE:         'INPUT_UPDATE',

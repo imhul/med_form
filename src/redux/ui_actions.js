@@ -28,6 +28,16 @@ export function formUpdate(payload) {
   }
 };
 
+export function numberUpdate(payload, id) {
+  return (dispatch) => {
+    dispatch({
+      type: types.NUMBER_UPDATE,
+      payload: payload,
+      meta: id,
+    })
+  }
+};
+
 export function formSubmit() {
   return (dispatch) => {
     dispatch({
