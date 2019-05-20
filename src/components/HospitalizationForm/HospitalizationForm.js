@@ -145,11 +145,23 @@ class HospitalizationForm extends Component {
                         return null
                     };
                 case 'text':
-                    return textInput(inputData);
+                    if(isChild) {
+                        return textInput(inputData);
+                    } else {
+                        return null
+                    };
                 case 'textarea':
-                    return textareaInput(inputData);
+                    if(isChild) {
+                        return textareaInput(inputData);
+                    } else {
+                        return null
+                    };
                 case 'number':
-                    return numberInput(inputData);
+                    if(isChild) {
+                        return numberInput(inputData);
+                    } else {
+                        return null
+                    };
                 case 'switch':
                     return switchInput(inputData);
                 case 'parent-radio':
