@@ -222,7 +222,13 @@ class HospitalizationForm extends Component {
                         {inputData.textAfter}
                     </FormItem>
                 )
-            } else return <DateInput key={`${inputData.Id}_${inputData.Name}`} />
+            } else return (
+                <div key={`${inputData.Id}_${inputData.Name}`}>
+                    {inputData.TextBefore}
+                        <DateInput />
+                    {inputData.textAfter}
+                </div>
+            )
         };
         const textInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
