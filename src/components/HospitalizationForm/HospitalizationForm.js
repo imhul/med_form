@@ -299,9 +299,9 @@ class HospitalizationForm extends Component {
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
                     // formatter={value => `${value}`.replace(inputData.Mode.Format, ',')}
                     // parser={value => value.replace(inputData.Mode.Prefix, '').replace(inputData.Mode.Suffix, '')}
-                    step={inputData.Mode.Step}
-                    min={inputData.Mode.Min} 
-                    max={inputData.Mode.Max}
+                    step={+inputData.Mode.Step}
+                    min={+inputData.Mode.Min} 
+                    max={+inputData.Mode.Max}
                     onChange={(value) => this.onNumberUpdate(value, inputData.Id)}
                 />
                 {inputData.textAfter}
