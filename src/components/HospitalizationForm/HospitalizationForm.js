@@ -166,14 +166,8 @@ class HospitalizationForm extends Component {
                     return switchInput(inputData);
                 case 'parent-radio':
                     return radioGroup(inputData);
-                // case 'parent-checkbox':
-                //     return (
-                //         <FormItem label={inputData.Title} {...buttonItemLayout} key={inputData.Id}>
-                //             {inputData.TextBefore}
-                //             <CheckboxGroup>{checkboxGroup(inputData)}</CheckboxGroup>
-                //             {inputData.textAfter}
-                //         </FormItem>
-                //     );
+                case 'parent':
+                    return parentTitle(inputData);
                 case 'checkbox':
                     if(isChild) {
                         return checkboxInput(inputData);
@@ -301,16 +295,9 @@ class HospitalizationForm extends Component {
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                 {inputData.TextBefore}
-                {/* <Input
-                    id={inputData.Id}
-                    placeholder={inputData.Placeholder}
-                    addonAfter={inputData.TextAfter}
-                    addonBefore={editIcon}
-                /> */}
+
                 <InputNumber
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
-                    // formatter={value => `${value}`.replace(inputData.Mode.Format, ',')}
-                    // parser={value => value.replace(inputData.Mode.Prefix, '').replace(inputData.Mode.Suffix, '')}
                     step={+inputData.Mode.Step}
                     min={+inputData.Mode.Min} 
                     max={+inputData.Mode.Max}
