@@ -275,7 +275,7 @@ const testData = {
             "Id": "16",
             "Owner": "6",
             "Name": "PainCharacterOther",
-            "Title": null,
+            "Title": "Інший характер болю:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -284,7 +284,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інший характер болю",
             "Mode": null,
             "Page": "1"
         },
@@ -598,8 +598,8 @@ const testData = {
             "Id": "35",
             "Owner": "6",
             "Name": "СomplaintsPainProjection",
-            "Title": null,
-            "Value": "біль в проекції",
+            "Title": "Біль в проекції:",
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -607,7 +607,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Біль в проекції",
             "Mode": null,
             "Page": "1"
         },
@@ -853,7 +853,7 @@ const testData = {
             "Id": "50",
             "Owner": "6",
             "Name": "СomplaintsEdemaOther",
-            "Title": null,
+            "Title": "Інші набряки:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -938,7 +938,7 @@ const testData = {
             "Id": "55",
             "Owner": "6",
             "Name": "СomplaintsOtherText",
-            "Title": null,
+            "Title": "Інші скарги:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -947,7 +947,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інші скарги",
             "Mode": null,
             "Page": "1"
         },
@@ -1053,7 +1053,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Початкові симптоми",
             "Mode": null,
             "Page": "1"
         },
@@ -1197,7 +1197,7 @@ const testData = {
             "Id": "70",
             "Owner": "69",
             "Name": "CircumstancesDiseaseText",
-            "Title": null,
+            "Title": "Інше лікування:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -1206,7 +1206,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інше лікування",
             "Mode": null,
             "Page": "1"
         },
@@ -1231,7 +1231,7 @@ const testData = {
             "Id": "72",
             "Owner": "71",
             "Name": "AnmConsultDoctName",
-            "Title": null,
+            "Title": "Ім'я консультуючого лікаря:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -1240,7 +1240,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Ім'я консультуючого лікаря",
             "Mode": null,
             "Page": "1"
         },
@@ -1793,7 +1793,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "104",
@@ -1810,7 +1810,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "105",
@@ -1827,7 +1827,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "106",
@@ -1844,7 +1844,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "107",
@@ -1865,7 +1865,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "108",
@@ -1882,7 +1882,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "109",
@@ -1903,7 +1903,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "110",
@@ -1920,7 +1920,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "111",
@@ -1941,7 +1941,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "112",
@@ -1958,7 +1958,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "113",
@@ -1979,7 +1979,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "114",
@@ -1996,7 +1996,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "115",
@@ -2017,7 +2017,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "116",
@@ -2034,7 +2034,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "117",
@@ -2055,7 +2055,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "118",
@@ -2072,7 +2072,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "119",
@@ -2093,7 +2093,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "120",
@@ -2110,7 +2110,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "121",
@@ -2131,13 +2131,13 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "122",
             "Owner": "105",
             "Name": "OperationTreatTxt",
-            "Title": null,
+            "Title": "Інші оперативні втручання:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -2146,9 +2146,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інші оперативні втручання",
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "123",
@@ -2165,7 +2165,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "124",
@@ -2182,7 +2182,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "125",
@@ -2199,7 +2199,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "126",
@@ -2220,7 +2220,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "127",
@@ -2237,7 +2237,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "128",
@@ -2254,7 +2254,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "129",
@@ -2271,7 +2271,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "130",
@@ -2292,7 +2292,7 @@ const testData = {
                 "Mode": "year",
                 "Format": "YYYY"
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "131",
@@ -2309,7 +2309,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "132",
@@ -2326,7 +2326,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "133",
@@ -2343,7 +2343,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "134",
@@ -2360,7 +2360,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "135",
@@ -2377,13 +2377,13 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "136",
             "Owner": "135",
             "Name": "AllelgAnamnesisOther",
-            "Title": null,
+            "Title": "Інший тип алергологічного анамнезу:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -2392,9 +2392,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інший тип алергологічного анамнезу",
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "137",
@@ -2411,7 +2411,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "138",
@@ -2428,7 +2428,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "139",
@@ -2445,7 +2445,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "140",
@@ -2466,7 +2466,7 @@ const testData = {
                 "Mode": null,
                 "Format": null
             },
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "141",
@@ -2483,7 +2483,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "142",
@@ -2500,7 +2500,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "143",
@@ -2517,13 +2517,13 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "144",
             "Owner": "143",
             "Name": "HereditaryAnmText",
-            "Title": null,
+            "Title": "Інший тип спадкового анамнезу:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -2532,9 +2532,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інший тип спадкового анамнезу",
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "145",
@@ -2551,7 +2551,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "146",
@@ -2559,7 +2559,7 @@ const testData = {
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан задовільний",
-            "TextBefore": "Загальний стан",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2568,7 +2568,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "147",
@@ -2585,7 +2585,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "148",
@@ -2602,7 +2602,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "149",
@@ -2619,7 +2619,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "150",
@@ -2636,7 +2636,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "151",
@@ -2653,7 +2653,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "152",
@@ -2670,7 +2670,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "153",
@@ -2678,7 +2678,7 @@ const testData = {
             "Name": "Consciousness",
             "Title": null,
             "Value": "ясна",
-            "TextBefore": "Свідомість:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2687,7 +2687,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "154",
@@ -2695,7 +2695,7 @@ const testData = {
             "Name": "Consciousness",
             "Title": null,
             "Value": "оглушення",
-            "TextBefore": "Свідомість:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2704,7 +2704,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "155",
@@ -2721,7 +2721,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "156",
@@ -2738,7 +2738,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "157",
@@ -2755,7 +2755,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "158",
@@ -2772,7 +2772,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "159",
@@ -2789,7 +2789,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "160",
@@ -2806,7 +2806,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "161",
@@ -2823,7 +2823,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "162",
@@ -2840,7 +2840,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "163",
@@ -2848,7 +2848,7 @@ const testData = {
             "Name": "VerbalContact",
             "Title": null,
             "Value": "не доступний",
-            "TextBefore": "мовний контакт:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2857,7 +2857,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "164",
@@ -2874,7 +2874,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "165",
@@ -2891,7 +2891,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "166",
@@ -2908,7 +2908,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "167",
@@ -2916,7 +2916,7 @@ const testData = {
             "Name": "PositionInBed",
             "Title": null,
             "Value": "активне",
-            "TextBefore": "положення в ліжку:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2925,7 +2925,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "168",
@@ -2942,7 +2942,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "169",
@@ -2959,7 +2959,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "2"
         },
         {
             "Id": "170",
@@ -2976,7 +2976,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "171",
@@ -2984,7 +2984,7 @@ const testData = {
             "Name": "MotionActivity",
             "Title": null,
             "Value": "лежить у ліжку",
-            "TextBefore": "Рухова активність:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -2993,7 +2993,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "172",
@@ -3010,7 +3010,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "173",
@@ -3027,7 +3027,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "174",
@@ -3044,7 +3044,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "175",
@@ -3061,7 +3061,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "176",
@@ -3078,7 +3078,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "177",
@@ -3086,7 +3086,7 @@ const testData = {
             "Name": "SkinCondition",
             "Title": null,
             "Value": "шкіра тілесного кольору",
-            "TextBefore": "Стан шкірних покривів:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3095,7 +3095,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "178",
@@ -3112,7 +3112,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "179",
@@ -3129,7 +3129,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "180",
@@ -3146,7 +3146,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "181",
@@ -3163,7 +3163,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "182",
@@ -3180,7 +3180,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "183",
@@ -3188,7 +3188,7 @@ const testData = {
             "Name": "SkinTurgor",
             "Title": null,
             "Value": "звичайний",
-            "TextBefore": "Тургор шкіри:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3197,7 +3197,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "184",
@@ -3214,7 +3214,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "185",
@@ -3231,7 +3231,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "186",
@@ -3248,7 +3248,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "187",
@@ -3256,7 +3256,7 @@ const testData = {
             "Name": "SkinMoisture",
             "Title": null,
             "Value": "суха",
-            "TextBefore": "Вологість шкіри:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3265,7 +3265,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "188",
@@ -3282,7 +3282,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "189",
@@ -3299,7 +3299,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "190",
@@ -3316,7 +3316,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "191",
@@ -3333,7 +3333,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "192",
@@ -3341,7 +3341,7 @@ const testData = {
             "Name": "BodyConsitution",
             "Title": null,
             "Value": "Астенічна",
-            "TextBefore": "Тип тілобудови:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3350,7 +3350,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "193",
@@ -3367,7 +3367,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "194",
@@ -3384,7 +3384,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "195",
@@ -3401,7 +3401,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "196",
@@ -3409,7 +3409,7 @@ const testData = {
             "Name": "SubcutaneousTissue",
             "Title": null,
             "Value": "незначно розвинута",
-            "TextBefore": "Підшірно-жирова клітковина:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3418,7 +3418,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "197",
@@ -3435,7 +3435,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "198",
@@ -3452,7 +3452,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "199",
@@ -3469,7 +3469,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "200",
@@ -3486,7 +3486,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "201",
@@ -3503,7 +3503,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "202",
@@ -3520,7 +3520,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "203",
@@ -3537,7 +3537,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "204",
@@ -3554,7 +3554,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "205",
@@ -3562,7 +3562,7 @@ const testData = {
             "Name": "LymphNodes",
             "Title": null,
             "Value": "не пальпуються ",
-            "TextBefore": "Лімфатичні вузли:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3571,7 +3571,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "206",
@@ -3579,7 +3579,7 @@ const testData = {
             "Name": "LymphNodes",
             "Title": null,
             "Value": "пальпуються ",
-            "TextBefore": "Лімфатичні вузли:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3588,7 +3588,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "207",
@@ -3596,7 +3596,7 @@ const testData = {
             "Name": "LymphNodesSize",
             "Title": null,
             "Value": "не збільшені ",
-            "TextBefore": "Лімфатичні вузли:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3605,7 +3605,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "208",
@@ -3613,7 +3613,7 @@ const testData = {
             "Name": "LymphNodesSize",
             "Title": null,
             "Value": "збільшені ",
-            "TextBefore": "Лімфатичні вузли:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3622,7 +3622,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "209",
@@ -3639,7 +3639,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "210",
@@ -3656,7 +3656,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "211",
@@ -3664,7 +3664,7 @@ const testData = {
             "Name": "ChestForm",
             "Title": null,
             "Value": "симетрична",
-            "TextBefore": "Грудна клітка:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3673,7 +3673,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "212",
@@ -3681,7 +3681,7 @@ const testData = {
             "Name": "ChestForm",
             "Title": null,
             "Value": "асиметрична",
-            "TextBefore": "Грудна клітка:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3690,7 +3690,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "213",
@@ -3698,7 +3698,7 @@ const testData = {
             "Name": "ChestFormSide",
             "Title": null,
             "Value": "асиметрична справа",
-            "TextBefore": "Грудна клітка:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3707,7 +3707,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "214",
@@ -3715,7 +3715,7 @@ const testData = {
             "Name": "ChestFormSide",
             "Title": null,
             "Value": "асиметрична зліва",
-            "TextBefore": "Грудна клітка:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3724,7 +3724,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "215",
@@ -3741,7 +3741,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "3"
         },
         {
             "Id": "216",
@@ -3758,7 +3758,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "217",
@@ -3766,7 +3766,7 @@ const testData = {
             "Name": "ChestDeform",
             "Title": null,
             "Value": "відсутні",
-            "TextBefore": "Деформації:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3775,7 +3775,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "218",
@@ -3792,13 +3792,13 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "219",
             "Owner": "218",
             "Name": "ChestDeformLoc",
-            "Title": null,
+            "Title": "Інші деформації грудної клітки:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -3807,9 +3807,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інші деформації грудної клітки",
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "220",
@@ -3826,7 +3826,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "221",
@@ -3843,7 +3843,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "222",
@@ -3860,7 +3860,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "223",
@@ -3877,7 +3877,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "224",
@@ -3894,7 +3894,7 @@ const testData = {
             "Type": "checkbox",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "225",
@@ -3911,7 +3911,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "226",
@@ -3928,7 +3928,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "227",
@@ -3945,7 +3945,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "228",
@@ -3962,7 +3962,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "229",
@@ -3970,7 +3970,7 @@ const testData = {
             "Name": "RespirationRate",
             "Title": "Частота дихальних рухів:",
             "Value": null,
-            "TextBefore": "Частота дихальних рухів:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -3979,9 +3979,9 @@ const testData = {
             "Type": "number",
             "Placeholder": null,
             "Mode": {
-                "Step": "0.1",
-                "Min": "0",
-                "Max": "1000"
+                "Step": "1",
+                "Min": "1",
+                "Max": "100"
             },
             "Page": "1"
         },
@@ -4000,7 +4000,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "231",
@@ -4017,7 +4017,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "232",
@@ -4034,7 +4034,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "233",
@@ -4051,7 +4051,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "234",
@@ -4068,7 +4068,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "235",
@@ -4085,7 +4085,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "236",
@@ -4102,7 +4102,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "237",
@@ -4119,7 +4119,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "238",
@@ -4127,7 +4127,7 @@ const testData = {
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "везикулярне дихання",
-            "TextBefore": "Аускультативно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4136,7 +4136,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "239",
@@ -4144,7 +4144,7 @@ const testData = {
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "жорстке дихання",
-            "TextBefore": "Аускультативно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4153,7 +4153,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "240",
@@ -4161,7 +4161,7 @@ const testData = {
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "жорстке везикулярне дихання",
-            "TextBefore": "Аускультативно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4170,7 +4170,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "241",
@@ -4178,7 +4178,7 @@ const testData = {
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "бронхіальне дихання",
-            "TextBefore": "Аускультативно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4187,7 +4187,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "242",
@@ -4195,7 +4195,7 @@ const testData = {
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "амфоричне дихання",
-            "TextBefore": "Аускультативно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4204,7 +4204,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "243",
@@ -4221,7 +4221,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "244",
@@ -4238,7 +4238,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "245",
@@ -4255,7 +4255,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "246",
@@ -4272,7 +4272,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "247",
@@ -4289,7 +4289,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "248",
@@ -4306,7 +4306,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "249",
@@ -4323,7 +4323,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "250",
@@ -4331,7 +4331,7 @@ const testData = {
             "Name": "WheezingType",
             "Title": null,
             "Value": "сухі",
-            "TextBefore": "Тип хрипів:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4340,7 +4340,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "251",
@@ -4357,7 +4357,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "252",
@@ -4374,7 +4374,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "253",
@@ -4391,7 +4391,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "254",
@@ -4399,7 +4399,7 @@ const testData = {
             "Name": "WheezingType",
             "Title": null,
             "Value": "вологі",
-            "TextBefore": "Тип хрипів:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4408,7 +4408,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "255",
@@ -4425,7 +4425,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "256",
@@ -4442,7 +4442,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "257",
@@ -4459,7 +4459,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "258",
@@ -4467,7 +4467,7 @@ const testData = {
             "Name": "Crepitatio",
             "Title": null,
             "Value": "відсутня",
-            "TextBefore": "крепітація:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4476,7 +4476,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "259",
@@ -4493,7 +4493,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "260",
@@ -4510,7 +4510,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "261",
@@ -4518,7 +4518,7 @@ const testData = {
             "Name": "PleuralFrictionNoise",
             "Title": null,
             "Value": "відсутній",
-            "TextBefore": "Шум тертя плеври:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4527,7 +4527,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "262",
@@ -4544,7 +4544,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "263",
@@ -4561,7 +4561,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "264",
@@ -4578,7 +4578,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "265",
@@ -4595,7 +4595,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "266",
@@ -4612,7 +4612,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "267",
@@ -4629,7 +4629,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "268",
@@ -4646,7 +4646,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "269",
@@ -4663,7 +4663,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "270",
@@ -4680,7 +4680,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "271",
@@ -4697,7 +4697,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "272",
@@ -4714,7 +4714,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "4"
         },
         {
             "Id": "273",
@@ -4722,7 +4722,7 @@ const testData = {
             "Name": "CardivascularSystem",
             "Title": "Серцево-судинна система:",
             "Value": null,
-            "TextBefore": "Серцево- судинна система:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4731,7 +4731,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "274",
@@ -4748,7 +4748,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "275",
@@ -4756,7 +4756,7 @@ const testData = {
             "Name": "HeartTones",
             "Title": null,
             "Value": "ритмічні",
-            "TextBefore": "серцеві тони:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4765,7 +4765,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "276",
@@ -4782,7 +4782,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "277",
@@ -4799,7 +4799,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "278",
@@ -4816,7 +4816,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "279",
@@ -4833,7 +4833,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "280",
@@ -4850,7 +4850,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "281",
@@ -4867,7 +4867,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "282",
@@ -4875,7 +4875,7 @@ const testData = {
             "Name": "FirstToneChar",
             "Title": null,
             "Value": "нормальної звучності",
-            "TextBefore": "І тон:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4884,7 +4884,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "283",
@@ -4901,7 +4901,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "284",
@@ -4918,7 +4918,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "285",
@@ -4935,7 +4935,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "286",
@@ -4943,7 +4943,7 @@ const testData = {
             "Name": "SecondToneChar",
             "Title": null,
             "Value": "нормальної звучності",
-            "TextBefore": "І тон:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -4952,7 +4952,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "287",
@@ -4969,7 +4969,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "288",
@@ -4986,7 +4986,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "289",
@@ -4994,7 +4994,7 @@ const testData = {
             "Name": "Pulse",
             "Title": "Пульс:",
             "Value": null,
-            "TextBefore": "Пульс:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5003,7 +5003,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "290",
@@ -5020,7 +5020,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "291",
@@ -5028,7 +5028,7 @@ const testData = {
             "Name": "PulseRigidity",
             "Title": null,
             "Value": "задовільна",
-            "TextBefore": "Напруженість пульсу:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5037,7 +5037,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "292",
@@ -5054,7 +5054,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "293",
@@ -5071,7 +5071,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "294",
@@ -5088,7 +5088,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "295",
@@ -5096,7 +5096,7 @@ const testData = {
             "Name": "PulseFullness",
             "Title": null,
             "Value": "задовільна",
-            "TextBefore": "Наповненість:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5105,7 +5105,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "296",
@@ -5122,7 +5122,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "297",
@@ -5139,7 +5139,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "298",
@@ -5156,7 +5156,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "299",
@@ -5164,7 +5164,7 @@ const testData = {
             "Name": "FullnessSymmetry",
             "Title": null,
             "Value": "симетрична",
-            "TextBefore": "Симетричність наповненості:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5173,7 +5173,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "300",
@@ -5190,7 +5190,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "301",
@@ -5207,7 +5207,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "302",
@@ -5224,7 +5224,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "303",
@@ -5232,7 +5232,7 @@ const testData = {
             "Name": "PulseDeficiency",
             "Title": null,
             "Value": "наявний",
-            "TextBefore": "Дефіцит пульсу:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5241,7 +5241,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "304",
@@ -5258,7 +5258,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "5"
         },
         {
             "Id": "305",
@@ -5266,7 +5266,7 @@ const testData = {
             "Name": "Abdomen",
             "Title": "Живіт:",
             "Value": null,
-            "TextBefore": "Живіт:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5275,7 +5275,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "306",
@@ -5283,7 +5283,7 @@ const testData = {
             "Name": "AbdomenSize",
             "Title": null,
             "Value": "не збільшений",
-            "TextBefore": "Живіт:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5292,7 +5292,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "307",
@@ -5309,7 +5309,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "308",
@@ -5317,7 +5317,7 @@ const testData = {
             "Name": "AbdomenSize",
             "Title": null,
             "Value": "збільшений за рахунок асциту",
-            "TextBefore": "збільшений за рахунок асциту",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5326,7 +5326,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "309",
@@ -5343,7 +5343,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "310",
@@ -5351,7 +5351,7 @@ const testData = {
             "Name": "AbdomenSymmetry",
             "Title": null,
             "Value": "симетричний",
-            "TextBefore": "Симетричність:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5360,7 +5360,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "311",
@@ -5377,7 +5377,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "312",
@@ -5394,7 +5394,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "313",
@@ -5411,7 +5411,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "314",
@@ -5419,7 +5419,7 @@ const testData = {
             "Name": "AbdomenDeformation",
             "Title": null,
             "Value": "відсутня",
-            "TextBefore": "Деформація:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5428,7 +5428,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "315",
@@ -5445,7 +5445,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "316",
@@ -5462,7 +5462,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "317",
@@ -5479,7 +5479,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "318",
@@ -5496,7 +5496,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "319",
@@ -5513,7 +5513,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "320",
@@ -5530,11 +5530,11 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "321",
-            "Owner": null,
+            "Owner": "0",
             "Name": "AbdomenScrubs",
             "Title": "Рубці:",
             "Value": null,
@@ -5547,7 +5547,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "322",
@@ -5555,7 +5555,7 @@ const testData = {
             "Name": "AbdomenScrubs",
             "Title": null,
             "Value": "відсутні",
-            "TextBefore": "Рубці:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5564,7 +5564,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "323",
@@ -5581,7 +5581,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "324",
@@ -5602,7 +5602,7 @@ const testData = {
                 "Min": "0",
                 "Max": "1000"
             },
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "325",
@@ -5623,13 +5623,13 @@ const testData = {
                 "Min": "0",
                 "Max": "1000"
             },
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "326",
             "Owner": "323",
             "Name": "AbdomenScrubsLocalization",
-            "Title": null,
+            "Title": "Локалізація рубців:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -5638,9 +5638,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": "локалізація",
+            "Placeholder": "Локалізація рубців",
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "327",
@@ -5648,7 +5648,7 @@ const testData = {
             "Name": "AbdomenPalpation",
             "Title": "Пальпаторно:",
             "Value": null,
-            "TextBefore": "Пальпаторно:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5657,7 +5657,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "328",
@@ -5665,7 +5665,7 @@ const testData = {
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "не напружена",
-            "TextBefore": "Напруженість черевної стінки:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -5674,7 +5674,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "329",
@@ -5691,7 +5691,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "330",
@@ -5708,7 +5708,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "331",
@@ -5725,7 +5725,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "332",
@@ -5742,7 +5742,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "333",
@@ -5759,7 +5759,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "334",
@@ -5776,7 +5776,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "335",
@@ -5793,7 +5793,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "336",
@@ -5810,7 +5810,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "337",
@@ -5827,7 +5827,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "338",
@@ -5844,7 +5844,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "339",
@@ -5861,7 +5861,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "340",
@@ -5878,7 +5878,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "341",
@@ -5895,7 +5895,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "342",
@@ -5912,7 +5912,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "343",
@@ -5929,7 +5929,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "344",
@@ -5946,7 +5946,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "345",
@@ -5963,7 +5963,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "346",
@@ -5980,7 +5980,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "347",
@@ -5997,7 +5997,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "348",
@@ -6014,7 +6014,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "349",
@@ -6031,7 +6031,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "350",
@@ -6048,14 +6048,14 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "351",
             "Owner": "344",
             "Name": "PeritonealSymphtomsPosOther",
-            "Title": null,
-            "Value": "інші",
+            "Title": "Інші перитонеальні симптоми:",
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6063,9 +6063,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Інші перитонеальні симптоми",
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "352",
@@ -6082,7 +6082,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "353",
@@ -6099,7 +6099,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "354",
@@ -6116,7 +6116,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "355",
@@ -6133,7 +6133,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "356",
@@ -6150,7 +6150,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "357",
@@ -6167,7 +6167,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "358",
@@ -6184,7 +6184,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "359",
@@ -6201,7 +6201,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "360",
@@ -6218,7 +6218,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "361",
@@ -6226,7 +6226,7 @@ const testData = {
             "Name": "HeparPalpationEdge",
             "Title": null,
             "Value": "не виступає",
-            "TextBefore": "Край Печінки:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -6235,7 +6235,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "362",
@@ -6252,7 +6252,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "363",
@@ -6273,7 +6273,7 @@ const testData = {
                 "Min": "0",
                 "Max": "1000"
             },
-            "Page": "1"
+            "Page": "6"
         },
         {
             "Id": "364",
@@ -6290,7 +6290,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "365",
@@ -6298,7 +6298,7 @@ const testData = {
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "не пальпуються",
-            "TextBefore": "Нирки",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -6307,7 +6307,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "366",
@@ -6315,7 +6315,7 @@ const testData = {
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "негативний ",
-            "TextBefore": "Сиптом Пастернацького:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -6324,7 +6324,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "367",
@@ -6341,7 +6341,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "368",
@@ -6358,7 +6358,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "369",
@@ -6375,7 +6375,7 @@ const testData = {
             "Type": "parent-radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "370",
@@ -6383,7 +6383,7 @@ const testData = {
             "Name": "Urination",
             "Title": null,
             "Value": "не утруднений",
-            "TextBefore": "Сечопуск:",
+            "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
             "Width": null,
@@ -6392,7 +6392,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "371",
@@ -6409,7 +6409,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "372",
@@ -6426,7 +6426,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "373",
@@ -6443,7 +6443,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "374",
@@ -6460,7 +6460,7 @@ const testData = {
             "Type": "radio",
             "Placeholder": null,
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "375",
@@ -6475,9 +6475,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Status Localis",
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "376",
@@ -6492,9 +6492,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Попередній діагноз",
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "377",
@@ -6509,9 +6509,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Основний діагноз",
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "378",
@@ -6526,9 +6526,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Ускладення основного діагнозу",
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         },
         {
             "Id": "379",
@@ -6543,9 +6543,9 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "textarea",
-            "Placeholder": null,
+            "Placeholder": "Супутній діагноз",
             "Mode": null,
-            "Page": "1"
+            "Page": "7"
         }
     ]
 };
