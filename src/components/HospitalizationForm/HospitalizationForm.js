@@ -163,11 +163,15 @@ class HospitalizationForm extends Component {
                         return null
                     };
                 case 'switch':
-                    return switchInput(inputData);
+                    if(isChild) {
+                        return switchInput(inputData);
+                    } else {
+                        return null
+                    };
+                    
                 case 'parent-radio':
                     return radioGroup(inputData);
-                case 'parent':
-                    return parentTitle(inputData);
+                
                 case 'checkbox':
                     if(isChild) {
                         return checkboxInput(inputData);
@@ -175,10 +179,14 @@ class HospitalizationForm extends Component {
                         return null
                     };
                     
-                case 'radio': 
-                    return null;
+                case 'parent':
+                    if(isChild) {
+                        return parentTitle(inputData);
+                    } else {
+                        return null
+                    };
                 default:
-                    return console.warn(`unknown field type: ${inputData.Type}!`)
+                    return null
             }
         };
         // Filtering children by parent Id
