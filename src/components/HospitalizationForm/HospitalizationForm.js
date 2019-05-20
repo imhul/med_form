@@ -186,6 +186,11 @@ class HospitalizationForm extends Component {
             return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
         // Inputs
+        const parentTitle = (inputData) => (
+            <div className="parent-wrapper" key={inputData.Id}>
+                <h3 id={inputData.Id}>{inputData.Title}</h3>
+            </div>
+        );
         const dateInput = (inputData) => {
             const DateInput = () => (
                 <DatePicker 
@@ -352,7 +357,7 @@ class HospitalizationForm extends Component {
                     />
                     <Pagination
                         current={ currentPage }
-                        total={ formData.length }
+                        total={ formOptions.TotalParent }
                         pageSize={ 10 }
                         onChange={ this.onPaginationUpdate }
                         showTotal={ total => `Всього ${ total } питань` }
