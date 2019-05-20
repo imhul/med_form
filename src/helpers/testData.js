@@ -7,7 +7,8 @@ const testData = {
         "Module": 1,
         "Department": 1,
         "formTextBefore": "Текст на початку форми",
-        "formTextAfter": "Текст в кінці форми"
+        "formTextAfter": "Текст в кінці форми",
+        "TotalParent": 61
     },
     "Error": [
         {
@@ -19,6 +20,9 @@ const testData = {
         {
             "Id": "1",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Сomplaints",
             "Title": "33. Скарги пацієнта:",
             "Value": null,
@@ -30,12 +34,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "2",
             "Owner": "1",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Сomplaints",
             "Title": null,
             "Value": "Активно не пред'являє",
@@ -47,12 +53,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "3",
             "Owner": "1",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Сomplaints",
             "Title": null,
             "Value": "Збір скарг неможливий через кому",
@@ -64,12 +72,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "4",
             "Owner": "1",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "Сomplaints",
             "Title": null,
             "Value": "в зв'язку з мовними розладами збір скарг неможливий",
@@ -81,12 +91,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "5",
             "Owner": "1",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Сomplaints",
             "Title": null,
             "Value": "через тяжкість стану збір скарг неможливий",
@@ -98,12 +110,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "6",
             "Owner": "1",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Сomplaints",
             "Title": null,
             "Value": "скарги на біль",
@@ -115,12 +129,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "7",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "СomplaintsPain",
             "Title": "Тип болю:",
             "Value": null,
@@ -130,14 +146,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "8",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterPunctum",
             "Title": null,
             "Value": "біль колючого характеру",
@@ -149,12 +167,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "9",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "PainCharacterAching",
             "Title": null,
             "Value": "біль ниючого характеру",
@@ -166,12 +186,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "10",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterAcute",
             "Title": null,
             "Value": "біль гострого характеру",
@@ -183,12 +205,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "11",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "PainCharacterRemittens",
             "Title": null,
             "Value": "біль періодичного характеру",
@@ -200,12 +224,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "12",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterPermanent",
             "Title": null,
             "Value": "постійний біль",
@@ -217,12 +243,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "13",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterPulsus",
             "Title": null,
             "Value": "біль пульсуючого характеру",
@@ -234,12 +262,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "14",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "PainCharacterCutting",
             "Title": null,
             "Value": "біль ріжучого характеру",
@@ -251,12 +281,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "15",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterReminiscent",
             "Title": null,
             "Value": "переймоподібний біль",
@@ -268,12 +300,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "16",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PainCharacterOther",
             "Title": "Інший характер болю:",
             "Value": "",
@@ -283,14 +317,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інший характер болю",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "17",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PainLocalization",
             "Title": "Локалізація болю:",
             "Value": null,
@@ -300,14 +336,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "18",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Headache",
             "Title": null,
             "Value": "головний біль",
@@ -319,12 +357,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "19",
             "Owner": "18",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CompressionHeadache",
             "Title": null,
             "Value": "стискаючий головний біль",
@@ -336,12 +376,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "20",
             "Owner": "18",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulsatingHeadache",
             "Title": null,
             "Value": "пульсуючий головний біль",
@@ -353,12 +395,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "21",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "EpigastricPain",
             "Title": null,
             "Value": "біль в епігастрії",
@@ -370,12 +414,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "22",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MesogasterPain",
             "Title": null,
             "Value": "біль в мезогастрії",
@@ -387,12 +433,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "23",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HypogastricPain",
             "Title": null,
             "Value": "біль в гіпогастрії",
@@ -404,12 +452,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "24",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestPain",
             "Title": null,
             "Value": "біль у грудній клітці",
@@ -421,12 +471,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "25",
             "Owner": "24",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestLocalizationPain",
             "Title": null,
             "Value": "зліва",
@@ -438,12 +490,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "26",
             "Owner": "24",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestLocalizationPain",
             "Title": null,
             "Value": "справа",
@@ -455,12 +509,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "27",
             "Owner": "24",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestLocalizationPain",
             "Title": null,
             "Value": "біль за грудиною",
@@ -472,12 +528,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "28",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DuckAppendix",
             "Title": null,
             "Value": "в мечовидній ділянці",
@@ -489,12 +547,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "29",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HypochohdriumLeftPain",
             "Title": null,
             "Value": "біль в лівому підребер'ї",
@@ -506,12 +566,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "30",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HypochohdriumRightPain",
             "Title": null,
             "Value": "біль у правому підребер'ї",
@@ -523,12 +585,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "31",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsIliacPain",
             "Title": null,
             "Value": "біль у правій клубовій ділянці",
@@ -540,12 +604,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "32",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsIliacPain",
             "Title": null,
             "Value": "біль у лівій клубовій ділянці",
@@ -557,12 +623,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "33",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsUppExtrPain",
             "Title": null,
             "Value": "біль у верхніх кінцівках",
@@ -574,12 +642,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "34",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsLwrExtrPain",
             "Title": null,
             "Value": "біль у нижніх кінцівках",
@@ -591,12 +661,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "35",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsPainProjection",
             "Title": "Біль в проекції:",
             "Value": "",
@@ -606,14 +678,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Біль в проекції",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "36",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "СomplaintsOther",
             "Title": "Інші скарги:",
             "Value": null,
@@ -623,14 +697,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "37",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsBleeding",
             "Title": null,
             "Value": "кровотечу",
@@ -642,12 +718,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "38",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsGeneralWeakness",
             "Title": null,
             "Value": "загальну слабкість",
@@ -659,12 +737,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "39",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsVertigo",
             "Title": null,
             "Value": "запаморочення",
@@ -676,12 +756,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "40",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsDryMouth",
             "Title": null,
             "Value": "сухість в роті",
@@ -693,12 +775,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "41",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsNausea",
             "Title": null,
             "Value": "нудоту",
@@ -710,12 +794,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "42",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsBurping",
             "Title": null,
             "Value": "відрижку",
@@ -727,12 +813,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "43",
             "Owner": "42",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsBitBitterness",
             "Title": null,
             "Value": "відрижку гіркотою",
@@ -744,12 +832,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "44",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsShortnessBreath",
             "Title": null,
             "Value": "задишку",
@@ -761,12 +851,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "45",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsLackAir",
             "Title": null,
             "Value": "відчуття браку повітря",
@@ -778,12 +870,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "46",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsEdema",
             "Title": null,
             "Value": "набряк",
@@ -795,12 +889,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "47",
             "Owner": "46",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsEdemaLocalization",
             "Title": null,
             "Value": "набряк обличчя",
@@ -812,12 +908,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "48",
             "Owner": "46",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsEdemaLocalizationUpper",
             "Title": null,
             "Value": "набряк верхніх кінцівок",
@@ -829,12 +927,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "49",
             "Owner": "46",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsEdemaLocalizationLower",
             "Title": null,
             "Value": "набряк нижніх кнцівок",
@@ -846,12 +946,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "50",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsEdemaOther",
             "Title": "Інші набряки:",
             "Value": "",
@@ -861,14 +963,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інші набряки",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "51",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsAnasarca",
             "Title": null,
             "Value": "генералізований набряк",
@@ -880,12 +984,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "52",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsVomitusUno",
             "Title": null,
             "Value": "одноразову блювоту",
@@ -897,12 +1003,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "53",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsVomitusPermanent",
             "Title": null,
             "Value": "часту блювоту",
@@ -914,12 +1022,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "54",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsNumbness",
             "Title": null,
             "Value": "оніміння",
@@ -931,12 +1041,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "55",
             "Owner": "6",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "СomplaintsOtherText",
             "Title": "Інші скарги:",
             "Value": "",
@@ -946,14 +1058,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інші скарги",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "56",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Anamnesis",
             "Title": "34. Анамнез хвороби:",
             "Value": null,
@@ -963,14 +1077,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "57",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AnamnesisMorbi",
             "Title": "Дата початку захворювання:",
             "Value": null,
@@ -982,12 +1098,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "58",
             "Owner": "57",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DateOnsetMorbi",
             "Title": null,
             "Value": "дата невідома",
@@ -999,12 +1117,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "59",
             "Owner": "57",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DateOnsetMorbi",
             "Title": null,
             "Value": "дата початку захворювання",
@@ -1016,12 +1136,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "60",
             "Owner": "59",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DateOnsetMorbiYear",
             "Title": null,
             "Value": null,
@@ -1037,12 +1159,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "61",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DebutSymptoms",
             "Title": "Початкові симптоми:",
             "Value": "",
@@ -1054,12 +1178,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Початкові симптоми",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "62",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "CircumstancesDisease",
             "Title": "Обставини початку захворювання:",
             "Value": null,
@@ -1069,14 +1195,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "63",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CircumstancesDisease",
             "Title": "Лікування даного захворювання:",
             "Value": null,
@@ -1088,12 +1216,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "64",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CircumstancesDisease",
             "Title": null,
             "Value": "не відомо",
@@ -1105,12 +1235,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "65",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CircumstancesDisease",
             "Title": null,
             "Value": "не лікувався",
@@ -1122,12 +1254,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "66",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TreatmentthisDisease",
             "Title": null,
             "Value": "лікувався самостійно",
@@ -1139,12 +1273,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "67",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TreatmentthisDisease",
             "Title": null,
             "Value": "лікувався амбулаторно",
@@ -1156,12 +1292,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "68",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TreatmentthisDisease",
             "Title": null,
             "Value": "лікувався стаціонарно",
@@ -1173,12 +1311,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "69",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TreatmentthisDisease",
             "Title": null,
             "Value": "інше",
@@ -1190,12 +1330,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "70",
             "Owner": "69",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CircumstancesDiseaseText",
             "Title": "Інше лікування:",
             "Value": "",
@@ -1207,12 +1349,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Інше лікування",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "71",
             "Owner": "63",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AnmConsultDoct",
             "Title": null,
             "Value": "консультований лікарем",
@@ -1224,12 +1368,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "72",
             "Owner": "71",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AnmConsultDoctName",
             "Title": "Ім'я консультуючого лікаря:",
             "Value": "",
@@ -1239,14 +1385,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Ім'я консультуючого лікаря",
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "73",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AnamnesisVitae",
             "Title": "35. Анамнез життя:",
             "Value": null,
@@ -1258,12 +1406,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "74",
             "Owner": "73",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AnamnesisVitae",
             "Title": null,
             "Value": "Анамнез зібраний зі слів, додаткової медичної документації не надано.",
@@ -1275,12 +1425,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "75",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "BadDenies",
             "Title": "Шкідливі звички:",
             "Value": null,
@@ -1290,14 +1442,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "parent-radio",
+            "Type": "parent",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "76",
             "Owner": "75",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SmokingDenies",
             "Title": null,
             "Value": "паління",
@@ -1309,12 +1463,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "77",
             "Owner": "75",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlcoholDenies",
             "Title": null,
             "Value": "алкогольна залежність",
@@ -1326,12 +1482,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "78",
             "Owner": "75",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DrugsDenies",
             "Title": null,
             "Value": "прийом наркотичних або токсичних речовин",
@@ -1343,12 +1501,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "79",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Tuberculosis",
             "Title": "Туберкульоз:",
             "Value": null,
@@ -1360,12 +1520,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "80",
             "Owner": "79",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Tuberculosis",
             "Title": null,
             "Value": "заперечує",
@@ -1377,12 +1539,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "81",
             "Owner": "79",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Tuberculosis",
             "Title": null,
             "Value": "переніс туберкульоз",
@@ -1394,12 +1558,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "82",
             "Owner": "81",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TuberculosisYear",
             "Title": null,
             "Value": null,
@@ -1415,12 +1581,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "83",
             "Owner": "0",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "SexualTransmitDisease",
             "Title": "Венеричні захворювання:",
             "Value": null,
@@ -1432,12 +1600,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "84",
             "Owner": "83",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SexualTransmitDisease",
             "Title": null,
             "Value": "заперечує",
@@ -1449,12 +1619,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "85",
             "Owner": "83",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SexualTransmitDisease",
             "Title": null,
             "Value": "переніс",
@@ -1466,12 +1638,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "86",
             "Owner": "85",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SexualTransmitDiseaseYear",
             "Title": null,
             "Value": null,
@@ -1487,12 +1661,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "87",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ViralHepatitis",
             "Title": "Вірусний гепатит:",
             "Value": null,
@@ -1504,12 +1680,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "88",
             "Owner": "87",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitis",
             "Title": null,
             "Value": "заперечує",
@@ -1521,12 +1699,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "89",
             "Owner": "87",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitis",
             "Title": null,
             "Value": "переніс",
@@ -1538,12 +1718,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "90",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisA",
             "Title": null,
             "Value": "заперечує",
@@ -1555,12 +1737,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "91",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisA",
             "Title": null,
             "Value": "переніс",
@@ -1572,12 +1756,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "92",
             "Owner": "91",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisAYear",
             "Title": null,
             "Value": null,
@@ -1593,12 +1779,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "93",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisB",
             "Title": null,
             "Value": "заперечує",
@@ -1610,12 +1798,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "94",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisB",
             "Title": null,
             "Value": "переніс",
@@ -1627,12 +1817,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "95",
             "Owner": "94",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "ViralHepatitisBYear",
             "Title": null,
             "Value": null,
@@ -1648,12 +1840,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "96",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisC",
             "Title": null,
             "Value": "заперечує",
@@ -1665,12 +1859,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "97",
             "Owner": "89",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisC",
             "Title": null,
             "Value": "переніс",
@@ -1682,12 +1878,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "98",
             "Owner": "97",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ViralHepatitisCYear",
             "Title": null,
             "Value": null,
@@ -1703,12 +1901,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "99",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "HIV",
             "Title": "ВІЛ/СНІД:",
             "Value": null,
@@ -1720,12 +1920,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "100",
             "Owner": "99",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HIV",
             "Title": null,
             "Value": "заперечує",
@@ -1737,12 +1939,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "101",
             "Owner": "99",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HIV",
             "Title": null,
             "Value": "переніс",
@@ -1754,12 +1958,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "1"
+            "Mode": null
         },
         {
             "Id": "102",
             "Owner": "101",
+            "Page": "1",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HIVYear",
             "Title": null,
             "Value": null,
@@ -1775,12 +1981,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "103",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "OperationTreat",
             "Title": "Перенесені оперативні втручання:",
             "Value": null,
@@ -1792,12 +2000,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "104",
             "Owner": "103",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OperationTreat",
             "Title": null,
             "Value": "заперечує",
@@ -1809,12 +2019,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "105",
             "Owner": "103",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OperationTreat",
             "Title": null,
             "Value": "переніс",
@@ -1826,12 +2038,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "106",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Hernioplasty",
             "Title": null,
             "Value": "герніопластика",
@@ -1843,12 +2057,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "107",
             "Owner": "106",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HernioplastyYear",
             "Title": null,
             "Value": null,
@@ -1864,12 +2080,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "108",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Mastectomy",
             "Title": null,
             "Value": "мастектомія у",
@@ -1881,12 +2099,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "109",
             "Owner": "108",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MastectomyYear",
             "Title": null,
             "Value": null,
@@ -1902,12 +2122,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "110",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Prostatectomy",
             "Title": null,
             "Value": "простатектомія у",
@@ -1919,12 +2141,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "111",
             "Owner": "110",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ProstatectomyYear",
             "Title": null,
             "Value": null,
@@ -1940,12 +2164,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "112",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HastrResection",
             "Title": null,
             "Value": "резекція шлунка у",
@@ -1957,12 +2183,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "113",
             "Owner": "112",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HastrResectionYear",
             "Title": null,
             "Value": null,
@@ -1978,12 +2206,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "114",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Hasrtectomy",
             "Title": null,
             "Value": "гастректомія у",
@@ -1995,12 +2225,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "115",
             "Owner": "114",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HasrtectomyYear",
             "Title": null,
             "Value": null,
@@ -2016,12 +2248,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "116",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OperationTreatPR",
             "Title": null,
             "Value": "резекція молочної залози",
@@ -2033,12 +2267,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "117",
             "Owner": "116",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OperationTreatPRYear",
             "Title": null,
             "Value": null,
@@ -2054,12 +2290,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "118",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Cholecystectomy",
             "Title": null,
             "Value": "холецистектомія",
@@ -2071,12 +2309,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "119",
             "Owner": "118",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "CholecystectomyYear",
             "Title": null,
             "Value": null,
@@ -2092,12 +2332,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "120",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Apendectomy",
             "Title": null,
             "Value": "апендектомія",
@@ -2109,12 +2351,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "121",
             "Owner": "120",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ApendectomyYear",
             "Title": null,
             "Value": null,
@@ -2130,12 +2374,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "122",
             "Owner": "105",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OperationTreatTxt",
             "Title": "Інші оперативні втручання:",
             "Value": "",
@@ -2147,12 +2393,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Інші оперативні втручання",
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "123",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "TransfusionAnamnesis",
             "Title": "Трансфузіологічний анамнез:",
             "Value": null,
@@ -2164,12 +2412,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "124",
             "Owner": "123",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TransfusionAnamnesis",
             "Title": null,
             "Value": "не обтяжений ",
@@ -2181,12 +2431,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "125",
             "Owner": "123",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TransfusionAnamnesis",
             "Title": null,
             "Value": "переніс у",
@@ -2198,12 +2450,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "126",
             "Owner": "125",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TransfusionAnamnesisYear",
             "Title": null,
             "Value": null,
@@ -2219,12 +2473,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "127",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "OncologicalAnm",
             "Title": "Онкологічні захворювання:",
             "Value": null,
@@ -2236,12 +2492,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "128",
             "Owner": "127",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OncologicalAnm",
             "Title": null,
             "Value": "заперечує",
@@ -2253,12 +2511,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "129",
             "Owner": "127",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OncologicalAnm",
             "Title": null,
             "Value": "перененесені",
@@ -2270,12 +2530,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "130",
             "Owner": "129",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "OncologicalAnmYear",
             "Title": null,
             "Value": null,
@@ -2291,12 +2553,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": "year",
                 "Format": "YYYY"
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "131",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AllelgAnamnesis",
             "Title": "Алергологічний анамнез:",
             "Value": null,
@@ -2308,12 +2572,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "132",
             "Owner": "131",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AllelgAnamnesis",
             "Title": null,
             "Value": "не обтяжений ",
@@ -2325,12 +2591,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "133",
             "Owner": "131",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AllelgAnamnesis",
             "Title": null,
             "Value": "продукти харчування ",
@@ -2342,12 +2610,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "134",
             "Owner": "131",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AllelgAnamnesis",
             "Title": null,
             "Value": "не відомо",
@@ -2359,12 +2629,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "135",
             "Owner": "131",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AllelgAnamnesis",
             "Title": null,
             "Value": "інший",
@@ -2376,12 +2648,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "136",
             "Owner": "135",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AllelgAnamnesisOther",
             "Title": "Інший тип алергологічного анамнезу:",
             "Value": "",
@@ -2391,14 +2665,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інший тип алергологічного анамнезу",
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "137",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "TravmAnamn",
             "Title": "Травми:",
             "Value": null,
@@ -2410,12 +2686,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "138",
             "Owner": "137",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TravmAnamn",
             "Title": null,
             "Value": "не обтяжений ",
@@ -2427,12 +2705,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "139",
             "Owner": "137",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TravmAnamn",
             "Title": null,
             "Value": "переніс травму",
@@ -2444,12 +2724,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "140",
             "Owner": "139",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": false,
             "Name": "TravmAnamnYear",
             "Title": null,
             "Value": null,
@@ -2465,12 +2747,14 @@ const testData = {
                 "ShowTime": false,
                 "Mode": null,
                 "Format": null
-            },
-            "Page": "2"
+            }
         },
         {
             "Id": "141",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "HereditaryAnm",
             "Title": "Спадковий анамнез:",
             "Value": null,
@@ -2482,12 +2766,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "142",
             "Owner": "141",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HereditaryAnm",
             "Title": null,
             "Value": "не обтяжений ",
@@ -2499,12 +2785,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "143",
             "Owner": "141",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HereditaryAnm",
             "Title": null,
             "Value": "обтяжений",
@@ -2516,12 +2804,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "144",
             "Owner": "143",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HereditaryAnmText",
             "Title": "Інший тип спадкового анамнезу:",
             "Value": "",
@@ -2531,14 +2821,16 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інший тип спадкового анамнезу",
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "145",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ObjectiveExamData",
             "Title": "36. Об’єктивний стан хворого:",
             "Value": null,
@@ -2550,12 +2842,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "146",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан задовільний",
@@ -2567,12 +2861,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "147",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан ближче до задовільного",
@@ -2584,12 +2880,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "148",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан середнього ступеня тяжкості",
@@ -2601,12 +2899,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "149",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан важкий",
@@ -2618,12 +2918,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "150",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан ближче до важкого",
@@ -2635,12 +2937,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "151",
             "Owner": "145",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GeneralCondition",
             "Title": null,
             "Value": "Загальний стан вкрай важкий",
@@ -2652,12 +2956,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "152",
             "Owner": "0",
+            "Page": "2",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Consciousness",
             "Title": "Свідомість:",
             "Value": null,
@@ -2669,12 +2975,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "153",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "ясна",
@@ -2686,12 +2994,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "154",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "оглушення",
@@ -2703,12 +3013,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "155",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "сопор",
@@ -2720,12 +3032,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "156",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "кома І",
@@ -2737,12 +3051,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "157",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "кома І-ІІ",
@@ -2754,12 +3070,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "158",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "кома ІІ",
@@ -2771,12 +3089,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "159",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "кома ІІ-ІІІ",
@@ -2788,12 +3108,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "160",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Consciousness",
             "Title": null,
             "Value": "кома ІІІ",
@@ -2805,12 +3127,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "161",
             "Owner": "152",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "GCS",
             "Title": "За шкалою Глазго:",
             "Value": null,
@@ -2822,12 +3146,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "162",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "VerbalContact",
             "Title": "Доступність мовного контакту:",
             "Value": null,
@@ -2839,12 +3165,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "163",
             "Owner": "162",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "VerbalContact",
             "Title": null,
             "Value": "не доступний",
@@ -2856,12 +3184,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "164",
             "Owner": "162",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "VerbalContact",
             "Title": null,
             "Value": "відповідає коротко",
@@ -2873,12 +3203,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "165",
             "Owner": "162",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "VerbalContact",
             "Title": null,
             "Value": "відповідає розгорнуто",
@@ -2890,12 +3222,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "166",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PositionInBed",
             "Title": "Положення в ліжку:",
             "Value": null,
@@ -2907,12 +3241,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "167",
             "Owner": "166",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PositionInBed",
             "Title": null,
             "Value": "активне",
@@ -2924,12 +3260,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "168",
             "Owner": "166",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PositionInBed",
             "Title": null,
             "Value": "пасивне ",
@@ -2941,12 +3279,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "169",
             "Owner": "166",
+            "Page": "2",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PositionInBed",
             "Title": null,
             "Value": "вимушене",
@@ -2958,12 +3298,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "2"
+            "Mode": null
         },
         {
             "Id": "170",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "MotionActivity",
             "Title": "Рухова активність:",
             "Value": null,
@@ -2975,12 +3317,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "171",
             "Owner": "170",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MotionActivity",
             "Title": null,
             "Value": "лежить у ліжку",
@@ -2992,12 +3336,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "172",
             "Owner": "170",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MotionActivity",
             "Title": null,
             "Value": "самостійно сидить",
@@ -3009,12 +3355,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "173",
             "Owner": "170",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MotionActivity",
             "Title": null,
             "Value": "сидить з підтримкою",
@@ -3026,12 +3374,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "174",
             "Owner": "170",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MotionActivity",
             "Title": null,
             "Value": "ходить зі сторонньою допомогою",
@@ -3043,12 +3393,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "175",
             "Owner": "170",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "MotionActivity",
             "Title": null,
             "Value": "самостійно ходить",
@@ -3060,12 +3412,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "176",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "SkinCondition",
             "Title": "Шкіра:",
             "Value": null,
@@ -3077,12 +3431,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "177",
             "Owner": "176",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinCondition",
             "Title": null,
             "Value": "шкіра тілесного кольору",
@@ -3094,12 +3450,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "178",
             "Owner": "176",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinCondition",
             "Title": null,
             "Value": "блідо-рожева",
@@ -3111,12 +3469,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "179",
             "Owner": "176",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinCondition",
             "Title": null,
             "Value": "бліда",
@@ -3128,12 +3488,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "180",
             "Owner": "176",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinCondition",
             "Title": null,
             "Value": "іктерична",
@@ -3145,12 +3507,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "181",
             "Owner": "176",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinCondition",
             "Title": null,
             "Value": "ціанотична",
@@ -3162,12 +3526,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "182",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "SkinTurgor",
             "Title": "Тугор шкіри:",
             "Value": null,
@@ -3179,12 +3545,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "183",
             "Owner": "182",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinTurgor",
             "Title": null,
             "Value": "звичайний",
@@ -3196,12 +3564,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "184",
             "Owner": "182",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinTurgor",
             "Title": null,
             "Value": "знижений",
@@ -3213,12 +3583,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "185",
             "Owner": "182",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinTurgor",
             "Title": null,
             "Value": "підвищений",
@@ -3230,12 +3602,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "186",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "SkinMoisture",
             "Title": "Вологість шкіри:",
             "Value": null,
@@ -3247,12 +3621,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "187",
             "Owner": "186",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinMoisture",
             "Title": null,
             "Value": "суха",
@@ -3264,12 +3640,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "188",
             "Owner": "186",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinMoisture",
             "Title": null,
             "Value": "волога",
@@ -3281,12 +3659,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "189",
             "Owner": "188",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinMoisture",
             "Title": null,
             "Value": "нормальна вологість",
@@ -3298,12 +3678,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "190",
             "Owner": "188",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SkinMoisture",
             "Title": null,
             "Value": "підвищена вологість",
@@ -3315,12 +3697,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "191",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "BodyConsitution",
             "Title": "Конституція тіла:",
             "Value": null,
@@ -3332,12 +3716,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "192",
             "Owner": "191",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BodyConsitution",
             "Title": null,
             "Value": "Астенічна",
@@ -3349,12 +3735,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "193",
             "Owner": "191",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BodyConsitution",
             "Title": null,
             "Value": "Нормостенічна",
@@ -3366,12 +3754,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "194",
             "Owner": "191",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BodyConsitution",
             "Title": null,
             "Value": "Гіперстенічна",
@@ -3383,12 +3773,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "195",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "SubcutaneousTissue",
             "Title": "Ступінь розвитку підшкірно-жирової клітковини:",
             "Value": null,
@@ -3400,12 +3792,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "196",
             "Owner": "195",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SubcutaneousTissue",
             "Title": null,
             "Value": "незначно розвинута",
@@ -3417,12 +3811,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "197",
             "Owner": "195",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SubcutaneousTissue",
             "Title": null,
             "Value": "помірно розвинута",
@@ -3434,12 +3830,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "198",
             "Owner": "195",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SubcutaneousTissue",
             "Title": null,
             "Value": "надмірно розвинута",
@@ -3451,12 +3849,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "199",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Edema",
             "Title": "Набряк:",
             "Value": "набряк",
@@ -3468,12 +3868,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "200",
             "Owner": "199",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "EdemaLocalizationHead",
             "Title": null,
             "Value": "набряк обличчя",
@@ -3485,12 +3887,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "201",
             "Owner": "199",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "EdemaLocalizationUppExtr",
             "Title": null,
             "Value": "набряк верхніх кінцівок",
@@ -3502,12 +3906,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "202",
             "Owner": "199",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "EdemaLocalizationLwrExtr",
             "Title": null,
             "Value": "набряк нижніх кнцівок",
@@ -3519,12 +3925,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "203",
             "Owner": "199",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Anasarca ",
             "Title": null,
             "Value": "генералізований набряк",
@@ -3536,12 +3944,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "204",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "LymphNodes",
             "Title": "Лімфатичні вузли:",
             "Value": null,
@@ -3553,12 +3963,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "205",
             "Owner": "204",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "LymphNodes",
             "Title": null,
             "Value": "не пальпуються ",
@@ -3570,12 +3982,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "206",
             "Owner": "204",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "LymphNodes",
             "Title": null,
             "Value": "пальпуються ",
@@ -3587,12 +4001,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "207",
             "Owner": "206",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "LymphNodesSize",
             "Title": null,
             "Value": "не збільшені ",
@@ -3604,12 +4020,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "208",
             "Owner": "206",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "LymphNodesSize",
             "Title": null,
             "Value": "збільшені ",
@@ -3621,12 +4039,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "209",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "RespiratorySystem",
             "Title": "Дихальна система:",
             "Value": null,
@@ -3638,12 +4058,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "210",
             "Owner": "0",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestForm",
             "Title": "Грудна клітка:",
             "Value": null,
@@ -3655,12 +4077,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "211",
             "Owner": "210",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestForm",
             "Title": null,
             "Value": "симетрична",
@@ -3672,12 +4096,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "212",
             "Owner": "210",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestForm",
             "Title": null,
             "Value": "асиметрична",
@@ -3689,12 +4115,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "213",
             "Owner": "212",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestFormSide",
             "Title": null,
             "Value": "асиметрична справа",
@@ -3706,12 +4134,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "214",
             "Owner": "212",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestFormSide",
             "Title": null,
             "Value": "асиметрична зліва",
@@ -3723,12 +4153,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "215",
             "Owner": "212",
+            "Page": "3",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestFormSide",
             "Title": null,
             "Value": "асиметрична з обох сторін",
@@ -3740,12 +4172,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "3"
+            "Mode": null
         },
         {
             "Id": "216",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ChestDeform",
             "Title": "Деформації грудної клітки:",
             "Value": null,
@@ -3757,12 +4191,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "217",
             "Owner": "216",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestDeform",
             "Title": null,
             "Value": "відсутні",
@@ -3774,12 +4210,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "218",
             "Owner": "216",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestDeform",
             "Title": null,
             "Value": "наявні",
@@ -3791,12 +4229,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "219",
             "Owner": "218",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestDeformLoc",
             "Title": "Інші деформації грудної клітки:",
             "Value": "",
@@ -3808,12 +4248,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Інші деформації грудної клітки",
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "220",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ChestBreathing",
             "Title": "Симетричність дихання:",
             "Value": null,
@@ -3825,12 +4267,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "221",
             "Owner": "220",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestBreathing",
             "Title": null,
             "Value": "симетричне",
@@ -3842,12 +4286,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "222",
             "Owner": "220",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestBreathing",
             "Title": null,
             "Value": "асиметричне",
@@ -3859,12 +4305,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "223",
             "Owner": "222",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestBreathingSym",
             "Title": null,
             "Value": "асиметричне справа",
@@ -3876,12 +4324,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "224",
             "Owner": "222",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ChestBreathingSym",
             "Title": null,
             "Value": "асиметричне зліва",
@@ -3893,12 +4343,14 @@ const testData = {
             "Checked": false,
             "Type": "checkbox",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "225",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "BreathingType",
             "Title": "Тип дихання:",
             "Value": null,
@@ -3910,12 +4362,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "226",
             "Owner": "225",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingType",
             "Title": null,
             "Value": "змішаний",
@@ -3927,12 +4381,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "227",
             "Owner": "225",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingType",
             "Title": null,
             "Value": "грудний",
@@ -3944,12 +4400,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "228",
             "Owner": "225",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingType",
             "Title": null,
             "Value": "черевний",
@@ -3961,12 +4419,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "229",
             "Owner": "225",
+            "Page": "1",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "RespirationRate",
             "Title": "Частота дихальних рухів:",
             "Value": null,
@@ -3982,12 +4442,14 @@ const testData = {
                 "Step": "1",
                 "Min": "1",
                 "Max": "100"
-            },
-            "Page": "1"
+            }
         },
         {
             "Id": "230",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": "Альтернуюче дихання:",
             "Value": null,
@@ -3999,12 +4461,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "231",
             "Owner": "230",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "ні",
@@ -4016,12 +4480,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "232",
             "Owner": "230",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "так",
@@ -4033,12 +4499,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "233",
             "Owner": "232",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "Куссмауля",
@@ -4050,12 +4518,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "234",
             "Owner": "232",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "Біота",
@@ -4067,12 +4537,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "235",
             "Owner": "232",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "Чейн-Стокса",
@@ -4084,12 +4556,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "236",
             "Owner": "232",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AlterBreathing",
             "Title": null,
             "Value": "Грокко-Фругоні",
@@ -4101,12 +4575,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "237",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "BreathingAuscultating",
             "Title": "Аускультативно:",
             "Value": null,
@@ -4118,12 +4594,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "238",
             "Owner": "237",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "везикулярне дихання",
@@ -4135,12 +4613,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "239",
             "Owner": "237",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "жорстке дихання",
@@ -4152,12 +4632,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "240",
             "Owner": "237",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "жорстке везикулярне дихання",
@@ -4169,12 +4651,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "241",
             "Owner": "237",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "бронхіальне дихання",
@@ -4186,12 +4670,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "242",
             "Owner": "237",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "BreathingAuscultating",
             "Title": null,
             "Value": "амфоричне дихання",
@@ -4203,12 +4689,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "243",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AdditionalBreathingNoises",
             "Title": "додаткові дихальні шуми:",
             "Value": null,
@@ -4220,12 +4708,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "244",
             "Owner": "243",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AdditionalBreathingNoises",
             "Title": null,
             "Value": "відсутні",
@@ -4237,12 +4727,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "245",
             "Owner": "243",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AdditionalBreathingNoises",
             "Title": null,
             "Value": "наявні",
@@ -4254,12 +4746,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "246",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Wheezing",
             "Title": "Хрипи:",
             "Value": null,
@@ -4271,12 +4765,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "247",
             "Owner": "246",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Wheezing",
             "Title": null,
             "Value": "відсутні",
@@ -4288,12 +4784,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "248",
             "Owner": "246",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Wheezing",
             "Title": null,
             "Value": "наявні",
@@ -4305,12 +4803,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "249",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "WheezingType",
             "Title": "Тип хрипів:",
             "Value": null,
@@ -4322,12 +4822,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "250",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "сухі",
@@ -4339,12 +4841,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "251",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "свистячі",
@@ -4356,12 +4860,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "252",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "тріскучі",
@@ -4373,12 +4879,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "253",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "дзижчачі",
@@ -4390,12 +4898,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "254",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "вологі",
@@ -4407,12 +4917,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "255",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "дрібнопухирчасті",
@@ -4424,12 +4936,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "256",
             "Owner": "248",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "WheezingType",
             "Title": null,
             "Value": "середньопухирчасті",
@@ -4441,12 +4955,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "257",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Crepitatio",
             "Title": "Крепітація:",
             "Value": null,
@@ -4458,12 +4974,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "258",
             "Owner": "257",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Crepitatio",
             "Title": null,
             "Value": "відсутня",
@@ -4475,12 +4993,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "259",
             "Owner": "257",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Crepitatio",
             "Title": null,
             "Value": "прослуховується",
@@ -4492,12 +5012,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "260",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PleuralFrictionNoise",
             "Title": "Шум тертя плеври:",
             "Value": null,
@@ -4509,12 +5031,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "261",
             "Owner": "260",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PleuralFrictionNoise",
             "Title": null,
             "Value": "відсутній",
@@ -4526,12 +5050,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "262",
             "Owner": "260",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PleuralFrictionNoise",
             "Title": null,
             "Value": "наявний",
@@ -4543,12 +5069,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "263",
             "Owner": "260",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PleuralFrictionNoiseLoc",
             "Title": null,
             "Value": "справа",
@@ -4560,12 +5088,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "264",
             "Owner": "260",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PleuralFrictionNoiseLoc",
             "Title": null,
             "Value": "зліва",
@@ -4577,12 +5107,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "265",
             "Owner": "260",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PleuralFrictionNoiseLoc",
             "Title": null,
             "Value": "з обох сторін",
@@ -4594,12 +5126,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "266",
             "Owner": "0",
+            "Page": "4",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "DullingPulmonarySound",
             "Title": "Перкуторно:",
             "Value": null,
@@ -4611,12 +5145,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "267",
             "Owner": "266",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySound",
             "Title": null,
             "Value": "ясний легеневий звук",
@@ -4628,12 +5164,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "268",
             "Owner": "266",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySound",
             "Title": null,
             "Value": "притуплення",
@@ -4645,12 +5183,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "269",
             "Owner": "268",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySoundLoc",
             "Title": null,
             "Value": "притуплення справа",
@@ -4662,12 +5202,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "270",
             "Owner": "268",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySoundLoc",
             "Title": null,
             "Value": "притуплення зліва",
@@ -4679,12 +5221,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "271",
             "Owner": "268",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySoundLoc",
             "Title": null,
             "Value": "з обох сторін",
@@ -4696,12 +5240,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "272",
             "Owner": "266",
+            "Page": "4",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "DullingPulmonarySound",
             "Title": null,
             "Value": "тимпаніт",
@@ -4713,12 +5259,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "4"
+            "Mode": null
         },
         {
             "Id": "273",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "CardivascularSystem",
             "Title": "Серцево-судинна система:",
             "Value": null,
@@ -4730,12 +5278,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "274",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTones",
             "Title": "Серцеві тони:",
             "Value": null,
@@ -4747,12 +5297,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "275",
             "Owner": "274",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTones",
             "Title": null,
             "Value": "ритмічні",
@@ -4764,12 +5316,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "276",
             "Owner": "274",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTones",
             "Title": null,
             "Value": "аритмічні",
@@ -4781,12 +5335,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "277",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "HeartTonesSound",
             "Title": "Звучність:",
             "Value": null,
@@ -4798,12 +5354,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "278",
             "Owner": "277",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTonesSound",
             "Title": null,
             "Value": "звучні",
@@ -4815,12 +5373,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "279",
             "Owner": "277",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTonesSound",
             "Title": null,
             "Value": "ослаблені ",
@@ -4832,12 +5392,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "280",
             "Owner": "277",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeartTonesSound",
             "Title": null,
             "Value": "приглушені",
@@ -4849,12 +5411,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "281",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "FirstToneChar",
             "Title": "І тон:",
             "Value": null,
@@ -4866,12 +5430,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "282",
             "Owner": "281",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FirstToneChar",
             "Title": null,
             "Value": "нормальної звучності",
@@ -4883,12 +5449,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "283",
             "Owner": "281",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FirstToneChar",
             "Title": null,
             "Value": "посилений",
@@ -4900,12 +5468,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "284",
             "Owner": "281",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FirstToneChar",
             "Title": null,
             "Value": "ослаблений",
@@ -4917,12 +5487,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "285",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SecondToneChar",
             "Title": "ІІ тон:",
             "Value": null,
@@ -4934,12 +5506,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "286",
             "Owner": "285",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SecondToneChar",
             "Title": null,
             "Value": "нормальної звучності",
@@ -4951,12 +5525,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "287",
             "Owner": "285",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SecondToneChar",
             "Title": null,
             "Value": "посилений",
@@ -4968,12 +5544,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "288",
             "Owner": "285",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "SecondToneChar",
             "Title": null,
             "Value": "ослаблений",
@@ -4985,12 +5563,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "289",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Pulse",
             "Title": "Пульс:",
             "Value": null,
@@ -5002,12 +5582,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "290",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseRigidity",
             "Title": "Напруженість пульсу:",
             "Value": null,
@@ -5019,12 +5601,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "291",
             "Owner": "290",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseRigidity",
             "Title": null,
             "Value": "задовільна",
@@ -5036,12 +5620,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "292",
             "Owner": "290",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseRigidity",
             "Title": null,
             "Value": "знижена",
@@ -5053,12 +5639,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "293",
             "Owner": "290",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseRigidity",
             "Title": null,
             "Value": "підвищена",
@@ -5070,12 +5658,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "294",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PulseFullness",
             "Title": "Наповненість:",
             "Value": null,
@@ -5087,12 +5677,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "295",
             "Owner": "294",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseFullness",
             "Title": null,
             "Value": "задовільна",
@@ -5104,12 +5696,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "296",
             "Owner": "294",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseFullness",
             "Title": null,
             "Value": "знижена",
@@ -5121,12 +5715,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "297",
             "Owner": "294",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseFullness",
             "Title": null,
             "Value": "підвищена",
@@ -5138,12 +5734,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "298",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "FullnessSymmetry",
             "Title": "Симетричність наповненості:",
             "Value": null,
@@ -5155,12 +5753,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "299",
             "Owner": "298",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FullnessSymmetry",
             "Title": null,
             "Value": "симетрична",
@@ -5172,12 +5772,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "300",
             "Owner": "298",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FullnessSymmetry",
             "Title": null,
             "Value": "асиметрична справа",
@@ -5189,12 +5791,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "301",
             "Owner": "298",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "FullnessSymmetry",
             "Title": null,
             "Value": "асиметрична зліва",
@@ -5206,12 +5810,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "302",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PulseDeficiency",
             "Title": "Дефіцит пульсу:",
             "Value": null,
@@ -5223,12 +5829,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "303",
             "Owner": "302",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseDeficiency",
             "Title": null,
             "Value": "наявний",
@@ -5240,12 +5848,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "304",
             "Owner": "302",
+            "Page": "5",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PulseDeficiency",
             "Title": null,
             "Value": "відсутній",
@@ -5257,12 +5867,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "5"
+            "Mode": null
         },
         {
             "Id": "305",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Abdomen",
             "Title": "Живіт:",
             "Value": null,
@@ -5274,12 +5886,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "306",
             "Owner": "305",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSize",
             "Title": null,
             "Value": "не збільшений",
@@ -5291,12 +5905,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "307",
             "Owner": "305",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSize",
             "Title": null,
             "Value": "збільшений за рахунок ПЖК",
@@ -5308,12 +5924,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "308",
             "Owner": "305",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSize",
             "Title": null,
             "Value": "збільшений за рахунок асциту",
@@ -5325,12 +5943,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "309",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenConfiguration",
             "Title": "Форма живота:",
             "Value": null,
@@ -5342,12 +5962,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "310",
             "Owner": "309",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSymmetry",
             "Title": null,
             "Value": "симетричний",
@@ -5359,12 +5981,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "311",
             "Owner": "309",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSymmetry",
             "Title": null,
             "Value": "асиметричний справа",
@@ -5376,12 +6000,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "312",
             "Owner": "309",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenSymmetry",
             "Title": null,
             "Value": "асиметричний зліва",
@@ -5393,12 +6019,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "313",
             "Owner": "0",
+            "Page": "5",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenDeformation",
             "Title": "Деформація живота:",
             "Value": null,
@@ -5410,12 +6038,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "314",
             "Owner": "313",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenDeformation",
             "Title": null,
             "Value": "відсутня",
@@ -5427,12 +6057,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "315",
             "Owner": "313",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenDeformation",
             "Title": null,
             "Value": "наявна",
@@ -5444,12 +6076,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "316",
             "Owner": "315",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenDeformationSide",
             "Title": null,
             "Value": "справа",
@@ -5461,12 +6095,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "317",
             "Owner": "315",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenDeformationSide",
             "Title": null,
             "Value": "зліва",
@@ -5478,12 +6114,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "318",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ParticipateInBreathing",
             "Title": "Участь в акті дихання:",
             "Value": null,
@@ -5495,12 +6133,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "319",
             "Owner": "318",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ParticipateInBreathing",
             "Title": null,
             "Value": "приймає",
@@ -5512,12 +6152,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "320",
             "Owner": "318",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "ParticipateInBreathing",
             "Title": null,
             "Value": "не приймає",
@@ -5529,12 +6171,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "321",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenScrubs",
             "Title": "Рубці:",
             "Value": null,
@@ -5546,12 +6190,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "322",
             "Owner": "321",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenScrubs",
             "Title": null,
             "Value": "відсутні",
@@ -5563,12 +6209,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "323",
             "Owner": "321",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenScrubs",
             "Title": null,
             "Value": "наявні",
@@ -5580,12 +6228,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "324",
             "Owner": "323",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenScrubsParametersWidth",
             "Title": "Розміри:",
             "Value": "",
@@ -5601,12 +6251,14 @@ const testData = {
                 "Step": "1",
                 "Min": "0",
                 "Max": "1000"
-            },
-            "Page": "6"
+            }
         },
         {
             "Id": "325",
             "Owner": "323",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenScrubsParametersHeight",
             "Title": null,
             "Value": "",
@@ -5622,12 +6274,14 @@ const testData = {
                 "Step": "1",
                 "Min": "0",
                 "Max": "1000"
-            },
-            "Page": "6"
+            }
         },
         {
             "Id": "326",
             "Owner": "323",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenScrubsLocalization",
             "Title": "Локалізація рубців:",
             "Value": "",
@@ -5639,12 +6293,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Локалізація рубців",
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "327",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenPalpation",
             "Title": "Пальпаторно:",
             "Value": null,
@@ -5656,12 +6312,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "328",
             "Owner": "327",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "не напружена",
@@ -5673,12 +6331,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "329",
             "Owner": "327",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "помірно резистентна",
@@ -5690,12 +6350,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "330",
             "Owner": "327",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "резистентна",
@@ -5707,12 +6369,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "331",
             "Owner": "327",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "помірно напружена",
@@ -5724,12 +6388,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "332",
             "Owner": "327",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "TensionAbdomen",
             "Title": null,
             "Value": "напружена",
@@ -5741,12 +6407,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "333",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenPalpationPain",
             "Title": "Болючість:",
             "Value": null,
@@ -5758,12 +6426,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "334",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "Безболісний",
@@ -5775,12 +6445,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "335",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "помірно болючий в епігастрії",
@@ -5792,12 +6464,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "336",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "помірно болючий в мезогастрії",
@@ -5809,12 +6483,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "337",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "помірно болючий в гіпогастрії",
@@ -5826,12 +6502,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "338",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "різко болючий в епігастрії",
@@ -5843,12 +6521,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "339",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "різко болючий в мезогастрії",
@@ -5860,12 +6540,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "340",
             "Owner": "333",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPalpationPain",
             "Title": null,
             "Value": "різко болючий  в гіпогастрії",
@@ -5877,12 +6559,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "341",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PeritonealSymphtoms",
             "Title": "Перитонеальні симптоми:",
             "Value": null,
@@ -5894,12 +6578,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "342",
             "Owner": "341",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtoms",
             "Title": null,
             "Value": "не визначаються",
@@ -5911,12 +6597,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "343",
             "Owner": "341",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtoms",
             "Title": null,
             "Value": "сумнівні",
@@ -5928,12 +6616,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "344",
             "Owner": "341",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtoms",
             "Title": null,
             "Value": "позитивні",
@@ -5945,12 +6635,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "345",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Бартомье-Михельсона",
@@ -5962,12 +6654,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "346",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Думбадзе",
@@ -5979,12 +6673,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "347",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Кера",
@@ -5996,12 +6692,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "348",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Мейо-Робсона",
@@ -6013,12 +6711,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "349",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Мерфи",
@@ -6030,12 +6730,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "350",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPos",
             "Title": null,
             "Value": "Мюсси-Георгиевского (френикус-симптом)",
@@ -6047,12 +6749,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "351",
             "Owner": "344",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PeritonealSymphtomsPosOther",
             "Title": "Інші перитонеальні симптоми:",
             "Value": "",
@@ -6064,12 +6768,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Інші перитонеальні симптоми",
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "352",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AbdomenPeristaltic",
             "Title": "Перистальтика:",
             "Value": null,
@@ -6081,12 +6787,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "353",
             "Owner": "352",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPeristaltic",
             "Title": null,
             "Value": "не вислуховується",
@@ -6098,12 +6806,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "354",
             "Owner": "352",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPeristaltic",
             "Title": null,
             "Value": "вислуховується",
@@ -6115,12 +6825,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "355",
             "Owner": "352",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPeristaltic",
             "Title": null,
             "Value": "ослаблена",
@@ -6132,12 +6844,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "356",
             "Owner": "352",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPeristaltic",
             "Title": null,
             "Value": "звичайна",
@@ -6149,12 +6863,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "357",
             "Owner": "352",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "AbdomenPeristaltic",
             "Title": null,
             "Value": "посилена",
@@ -6166,12 +6882,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "358",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "HeparPalpation",
             "Title": "Печінка:",
             "Value": null,
@@ -6183,12 +6901,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "359",
             "Owner": "358",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeparPalpation",
             "Title": null,
             "Value": "не пальпується",
@@ -6200,12 +6920,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "360",
             "Owner": "358",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeparPalpation",
             "Title": null,
             "Value": "пальпується",
@@ -6217,12 +6939,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "361",
             "Owner": "358",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeparPalpationEdge",
             "Title": null,
             "Value": "не виступає",
@@ -6234,12 +6958,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "362",
             "Owner": "358",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "HeparPalpationEdge",
             "Title": null,
             "Value": "виступає",
@@ -6251,12 +6977,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "6"
+            "Mode": null
         },
         {
             "Id": "363",
             "Owner": "362",
+            "Page": "6",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "EdgeLiverProtrusion",
             "Title": null,
             "Value": "",
@@ -6272,12 +7000,14 @@ const testData = {
                 "Step": "1",
                 "Min": "0",
                 "Max": "1000"
-            },
-            "Page": "6"
+            }
         },
         {
             "Id": "364",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Kidneys",
             "Title": "Нирки",
             "Value": null,
@@ -6289,12 +7019,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "365",
             "Owner": "364",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "не пальпуються",
@@ -6306,12 +7038,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "366",
             "Owner": "364",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "негативний ",
@@ -6323,12 +7057,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "367",
             "Owner": "364",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "позитивний зліва",
@@ -6340,12 +7076,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "368",
             "Owner": "364",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "PasternatskyySymphtom",
             "Title": null,
             "Value": "позитивний справа",
@@ -6357,12 +7095,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "369",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Urination",
             "Title": "Сечопуск:",
             "Value": null,
@@ -6374,12 +7114,14 @@ const testData = {
             "Checked": false,
             "Type": "parent-radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "370",
             "Owner": "369",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Urination",
             "Title": null,
             "Value": "не утруднений",
@@ -6391,12 +7133,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "371",
             "Owner": "369",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Urination",
             "Title": null,
             "Value": "самостійний, безболісний",
@@ -6408,12 +7152,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "372",
             "Owner": "369",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Urination",
             "Title": null,
             "Value": "болючий",
@@ -6425,12 +7171,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "373",
             "Owner": "369",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Urination",
             "Title": null,
             "Value": "частий",
@@ -6442,12 +7190,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "374",
             "Owner": "369",
+            "Page": "7",
+            "IsParent": false,
+            "IsChild": true,
             "Name": "Urination",
             "Title": null,
             "Value": "рідкий",
@@ -6459,12 +7209,14 @@ const testData = {
             "Checked": false,
             "Type": "radio",
             "Placeholder": null,
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "375",
             "Owner": "0",
+            "Page": "6",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "Status Localis",
             "Title": "Status Localis:",
             "Value": "",
@@ -6476,12 +7228,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Status Localis",
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "376",
             "Owner": "0",
+            "Page": "7",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PreliminaryDiagnosis:",
             "Title": "Попередній діагноз:",
             "Value": "",
@@ -6493,12 +7247,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Попередній діагноз",
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "377",
             "Owner": "0",
+            "Page": "7",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "PreliminaryDiagnosisMain",
             "Title": "Основний:",
             "Value": "",
@@ -6510,12 +7266,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Основний діагноз",
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "378",
             "Owner": "0",
+            "Page": "7",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ComplicationMain",
             "Title": "Ускладення основного:",
             "Value": "",
@@ -6527,12 +7285,14 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Ускладення основного діагнозу",
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         },
         {
             "Id": "379",
             "Owner": "0",
+            "Page": "7",
+            "IsParent": true,
+            "IsChild": false,
             "Name": "ConcomitantDiagnosis",
             "Title": "Супутній:",
             "Value": "",
@@ -6544,8 +7304,7 @@ const testData = {
             "Checked": false,
             "Type": "textarea",
             "Placeholder": "Супутній діагноз",
-            "Mode": null,
-            "Page": "7"
+            "Mode": null
         }
     ]
 };
