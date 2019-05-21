@@ -209,7 +209,7 @@ class HospitalizationForm extends Component {
                     showTime={inputData.Mode.ShowTime}
                     format={inputData.Mode.Format}
                     mode={inputData.Mode.Mode}
-                    value={inputData.Value}
+                    value={inputData.Value !== "" ? inputData.Value : null }
                     id={inputData.Id}
                     locale={locale}
                 />
@@ -218,15 +218,15 @@ class HospitalizationForm extends Component {
                 return (
                     <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
                         {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                        <DateInput key={`${inputData.Id}_${inputData.Name}`} />
+                        <DateInput className="date-input" />
                         {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                     </FormItem>
                 )
             } else return (
                 <div key={`${inputData.Id}_${inputData.Name}`}>
-                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                        <DateInput className="" />
-                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+                    { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
+                        <DateInput className="date-input child" />
+                    { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </div>
             )
         };
