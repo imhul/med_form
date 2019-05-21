@@ -5,6 +5,11 @@
     padding: 25px;
     width: 90%;
     max-width: 900px;
+    .ant-form-item-label {
+        line-height: 1.4;
+        white-space: normal;
+        text-align: left;
+    }
     .ant-input-number {
         width: 50%;
     }

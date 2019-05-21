@@ -217,46 +217,46 @@ class HospitalizationForm extends Component {
             if(inputData.Owner === null) {
                 return (
                     <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                        {inputData.TextBefore}
+                        {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                         <DateInput key={`${inputData.Id}_${inputData.Name}`} />
-                        {inputData.textAfter}
+                        {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                     </FormItem>
                 )
             } else return (
                 <div key={`${inputData.Id}_${inputData.Name}`}>
-                    {inputData.TextBefore}
-                        <DateInput />
-                    {inputData.textAfter}
+                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
+                        <DateInput className="" />
+                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </div>
             )
         };
         const textInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
+                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <Input
                     id={inputData.Id}
                     placeholder={inputData.Placeholder}
                     addonAfter={inputData.TextAfter}
                     addonBefore={editIcon}
                 />
-                {inputData.textAfter}
+                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </FormItem>
         );
         const textareaInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
+                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <TextArea
                     id={inputData.Id}
                     placeholder={inputData.Placeholder}
                 />
-                {inputData.textAfter}
+                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </FormItem>
         );
         const radioGroup = (inputData) => {
             const child = ownerDetector(inputData.Id);
             return (
                 <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                    {inputData.TextBefore}
+                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                     <RadioGroup
                         key={`${inputData.Name}_${inputData.Id}`}
                         defaultValue={null}
@@ -284,7 +284,7 @@ class HospitalizationForm extends Component {
                             }))
                         }
                     </RadioGroup>
-                    {inputData.textAfter}
+                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </FormItem>
             )
         };
@@ -292,7 +292,7 @@ class HospitalizationForm extends Component {
             const child = ownerDetector(inputData.Id);
             return (
                 <div className="check-box-wrapper" key={`${inputData.Name}_${inputData.Id}`}>
-                    {inputData.TextBefore}
+                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                     <Checkbox 
                         checked={inputData.Checked} 
                         id={inputData.Id} 
@@ -307,13 +307,13 @@ class HospitalizationForm extends Component {
                                 child.map(subitem => typeDetector(subitem, true)) : null
                         }
                     </Checkbox>
-                    {inputData.textAfter}
+                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </div>
             )
         };
         const numberInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
+                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
 
                 <InputNumber
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
@@ -322,18 +322,18 @@ class HospitalizationForm extends Component {
                     max={+inputData.Mode.Max}
                     onChange={(value) => this.onNumberUpdate(value, inputData.Id)}
                 />
-                {inputData.textAfter}
+                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </FormItem>
         );
         const switchInput = (inputData) => (
             <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore}
+                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <Switch 
                     checked={inputData.Value} // boolean
                     checkedChildren={inputData.Mode.TextChecked} // 'Так'
                     unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
                 />
-                {inputData.textAfter}
+                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </FormItem>
         );
 
