@@ -3,29 +3,18 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import locale from 'antd/lib/date-picker/locale/uk_UA';
-import {
-    Form,
-    DatePicker,
-    Checkbox,
-    Radio,
-    Input,
-    InputNumber,
-    Switch,
-    Button,
-    Pagination,
-    Popconfirm,
-    Icon,
-} from 'antd';
+import { Form, Button, Pagination, Popconfirm, Icon, } from 'antd';
 
 // Helpers
-import { requestBody, requestURL, requestHeader } from '../../helpers';
+import { 
+    requestBody, 
+    requestURL, 
+    requestHeader, 
+    typeDetector, 
+    buttonItemLayout, 
+} from '../../helpers';
 
-const { TextArea } = Input;
 const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
-const RadioButton = Radio.Button;
-const editIcon = <Icon type="form" />;
 
 class HospitalizationForm extends Component {
 
@@ -63,7 +52,7 @@ class HospitalizationForm extends Component {
         this.onPopupCancel = this.onPopupCancel.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
-        // this.loadAllData(); // First data loading
+        // Тут должна вызываться функция this.loadAllData(); // First data loading
     };
 
     onPaginationUpdate = (page) => {
@@ -102,242 +91,12 @@ class HospitalizationForm extends Component {
         uiActions.paginationUpdate(ui.nextPage);
     };
 
-    onNumberUpdate = (value, id) => {
-        this.props.uiActions.numberUpdate(value, id)
-    };
-
     render() {
         // Props to constants
         const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, } = this.props.ui;
         const { uiActions } = this.props;
-        // Decorative options
-        const buttonItemLayout = {
-            wrapperCol: {
-                xs: {
-                    span: 24,
-                    offset: 0,
-                },
-                sm: {
-                    span: 16,
-                    offset: 8,
-                },
-            },
-        };
-        const formItemLayout = {
-            labelCol: {
-                xs: { span: 24 },
-                sm: { span: 8 },
-            },
-            wrapperCol: {
-                xs: { span: 24 },
-                sm: { span: 16 },
-            },
-        };
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
-        // Inputs initialization by types
-        const typeDetector = (inputData, isChild) => {
-            switch (inputData.Type) {
-                case 'date':
-                    if(isChild) {
-                        return dateInput(inputData);
-                    } else {
-                        return null
-                    };
-                case 'text':
-                    if(isChild) {
-                        return textInput(inputData);
-                    } else {
-                        return null
-                    };
-                case 'textarea':
-                    if(isChild) {
-                        return textareaInput(inputData);
-                    } else {
-                        return null
-                    };
-                case 'number':
-                    if(isChild) {
-                        return numberInput(inputData);
-                    } else {
-                        return null
-                    };
-                case 'switch':
-                    if(isChild) {
-                        return switchInput(inputData);
-                    } else {
-                        return null
-                    };
-                    
-                case 'parent-radio':
-                    return radioGroup(inputData);
-                
-                case 'checkbox':
-                    if(isChild) {
-                        return checkboxInput(inputData);
-                    } else {
-                        return null
-                    };
-                    
-                case 'parent':
-                    if(isChild) {
-                        return parentTitle(inputData);
-                    } else {
-                        return null
-                    };
-                default:
-                    return null
-            }
-        };
-        // Filtering children by parent Id
-        const ownerDetector = (inputId) => {
-            return dataFilteredByPage.filter( item => item.Owner == inputId )
-        };
-        // Inputs
-        const parentTitle = (inputData) => (
-            <div className="parent-wrapper" key={inputData.Id}>
-                <h3 id={inputData.Id}>{inputData.Title}</h3>
-            </div>
-        );
-        const dateInput = (inputData) => {
-            const DateInput = () => (
-                <DatePicker 
-                    onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
-                    onPanelChange={(date, mode) => uiActions.dateUpdate(date, mode, inputData.Id)}
-                    className={`child ${inputData.Mode.Mode}-picker`}
-                    placeholder={inputData.Placeholder}
-                    showTime={inputData.Mode.ShowTime}
-                    format={inputData.Mode.Format}
-                    mode={inputData.Mode.Mode}
-                    value={inputData.Value !== "" ? inputData.Value : null }
-                    id={inputData.Id}
-                    locale={locale}
-                />
-            );
-            if(inputData.Owner === null) {
-                return (
-                    <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                        {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                        <DateInput className="date-input" />
-                        {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-                    </FormItem>
-                )
-            } else return (
-                <div key={`${inputData.Id}_${inputData.Name}`}>
-                    { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                        <DateInput className="date-input child" />
-                    { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-                </div>
-            )
-        };
-        const textInput = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <Input
-                    id={inputData.Id}
-                    placeholder={inputData.Placeholder}
-                    addonAfter={inputData.TextAfter}
-                    addonBefore={editIcon}
-                />
-                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-            </FormItem>
-        );
-        const textareaInput = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <TextArea
-                    id={inputData.Id}
-                    placeholder={inputData.Placeholder}
-                />
-                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-            </FormItem>
-        );
-        const radioGroup = (inputData) => {
-            const child = ownerDetector(inputData.Id);
-            return (
-                <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                    <RadioGroup
-                        key={`${inputData.Name}_${inputData.Id}`}
-                        defaultValue={null}
-                        name={inputData.Name}
-                        id={inputData.Id}
-                        buttonStyle="solid"
-                        className={inputData.Owner === null ? "parent" : "child"}
-                    >
-                        {
-                            child.map(subitem => (
-                                <RadioButton
-                                    key={subitem.Id}
-                                    id={subitem.Id} 
-                                    value={subitem.Value}
-                                    className={`${subitem.Owner === null ? "parent child" : "child"}`}
-                                    title={subitem.Owner}
-                                >
-                                    { subitem.Value }
-                                </RadioButton>
-                            ))
-                        }
-                        {
-                            child.map(subitem => ownerDetector(subitem.Id).map(item => {
-                                return subitem.Checked === true ? typeDetector(item, true) : null
-                            }))
-                        }
-                    </RadioGroup>
-                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-                </FormItem>
-            )
-        };
-        const checkboxInput = (inputData) => {
-            const child = ownerDetector(inputData.Id);
-            return (
-                <div className="check-box-wrapper" key={`${inputData.Name}_${inputData.Id}`}>
-                    {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                    <Checkbox 
-                        checked={inputData.Checked} 
-                        id={inputData.Id} 
-                        value={inputData.Value}
-                        name={inputData.Name}
-                        key={inputData.Id}
-                        className={inputData.Owner === null ? "parent" : "child"}
-                    >
-                        {inputData.Value}
-                        {
-                            inputData.Checked ? 
-                                child.map(subitem => typeDetector(subitem, true)) : null
-                        }
-                    </Checkbox>
-                    {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-                </div>
-            )
-        };
-        const numberInput = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-
-                <InputNumber
-                    defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
-                    step={+inputData.Mode.Step}
-                    min={+inputData.Mode.Min} 
-                    max={+inputData.Mode.Max}
-                    onChange={(value) => this.onNumberUpdate(value, inputData.Id)}
-                />
-                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-            </FormItem>
-        );
-        const switchInput = (inputData) => (
-            <FormItem label={inputData.Title} {...formItemLayout} key={inputData.Id}>
-                {inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <Switch 
-                    checked={inputData.Value} // boolean
-                    checkedChildren={inputData.Mode.TextChecked} // 'Так'
-                    unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
-                />
-                {inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
-            </FormItem>
-        );
-
-
         return (
             <div className="flex-container">
                 <Form 
@@ -352,7 +111,7 @@ class HospitalizationForm extends Component {
 
                     <FormItem className="form-text-after" label={formOptions.formTextAfter} />
                     <FormItem {...buttonItemLayout}>
-                        <Button type="primary" htmlType="submit">Зберегти</Button>
+                        <Button type="primary" htmlType="submit">Зберегти <Icon theme="filled" type="save" /></Button>
                     </FormItem>
 
                     <Popconfirm 

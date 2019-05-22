@@ -8,7 +8,7 @@ const testData = {
         "Department": 1,
         "formTextBefore": "Текст на початку форми",
         "formTextAfter": "Текст в кінці форми",
-        "TotalParent": 61
+        "TotalParent": 62
     },
     "Error": [
         {
@@ -25,7 +25,7 @@ const testData = {
             "IsChild": false,
             "Name": "Сomplaints",
             "Title": "33. Скарги пацієнта:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -33,7 +33,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -52,7 +52,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -71,7 +71,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -90,7 +90,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -109,7 +109,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -128,7 +128,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -139,7 +139,7 @@ const testData = {
             "IsChild": false,
             "Name": "СomplaintsPain",
             "Title": "Тип болю:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -147,7 +147,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -166,7 +166,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -185,7 +185,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -204,7 +204,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -223,7 +223,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -242,7 +242,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -261,7 +261,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -280,7 +280,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -299,7 +299,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -329,7 +329,7 @@ const testData = {
             "IsChild": false,
             "Name": "PainLocalization",
             "Title": "Локалізація болю:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -337,7 +337,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -356,7 +356,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -375,7 +375,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -394,7 +394,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -413,7 +413,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -432,7 +432,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -451,7 +451,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -470,7 +470,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -489,7 +489,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -508,7 +508,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -527,7 +527,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -546,7 +546,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -565,7 +565,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -584,7 +584,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -603,7 +603,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -622,7 +622,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -641,7 +641,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -660,7 +660,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -690,7 +690,7 @@ const testData = {
             "IsChild": false,
             "Name": "СomplaintsOther",
             "Title": "Інші скарги:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -698,7 +698,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -717,7 +717,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -736,7 +736,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -755,7 +755,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -774,7 +774,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -793,7 +793,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -812,7 +812,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -831,7 +831,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -850,7 +850,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -869,7 +869,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -888,7 +888,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -907,7 +907,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -926,7 +926,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -945,12 +945,12 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "50",
-            "Owner": "6",
+            "Owner": "46",
             "Page": "1",
             "IsParent": false,
             "IsChild": true,
@@ -983,7 +983,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1002,7 +1002,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1021,7 +1021,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1040,7 +1040,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1070,7 +1070,7 @@ const testData = {
             "IsChild": false,
             "Name": "Anamnesis",
             "Title": "34. Анамнез хвороби:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1078,7 +1078,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1089,7 +1089,7 @@ const testData = {
             "IsChild": true,
             "Name": "AnamnesisMorbi",
             "Title": "Дата початку захворювання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1097,7 +1097,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1116,7 +1116,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1135,7 +1135,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1146,7 +1146,7 @@ const testData = {
             "IsChild": true,
             "Name": "DateOnsetMorbiYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1154,7 +1154,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1188,7 +1188,7 @@ const testData = {
             "IsChild": false,
             "Name": "CircumstancesDisease",
             "Title": "Обставини початку захворювання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1196,7 +1196,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1207,7 +1207,7 @@ const testData = {
             "IsChild": true,
             "Name": "CircumstancesDisease",
             "Title": "Лікування даного захворювання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1215,7 +1215,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1234,7 +1234,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1253,7 +1253,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1272,7 +1272,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1291,7 +1291,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1310,7 +1310,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1329,7 +1329,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1353,12 +1353,12 @@ const testData = {
         },
         {
             "Id": "71",
-            "Owner": "63",
+            "Owner": "0",
             "Page": "1",
-            "IsParent": false,
-            "IsChild": true,
+            "IsParent": true,
+            "IsChild": false,
             "Name": "AnmConsultDoct",
-            "Title": null,
+            "Title": "Консультований лікарем",
             "Value": "консультований лікарем",
             "TextBefore": null,
             "TextAfter": null,
@@ -1367,7 +1367,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1377,8 +1377,8 @@ const testData = {
             "IsParent": false,
             "IsChild": true,
             "Name": "AnmConsultDoctName",
-            "Title": "Ім'я консультуючого лікаря:",
-            "Value": "",
+            "Title": "Консультований лікарем",
+            "Value": "Ім'я консультуючого лікаря",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1397,7 +1397,7 @@ const testData = {
             "IsChild": false,
             "Name": "AnamnesisVitae",
             "Title": "35. Анамнез життя:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1405,7 +1405,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1424,7 +1424,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1435,7 +1435,7 @@ const testData = {
             "IsChild": false,
             "Name": "BadDenies",
             "Title": "Шкідливі звички:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1443,7 +1443,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1462,7 +1462,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1481,7 +1481,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1500,7 +1500,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1511,7 +1511,7 @@ const testData = {
             "IsChild": false,
             "Name": "Tuberculosis",
             "Title": "Туберкульоз:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1519,7 +1519,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1538,7 +1538,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1557,7 +1557,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1568,7 +1568,7 @@ const testData = {
             "IsChild": true,
             "Name": "TuberculosisYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1576,7 +1576,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1591,7 +1591,7 @@ const testData = {
             "IsChild": false,
             "Name": "SexualTransmitDisease",
             "Title": "Венеричні захворювання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1599,7 +1599,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1618,7 +1618,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1637,7 +1637,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -1648,7 +1648,7 @@ const testData = {
             "IsChild": true,
             "Name": "SexualTransmitDiseaseYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1656,7 +1656,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1671,7 +1671,7 @@ const testData = {
             "IsChild": false,
             "Name": "ViralHepatitis",
             "Title": "Вірусний гепатит:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1679,13 +1679,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "88",
             "Owner": "87",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitis",
@@ -1698,13 +1698,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "89",
             "Owner": "87",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitis",
@@ -1717,13 +1717,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "90",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisA",
@@ -1736,13 +1736,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "91",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisA",
@@ -1755,18 +1755,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "92",
             "Owner": "91",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisAYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1774,7 +1774,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1784,7 +1784,7 @@ const testData = {
         {
             "Id": "93",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisB",
@@ -1797,13 +1797,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "94",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisB",
@@ -1816,18 +1816,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "95",
             "Owner": "94",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": false,
             "Name": "ViralHepatitisBYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1835,7 +1835,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1845,7 +1845,7 @@ const testData = {
         {
             "Id": "96",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisC",
@@ -1858,13 +1858,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "97",
             "Owner": "89",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisC",
@@ -1877,18 +1877,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "98",
             "Owner": "97",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "ViralHepatitisCYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1896,7 +1896,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1911,7 +1911,7 @@ const testData = {
             "IsChild": false,
             "Name": "HIV",
             "Title": "ВІЛ/СНІД:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1919,13 +1919,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "100",
             "Owner": "99",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "HIV",
@@ -1938,13 +1938,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "101",
             "Owner": "99",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "HIV",
@@ -1957,18 +1957,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "102",
             "Owner": "101",
-            "Page": "1",
+            "Page": "2",
             "IsParent": false,
             "IsChild": true,
             "Name": "HIVYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -1976,7 +1976,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -1991,7 +1991,7 @@ const testData = {
             "IsChild": false,
             "Name": "OperationTreat",
             "Title": "Перенесені оперативні втручання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -1999,7 +1999,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2018,7 +2018,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2037,7 +2037,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2056,7 +2056,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2067,7 +2067,7 @@ const testData = {
             "IsChild": true,
             "Name": "HernioplastyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2075,7 +2075,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2090,7 +2090,7 @@ const testData = {
             "IsChild": true,
             "Name": "Mastectomy",
             "Title": null,
-            "Value": "мастектомія у",
+            "Value": "мастектомія",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2098,7 +2098,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2109,7 +2109,7 @@ const testData = {
             "IsChild": true,
             "Name": "MastectomyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2117,7 +2117,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2132,7 +2132,7 @@ const testData = {
             "IsChild": true,
             "Name": "Prostatectomy",
             "Title": null,
-            "Value": "простатектомія у",
+            "Value": "простатектомія",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2140,7 +2140,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2151,7 +2151,7 @@ const testData = {
             "IsChild": true,
             "Name": "ProstatectomyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2159,7 +2159,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2174,7 +2174,7 @@ const testData = {
             "IsChild": true,
             "Name": "HastrResection",
             "Title": null,
-            "Value": "резекція шлунка у",
+            "Value": "резекція шлунка",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2182,7 +2182,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2193,7 +2193,7 @@ const testData = {
             "IsChild": true,
             "Name": "HastrResectionYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2201,7 +2201,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2216,7 +2216,7 @@ const testData = {
             "IsChild": true,
             "Name": "Hasrtectomy",
             "Title": null,
-            "Value": "гастректомія у",
+            "Value": "гастректомія",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2224,7 +2224,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2235,7 +2235,7 @@ const testData = {
             "IsChild": true,
             "Name": "HasrtectomyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2243,7 +2243,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2266,7 +2266,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2277,7 +2277,7 @@ const testData = {
             "IsChild": true,
             "Name": "OperationTreatPRYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2285,7 +2285,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2308,7 +2308,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2319,7 +2319,7 @@ const testData = {
             "IsChild": true,
             "Name": "CholecystectomyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2327,7 +2327,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2350,7 +2350,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2361,7 +2361,7 @@ const testData = {
             "IsChild": true,
             "Name": "ApendectomyYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2369,7 +2369,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2383,7 +2383,7 @@ const testData = {
             "IsParent": false,
             "IsChild": true,
             "Name": "OperationTreatTxt",
-            "Title": "Інші оперативні втручання:",
+            "Title": "Інше:",
             "Value": "",
             "TextBefore": null,
             "TextAfter": null,
@@ -2391,7 +2391,7 @@ const testData = {
             "Width": null,
             "Padding": null,
             "Checked": false,
-            "Type": "textarea",
+            "Type": "text",
             "Placeholder": "Інші оперативні втручання",
             "Mode": null
         },
@@ -2403,7 +2403,7 @@ const testData = {
             "IsChild": false,
             "Name": "TransfusionAnamnesis",
             "Title": "Трансфузіологічний анамнез:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2411,7 +2411,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2430,7 +2430,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2449,7 +2449,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2460,7 +2460,7 @@ const testData = {
             "IsChild": true,
             "Name": "TransfusionAnamnesisYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2468,7 +2468,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2483,7 +2483,7 @@ const testData = {
             "IsChild": false,
             "Name": "OncologicalAnm",
             "Title": "Онкологічні захворювання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2491,7 +2491,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2510,7 +2510,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2529,7 +2529,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2540,7 +2540,7 @@ const testData = {
             "IsChild": true,
             "Name": "OncologicalAnmYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": "у",
             "TextAfter": "році",
             "InLine": null,
@@ -2548,7 +2548,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": "year",
@@ -2563,7 +2563,7 @@ const testData = {
             "IsChild": false,
             "Name": "AllelgAnamnesis",
             "Title": "Алергологічний анамнез:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2571,7 +2571,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2590,7 +2590,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2609,7 +2609,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2628,7 +2628,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2647,7 +2647,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2677,7 +2677,7 @@ const testData = {
             "IsChild": false,
             "Name": "TravmAnamn",
             "Title": "Травми:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2685,7 +2685,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2704,7 +2704,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2723,7 +2723,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2734,7 +2734,7 @@ const testData = {
             "IsChild": false,
             "Name": "TravmAnamnYear",
             "Title": null,
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2742,7 +2742,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "date",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "ShowTime": false,
                 "Mode": null,
@@ -2757,7 +2757,7 @@ const testData = {
             "IsChild": false,
             "Name": "HereditaryAnm",
             "Title": "Спадковий анамнез:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2765,7 +2765,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2784,7 +2784,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2803,7 +2803,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2833,7 +2833,7 @@ const testData = {
             "IsChild": false,
             "Name": "ObjectiveExamData",
             "Title": "36. Об’єктивний стан хворого:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2841,7 +2841,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2860,7 +2860,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2879,7 +2879,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2898,7 +2898,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2917,7 +2917,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2936,7 +2936,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2955,7 +2955,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2966,7 +2966,7 @@ const testData = {
             "IsChild": false,
             "Name": "Consciousness",
             "Title": "Свідомість:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -2974,7 +2974,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -2993,7 +2993,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3012,7 +3012,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3031,7 +3031,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3050,7 +3050,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3069,7 +3069,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3088,7 +3088,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3107,7 +3107,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3126,18 +3126,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "161",
-            "Owner": "152",
+            "Owner": null,
             "Page": "2",
             "IsParent": false,
-            "IsChild": true,
+            "IsChild": false,
             "Name": "GCS",
             "Title": "За шкалою Глазго:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3145,7 +3145,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3156,7 +3156,7 @@ const testData = {
             "IsChild": false,
             "Name": "VerbalContact",
             "Title": "Доступність мовного контакту:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3164,13 +3164,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "163",
             "Owner": "162",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "VerbalContact",
@@ -3183,13 +3183,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "164",
             "Owner": "162",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "VerbalContact",
@@ -3202,13 +3202,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "165",
             "Owner": "162",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "VerbalContact",
@@ -3221,7 +3221,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3232,7 +3232,7 @@ const testData = {
             "IsChild": false,
             "Name": "PositionInBed",
             "Title": "Положення в ліжку:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3240,13 +3240,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "167",
             "Owner": "166",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "PositionInBed",
@@ -3259,13 +3259,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "168",
             "Owner": "166",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "PositionInBed",
@@ -3278,13 +3278,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "169",
             "Owner": "166",
-            "Page": "2",
+            "Page": "3",
             "IsParent": false,
             "IsChild": true,
             "Name": "PositionInBed",
@@ -3297,7 +3297,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3308,7 +3308,7 @@ const testData = {
             "IsChild": false,
             "Name": "MotionActivity",
             "Title": "Рухова активність:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3316,7 +3316,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3335,7 +3335,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3354,7 +3354,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3373,7 +3373,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3392,7 +3392,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3411,7 +3411,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3422,7 +3422,7 @@ const testData = {
             "IsChild": false,
             "Name": "SkinCondition",
             "Title": "Шкіра:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3430,7 +3430,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3449,7 +3449,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3468,7 +3468,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3487,7 +3487,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3506,7 +3506,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3525,7 +3525,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3536,7 +3536,7 @@ const testData = {
             "IsChild": false,
             "Name": "SkinTurgor",
             "Title": "Тугор шкіри:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3544,7 +3544,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3563,7 +3563,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3582,7 +3582,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3601,7 +3601,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3612,7 +3612,7 @@ const testData = {
             "IsChild": false,
             "Name": "SkinMoisture",
             "Title": "Вологість шкіри:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3620,7 +3620,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3639,7 +3639,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3658,7 +3658,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3677,7 +3677,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3696,7 +3696,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3707,7 +3707,7 @@ const testData = {
             "IsChild": false,
             "Name": "BodyConsitution",
             "Title": "Конституція тіла:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3715,7 +3715,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3734,7 +3734,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3753,7 +3753,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3772,7 +3772,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3783,7 +3783,7 @@ const testData = {
             "IsChild": false,
             "Name": "SubcutaneousTissue",
             "Title": "Ступінь розвитку підшкірно-жирової клітковини:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3791,7 +3791,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3810,7 +3810,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3829,7 +3829,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3848,7 +3848,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3867,7 +3867,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3886,7 +3886,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3905,7 +3905,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3924,7 +3924,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3943,7 +3943,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3954,7 +3954,7 @@ const testData = {
             "IsChild": false,
             "Name": "LymphNodes",
             "Title": "Лімфатичні вузли:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -3962,7 +3962,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -3981,7 +3981,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4000,7 +4000,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4019,7 +4019,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4038,7 +4038,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4049,7 +4049,7 @@ const testData = {
             "IsChild": false,
             "Name": "RespiratorySystem",
             "Title": "Дихальна система:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4057,18 +4057,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "210",
             "Owner": null,
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestForm",
             "Title": "Грудна клітка:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4076,13 +4076,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "211",
             "Owner": "210",
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestForm",
@@ -4095,13 +4095,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "212",
             "Owner": "210",
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestForm",
@@ -4114,13 +4114,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "213",
             "Owner": "212",
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestFormSide",
@@ -4133,13 +4133,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "214",
             "Owner": "212",
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestFormSide",
@@ -4152,13 +4152,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "215",
             "Owner": "212",
-            "Page": "3",
+            "Page": "4",
             "IsParent": false,
             "IsChild": true,
             "Name": "ChestFormSide",
@@ -4171,7 +4171,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4182,7 +4182,7 @@ const testData = {
             "IsChild": false,
             "Name": "ChestDeform",
             "Title": "Деформації грудної клітки:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4190,7 +4190,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4209,7 +4209,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4228,7 +4228,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4258,7 +4258,7 @@ const testData = {
             "IsChild": false,
             "Name": "ChestBreathing",
             "Title": "Симетричність дихання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4266,7 +4266,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4285,7 +4285,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4304,7 +4304,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4323,7 +4323,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4342,7 +4342,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "checkbox",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4353,7 +4353,7 @@ const testData = {
             "IsChild": false,
             "Name": "BreathingType",
             "Title": "Тип дихання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4361,7 +4361,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4380,7 +4380,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4399,7 +4399,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4418,18 +4418,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "229",
             "Owner": "225",
-            "Page": "1",
+            "Page": "4",
             "IsParent": true,
             "IsChild": false,
             "Name": "RespirationRate",
             "Title": "Частота дихальних рухів:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4437,7 +4437,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "number",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "Step": "1",
                 "Min": "1",
@@ -4452,7 +4452,7 @@ const testData = {
             "IsChild": true,
             "Name": "AlterBreathing",
             "Title": "Альтернуюче дихання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4460,7 +4460,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4479,7 +4479,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4498,7 +4498,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4517,7 +4517,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4536,7 +4536,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4555,7 +4555,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4574,7 +4574,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4585,7 +4585,7 @@ const testData = {
             "IsChild": false,
             "Name": "BreathingAuscultating",
             "Title": "Аускультативно:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4593,7 +4593,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4612,7 +4612,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4631,7 +4631,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4650,7 +4650,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4669,7 +4669,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4688,7 +4688,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4699,7 +4699,7 @@ const testData = {
             "IsChild": false,
             "Name": "AdditionalBreathingNoises",
             "Title": "додаткові дихальні шуми:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4707,7 +4707,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4726,7 +4726,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4745,7 +4745,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4756,7 +4756,7 @@ const testData = {
             "IsChild": false,
             "Name": "Wheezing",
             "Title": "Хрипи:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4764,7 +4764,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4783,7 +4783,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4802,7 +4802,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4813,7 +4813,7 @@ const testData = {
             "IsChild": false,
             "Name": "WheezingType",
             "Title": "Тип хрипів:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4821,7 +4821,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4840,7 +4840,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4859,7 +4859,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4878,7 +4878,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4897,7 +4897,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4916,7 +4916,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4935,7 +4935,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4954,7 +4954,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4965,7 +4965,7 @@ const testData = {
             "IsChild": false,
             "Name": "Crepitatio",
             "Title": "Крепітація:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -4973,7 +4973,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -4992,7 +4992,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5011,7 +5011,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5022,7 +5022,7 @@ const testData = {
             "IsChild": false,
             "Name": "PleuralFrictionNoise",
             "Title": "Шум тертя плеври:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5030,7 +5030,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5049,7 +5049,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5068,7 +5068,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5087,7 +5087,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5106,7 +5106,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5125,7 +5125,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5136,7 +5136,7 @@ const testData = {
             "IsChild": false,
             "Name": "DullingPulmonarySound",
             "Title": "Перкуторно:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5144,7 +5144,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5163,7 +5163,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5182,7 +5182,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5201,7 +5201,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5220,7 +5220,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5239,7 +5239,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5258,7 +5258,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5269,7 +5269,7 @@ const testData = {
             "IsChild": false,
             "Name": "CardivascularSystem",
             "Title": "Серцево-судинна система:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5277,7 +5277,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5288,7 +5288,7 @@ const testData = {
             "IsChild": true,
             "Name": "HeartTones",
             "Title": "Серцеві тони:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5296,7 +5296,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5315,7 +5315,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5334,7 +5334,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5345,7 +5345,7 @@ const testData = {
             "IsChild": false,
             "Name": "HeartTonesSound",
             "Title": "Звучність:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5353,7 +5353,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5372,7 +5372,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5391,7 +5391,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5410,7 +5410,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5421,7 +5421,7 @@ const testData = {
             "IsChild": false,
             "Name": "FirstToneChar",
             "Title": "І тон:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5429,7 +5429,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5448,7 +5448,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5467,7 +5467,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5486,7 +5486,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5497,7 +5497,7 @@ const testData = {
             "IsChild": true,
             "Name": "SecondToneChar",
             "Title": "ІІ тон:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5505,7 +5505,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5524,7 +5524,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5543,7 +5543,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5562,7 +5562,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5573,7 +5573,7 @@ const testData = {
             "IsChild": false,
             "Name": "Pulse",
             "Title": "Пульс:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5581,7 +5581,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5592,7 +5592,7 @@ const testData = {
             "IsChild": true,
             "Name": "PulseRigidity",
             "Title": "Напруженість пульсу:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5600,7 +5600,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5619,7 +5619,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5638,7 +5638,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5657,7 +5657,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5668,7 +5668,7 @@ const testData = {
             "IsChild": false,
             "Name": "PulseFullness",
             "Title": "Наповненість:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5676,7 +5676,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5695,7 +5695,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5714,7 +5714,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5733,7 +5733,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5744,7 +5744,7 @@ const testData = {
             "IsChild": false,
             "Name": "FullnessSymmetry",
             "Title": "Симетричність наповненості:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5752,7 +5752,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5771,7 +5771,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5790,7 +5790,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5809,7 +5809,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5820,7 +5820,7 @@ const testData = {
             "IsChild": false,
             "Name": "PulseDeficiency",
             "Title": "Дефіцит пульсу:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5828,7 +5828,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5847,7 +5847,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5866,7 +5866,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5877,7 +5877,7 @@ const testData = {
             "IsChild": false,
             "Name": "Abdomen",
             "Title": "Живіт:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5885,7 +5885,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5904,7 +5904,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5923,7 +5923,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5942,18 +5942,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "309",
             "Owner": null,
-            "Page": "5",
+            "Page": "6",
             "IsParent": true,
             "IsChild": false,
             "Name": "AbdomenConfiguration",
             "Title": "Форма живота:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -5961,7 +5961,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5980,7 +5980,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -5999,7 +5999,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6018,18 +6018,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "313",
             "Owner": null,
-            "Page": "5",
+            "Page": "6",
             "IsParent": true,
             "IsChild": false,
             "Name": "AbdomenDeformation",
             "Title": "Деформація живота:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6037,7 +6037,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6056,7 +6056,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6075,7 +6075,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6094,7 +6094,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6113,7 +6113,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6124,7 +6124,7 @@ const testData = {
             "IsChild": false,
             "Name": "ParticipateInBreathing",
             "Title": "Участь в акті дихання:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6132,7 +6132,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6151,7 +6151,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6170,7 +6170,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6181,7 +6181,7 @@ const testData = {
             "IsChild": false,
             "Name": "AbdomenScrubs",
             "Title": "Рубці:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6189,7 +6189,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6208,7 +6208,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6227,7 +6227,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6303,7 +6303,7 @@ const testData = {
             "IsChild": false,
             "Name": "AbdomenPalpation",
             "Title": "Пальпаторно:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6311,7 +6311,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6330,7 +6330,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6349,7 +6349,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6368,7 +6368,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6387,7 +6387,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6406,7 +6406,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6417,7 +6417,7 @@ const testData = {
             "IsChild": false,
             "Name": "AbdomenPalpationPain",
             "Title": "Болючість:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6425,7 +6425,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6444,7 +6444,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6463,7 +6463,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6482,7 +6482,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6501,7 +6501,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6520,7 +6520,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6539,7 +6539,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6558,7 +6558,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6569,7 +6569,7 @@ const testData = {
             "IsChild": false,
             "Name": "PeritonealSymphtoms",
             "Title": "Перитонеальні симптоми:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6577,7 +6577,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6596,7 +6596,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6615,7 +6615,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6634,7 +6634,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6653,7 +6653,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6672,7 +6672,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6691,7 +6691,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6710,7 +6710,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6729,7 +6729,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6748,7 +6748,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6778,7 +6778,7 @@ const testData = {
             "IsChild": false,
             "Name": "AbdomenPeristaltic",
             "Title": "Перистальтика:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6786,7 +6786,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6805,7 +6805,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6824,7 +6824,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6843,7 +6843,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6862,7 +6862,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6881,7 +6881,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6892,7 +6892,7 @@ const testData = {
             "IsChild": false,
             "Name": "HeparPalpation",
             "Title": "Печінка:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -6900,7 +6900,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6919,7 +6919,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6938,7 +6938,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6957,7 +6957,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6976,7 +6976,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -6995,7 +6995,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "number",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": {
                 "Step": "1",
                 "Min": "0",
@@ -7010,7 +7010,7 @@ const testData = {
             "IsChild": false,
             "Name": "Kidneys",
             "Title": "Нирки",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -7018,7 +7018,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7037,7 +7037,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7056,7 +7056,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7075,7 +7075,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7094,18 +7094,18 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "369",
             "Owner": null,
-            "Page": "6",
+            "Page": "7",
             "IsParent": true,
             "IsChild": false,
             "Name": "Urination",
             "Title": "Сечопуск:",
-            "Value": null,
+            "Value": "",
             "TextBefore": null,
             "TextAfter": null,
             "InLine": null,
@@ -7113,7 +7113,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "parent-radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7132,7 +7132,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7151,7 +7151,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7170,7 +7170,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7189,7 +7189,7 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
@@ -7208,13 +7208,13 @@ const testData = {
             "Padding": null,
             "Checked": false,
             "Type": "radio",
-            "Placeholder": "",
+            "Placeholder": null,
             "Mode": null
         },
         {
             "Id": "375",
             "Owner": null,
-            "Page": "6",
+            "Page": "7",
             "IsParent": true,
             "IsChild": false,
             "Name": "Status Localis",
