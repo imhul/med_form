@@ -474,27 +474,8 @@ const testData = {
             "Mode": null
         },
         {
-            "Id": "384",
-            "Owner": "24",
-            "Page": "1",
-            "IsParent": true,
-            "IsChild": false,
-            "Name": "ChestLocalizationPain",
-            "Title": "test parent",
-            "Value": "",
-            "TextBefore": "",
-            "TextAfter": "",
-            "InLine": null,
-            "Width": null,
-            "Padding": null,
-            "Checked": false,
-            "Type": "parent",
-            "Placeholder": "",
-            "Mode": null
-        },
-        {
             "Id": "417",
-            "Owner": "384",
+            "Owner": "24",
             "Page": "1",
             "IsParent": true,
             "IsChild": false,
