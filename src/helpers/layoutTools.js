@@ -49,25 +49,21 @@ export const typeDetector = (inputData, isChild) => {
             };
         case 'text':
             if(isChild) {
-                return <TextInput inputData={inputData} key={inputData.Id} />;
+                return <TextInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
             } else {
                 return null
             };
         case 'textarea':
-            if(isChild) {
-                return <TextareaInput inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <TextareaInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'number':
             if(isChild) {
-                return <NumberInput inputData={inputData} key={inputData.Id} />;
+                return <NumberInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
             } else {
                 return null
             };
         case 'switch':
             if(isChild) {
-                return <SwitchInput inputData={inputData} key={inputData.Id} />;
+                return <SwitchInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
             } else {
                 return null
             };

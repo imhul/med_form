@@ -12,15 +12,7 @@ const FormItem = Form.Item;
 class NumberInput extends PureComponent {
     render() {
         const { inputData, uiActions } = this.props;
-        const NumberInputChild = () => (
-            <InputNumber
-                defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
-                step={+inputData.Mode.Step}
-                min={+inputData.Mode.Min} 
-                max={+inputData.Mode.Max}
-                onChange={(value) => uiActions.numberUpdate(value, inputData.Id)}
-            />
-        );
+
         if(inputData.Owner === null) {
             return (
                 <FormItem 
@@ -29,14 +21,26 @@ class NumberInput extends PureComponent {
                     {...formItemLayout} 
                 >
                     { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                    <NumberInputChild />
+                    <InputNumber
+                        defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
+                        step={+inputData.Mode.Step}
+                        min={+inputData.Mode.Min} 
+                        max={+inputData.Mode.Max}
+                        onChange={(value) => uiActions.numberUpdate(value, inputData.Id)}
+                    />
                     { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </FormItem>
             )
         } else return (
             <div className="child" style={{display: "inline"}}>
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <NumberInputChild />
+                <InputNumber
+                    defaultValue={ inputData.Value !== null ? inputData.Value : 0 }
+                    step={+inputData.Mode.Step}
+                    min={+inputData.Mode.Min} 
+                    max={+inputData.Mode.Max}
+                    onChange={(value) => uiActions.numberUpdate(value, inputData.Id)}
+                />
                 { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </div>
         )
