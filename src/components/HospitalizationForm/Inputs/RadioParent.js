@@ -26,7 +26,7 @@ class RadioParent extends PureComponent {
                 <FormItem 
                     className={inputData.Owner === null ? "parent" : "child"}
                     label={inputData.Title} 
-                    {...formItemLayout} 
+                    {...formItemLayout}
                 >
                     { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                     <RadioGroup
@@ -37,19 +37,18 @@ class RadioParent extends PureComponent {
                         className={inputData.Owner === null ? "parent" : "child"}
                     >
                         {
-            
-                                ownerDetector(inputData.Id).map(subitem => (
-                                    <RadioButton
-                                        id={subitem.Id} 
-                                        value={subitem.Value}
-                                        className={subitem.Owner === null ? "parent" : "child"}
-                                        title={subitem.Owner}
-                                    >
-                                        { subitem.Value }
-                                        
-                                    </RadioButton>
-                                )
-                            )
+                            ownerDetector(inputData.Id).map(subitem => (
+                                <RadioButton
+                                    id={subitem.Id} 
+                                    key={subitem.Id} 
+                                    value={subitem.Value}
+                                    className={subitem.Owner === null ? "parent" : "child"}
+                                    title={subitem.Owner}
+                                >
+                                    { subitem.Value }
+                                    
+                                </RadioButton>
+                            ))
                         }
                         {
                             ownerDetector(inputData.Id).map(subitem => ownerDetector(subitem.Id).map(item => {
@@ -66,6 +65,7 @@ class RadioParent extends PureComponent {
             <div 
                 className="child" 
                 style={ isChild ? {marginLeft: 10, display: "block"} : {display: "none"} }
+                
             >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <RadioGroup
@@ -79,6 +79,7 @@ class RadioParent extends PureComponent {
                         ownerDetector(inputData.Id).map(subitem => (
                             <RadioButton
                                 id={subitem.Id} 
+                                key={subitem.Id} 
                                 value={subitem.Value} 
                                 className={subitem.Owner === null ? "parent" : "child"}
                                 title={subitem.Owner}

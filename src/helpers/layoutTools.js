@@ -49,7 +49,7 @@ export const typeDetector = (inputData, isChild) => {
             return <TextareaInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'number':
             return <NumberInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
-        case 'switch':
+        case 'switcher':
             return <SwitchInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'checkbox':
             return <CheckboxInput isChild={isChild} inputData={inputData} key={inputData.Id} />;

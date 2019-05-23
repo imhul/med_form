@@ -6,31 +6,36 @@ import { formItemLayout } from '../../../helpers';
 
 const FormItem = Form.Item;
 
-const SwitchInput = (inputData) => { 
-    const SwitchChild = () => (
-        <Switch 
-            checked={inputData.Value} // boolean
-            checkedChildren={inputData.Mode.TextChecked} // 'Так'
-            unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
-        />
-    );
-    if(inputData.Owner === null) {
+const SwitchInput = (data) => { 
+    console.log("SwitchInput data: ", data.inputData);
+    if(data.inputData.Owner === null) {
         return (
             <FormItem 
-                className={inputData.Owner === null ? "parent" : "child"}
-                label={inputData.Title} 
+                className={data.inputData.Owner === null ? "parent" : "child"}
+                label={data.inputData.Title} 
                 {...formItemLayout} 
             >
-                { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <SwitchChild />
-                { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+                { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
+                <Switch 
+                    checked={data.inputData.Value} // boolean
+                    checkedChildren={data.inputData.Mode.TextChecked} // 'Так'
+                    unCheckedChildren={data.inputData.Mode.TextUnchecked} // 'Ні'
+                />
+                { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
             </FormItem>
         )
     } else return (
-        <div className="child" style={{display: "inline"}}>
-            { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-            <SwitchChild />
-            { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+        <div 
+            className="child" 
+            style={ data.isChild ? {display: "inline-block"} : {display: "none"} }
+        >
+            { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
+            <Switch 
+                checked={data.inputData.Value} // boolean
+                checkedChildren={data.inputData.Mode.TextChecked} // 'Так'
+                unCheckedChildren={data.inputData.Mode.TextUnchecked} // 'Ні'
+            />
+            { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
         </div>
     )
 };
