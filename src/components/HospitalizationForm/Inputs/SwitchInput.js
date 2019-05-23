@@ -17,7 +17,7 @@ const SwitchInput = (data) => {
             >
                 { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
                 <Switch 
-                    checked={data.inputData.Value} // boolean
+                    checked={data.inputData.Checked} // boolean
                     checkedChildren={data.inputData.Mode.TextChecked} // 'Так'
                     unCheckedChildren={data.inputData.Mode.TextUnchecked} // 'Ні'
                 />
