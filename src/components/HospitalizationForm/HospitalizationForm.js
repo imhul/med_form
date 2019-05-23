@@ -70,13 +70,13 @@ class HospitalizationForm extends Component {
 
     formSubmit(newData) {
         const { uiActions, ui } = this.props;
-        const currentPage = newData.filter(item => item.Page == ui.currentPage);
-        console.info("currentPage - object for submit: ", currentPage);
+        const currentPageData = newData.filter(item => item.Page == ui.currentPage);
+        console.info("currentPageData - object for submit: ", currentPageData);
         // TODO: Тут будет функция отправки новых данных формы(newData), 
         // внутри которой будет вызван action formSubmit(),
         // указывающий на изменение состояния isSubmitted,
         // в случае успешной отправки формы на сервер: 
-        uiActions.formSubmit(currentPage)
+        uiActions.formSubmit(currentPageData)
     };
 
     onPopupCancel() {
@@ -93,7 +93,7 @@ class HospitalizationForm extends Component {
 
     render() {
         // Props to constants
-        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, } = this.props.ui;
+        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, isFormActivated, } = this.props.ui;
         const { uiActions } = this.props;
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
@@ -111,7 +111,9 @@ class HospitalizationForm extends Component {
 
                     <FormItem className="form-text-after" label={formOptions.formTextAfter} />
                     <FormItem {...buttonItemLayout}>
-                        <Button type="primary" htmlType="submit">Зберегти <Icon theme="filled" type="save" /></Button>
+                        <Button disabled={!isFormActivated} type="primary" htmlType="submit">
+                            Зберегти <Icon theme="filled" type="save" />
+                        </Button>
                     </FormItem>
 
                     <Popconfirm 

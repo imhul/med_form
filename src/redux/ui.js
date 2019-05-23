@@ -10,6 +10,7 @@ const initState = {
     isSubmitted: false,
     isPopupVisible: false,
     nextPage: null,
+    isFormActivated: false,
 };
 
 export default (state = initState, action) => {
@@ -31,6 +32,7 @@ export default (state = initState, action) => {
             });
             return {
                 ...state,
+                isFormActivated: true,
             };
 
         case types.NUMBER_UPDATE:
@@ -40,6 +42,7 @@ export default (state = initState, action) => {
             });
             return {
                 ...state,
+                isFormActivated: true,
             };
 
         case types.SWITCH_UPDATE:
@@ -49,6 +52,7 @@ export default (state = initState, action) => {
             });
             return {
                 ...state,
+                isFormActivated: true,
             };
 
         case types.FORM_UPDATE:
@@ -78,6 +82,7 @@ export default (state = initState, action) => {
             });
             return {
                 ...state,
+                isFormActivated: true,
             };
 
         case types.FORM_SUBMIT:

@@ -68,6 +68,7 @@ class RadioParent extends PureComponent {
                 
             >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
+                <p>{ inputData.Title ? `${inputData.Title}  ` : null }</p>
                 <RadioGroup
                     defaultValue={null}
                     name={inputData.Name}
