@@ -65,7 +65,7 @@ class RadioParent extends PureComponent {
         } else return (
             <div 
                 className="child" 
-                style={ isChild ? {display: "inline-block"} : {display: "none"} }
+                style={ isChild ? {marginLeft: 10, display: "inline-block"} : {display: "none"} }
             >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <RadioGroup
@@ -84,7 +84,6 @@ class RadioParent extends PureComponent {
                                 title={subitem.Owner}
                             >
                                 { subitem.Value }
-                                
                             </RadioButton>
                         ))
                     }
