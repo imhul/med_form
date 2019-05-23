@@ -6,32 +6,34 @@ import { formItemLayout } from '../../../helpers';
 
 const FormItem = Form.Item;
 
-const TextInput = (inputData) => {
-    const TextInputChild = () => (
-        <Input
-            id={inputData.Id}
-            placeholder={inputData.Placeholder}
-            addonAfter={inputData.TextAfter}
-            addonBefore={<Icon type="form" />}
-        />
-    );
-    if(inputData.Owner === null) {
+const TextInput = (data) => {
+    if(data.inputData.Owner === null) {
         return (
             <FormItem 
                 className="parent"
-                label={inputData.Title} 
+                label={data.inputData.Title} 
                 {...formItemLayout} 
             >
-                { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-                <TextInputChild />
-                { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+                { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
+                <Input
+                    id={data.inputData.Id}
+                    placeholder={data.inputData.Placeholder}
+                    addonAfter={data.inputData.TextAfter}
+                    addonBefore={<Icon type="form" />}
+                />
+                { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
             </FormItem>
         )
     } else return (
         <div className="child" style={{display: "inline"}}>
-            { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
-            <TextInputChild />
-            { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+            { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
+            <Input
+                id={data.inputData.Id}
+                placeholder={data.inputData.Placeholder}
+                addonAfter={data.inputData.TextAfter}
+                addonBefore={<Icon type="form" />}
+            />
+            { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
         </div>
     )
 };
