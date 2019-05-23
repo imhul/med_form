@@ -11,7 +11,7 @@ const FormItem = Form.Item;
 
 class NumberInput extends PureComponent {
     render() {
-        const { inputData, uiActions } = this.props;
+        const { isChild, inputData, uiActions } = this.props;
 
         if(inputData.Owner === null) {
             return (
@@ -32,7 +32,10 @@ class NumberInput extends PureComponent {
                 </FormItem>
             )
         } else return (
-            <div className="child" style={{display: "inline"}}>
+            <div 
+                className="child" 
+                style={ isChild ? {display: "inline"} : {display: "none"} }
+            >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <InputNumber
                     defaultValue={ inputData.Value !== null ? inputData.Value : 0 }

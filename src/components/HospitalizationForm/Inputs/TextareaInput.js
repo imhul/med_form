@@ -24,7 +24,10 @@ const TextareaInput = (data) => {
             </FormItem>
         )
     } else return ( 
-        <div className="child" style={ data.isChild ? {display: "inline"} : {display: "none"} }>
+        <div 
+            className="child" 
+            style={ data.isChild ? {display: "inline"} : {display: "none"} }
+        >
             { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
             <TextArea
                 id={data.inputData.Id}

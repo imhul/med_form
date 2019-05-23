@@ -42,47 +42,21 @@ export const formItemLayout = {
 export const typeDetector = (inputData, isChild) => {
     switch (inputData.Type) {
         case 'date':
-            if(isChild) {
-                return <DateInput inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <DateInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'text':
-            if(isChild) {
-                return <TextInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <TextInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'textarea':
             return <TextareaInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'number':
-            if(isChild) {
-                return <NumberInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <NumberInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'switch':
-            if(isChild) {
-                return <SwitchInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <SwitchInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'checkbox':
-            if(isChild) {
-                return <CheckboxInput inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
-
+            return <CheckboxInput isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'parent-radio':
-            return <RadioParent inputData={inputData} key={inputData.Id} />;
-            
+            return <RadioParent isChild={isChild} inputData={inputData} key={inputData.Id} />;
         case 'parent':
-            if(isChild) {
-                return <ParentTitle inputData={inputData} key={inputData.Id} />;
-            } else {
-                return null
-            };
+            return <ParentTitle isChild={isChild} inputData={inputData} key={inputData.Id} />;
         default:
             return null
     }

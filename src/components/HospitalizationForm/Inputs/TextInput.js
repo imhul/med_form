@@ -25,7 +25,10 @@ const TextInput = (data) => {
             </FormItem>
         )
     } else return (
-        <div className="child" style={{display: "inline"}}>
+        <div 
+            className="child" 
+            style={ data.isChild ? {display: "inline"} : {display: "none"} }
+        >
             { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
             <Input
                 id={data.inputData.Id}

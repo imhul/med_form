@@ -9,16 +9,18 @@ import { typeDetector } from '../../../helpers';
 
 class CheckboxInput extends PureComponent {
     render() {
-        const { inputData, ui } = this.props;
+        const { isChild, inputData, ui } = this.props;
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = ui.formData.filter(item => item.Page == ui.currentPage);
         // Filtering children by parent Id
         const ownerDetector = (inputId) => {
             return dataFilteredByPage.filter( item => item.Owner == inputId )
         };
-        const child = ownerDetector(inputData.Id);
         return (
-            <div className={inputData.Owner === null ? "parent" : "child"}>
+            <div 
+                className={inputData.Owner === null ? "parent" : "child"}
+                style={ isChild ? {display: "inline"} : {display: "none"} }
+            >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <Checkbox 
                     className={inputData.Owner === null ? "parent" : "child"}
@@ -30,8 +32,7 @@ class CheckboxInput extends PureComponent {
                 >
                     {inputData.Value}
                     {
-                        inputData.Checked ? 
-                            child.map(subitem => typeDetector(subitem, true)) : null
+                        inputData.Checked ? ownerDetector(inputData.Id).map(subitem => typeDetector(subitem, true)) : null
                     }
                 </Checkbox>
                 { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }

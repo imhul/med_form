@@ -12,17 +12,17 @@ const FormItem = Form.Item;
 
 class DateInput extends PureComponent {
     render() {
-        const { inputData, uiActions } = this.props;
+        const { isChild, inputData, uiActions } = this.props;
         const DateInputChild = () => (
             <DatePicker 
                 onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
                 onPanelChange={(date, mode) => uiActions.dateUpdate(date, mode, inputData.Id)}
+                value={inputData.Value !== "" ? inputData.Value : null }
                 className={`${inputData.Mode.Mode}-picker`}
                 placeholder={inputData.Placeholder}
                 showTime={inputData.Mode.ShowTime}
                 format={inputData.Mode.Format}
                 mode={inputData.Mode.Mode}
-                value={inputData.Value !== "" ? inputData.Value : null }
                 id={inputData.Id}
                 locale={locale}
             />
@@ -31,7 +31,7 @@ class DateInput extends PureComponent {
             return (
                 <FormItem 
                     label={inputData.Title} {...formItemLayout}
-                    className={inputData.Owner === null ? "parent" : "child"}
+                    className="parent"
                 >
                     { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                     <DateInputChild />
@@ -39,7 +39,10 @@ class DateInput extends PureComponent {
                 </FormItem>
             )
         } else return (
-            <div className="child" style={{display: "inline-block"}}>
+            <div 
+                className="child" 
+                style={ isChild ? {display: "inline-block"} : {display: "none"} }
+            >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                     <DateInputChild />
                 { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
