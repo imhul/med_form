@@ -52,7 +52,7 @@ class HospitalizationForm extends Component {
         this.onPopupCancel = this.onPopupCancel.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
-        // Тут должна вызываться функция this.loadAllData(); // First data loading
+        this.loadAllData();  // First data loading
     };
 
     onPaginationUpdate = (page) => {
