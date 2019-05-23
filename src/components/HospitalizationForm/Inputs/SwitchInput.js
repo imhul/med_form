@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as UI_ACTIONS from '../../../redux/ui_actions';
 import { Form, Switch } from 'antd';
 
 // Helpers
@@ -6,38 +9,60 @@ import { formItemLayout } from '../../../helpers';
 
 const FormItem = Form.Item;
 
-const SwitchInput = (data) => { 
-    console.log("SwitchInput data: ", data.inputData);
-    if(data.inputData.Owner === null) {
-        return (
-            <FormItem 
-                className={data.inputData.Owner === null ? "parent" : "child"}
-                label={data.inputData.Title} 
-                {...formItemLayout} 
+class SwitchInput extends PureComponent {
+    render() {
+        const { isChild, inputData, ui, uiActions } = this.props;
+        // Filtering inputs by current value of pagination component
+        const dataFilteredByPage = ui.formData.filter(item => item.Page == ui.currentPage);
+        // Filtering children by parent Id
+        const ownerDetector = (inputId) => {
+            return dataFilteredByPage.filter( item => item.Owner == inputId )
+        };
+        if(inputData.Owner === null) {
+            return (
+                <FormItem 
+                    className={inputData.Owner === null ? "parent" : "child"}
+                    label={inputData.Title} 
+                    {...formItemLayout} 
+                >
+                    { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
+                    <Switch 
+                        checked={inputData.Checked} // boolean
+                        onClick={(checked, event) => uiActions.switchUpdate(checked, inputData.Id )}
+                        checkedChildren={inputData.Mode.TextChecked} // 'Так'
+                        unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
+                    />
+                    { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+                </FormItem>
+            )
+        } else return (
+            <div 
+                className="child" 
+                style={ isChild ? {display: "inline-block"} : {display: "none"} }
             >
-                { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
+                { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <Switch 
-                    checked={data.inputData.Checked} // boolean
-                    checkedChildren={data.inputData.Mode.TextChecked} // 'Так'
-                    unCheckedChildren={data.inputData.Mode.TextUnchecked} // 'Ні'
+                    checked={inputData.Value} // boolean
+                    onClick={(checked, event) => uiActions.switchUpdate(checked, inputData.Id )}
+                    checkedChildren={inputData.Mode.TextChecked} // 'Так'
+                    unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
                 />
-                { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
-            </FormItem>
+                { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
+            </div>
         )
-    } else return (
-        <div 
-            className="child" 
-            style={ data.isChild ? {display: "inline-block"} : {display: "none"} }
-        >
-            { data.inputData.TextBefore ? `${data.inputData.TextBefore} ` : null }
-            <Switch 
-                checked={data.inputData.Value} // boolean
-                checkedChildren={data.inputData.Mode.TextChecked} // 'Так'
-                unCheckedChildren={data.inputData.Mode.TextUnchecked} // 'Ні'
-            />
-            { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
-        </div>
-    )
+    }
 };
 
-export default SwitchInput;
+function mapDispatchToProps(dispatch) {
+    return {
+        uiActions: bindActionCreators(UI_ACTIONS, dispatch),
+    }
+};
+
+function mapStateToProps(state) {
+    return {
+        ui: state.ui,
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SwitchInput);

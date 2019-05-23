@@ -38,6 +38,16 @@ export function numberUpdate(payload, id) {
   }
 };
 
+export function switchUpdate(checked, id) {
+  return (dispatch) => {
+    dispatch({
+      type: types.SWITCH_UPDATE,
+      payload: checked,
+      meta: id,
+    })
+  }
+};
+
 export function formSubmit() {
   return (dispatch) => {
     dispatch({

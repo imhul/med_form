@@ -42,6 +42,16 @@ export default (state = initState, action) => {
                 ...state,
             };
 
+        case types.SWITCH_UPDATE:
+            state.formData.filter(items => items.Id === action.meta).map(item => {
+                console.log("SWITCH_UPDATE action.payload: ", action.payload);
+                item.Value = action.payload;
+                item.Checked = action.payload
+            });
+            return {
+                ...state,
+            };
+
         case types.FORM_UPDATE:
             const target = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);
