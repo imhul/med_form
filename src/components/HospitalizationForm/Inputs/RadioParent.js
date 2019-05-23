@@ -65,7 +65,7 @@ class RadioParent extends PureComponent {
         } else return (
             <div 
                 className="child" 
-                style={ isChild ? {marginLeft: 10, display: "inline-block"} : {display: "none"} }
+                style={ isChild ? {marginLeft: 10, display: "block"} : {display: "none"} }
             >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <RadioGroup

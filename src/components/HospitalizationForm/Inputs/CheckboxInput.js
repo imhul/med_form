@@ -19,7 +19,7 @@ class CheckboxInput extends PureComponent {
         return (
             <div 
                 className={inputData.Owner === null ? "parent" : "child"}
-                style={ isChild ? {display: "inline"} : {display: "none"} }
+                style={ isChild ? {display: "block"} : {display: "none"} }
             >
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <Checkbox 
