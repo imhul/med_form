@@ -44,7 +44,6 @@ export default (state = initState, action) => {
 
         case types.SWITCH_UPDATE:
             state.formData.filter(items => items.Id === action.meta).map(item => {
-                console.log("SWITCH_UPDATE action.payload: ", action.payload);
                 item.Value = action.payload;
                 item.Checked = action.payload
             });

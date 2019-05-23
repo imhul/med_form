@@ -5,7 +5,7 @@ import * as UI_ACTIONS from '../../../redux/ui_actions';
 import { Form, Switch } from 'antd';
 
 // Helpers
-import { formItemLayout } from '../../../helpers';
+import { formItemLayout, typeDetector } from '../../../helpers';
 
 const FormItem = Form.Item;
 
@@ -32,6 +32,9 @@ class SwitchInput extends PureComponent {
                         checkedChildren={inputData.Mode.TextChecked} // 'Так'
                         unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
                     />
+                    {
+                        inputData.Checked ? ownerDetector(inputData.Id).map(subitem => typeDetector(subitem, true)) : null
+                    }
                     { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
                 </FormItem>
             )
@@ -47,6 +50,9 @@ class SwitchInput extends PureComponent {
                     checkedChildren={inputData.Mode.TextChecked} // 'Так'
                     unCheckedChildren={inputData.Mode.TextUnchecked} // 'Ні'
                 />
+                {
+                    inputData.Checked ? ownerDetector(inputData.Id).map(subitem => typeDetector(subitem, true)) : null
+                }
                 { inputData.TextAfter ? ` ${inputData.TextAfter}` : null }
             </div>
         )
