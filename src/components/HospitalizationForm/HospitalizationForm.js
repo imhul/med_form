@@ -72,6 +72,24 @@ class HospitalizationForm extends Component {
         const { uiActions, ui } = this.props;
         const currentPageData = newData.filter(item => item.Page == ui.currentPage);
         console.info("currentPageData - object for submit: ", currentPageData);
+
+        fetch("https://med.uax.co/api/?Method=SaveOptions", {
+            method: 'post',  
+            headers: {  
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+            },
+            body: 'FormData='+JSON.stringify(currentPageData)
+        })
+        .then(  
+            function(response)
+            {  
+                console.log(response);
+            }  
+        )  
+        .catch(function(err) {  
+            //console.log('err);  
+        });
+
         // TODO: Тут будет функция отправки новых данных формы(newData), 
         // внутри которой будет вызван action formSubmit(),
         // указывающий на изменение состояния isSubmitted,
