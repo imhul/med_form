@@ -1,5 +1,5 @@
 // Core
-import { hot, AppContainer } from 'react-hot-loader';
+// import { hot, AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -13,11 +13,11 @@ import './scss/index.scss';
 
 function renderApp() {
     const App = () => (
-        <AppContainer className="container">
+        // <AppContainer className="container">
             <Provider store={ store }>
                 <HospitalizationForm />
             </Provider>
-        </AppContainer>
+        // </AppContainer>
     );
     ReactDOM.render(<App />, document.getElementById('HospitalizationReception'))
 };
@@ -25,4 +25,4 @@ function renderApp() {
 renderApp();
 
 // Hot Reloading
-hot(module)(renderApp);
+// hot(module)(renderApp);
