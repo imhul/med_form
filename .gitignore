@@ -2,6 +2,7 @@
 /.git
 /.cache
 /dist
+/build
 sitemap.xml
 robots.txt
 yarn.lock

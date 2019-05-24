@@ -70,7 +70,7 @@ class RadioParent extends PureComponent {
                 { inputData.TextBefore ? `${inputData.TextBefore} ` : null }
                 <p>{ inputData.Title ? `${inputData.Title}  ` : null }</p>
                 <RadioGroup
-                    defaultValue={null}
+                    defaultValue={inputData.Value ? inputData.Value : null}
                     name={inputData.Name}
                     id={inputData.Id}
                     buttonStyle="solid"

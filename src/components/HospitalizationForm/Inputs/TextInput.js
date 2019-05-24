@@ -19,6 +19,7 @@ const TextInput = (data) => {
                     id={data.inputData.Id}
                     placeholder={data.inputData.Placeholder}
                     addonAfter={data.inputData.TextAfter}
+                    value={data.inputData.Value ? data.inputData.Value : ""}
                     addonBefore={<Icon type="form" />}
                 />
                 { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
@@ -34,6 +35,7 @@ const TextInput = (data) => {
                 id={data.inputData.Id}
                 placeholder={data.inputData.Placeholder}
                 addonAfter={data.inputData.TextAfter}
+                value={data.inputData.Value ? data.inputData.Value : ""}
                 addonBefore={<Icon type="form" />}
             />
             { data.inputData.TextAfter ? ` ${data.inputData.TextAfter}` : null }
