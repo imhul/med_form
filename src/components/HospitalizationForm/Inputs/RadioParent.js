@@ -41,12 +41,12 @@ class RadioParent extends PureComponent {
                                 <RadioButton
                                     id={subitem.Id} 
                                     key={subitem.Id} 
+                                    checked={subitem.Checked}
                                     value={subitem.Value}
                                     className={subitem.Owner === null ? "parent" : "child"}
                                     title={subitem.Owner}
                                 >
                                     { subitem.Value }
-                                    
                                 </RadioButton>
                             ))
                         }

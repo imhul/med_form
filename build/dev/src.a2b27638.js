@@ -34707,7 +34707,7 @@ var testData = {
     "IsChild": false,
     "Name": "Сomplaints",
     "Title": "33. Скарги пацієнта:",
-    "Value": "",
+    "Value": "скарги на біль",
     "TextBefore": "",
     "TextAfter": "",
     "InLine": null,
@@ -34803,7 +34803,7 @@ var testData = {
     "InLine": null,
     "Width": null,
     "Padding": null,
-    "Checked": false,
+    "Checked": true,
     "Type": "radio",
     "Placeholder": "",
     "Mode": null
@@ -34947,7 +34947,7 @@ var testData = {
     "InLine": null,
     "Width": null,
     "Padding": null,
-    "Checked": false,
+    "Checked": true,
     "Type": "checkbox",
     "Placeholder": "",
     "Mode": null
@@ -34977,7 +34977,7 @@ var testData = {
     "IsChild": true,
     "Name": "PainCharacterOther",
     "Title": "Інший характер болю:",
-    "Value": "",
+    "Value": "sdhfgskdfgsdfg",
     "TextBefore": "",
     "TextAfter": "",
     "InLine": null,
@@ -35791,7 +35791,7 @@ var testData = {
     "IsChild": false,
     "Name": "DebutSymptoms",
     "Title": "Початкові симптоми:",
-    "Value": "",
+    "Value": "варвар",
     "TextBefore": "",
     "TextAfter": "",
     "InLine": null,
@@ -41004,7 +41004,7 @@ var testData = {
     "IsChild": true,
     "Name": "AbdomenPalpationPain",
     "Title": "",
-    "Value": "різко болючий  в гіпогастрії",
+    "Value": "різко болючий в гіпогастрії",
     "TextBefore": "",
     "TextAfter": "",
     "InLine": null,
@@ -93464,6 +93464,7 @@ function (_PureComponent) {
           return _react.default.createElement(RadioButton, {
             id: subitem.Id,
             key: subitem.Id,
+            checked: subitem.Checked,
             value: subitem.Value,
             className: subitem.Owner === null ? "parent" : "child",
             title: subitem.Owner
@@ -93492,12 +93493,12 @@ function (_PureComponent) {
           id: subitem.Id,
           key: subitem.Id,
           value: subitem.Value,
-          className: subitem.Owner === null ? "parent" : "child",
+          className: "".concat(subitem.Owner === null ? "parent" : "child", " ").concat(subitem.Checked ? "ant-radio-button-checked" : null),
           title: subitem.Owner
         }, subitem.Value);
       }), ownerDetector(inputData.Id).map(function (subitem) {
         return ownerDetector(subitem.Id).map(function (item) {
-          return subitem.Checked === true ? (0, _helpers.typeDetector)(item, true) : null;
+          return subitem.Checked ? (0, _helpers.typeDetector)(item, true) : null;
         });
       })), inputData.TextAfter ? " ".concat(inputData.TextAfter) : null);
     }
@@ -94368,7 +94369,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49846" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
