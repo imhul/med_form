@@ -82,7 +82,7 @@ class RadioParent extends PureComponent {
                                 id={subitem.Id} 
                                 key={subitem.Id} 
                                 value={subitem.Value} 
-                                className={subitem.Owner === null ? "parent" : "child"}
+                                className={`${ subitem.Owner === null ? "parent" : "child" } ${ subitem.Checked ? "ant-radio-button-checked" : null }`}
                                 title={subitem.Owner}
                             >
                                 { subitem.Value }
@@ -91,7 +91,7 @@ class RadioParent extends PureComponent {
                     }
                     {
                         ownerDetector(inputData.Id).map(subitem => ownerDetector(subitem.Id).map(item => {
-                            return subitem.Checked === true ? typeDetector(item, true) : null
+                            return subitem.Checked ? typeDetector(item, true) : null
                         }))
                     }
                         
