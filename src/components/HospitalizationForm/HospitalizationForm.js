@@ -80,21 +80,13 @@ class HospitalizationForm extends Component {
             },
             body: 'FormData='+JSON.stringify(currentPageData)
         })
-        .then(  
-            function(response)
-            {  
-                console.log(response);
-            }  
-        )  
-        .catch(function(err) {  
-            //console.log('err);  
+        .then(response => {  
+            console.info(response);
+            uiActions.formSubmit(currentPageData)
+        })  
+        .catch(error => {
+            console.warn("formSubmit error: ", error);  
         });
-
-        // TODO: Тут будет функция отправки новых данных формы(newData), 
-        // внутри которой будет вызван action formSubmit(),
-        // указывающий на изменение состояния isSubmitted,
-        // в случае успешной отправки формы на сервер: 
-        uiActions.formSubmit(currentPageData)
     };
 
     onPopupCancel() {
