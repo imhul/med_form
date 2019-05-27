@@ -34686,19 +34686,16 @@ exports.default = void 0;
 var testData = {
   "Options": {
     "Hospital": "1",
-    "Patient": "2190",
-    "Hospitalization": "8",
-    "Reception": "6",
-    "Module": 1,
-    "Department": 1,
-    "formTextBefore": "Текст на початку форми",
-    "formTextAfter": "Текст в кінці форми",
+    "Patient": "0",
+    "Hospitalization": "0",
+    "Reception": "0",
+    "Module": 0,
+    "Department": 0,
+    "formTextBefore": "",
+    "formTextAfter": "",
     "TotalParent": 63
   },
-  "Error": [{
-    "Id": 100,
-    "Text": "Тестовая ошибка"
-  }],
+  "Error": [],
   "Data": [{
     "Id": "1",
     "Owner": null,
@@ -34803,7 +34800,7 @@ var testData = {
     "InLine": null,
     "Width": null,
     "Padding": null,
-    "Checked": true,
+    "Checked": false,
     "Type": "radio",
     "Placeholder": "",
     "Mode": null
@@ -34947,7 +34944,7 @@ var testData = {
     "InLine": null,
     "Width": null,
     "Padding": null,
-    "Checked": true,
+    "Checked": false,
     "Type": "checkbox",
     "Placeholder": "",
     "Mode": null
@@ -35791,7 +35788,7 @@ var testData = {
     "IsChild": false,
     "Name": "DebutSymptoms",
     "Title": "Початкові симптоми:",
-    "Value": "варвар",
+    "Value": "",
     "TextBefore": "",
     "TextAfter": "",
     "InLine": null,
@@ -72739,7 +72736,7 @@ var requestBody = function requestBody(data) {
 };
 
 exports.requestBody = requestBody;
-var requestURL = 'https://med.uax.co/json.php';
+var requestURL = 'https://med.uax.co/api/?Method=GetOptions';
 exports.requestURL = requestURL;
 var requestHeader = {
   "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -87246,6 +87243,8 @@ var UI_ACTIONS = _interopRequireWildcard(require("../../../redux/ui_actions"));
 
 var _uk_UA = _interopRequireDefault(require("antd/lib/date-picker/locale/uk_UA"));
 
+var _moment = _interopRequireDefault(require("moment"));
+
 var _helpers = require("../../../helpers");
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -87306,7 +87305,7 @@ function (_PureComponent) {
           onPanelChange: function onPanelChange(date, mode) {
             return uiActions.dateUpdate(date, mode, inputData.Id);
           },
-          value: inputData.Value !== "" ? inputData.Value : null,
+          value: inputData.Value !== "" ? (0, _moment.default)(inputData.Value) : null,
           className: "".concat(inputData.Mode.Mode, "-picker"),
           placeholder: inputData.Placeholder,
           showTime: inputData.Mode.ShowTime,
@@ -87388,7 +87387,7 @@ exports.default = _default2;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"antd/es/date-picker":"node_modules/antd/es/date-picker/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../../redux/ui_actions":"src/redux/ui_actions.js","antd/lib/date-picker/locale/uk_UA":"node_modules/antd/lib/date-picker/locale/uk_UA.js","../../../helpers":"src/helpers/index.js"}],"node_modules/antd/es/input/Input.js":[function(require,module,exports) {
+},{"antd/es/date-picker":"node_modules/antd/es/date-picker/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../../redux/ui_actions":"src/redux/ui_actions.js","antd/lib/date-picker/locale/uk_UA":"node_modules/antd/lib/date-picker/locale/uk_UA.js","moment":"node_modules/moment/moment.js","../../../helpers":"src/helpers/index.js"}],"node_modules/antd/es/input/Input.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -93980,7 +93979,8 @@ function (_Component) {
         headers: {
           "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
-        body: (0, _helpers.requestBody)(data)
+        //body: requestBody(data)
+        body: 'RequestData=' + JSON.stringify(data)
       }).then(function (response) {
         return response.json();
       }).then(function (data) {
@@ -94007,20 +94007,33 @@ function (_Component) {
     }
   }, {
     key: "formSubmit",
-    value: function formSubmit(newData) {
+    value: function formSubmit(newData, requestData) {
       var _this$props2 = this.props,
           uiActions = _this$props2.uiActions,
           ui = _this$props2.ui;
       var currentPageData = newData.filter(function (item) {
         return item.Page == ui.currentPage;
       });
-      console.info("currentPageData - object for submit: ", currentPageData);
-      fetch("https://med.uax.co/api/?Method=SaveOptions", {
+      console.info("currentPageData - object for submit: ", currentPageData); // Формируем список параметров для передачи на сервер
+
+      var data = {
+        'Hospital': document.getElementById("Hospital").value,
+        'Patient': document.getElementById("Patient").value,
+        'Hospitalization': document.getElementById("Hospitalization").value,
+        'Reception': document.getElementById("Reception").value,
+        'Department': document.getElementById("Department").value
+      };
+      var request = {
+        'Options': data,
+        'Data': currentPageData
+      };
+      fetch('https://med.uax.co/api/?Method=SaveOptions', {
         method: 'post',
         headers: {
           "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
-        body: 'FormData=' + JSON.stringify(currentPageData)
+        body: 'Request=' + JSON.stringify(request) //'FormData='+JSON.stringify(currentPageData)
+
       }).then(function (response) {
         console.info(response);
         uiActions.formSubmit(currentPageData);
@@ -94369,7 +94382,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49846" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50882" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

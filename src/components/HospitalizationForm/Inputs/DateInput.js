@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../../redux/ui_actions';
 import { Form, DatePicker } from 'antd';
 import locale from 'antd/lib/date-picker/locale/uk_UA';
+import moment from 'moment';
 
 // Helpers
 import { formItemLayout } from '../../../helpers';
@@ -17,7 +18,7 @@ class DateInput extends PureComponent {
             <DatePicker 
                 onChange={(date, dateString) => uiActions.dateUpdate(date, dateString, inputData.Id)}
                 onPanelChange={(date, mode) => uiActions.dateUpdate(date, mode, inputData.Id)}
-                value={inputData.Value !== "" ? inputData.Value : null }
+                value={inputData.Value !== "" ? moment(inputData.Value) : null }
                 className={`${inputData.Mode.Mode}-picker`}
                 placeholder={inputData.Placeholder}
                 showTime={inputData.Mode.ShowTime}
