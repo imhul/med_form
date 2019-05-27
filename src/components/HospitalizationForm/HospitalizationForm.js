@@ -35,7 +35,8 @@ class HospitalizationForm extends Component {
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
-            body: requestBody(data)
+            //body: requestBody(data)
+            body: 'RequestData='+JSON.stringify(data)
             })
             .then((response) => response.json())
             .then((data) => {
@@ -44,7 +45,7 @@ class HospitalizationForm extends Component {
             .catch((error) => {
                 console.warn('main fetch error: ', error)
             })
-    };
+        };
 
     componentDidMount() {
         this.loadAllData = this.loadAllData.bind(this);
@@ -68,17 +69,31 @@ class HospitalizationForm extends Component {
         this.formSubmit(this.props.ui.formData)
     };
 
-    formSubmit(newData) {
+    formSubmit(newData, requestData) {
         const { uiActions, ui } = this.props;
         const currentPageData = newData.filter(item => item.Page == ui.currentPage);
         console.info("currentPageData - object for submit: ", currentPageData);
 
-        fetch("https://med.uax.co/api/?Method=SaveOptions", {
+        // Формируем список параметров для передачи на сервер
+        const data = {
+            'Hospital': document.getElementById("Hospital").value,
+            'Patient': document.getElementById("Patient").value,
+            'Hospitalization': document.getElementById("Hospitalization").value,
+            'Reception': document.getElementById("Reception").value,
+            'Department': document.getElementById("Department").value,
+        };
+
+        const request = {
+            'Options' : data,
+            'Data' : currentPageData
+        }
+
+        fetch('https://med.uax.co/api/?Method=SaveOptions', {
             method: 'post',  
             headers: {  
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
             },
-            body: 'FormData='+JSON.stringify(currentPageData)
+            body: 'Request='+JSON.stringify(request) //'FormData='+JSON.stringify(currentPageData)
         })
         .then(response => {  
             console.info(response);

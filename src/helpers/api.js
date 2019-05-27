@@ -9,7 +9,7 @@ export const requestBody = (data) => {
     }
 };
 
-export const requestURL = 'https://med.uax.co/json.php';
+export const requestURL  = 'https://med.uax.co/api/?Method=GetOptions';
 
 export const requestHeader = {
     "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
