@@ -40,6 +40,7 @@ class HospitalizationForm extends Component {
             })
             .then((response) => response.json())
             .then((data) => {
+                console.info(data);
                 this.props.uiActions.loadData(data);
             })
             .catch((error) => {
@@ -95,13 +96,13 @@ class HospitalizationForm extends Component {
             },
             body: 'Request='+JSON.stringify(request) //'FormData='+JSON.stringify(currentPageData)
         })
-        .then(response => {  
-            console.info(response);
-            uiActions.formSubmit(currentPageData)
-        })  
-        .catch(error => {
-            console.warn("formSubmit error: ", error);  
-        });
+        .then((response) => response.json())
+        .then((data) => {
+            console.info(data);
+        })
+        .catch((error) => {
+            console.warn('main fetch error: ', error)
+        })
     };
 
     onPopupCancel() {
