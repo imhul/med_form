@@ -66182,15 +66182,7 @@ exports.requestHeader = exports.requestURL = exports.requestBody = void 0;
 
 // Формируем URL строку с параметрами для отправки на сервер
 var requestBody = function requestBody(data) {
-  var DataStr = "";
-
-  for (var key in data) {
-    if (DataStr != "") {
-      DataStr += "&";
-    }
-
-    DataStr += key + "=" + encodeURIComponent(data[key]);
-  }
+  return "RequestData=".concat(JSON.stringify(data));
 };
 
 exports.requestBody = requestBody;
@@ -87441,10 +87433,8 @@ function (_Component) {
 
       fetch(_helpers.requestURL, {
         method: 'post',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: 'RequestData=' + JSON.stringify(data)
+        headers: _helpers.requestHeader,
+        body: (0, _helpers.requestBody)(data)
       }).then(function (response) {
         if (response.ok && response.status === 200) {
           _message2.default.success(successLoadText);
@@ -87455,8 +87445,6 @@ function (_Component) {
 
           uiActions.loadError();
         }
-
-        ;
       }).then(function (data) {
         return uiActions.loadData(data);
       }).catch(function (error) {
@@ -87489,7 +87477,7 @@ function (_Component) {
         return item.Page == ui.currentPage;
       }); // Формируем список параметров для передачи на сервер
 
-      var data = {
+      var options = {
         'Hospital': document.getElementById("Hospital").value,
         'Patient': document.getElementById("Patient").value,
         'Hospitalization': document.getElementById("Hospitalization").value,
@@ -87497,14 +87485,12 @@ function (_Component) {
         'Department': document.getElementById("Department").value
       };
       var request = {
-        'Options': data,
+        'Options': options,
         'Data': currentPageData
       };
       fetch('https://med.uax.co/api/?Method=SaveOptions', {
         method: 'post',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
+        headers: _helpers.requestHeader,
         body: 'Request=' + JSON.stringify(request)
       }).then(function (response) {
         if (response.ok && response.status === 200) {
@@ -87518,8 +87504,6 @@ function (_Component) {
 
           uiActions.submitError(response.status);
         }
-      }).then(function (data) {
-        return console.info(data);
       }).catch(function (error) {
         return _message2.default.error(error);
       });

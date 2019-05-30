@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, Button, Pagination, Popconfirm, Icon, message } from 'antd';
+import { Form, Button, Pagination, Popconfirm, Icon, Alert, message, } from 'antd';
 import { Wave } from 'react-preloading-component';
 
 // Helpers
 import { 
-    requestBody, 
-    requestURL, 
-    requestHeader, 
-    typeDetector, 
-    buttonItemLayout, 
+    requestURL,
+    requestBody,
+    typeDetector,
+    requestHeader,
+    buttonItemLayout,
+    
 } from '../../helpers';
 
 const FormItem = Form.Item;
@@ -37,10 +38,8 @@ class HospitalizationForm extends Component {
         // Отправляем данные на сервер
         fetch(requestURL, {
             method: 'post',
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            },
-            body: 'RequestData='+JSON.stringify(data)
+            headers: requestHeader,
+            body: requestBody(data)
         })
         .then(response => {
             if(response.ok && (response.status === 200)) {
@@ -49,7 +48,7 @@ class HospitalizationForm extends Component {
             } else {
                 message.error(errorLoadText);
                 uiActions.loadError()
-            };  
+            }
         })
         .then(data => uiActions.loadData(data))
         .catch(error => message.error(error))
@@ -82,7 +81,7 @@ class HospitalizationForm extends Component {
         const currentPageData = newData.filter(item => item.Page == ui.currentPage);
 
         // Формируем список параметров для передачи на сервер
-        const data = {
+        const options = {
             'Hospital': document.getElementById("Hospital").value,
             'Patient': document.getElementById("Patient").value,
             'Hospitalization': document.getElementById("Hospitalization").value,
@@ -91,15 +90,13 @@ class HospitalizationForm extends Component {
         };
 
         const request = {
-            'Options' : data,
+            'Options' : options,
             'Data' : currentPageData
         };
 
         fetch('https://med.uax.co/api/?Method=SaveOptions', {
             method: 'post',  
-            headers: {  
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
-            },
+            headers: requestHeader,
             body: 'Request='+JSON.stringify(request)
         })
         .then(response => { 
@@ -112,7 +109,6 @@ class HospitalizationForm extends Component {
                 uiActions.submitError(response.status)
             }
         })
-        .then(data => console.info(data))
         .catch(error => message.error(error))
     };
 
