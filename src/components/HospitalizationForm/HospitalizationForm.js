@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, Button, Pagination, Popconfirm, Icon, } from 'antd';
+import { Form, Button, Pagination, Popconfirm, Icon, message } from 'antd';
+import { Wave } from 'react-preloading-component';
 
 // Helpers
 import { 
@@ -15,11 +16,15 @@ import {
 } from '../../helpers';
 
 const FormItem = Form.Item;
+const successLoadText = "Дані успішно завантажені!";
+const errorLoadText = "Помилка з'єднання! Дані не завантажені!";
+const successSaveText = "Дані успішно збережені!";
+const errorSaveText = "Помилка з'єднання! Дані не були збережені!";
 
 class HospitalizationForm extends Component {
 
     loadAllData() {
-
+        const { uiActions } = this.props;
         // Формируем список параметров для передачи на сервер
         const data = {
             'Hospital': document.getElementById("Hospital").value,
@@ -35,18 +40,20 @@ class HospitalizationForm extends Component {
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
-            //body: requestBody(data)
             body: 'RequestData='+JSON.stringify(data)
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.info(data);
-                this.props.uiActions.loadData(data);
-            })
-            .catch((error) => {
-                console.warn('main fetch error: ', error)
-            })
-        };
+        })
+        .then(response => {
+            if(response.ok && (response.status === 200)) {
+                message.success(successLoadText);
+                return response.json()
+            } else {
+                message.error(errorLoadText);
+                uiActions.loadError()
+            };  
+        })
+        .then(data => uiActions.loadData(data))
+        .catch(error => message.error(error))
+    };
 
     componentDidMount() {
         this.loadAllData = this.loadAllData.bind(this);
@@ -70,10 +77,9 @@ class HospitalizationForm extends Component {
         this.formSubmit(this.props.ui.formData)
     };
 
-    formSubmit(newData, requestData) {
+    formSubmit(newData) {
         const { uiActions, ui } = this.props;
         const currentPageData = newData.filter(item => item.Page == ui.currentPage);
-        console.info("currentPageData - object for submit: ", currentPageData);
 
         // Формируем список параметров для передачи на сервер
         const data = {
@@ -87,22 +93,27 @@ class HospitalizationForm extends Component {
         const request = {
             'Options' : data,
             'Data' : currentPageData
-        }
+        };
 
         fetch('https://med.uax.co/api/?Method=SaveOptions', {
             method: 'post',  
             headers: {  
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
             },
-            body: 'Request='+JSON.stringify(request) //'FormData='+JSON.stringify(currentPageData)
+            body: 'Request='+JSON.stringify(request)
         })
-        .then((response) => response.json())
-        .then((data) => {
-            console.info(data);
+        .then(response => { 
+            if(response.ok && (response.status === 200)) {
+                uiActions.formSubmit();
+                message.success(successSaveText);
+                return response.json()
+            } else {
+                message.error(errorSaveText);
+                uiActions.submitError(response.status)
+            }
         })
-        .catch((error) => {
-            console.warn('main fetch error: ', error)
-        })
+        .then(data => console.info(data))
+        .catch(error => message.error(error))
     };
 
     onPopupCancel() {
@@ -119,51 +130,55 @@ class HospitalizationForm extends Component {
 
     render() {
         // Props to constants
-        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, isFormActivated, } = this.props.ui;
+        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, isFormActivated, isInit } = this.props.ui;
         const { uiActions } = this.props;
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
+        // render
         return (
-            <div className="flex-container">
-                <Form 
-                    className="HospitalizationForm" 
-                    onSubmit={ this.onFormSubmit } 
-                    onChange={ uiActions.formUpdate }
-                >   
-                    <Icon type="solution" className="form-icon" />
-                    <FormItem className="form-text-before" label={formOptions.formTextBefore} />
+            <div className="flex-container" style={isInit === false ? { height: '100%' } : { height: 'auto' }}>
+                { isInit === false ? <Wave color="#1890ff" /> : ( // preloader
+                    <Form 
+                        className="HospitalizationForm" 
+                        onSubmit={ this.onFormSubmit } 
+                        onChange={ uiActions.formUpdate }
+                    >   
+                        <Icon type="solution" className="form-icon" />
+                        <FormItem className="form-text-before" label={formOptions.formTextBefore} />
 
-                    { dataFilteredByPage.map(inputs => typeDetector(inputs)) }
+                        { dataFilteredByPage.map(inputs => typeDetector(inputs)) }
 
-                    <FormItem className="form-text-after" label={formOptions.formTextAfter} />
-                    <FormItem {...buttonItemLayout}>
-                        <Button disabled={!isFormActivated} type="primary" htmlType="submit">
-                            Зберегти <Icon theme="filled" type="save" />
-                        </Button>
-                    </FormItem>
+                        <FormItem className="form-text-after" label={formOptions.formTextAfter} />
+                        <FormItem {...buttonItemLayout}>
+                            <Button disabled={!isFormActivated} type="primary" htmlType="submit">
+                                Зберегти <Icon theme="filled" type="save" />
+                            </Button>
+                        </FormItem>
 
-                    <Popconfirm 
-                        title="Внесені дані не були збережені. Ви впевнені, що хочете перейти на іншу сторінку?" 
-                        onConfirm={ this.onPopupConfirm } 
-                        onCancel={ this.onPopupCancel }
-                        okText="Так" 
-                        cancelText="Hі"
-                        visible={ !isSubmitted && isPopupVisible }
-                        icon={<Icon
-                            type="alert" 
-                            theme="twoTone" 
-                            twoToneColor="#faad14" 
-                            style={{fontSize: '40px'}} 
-                        />}
-                    />
-                    <Pagination
-                        current={ currentPage }
-                        total={ formOptions.TotalParent }
-                        pageSize={ 10 }
-                        onChange={ this.onPaginationUpdate }
-                        showTotal={ total => `Всього ${ total } питань` }
-                    />
-                </Form>
+                        <Popconfirm 
+                            title="Внесені дані не були збережені. Ви впевнені, що хочете перейти на іншу сторінку?" 
+                            onConfirm={ this.onPopupConfirm } 
+                            onCancel={ this.onPopupCancel }
+                            okText="Так" 
+                            cancelText="Hі"
+                            visible={ !isSubmitted && isPopupVisible }
+                            icon={<Icon
+                                type="alert" 
+                                theme="twoTone" 
+                                twoToneColor="#faad14" 
+                                style={{fontSize: '40px'}} 
+                            />}
+                        />
+                        <Pagination
+                            current={ currentPage }
+                            total={ formOptions.TotalParent }
+                            pageSize={ 10 }
+                            onChange={ this.onPaginationUpdate }
+                            showTotal={ total => `Всього ${ total } питань` }
+                        />
+                    </Form>
+                ) }
+                
             </div>
         )
     }

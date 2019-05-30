@@ -1,12 +1,11 @@
-import { typesUI as types } from './types';
-import testData from '../helpers/testData';
+import { typesUI as type } from './types';
 
 const initState = {
     isInit: false,
-    formData: testData.Data, // FOR TEST ONLY. NEEDED VALUE IS []
-    formOptions: testData.Options, // FOR TEST ONLY. NEEDED VALUE IS []
-    formErrors: testData.Error, // FOR TEST ONLY. NEEDED VALUE IS []
+    formData: [],
+    formOptions: [],
     currentPage: 1,
+    isDataLoaded: false,
     isSubmitted: false,
     isPopupVisible: false,
     nextPage: null,
@@ -16,16 +15,28 @@ const initState = {
 export default (state = initState, action) => {
     switch (action.type) {
 
-        case types.LOAD_DATA:
+        case type.LOAD_DATA:
             return { 
                 ...state,
                 formData: action.payload.Data,
                 formOptions: action.payload.Options,
-                formErrors: action.payload.Error,
+                isDataLoaded: true,
                 isInit: true,
             };
 
-        case types.DATE_UPDATE:
+        case type.LOAD_ERROR:
+            return { 
+                ...state,
+                isDataLoaded: false,
+            };
+
+        case type.SUBMIT_ERROR:
+            return { 
+                ...state,
+                isSubmitted: false,
+            };
+
+        case type.DATE_UPDATE:
             state.formData.filter(items => items.Id === action.meta).map(item => {
                 item.Value = action.payload;
                 item.Checked = !action.payload.checked
@@ -35,7 +46,7 @@ export default (state = initState, action) => {
                 isFormActivated: true,
             };
 
-        case types.NUMBER_UPDATE:
+        case type.NUMBER_UPDATE:
             state.formData.filter(items => items.Id === action.meta).map(item => {
                 item.Value = action.payload;
                 item.Checked = !action.payload.checked
@@ -45,7 +56,7 @@ export default (state = initState, action) => {
                 isFormActivated: true,
             };
 
-        case types.SWITCH_UPDATE:
+        case type.SWITCH_UPDATE:
             state.formData.filter(items => items.Id === action.meta).map(item => {
                 item.Value = action.payload;
                 item.Checked = action.payload
@@ -55,7 +66,7 @@ export default (state = initState, action) => {
                 isFormActivated: true,
             };
 
-        case types.FORM_UPDATE:
+        case type.FORM_UPDATE:
             const target = state.formData.filter(items => items.Id === action.payload.id);
             const untargets = state.formData.filter(items => items.Id !== action.payload.id);
             const targetOwner = `${target.map(item => item.Owner)[0]}`;
@@ -85,29 +96,30 @@ export default (state = initState, action) => {
                 isFormActivated: true,
             };
 
-        case types.FORM_SUBMIT:
+        case type.FORM_SUBMIT:
             return {
                 ...state,
                 isSubmitted: true,
             };
 
-        case types.CONFIRM_POPUP_SHOW:
+        case type.CONFIRM_POPUP_SHOW:
             return {
                 ...state,
                 isPopupVisible: true,
                 nextPage: action.payload,
             };
 
-        case types.CONFIRM_POPUP_HIDE:
+        case type.CONFIRM_POPUP_HIDE:
             return {
                 ...state,
                 isPopupVisible: false,
             };
 
-        case types.PAGINATION_UPDATE:
+        case type.PAGINATION_UPDATE:
             return { 
                 ...state,
                 currentPage: action.payload,
+                isFormActivated: false,
             };
 
         default:

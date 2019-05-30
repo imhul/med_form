@@ -9,6 +9,24 @@ export function loadData(payload) {
   }
 };
 
+export function loadError(text) {
+  return (dispatch) => {
+    dispatch({
+      type: types.LOAD_ERROR,
+      payload: text,
+    })
+  }
+};
+
+export function submitError(text) {
+  return (dispatch) => {
+    dispatch({
+      type: types.SUBMIT_ERROR,
+      payload: text,
+    })
+  }
+};
+
 export function dateUpdate(payload, mode, id) {
   return (dispatch) => {
     dispatch({

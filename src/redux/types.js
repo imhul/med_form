@@ -9,10 +9,12 @@ export const typesUI = {
     TEXTAREA_UPDATE:      'TEXTAREA_UPDATE',
     NUMBER_UPDATE:        'NUMBER_UPDATE',
     SWITCH_UPDATE:        'SWITCH_UPDATE',
+    SUBMIT_ERROR:         'SUBMIT_ERROR',
     INPUT_UPDATE:         'INPUT_UPDATE',
     FORM_UPDATE:          'FORM_UPDATE',
     FORM_SUBMIT:          'FORM_SUBMIT',
     DATE_UPDATE:          'DATE_UPDATE',
+    LOAD_ERROR:           'LOAD_ERROR',
     LOAD_DATA:            'LOAD_DATA',
 
   };

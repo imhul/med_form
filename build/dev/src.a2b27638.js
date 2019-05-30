@@ -34645,10 +34645,12 @@ var typesUI = {
   TEXTAREA_UPDATE: 'TEXTAREA_UPDATE',
   NUMBER_UPDATE: 'NUMBER_UPDATE',
   SWITCH_UPDATE: 'SWITCH_UPDATE',
+  SUBMIT_ERROR: 'SUBMIT_ERROR',
   INPUT_UPDATE: 'INPUT_UPDATE',
   FORM_UPDATE: 'FORM_UPDATE',
   FORM_SUBMIT: 'FORM_SUBMIT',
   DATE_UPDATE: 'DATE_UPDATE',
+  LOAD_ERROR: 'LOAD_ERROR',
   LOAD_DATA: 'LOAD_DATA'
 };
 exports.typesUI = typesUI;
@@ -34670,7095 +34672,6 @@ exports.typesUI = typesUI;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"react-hot-loader":"node_modules/react-hot-loader/index.js"}],"src/helpers/testData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
-var testData = {
-  "Options": {
-    "Hospital": "1",
-    "Patient": "0",
-    "Hospitalization": "0",
-    "Reception": "0",
-    "Module": 0,
-    "Department": 0,
-    "formTextBefore": "",
-    "formTextAfter": "",
-    "TotalParent": 63
-  },
-  "Error": [],
-  "Data": [{
-    "Id": "1",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Сomplaints",
-    "Title": "33. Скарги пацієнта:",
-    "Value": "скарги на біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "2",
-    "Owner": "1",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Сomplaints",
-    "Title": "",
-    "Value": "Активно не пред'являє",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "3",
-    "Owner": "1",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Сomplaints",
-    "Title": "",
-    "Value": "Збір скарг неможливий через кому",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "4",
-    "Owner": "1",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "Сomplaints",
-    "Title": "",
-    "Value": "в зв'язку з мовними розладами збір скарг неможливий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "5",
-    "Owner": "1",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Сomplaints",
-    "Title": "",
-    "Value": "через тяжкість стану збір скарг неможливий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "6",
-    "Owner": "1",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Сomplaints",
-    "Title": "",
-    "Value": "скарги на біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "7",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "СomplaintsPain",
-    "Title": "Тип болю:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "8",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterPunctum",
-    "Title": "",
-    "Value": "біль колючого характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "9",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterAching",
-    "Title": "",
-    "Value": "біль ниючого характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "10",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterAcute",
-    "Title": "",
-    "Value": "біль гострого характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "11",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterRemittens",
-    "Title": "",
-    "Value": "біль періодичного характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "12",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterPermanent",
-    "Title": "",
-    "Value": "постійний біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "13",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterPulsus",
-    "Title": "",
-    "Value": "біль пульсуючого характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "14",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterCutting",
-    "Title": "",
-    "Value": "біль ріжучого характеру",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "15",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterReminiscent",
-    "Title": "",
-    "Value": "переймоподібний біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "16",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PainCharacterOther",
-    "Title": "Інший характер болю:",
-    "Value": "sdhfgskdfgsdfg",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інший характер болю",
-    "Mode": null
-  }, {
-    "Id": "17",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PainLocalization",
-    "Title": "Локалізація болю:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "18",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Headache",
-    "Title": "",
-    "Value": "головний біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "19",
-    "Owner": "18",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "CompressionHeadache",
-    "Title": "",
-    "Value": "стискаючий головний біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "20",
-    "Owner": "18",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulsatingHeadache",
-    "Title": "",
-    "Value": "пульсуючий головний біль",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "21",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "EpigastricPain",
-    "Title": "",
-    "Value": "біль в епігастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "22",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MesogasterPain",
-    "Title": "",
-    "Value": "біль в мезогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "23",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HypogastricPain",
-    "Title": "",
-    "Value": "біль в гіпогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "24",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestPain",
-    "Title": "",
-    "Value": "біль у грудній клітці",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "417",
-    "Owner": "24",
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ChestLocalizationPain",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "25",
-    "Owner": "417",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestLocalizationPain",
-    "Title": "",
-    "Value": "зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "26",
-    "Owner": "417",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestLocalizationPain",
-    "Title": "",
-    "Value": "справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "27",
-    "Owner": "417",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestLocalizationPain",
-    "Title": "",
-    "Value": "біль за грудиною",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "28",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DuckAppendix",
-    "Title": "",
-    "Value": "в мечовидній ділянці",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "29",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HypochohdriumLeftPain",
-    "Title": "",
-    "Value": "біль в лівому підребер'ї",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "30",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HypochohdriumRightPain",
-    "Title": "",
-    "Value": "біль у правому підребер'ї",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "31",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsIliacPain",
-    "Title": "",
-    "Value": "біль у правій клубовій ділянці",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "32",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsIliacPain",
-    "Title": "",
-    "Value": "біль у лівій клубовій ділянці",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "33",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsUppExtrPain",
-    "Title": "",
-    "Value": "біль у верхніх кінцівках",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "34",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsLwrExtrPain",
-    "Title": "",
-    "Value": "біль у нижніх кінцівках",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "35",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsPainProjection",
-    "Title": "Біль в проекції:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Біль в проекції",
-    "Mode": null
-  }, {
-    "Id": "36",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "СomplaintsOther",
-    "Title": "Інші скарги:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "37",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsBleeding",
-    "Title": "",
-    "Value": "кровотечу",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "38",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsGeneralWeakness",
-    "Title": "",
-    "Value": "загальну слабкість",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "39",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsVertigo",
-    "Title": "",
-    "Value": "запаморочення",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "40",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsDryMouth",
-    "Title": "",
-    "Value": "сухість в роті",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "41",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsNausea",
-    "Title": "",
-    "Value": "нудоту",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "42",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsBurping",
-    "Title": "",
-    "Value": "відрижку",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "43",
-    "Owner": "42",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsBitBitterness",
-    "Title": "",
-    "Value": "відрижку гіркотою",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "44",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsShortnessBreath",
-    "Title": "",
-    "Value": "задишку",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "45",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsLackAir",
-    "Title": "",
-    "Value": "відчуття браку повітря",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "46",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsEdema",
-    "Title": "",
-    "Value": "набряк",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "47",
-    "Owner": "46",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsEdemaLocalization",
-    "Title": "",
-    "Value": "набряк обличчя",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "48",
-    "Owner": "46",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsEdemaLocalizationUpper",
-    "Title": "",
-    "Value": "набряк верхніх кінцівок",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "49",
-    "Owner": "46",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsEdemaLocalizationLower",
-    "Title": "",
-    "Value": "набряк нижніх кнцівок",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "50",
-    "Owner": "46",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsEdemaOther",
-    "Title": "Інші набряки:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інші набряки",
-    "Mode": null
-  }, {
-    "Id": "51",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsAnasarca",
-    "Title": "",
-    "Value": "генералізований набряк",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "52",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsVomitusUno",
-    "Title": "",
-    "Value": "одноразову блювоту",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "53",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsVomitusPermanent",
-    "Title": "",
-    "Value": "часту блювоту",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "54",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsNumbness",
-    "Title": "",
-    "Value": "оніміння",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "55",
-    "Owner": "6",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "СomplaintsOtherText",
-    "Title": "Інші скарги:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інші скарги",
-    "Mode": null
-  }, {
-    "Id": "57",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AnamnesisMorbi",
-    "Title": "Дата початку захворювання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "58",
-    "Owner": "57",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DateOnsetMorbi",
-    "Title": "",
-    "Value": "дата невідома",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "59",
-    "Owner": "57",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DateOnsetMorbi",
-    "Title": "",
-    "Value": "дата початку захворювання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "60",
-    "Owner": "59",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DateOnsetMorbiYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "61",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "DebutSymptoms",
-    "Title": "Початкові симптоми:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Початкові симптоми",
-    "Mode": null
-  }, {
-    "Id": "62",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "CircumstancesDisease",
-    "Title": "Обставини початку захворювання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "63",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "CircumstancesDisease",
-    "Title": "Лікування даного захворювання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "64",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "CircumstancesDisease",
-    "Title": "",
-    "Value": "не відомо",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "65",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "CircumstancesDisease",
-    "Title": "",
-    "Value": "не лікувався",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "66",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TreatmentthisDisease",
-    "Title": "",
-    "Value": "лікувався самостійно",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "67",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TreatmentthisDisease",
-    "Title": "",
-    "Value": "лікувався амбулаторно",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "68",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TreatmentthisDisease",
-    "Title": "",
-    "Value": "лікувався стаціонарно",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "69",
-    "Owner": "63",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TreatmentthisDisease",
-    "Title": "",
-    "Value": "інше",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "70",
-    "Owner": "69",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "CircumstancesDiseaseText",
-    "Title": "Інше лікування:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Інше лікування",
-    "Mode": null
-  }, {
-    "Id": "71",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AnmConsultDoct",
-    "Title": "",
-    "Value": "консультований лікарем",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "72",
-    "Owner": "71",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AnmConsultDoctName",
-    "Title": "Консультований лікарем",
-    "Value": "Ім'я консультуючого лікаря",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Ім'я консультуючого лікаря",
-    "Mode": null
-  }, {
-    "Id": "387",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AnamnesisVitae",
-    "Title": "35. Анамнез життя:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "73",
-    "Owner": "387",
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AnamnesisVitae",
-    "Title": "",
-    "Value": "Анамнез зібраний зі слів, додаткової медичної документації не надано.",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "74",
-    "Owner": "387",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AnamnesisVitae",
-    "Title": "",
-    "Value": "З анамнезом, результатами проведених дообстеження ознайомлений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "75",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "BadDenies",
-    "Title": "Шкідливі звички:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "76",
-    "Owner": "75",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SmokingDenies",
-    "Title": "",
-    "Value": "паління",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "77",
-    "Owner": "75",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlcoholDenies",
-    "Title": "",
-    "Value": "алкогольна залежність",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "78",
-    "Owner": "75",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DrugsDenies",
-    "Title": "",
-    "Value": "прийом наркотичних або токсичних речовин",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "79",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Tuberculosis",
-    "Title": "Туберкульоз:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "80",
-    "Owner": "79",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Tuberculosis",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "81",
-    "Owner": "79",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Tuberculosis",
-    "Title": "",
-    "Value": "переніс туберкульоз",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "82",
-    "Owner": "81",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TuberculosisYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "83",
-    "Owner": null,
-    "Page": "1",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SexualTransmitDisease",
-    "Title": "Венеричні захворювання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "84",
-    "Owner": "83",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SexualTransmitDisease",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "85",
-    "Owner": "83",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SexualTransmitDisease",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "86",
-    "Owner": "85",
-    "Page": "1",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SexualTransmitDiseaseYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "87",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ViralHepatitis",
-    "Title": "Вірусний гепатит:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "88",
-    "Owner": "87",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitis",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "89",
-    "Owner": "87",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitis",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "380",
-    "Owner": "89",
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ViralHepatitisA",
-    "Title": "Вірусний гепатит А",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "90",
-    "Owner": "380",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisA",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "91",
-    "Owner": "380",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisA",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "92",
-    "Owner": "91",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisAYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "426",
-    "Owner": "89",
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ViralHepatitisB",
-    "Title": "Вірусний гепатит B",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "93",
-    "Owner": "426",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisB",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "94",
-    "Owner": "426",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisB",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "95",
-    "Owner": "94",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "ViralHepatitisBYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "429",
-    "Owner": "89",
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ViralHepatitisC",
-    "Title": "Вірусний гепатит C",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "96",
-    "Owner": "429",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisC",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "97",
-    "Owner": "429",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisC",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "98",
-    "Owner": "97",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ViralHepatitisCYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "99",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "HIV",
-    "Title": "ВІЛ/СНІД:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "100",
-    "Owner": "99",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HIV",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "101",
-    "Owner": "99",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HIV",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "102",
-    "Owner": "101",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HIVYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "103",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "OperationTreat",
-    "Title": "Перенесені оперативні втручання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "104",
-    "Owner": "103",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OperationTreat",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "105",
-    "Owner": "103",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OperationTreat",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "106",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Hernioplasty",
-    "Title": "",
-    "Value": "герніопластика",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "107",
-    "Owner": "106",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HernioplastyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "108",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Mastectomy",
-    "Title": "",
-    "Value": "мастектомія",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "109",
-    "Owner": "108",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MastectomyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "110",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Prostatectomy",
-    "Title": "",
-    "Value": "простатектомія",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "111",
-    "Owner": "110",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ProstatectomyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "112",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HastrResection",
-    "Title": "",
-    "Value": "резекція шлунка",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "113",
-    "Owner": "112",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HastrResectionYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "114",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Hasrtectomy",
-    "Title": "",
-    "Value": "гастректомія",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "115",
-    "Owner": "114",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HasrtectomyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "116",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OperationTreatPR",
-    "Title": "",
-    "Value": "резекція молочної залози",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "117",
-    "Owner": "116",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OperationTreatPRYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "118",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Cholecystectomy",
-    "Title": "",
-    "Value": "холецистектомія",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "119",
-    "Owner": "118",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "CholecystectomyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "120",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Apendectomy",
-    "Title": "",
-    "Value": "апендектомія",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "121",
-    "Owner": "120",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ApendectomyYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "122",
-    "Owner": "105",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OperationTreatTxt",
-    "Title": "Інше:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інші оперативні втручання",
-    "Mode": null
-  }, {
-    "Id": "123",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "TransfusionAnamnesis",
-    "Title": "Трансфузіологічний анамнез:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "124",
-    "Owner": "123",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TransfusionAnamnesis",
-    "Title": "",
-    "Value": "не обтяжений ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "125",
-    "Owner": "123",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TransfusionAnamnesis",
-    "Title": "",
-    "Value": "переніс",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "126",
-    "Owner": "125",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TransfusionAnamnesisYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "127",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "OncologicalAnm",
-    "Title": "Онкологічні захворювання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "128",
-    "Owner": "127",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OncologicalAnm",
-    "Title": "",
-    "Value": "заперечує",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "129",
-    "Owner": "127",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OncologicalAnm",
-    "Title": "",
-    "Value": "перененесені",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "130",
-    "Owner": "129",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "OncologicalAnmYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": "year",
-      "Format": "YYYY"
-    }
-  }, {
-    "Id": "131",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AllelgAnamnesis",
-    "Title": "Алергологічний анамнез:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "132",
-    "Owner": "131",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AllelgAnamnesis",
-    "Title": "",
-    "Value": "не обтяжений ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "133",
-    "Owner": "131",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AllelgAnamnesis",
-    "Title": "",
-    "Value": "продукти харчування ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "134",
-    "Owner": "131",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AllelgAnamnesis",
-    "Title": "",
-    "Value": "не відомо",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "135",
-    "Owner": "131",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AllelgAnamnesis",
-    "Title": "",
-    "Value": "інший",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "136",
-    "Owner": "135",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AllelgAnamnesisOther",
-    "Title": "Інший тип алергологічного анамнезу:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інший тип алергологічного анамнезу",
-    "Mode": null
-  }, {
-    "Id": "137",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "TravmAnamn",
-    "Title": "Травми:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "138",
-    "Owner": "137",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TravmAnamn",
-    "Title": "",
-    "Value": "не обтяжений ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "139",
-    "Owner": "137",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TravmAnamn",
-    "Title": "",
-    "Value": "переніс травму",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "140",
-    "Owner": "139",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "TravmAnamnYear",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "у",
-    "TextAfter": "році",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "date",
-    "Placeholder": "",
-    "Mode": {
-      "ShowTime": false,
-      "Mode": null,
-      "Format": null
-    }
-  }, {
-    "Id": "141",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "HereditaryAnm",
-    "Title": "Спадковий анамнез:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "142",
-    "Owner": "141",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HereditaryAnm",
-    "Title": "",
-    "Value": "не обтяжений ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "143",
-    "Owner": "141",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HereditaryAnm",
-    "Title": "",
-    "Value": "обтяжений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "144",
-    "Owner": "143",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HereditaryAnmText",
-    "Title": "Інший тип спадкового анамнезу:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "text",
-    "Placeholder": "Інший тип спадкового анамнезу",
-    "Mode": null
-  }, {
-    "Id": "145",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ObjectiveExamData",
-    "Title": "36. Об’єктивний стан хворого:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "146",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан задовільний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "147",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан ближче до задовільного",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "148",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан середнього ступеня тяжкості",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "149",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан важкий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "150",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан ближче до важкого",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "151",
-    "Owner": "145",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "GeneralCondition",
-    "Title": "",
-    "Value": "Загальний стан вкрай важкий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "152",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Consciousness",
-    "Title": "Свідомість:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "153",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "ясна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "154",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "оглушення",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "155",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "сопор",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "156",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "кома І",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "157",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "кома І-ІІ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "158",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "кома ІІ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "159",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "кома ІІ-ІІІ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "160",
-    "Owner": "152",
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Consciousness",
-    "Title": "",
-    "Value": "кома ІІІ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "161",
-    "Owner": null,
-    "Page": "2",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "GCS",
-    "Title": "",
-    "Value": "За шкалою Глазго:",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "162",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "VerbalContact",
-    "Title": "Доступність мовного контакту:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "163",
-    "Owner": "162",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "VerbalContact",
-    "Title": "",
-    "Value": "не доступний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "164",
-    "Owner": "162",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "VerbalContact",
-    "Title": "",
-    "Value": "відповідає коротко",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "165",
-    "Owner": "162",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "VerbalContact",
-    "Title": "",
-    "Value": "відповідає розгорнуто",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "166",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PositionInBed",
-    "Title": "Положення в ліжку:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "167",
-    "Owner": "166",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PositionInBed",
-    "Title": "",
-    "Value": "активне",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "168",
-    "Owner": "166",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PositionInBed",
-    "Title": "",
-    "Value": "пасивне ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "169",
-    "Owner": "166",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PositionInBed",
-    "Title": "",
-    "Value": "вимушене",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "170",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "MotionActivity",
-    "Title": "Рухова активність:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "171",
-    "Owner": "170",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MotionActivity",
-    "Title": "",
-    "Value": "лежить у ліжку",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "172",
-    "Owner": "170",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MotionActivity",
-    "Title": "",
-    "Value": "самостійно сидить",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "173",
-    "Owner": "170",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MotionActivity",
-    "Title": "",
-    "Value": "сидить з підтримкою",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "174",
-    "Owner": "170",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MotionActivity",
-    "Title": "",
-    "Value": "ходить зі сторонньою допомогою",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "175",
-    "Owner": "170",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "MotionActivity",
-    "Title": "",
-    "Value": "самостійно ходить",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "176",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SkinCondition",
-    "Title": "Шкіра:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "177",
-    "Owner": "176",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinCondition",
-    "Title": "",
-    "Value": "шкіра тілесного кольору",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "178",
-    "Owner": "176",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinCondition",
-    "Title": "",
-    "Value": "блідо-рожева",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "179",
-    "Owner": "176",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinCondition",
-    "Title": "",
-    "Value": "бліда",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "180",
-    "Owner": "176",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinCondition",
-    "Title": "",
-    "Value": "іктерична",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "181",
-    "Owner": "176",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinCondition",
-    "Title": "",
-    "Value": "ціанотична",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "182",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SkinTurgor",
-    "Title": "Тугор шкіри:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "183",
-    "Owner": "182",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinTurgor",
-    "Title": "",
-    "Value": "звичайний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "184",
-    "Owner": "182",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinTurgor",
-    "Title": "",
-    "Value": "знижений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "185",
-    "Owner": "182",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinTurgor",
-    "Title": "",
-    "Value": "підвищений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "186",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SkinMoisture",
-    "Title": "Вологість шкіри:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "187",
-    "Owner": "186",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinMoisture",
-    "Title": "",
-    "Value": "суха",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "188",
-    "Owner": "186",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinMoisture",
-    "Title": "",
-    "Value": "волога",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "393",
-    "Owner": "188",
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SkinMoistureType",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "189",
-    "Owner": "393",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinMoistureType",
-    "Title": "",
-    "Value": "нормальна вологість",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "190",
-    "Owner": "393",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SkinMoistureType",
-    "Title": "",
-    "Value": "підвищена вологість",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "191",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "BodyConsitution",
-    "Title": "Конституція тіла:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "192",
-    "Owner": "191",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BodyConsitution",
-    "Title": "",
-    "Value": "Астенічна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "193",
-    "Owner": "191",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BodyConsitution",
-    "Title": "",
-    "Value": "Нормостенічна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "194",
-    "Owner": "191",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BodyConsitution",
-    "Title": "",
-    "Value": "Гіперстенічна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "195",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "SubcutaneousTissue",
-    "Title": "Ступінь розвитку підшкірно-жирової клітковини:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "196",
-    "Owner": "195",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SubcutaneousTissue",
-    "Title": "",
-    "Value": "незначно розвинута",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "197",
-    "Owner": "195",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SubcutaneousTissue",
-    "Title": "",
-    "Value": "помірно розвинута",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "198",
-    "Owner": "195",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SubcutaneousTissue",
-    "Title": "",
-    "Value": "надмірно розвинута",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "199",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Edema",
-    "Title": "Набряк:",
-    "Value": "набряк",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "200",
-    "Owner": "199",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "EdemaLocalizationHead",
-    "Title": "",
-    "Value": "набряк обличчя",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "201",
-    "Owner": "199",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "EdemaLocalizationUppExtr",
-    "Title": "",
-    "Value": "набряк верхніх кінцівок",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "202",
-    "Owner": "199",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "EdemaLocalizationLwrExtr",
-    "Title": "",
-    "Value": "набряк нижніх кнцівок",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "203",
-    "Owner": "199",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Anasarca ",
-    "Title": "",
-    "Value": "генералізований набряк",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "checkbox",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "204",
-    "Owner": null,
-    "Page": "3",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "LymphNodes",
-    "Title": "Лімфатичні вузли:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "205",
-    "Owner": "204",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "LymphNodes",
-    "Title": "",
-    "Value": "не пальпуються ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "206",
-    "Owner": "204",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "LymphNodes",
-    "Title": "",
-    "Value": "пальпуються ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "207",
-    "Owner": "206",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "LymphNodesSize",
-    "Title": "",
-    "Value": "не збільшені ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "208",
-    "Owner": "206",
-    "Page": "3",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "LymphNodesSize",
-    "Title": "",
-    "Value": "збільшені ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "209",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "RespiratorySystem",
-    "Title": "Дихальна система:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "210",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ChestForm",
-    "Title": "Грудна клітка:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "211",
-    "Owner": "210",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestForm",
-    "Title": "",
-    "Value": "симетрична",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "212",
-    "Owner": "210",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestForm",
-    "Title": "",
-    "Value": "асиметрична",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "396",
-    "Owner": "212",
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ChestFormSide",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "213",
-    "Owner": "396",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestFormSide",
-    "Title": "",
-    "Value": "асиметрична справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "214",
-    "Owner": "396",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestFormSide",
-    "Title": "",
-    "Value": "асиметрична зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "215",
-    "Owner": "396",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestFormSide",
-    "Title": "",
-    "Value": "асиметрична з обох сторін",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "216",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ChestDeform",
-    "Title": "Деформації грудної клітки:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "217",
-    "Owner": "216",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestDeform",
-    "Title": "",
-    "Value": "відсутні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "218",
-    "Owner": "216",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestDeform",
-    "Title": "",
-    "Value": "наявні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "219",
-    "Owner": "218",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestDeformLoc",
-    "Title": "Інші деформації грудної клітки:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Інші деформації грудної клітки",
-    "Mode": null
-  }, {
-    "Id": "220",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ChestBreathing",
-    "Title": "Симетричність дихання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "221",
-    "Owner": "220",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestBreathing",
-    "Title": "",
-    "Value": "симетричне",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "222",
-    "Owner": "220",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestBreathing",
-    "Title": "",
-    "Value": "асиметричне справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "223",
-    "Owner": "222",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ChestBreathing",
-    "Title": "",
-    "Value": "асиметричне зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "225",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "BreathingType",
-    "Title": "Тип дихання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "226",
-    "Owner": "225",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingType",
-    "Title": "",
-    "Value": "змішаний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "227",
-    "Owner": "225",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingType",
-    "Title": "",
-    "Value": "грудний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "228",
-    "Owner": "225",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingType",
-    "Title": "",
-    "Value": "черевний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "229",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "RespirationRate",
-    "Title": "Частота дихальних рухів:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "number",
-    "Placeholder": "",
-    "Mode": {
-      "Step": "1",
-      "Min": "1",
-      "Max": "100"
-    }
-  }, {
-    "Id": "230",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlterBreathing",
-    "Title": "Альтернуюче дихання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "switcher",
-    "Placeholder": "",
-    "Mode": {
-      "TextUnchecked": "ні",
-      "TextChecked": "так"
-    }
-  }, {
-    "Id": "399",
-    "Owner": "230",
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AlterBreathingType",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "233",
-    "Owner": "399",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlterBreathingType",
-    "Title": "",
-    "Value": "Куссмауля",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "234",
-    "Owner": "399",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlterBreathingType",
-    "Title": "",
-    "Value": "Біота",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "235",
-    "Owner": "399",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlterBreathingType",
-    "Title": "",
-    "Value": "Чейн-Стокса",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "236",
-    "Owner": "399",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AlterBreathingType",
-    "Title": "",
-    "Value": "Грокко-Фругоні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "237",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "BreathingAuscultating",
-    "Title": "Аускультативно:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "238",
-    "Owner": "237",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingAuscultating",
-    "Title": "",
-    "Value": "везикулярне дихання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "239",
-    "Owner": "237",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingAuscultating",
-    "Title": "",
-    "Value": "жорстке дихання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "240",
-    "Owner": "237",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingAuscultating",
-    "Title": "",
-    "Value": "жорстке везикулярне дихання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "241",
-    "Owner": "237",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingAuscultating",
-    "Title": "",
-    "Value": "бронхіальне дихання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "242",
-    "Owner": "237",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "BreathingAuscultating",
-    "Title": "",
-    "Value": "амфоричне дихання",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "243",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AdditionalBreathingNoises",
-    "Title": "додаткові дихальні шуми:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "244",
-    "Owner": "243",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AdditionalBreathingNoises",
-    "Title": "",
-    "Value": "відсутні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "245",
-    "Owner": "243",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AdditionalBreathingNoises",
-    "Title": "",
-    "Value": "наявні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "246",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Wheezing",
-    "Title": "Хрипи:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "247",
-    "Owner": "246",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Wheezing",
-    "Title": "",
-    "Value": "відсутні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "248",
-    "Owner": "246",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Wheezing",
-    "Title": "",
-    "Value": "наявні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "249",
-    "Owner": "248",
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "WheezingType",
-    "Title": "Тип хрипів:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "250",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "сухі",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "251",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "свистячі",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "252",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "тріскучі",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "253",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "дзижчачі",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "254",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "вологі",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "255",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "дрібнопухирчасті",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "256",
-    "Owner": "249",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "WheezingType",
-    "Title": "",
-    "Value": "середньопухирчасті",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "257",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Crepitatio",
-    "Title": "Крепітація:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "258",
-    "Owner": "257",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Crepitatio",
-    "Title": "",
-    "Value": "відсутня",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "259",
-    "Owner": "257",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Crepitatio",
-    "Title": "",
-    "Value": "прослуховується",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "260",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PleuralFrictionNoise",
-    "Title": "Шум тертя плеври:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "261",
-    "Owner": "260",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PleuralFrictionNoise",
-    "Title": "",
-    "Value": "відсутній",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "262",
-    "Owner": "260",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PleuralFrictionNoise",
-    "Title": "",
-    "Value": "наявний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "263",
-    "Owner": "260",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PleuralFrictionNoiseLoc",
-    "Title": "",
-    "Value": "справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "264",
-    "Owner": "260",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PleuralFrictionNoiseLoc",
-    "Title": "",
-    "Value": "зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "265",
-    "Owner": "260",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PleuralFrictionNoiseLoc",
-    "Title": "",
-    "Value": "з обох сторін",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "266",
-    "Owner": null,
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "DullingPulmonarySound",
-    "Title": "Перкуторно:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "267",
-    "Owner": "266",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySound",
-    "Title": "",
-    "Value": "ясний легеневий звук",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "268",
-    "Owner": "266",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySound",
-    "Title": "",
-    "Value": "притуплення",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "402",
-    "Owner": "268",
-    "Page": "4",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "DullingPulmonarySoundLoc",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "269",
-    "Owner": "402",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySoundLoc",
-    "Title": "",
-    "Value": "притуплення справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "270",
-    "Owner": "402",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySoundLoc",
-    "Title": "",
-    "Value": "притуплення зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "271",
-    "Owner": "402",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySoundLoc",
-    "Title": "",
-    "Value": "з обох сторін",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "272",
-    "Owner": "266",
-    "Page": "4",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "DullingPulmonarySound",
-    "Title": "",
-    "Value": "тимпаніт",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "273",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "CardivascularSystem",
-    "Title": "Серцево-судинна система:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "274",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "HeartTones",
-    "Title": "Серцеві тони:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "275",
-    "Owner": "274",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeartTones",
-    "Title": "",
-    "Value": "ритмічні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "276",
-    "Owner": "274",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeartTones",
-    "Title": "",
-    "Value": "аритмічні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "277",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "HeartTonesSound",
-    "Title": "Звучність:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "278",
-    "Owner": "277",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeartTonesSound",
-    "Title": "",
-    "Value": "звучні",
-    "TextBefore": "звучні",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "279",
-    "Owner": "277",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeartTonesSound",
-    "Title": "",
-    "Value": "ослаблені ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "280",
-    "Owner": "277",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeartTonesSound",
-    "Title": "",
-    "Value": "приглушені",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "281",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "FirstToneChar",
-    "Title": "І тон:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "282",
-    "Owner": "281",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FirstToneChar",
-    "Title": "",
-    "Value": "нормальної звучності",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "283",
-    "Owner": "281",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FirstToneChar",
-    "Title": "",
-    "Value": "посилений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "284",
-    "Owner": "281",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FirstToneChar",
-    "Title": "",
-    "Value": "ослаблений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "285",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SecondToneChar",
-    "Title": "ІІ тон:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "286",
-    "Owner": "285",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SecondToneChar",
-    "Title": "",
-    "Value": "нормальної звучності",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "287",
-    "Owner": "285",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SecondToneChar",
-    "Title": "",
-    "Value": "посилений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "288",
-    "Owner": "285",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "SecondToneChar",
-    "Title": "",
-    "Value": "ослаблений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "289",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Pulse",
-    "Title": "Пульс:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "290",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseRigidity",
-    "Title": "Напруженість пульсу:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "291",
-    "Owner": "290",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseRigidity",
-    "Title": "",
-    "Value": "задовільна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "292",
-    "Owner": "290",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseRigidity",
-    "Title": "",
-    "Value": "знижена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "293",
-    "Owner": "290",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseRigidity",
-    "Title": "",
-    "Value": "підвищена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "294",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PulseFullness",
-    "Title": "Наповненість:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "295",
-    "Owner": "294",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseFullness",
-    "Title": "",
-    "Value": "задовільна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "296",
-    "Owner": "294",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseFullness",
-    "Title": "",
-    "Value": "знижена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "297",
-    "Owner": "294",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseFullness",
-    "Title": "",
-    "Value": "підвищена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "298",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "FullnessSymmetry",
-    "Title": "Симетричність наповненості:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "299",
-    "Owner": "298",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FullnessSymmetry",
-    "Title": "",
-    "Value": "симетрична",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "300",
-    "Owner": "298",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FullnessSymmetry",
-    "Title": "",
-    "Value": "асиметрична справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "301",
-    "Owner": "298",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "FullnessSymmetry",
-    "Title": "",
-    "Value": "асиметрична зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "302",
-    "Owner": null,
-    "Page": "5",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PulseDeficiency",
-    "Title": "Дефіцит пульсу:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "303",
-    "Owner": "302",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseDeficiency",
-    "Title": "",
-    "Value": "відсутній",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "304",
-    "Owner": "302",
-    "Page": "5",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PulseDeficiency",
-    "Title": "",
-    "Value": "наявний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "305",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Abdomen",
-    "Title": "Живіт:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "306",
-    "Owner": "305",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSize",
-    "Title": "",
-    "Value": "не збільшений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "307",
-    "Owner": "305",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSize",
-    "Title": "",
-    "Value": "збільшений за рахунок ПЖК",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "308",
-    "Owner": "305",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSize",
-    "Title": "",
-    "Value": "збільшений за рахунок асциту",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "309",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenConfiguration",
-    "Title": "Форма живота:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "310",
-    "Owner": "309",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSymmetry",
-    "Title": "",
-    "Value": "симетричний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "311",
-    "Owner": "309",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSymmetry",
-    "Title": "",
-    "Value": "асиметричний справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "312",
-    "Owner": "309",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenSymmetry",
-    "Title": "",
-    "Value": "асиметричний зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "313",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenDeformation",
-    "Title": "Деформація живота:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "314",
-    "Owner": "313",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenDeformation",
-    "Title": "",
-    "Value": "відсутня",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "315",
-    "Owner": "313",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenDeformation",
-    "Title": "",
-    "Value": "наявна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "405",
-    "Owner": "315",
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenDeformationSide",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "316",
-    "Owner": "405",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenDeformationSide",
-    "Title": "",
-    "Value": "справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "317",
-    "Owner": "405",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenDeformationSide",
-    "Title": "",
-    "Value": "зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "318",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "ParticipateInBreathing",
-    "Title": "Участь в акті дихання:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "319",
-    "Owner": "318",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ParticipateInBreathing",
-    "Title": "",
-    "Value": "не приймає",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "320",
-    "Owner": "318",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "ParticipateInBreathing",
-    "Title": "",
-    "Value": "приймає",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "321",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenScrubs",
-    "Title": "Рубці:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "322",
-    "Owner": "321",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenScrubs",
-    "Title": "",
-    "Value": "відсутні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "323",
-    "Owner": "321",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenScrubs",
-    "Title": "",
-    "Value": "наявні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "324",
-    "Owner": "323",
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenScrubsParametersWidth",
-    "Title": "Розміри:",
-    "Value": "",
-    "TextBefore": "ширина",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "number",
-    "Placeholder": "ширина",
-    "Mode": {
-      "Step": "1",
-      "Min": "0",
-      "Max": "1000"
-    }
-  }, {
-    "Id": "325",
-    "Owner": "323",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenScrubsParametersHeight",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "висота",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "number",
-    "Placeholder": "висота",
-    "Mode": {
-      "Step": "1",
-      "Min": "0",
-      "Max": "1000"
-    }
-  }, {
-    "Id": "326",
-    "Owner": "323",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenScrubsLocalization",
-    "Title": "Локалізація рубців:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Локалізація рубців",
-    "Mode": null
-  }, {
-    "Id": "327",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenPalpation",
-    "Title": "Пальпаторно:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "328",
-    "Owner": "327",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TensionAbdomen",
-    "Title": "",
-    "Value": "не напружена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "329",
-    "Owner": "327",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TensionAbdomen",
-    "Title": "",
-    "Value": "помірно резистентна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "330",
-    "Owner": "327",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TensionAbdomen",
-    "Title": "",
-    "Value": "резистентна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "331",
-    "Owner": "327",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TensionAbdomen",
-    "Title": "",
-    "Value": "помірно напружена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "332",
-    "Owner": "327",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "TensionAbdomen",
-    "Title": "",
-    "Value": "напружена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "333",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenPalpationPain",
-    "Title": "Болючість:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "334",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "Безболісний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "335",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "помірно болючий в епігастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "336",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "помірно болючий в мезогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "337",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "помірно болючий в гіпогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "338",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "різко болючий в епігастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "339",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "різко болючий в мезогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "340",
-    "Owner": "333",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPalpationPain",
-    "Title": "",
-    "Value": "різко болючий в гіпогастрії",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "341",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PeritonealSymphtoms",
-    "Title": "Перитонеальні симптоми:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "342",
-    "Owner": "341",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtoms",
-    "Title": "",
-    "Value": "не визначаються",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "343",
-    "Owner": "341",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtoms",
-    "Title": "",
-    "Value": "сумнівні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "344",
-    "Owner": "341",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtoms",
-    "Title": "",
-    "Value": "позитивні",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "408",
-    "Owner": "344",
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "345",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Бартомье-Михельсона",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "346",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Думбадзе",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "347",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Кера",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "348",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Мейо-Робсона",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "349",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Мерфи",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "350",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPos",
-    "Title": "",
-    "Value": "Мюсси-Георгиевского (френикус-симптом)",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "351",
-    "Owner": "408",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PeritonealSymphtomsPosOther",
-    "Title": "Інші перитонеальні симптоми:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Інші перитонеальні симптоми",
-    "Mode": null
-  }, {
-    "Id": "352",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "AbdomenPeristaltic",
-    "Title": "Перистальтика:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "353",
-    "Owner": "352",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPeristaltic",
-    "Title": "",
-    "Value": "не вислуховується",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "354",
-    "Owner": "352",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPeristaltic",
-    "Title": "",
-    "Value": "вислуховується",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "355",
-    "Owner": "352",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPeristaltic",
-    "Title": "",
-    "Value": "ослаблена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "356",
-    "Owner": "352",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPeristaltic",
-    "Title": "",
-    "Value": "звичайна",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "357",
-    "Owner": "352",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "AbdomenPeristaltic",
-    "Title": "",
-    "Value": "посилена",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "358",
-    "Owner": null,
-    "Page": "6",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "HeparPalpation",
-    "Title": "Печінка:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "359",
-    "Owner": "358",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeparPalpation",
-    "Title": "",
-    "Value": "не пальпується",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "360",
-    "Owner": "358",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeparPalpation",
-    "Title": "",
-    "Value": "пальпується",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "361",
-    "Owner": "358",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeparPalpationEdge",
-    "Title": "",
-    "Value": "не виступає",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "362",
-    "Owner": "358",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "HeparPalpationEdge",
-    "Title": "",
-    "Value": "виступає",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "363",
-    "Owner": "362",
-    "Page": "6",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "EdgeLiverProtrusion",
-    "Title": "",
-    "Value": "",
-    "TextBefore": "на",
-    "TextAfter": "мм",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "number",
-    "Placeholder": "",
-    "Mode": {
-      "Step": "1",
-      "Min": "0",
-      "Max": "1000"
-    }
-  }, {
-    "Id": "364",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Kidneys",
-    "Title": "Нирки",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "365",
-    "Owner": "364",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PasternatskyySymphtom",
-    "Title": "",
-    "Value": "не пальпуються",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "366",
-    "Owner": "364",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PasternatskyySymphtom",
-    "Title": "",
-    "Value": "негативний ",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "367",
-    "Owner": "364",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PasternatskyySymphtom",
-    "Title": "",
-    "Value": "позитивний зліва",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "368",
-    "Owner": "364",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "PasternatskyySymphtom",
-    "Title": "",
-    "Value": "позитивний справа",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "369",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "Urination",
-    "Title": "Сечопуск:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "parent-radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "370",
-    "Owner": "369",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Urination",
-    "Title": "",
-    "Value": "не утруднений",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "371",
-    "Owner": "369",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Urination",
-    "Title": "",
-    "Value": "самостійний, безболісний",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "372",
-    "Owner": "369",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Urination",
-    "Title": "",
-    "Value": "болючий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "373",
-    "Owner": "369",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Urination",
-    "Title": "",
-    "Value": "частий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "374",
-    "Owner": "369",
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": true,
-    "Name": "Urination",
-    "Title": "",
-    "Value": "рідкий",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "radio",
-    "Placeholder": "",
-    "Mode": null
-  }, {
-    "Id": "375",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": true,
-    "IsChild": false,
-    "Name": "StatusLocalis",
-    "Title": "Status Localis:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Status Localis",
-    "Mode": null
-  }, {
-    "Id": "376",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "PreliminaryDiagnosis:",
-    "Title": "Попередній діагноз:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Попередній діагноз",
-    "Mode": null
-  }, {
-    "Id": "377",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "PreliminaryDiagnosisMain",
-    "Title": "Основний:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Основний діагноз",
-    "Mode": null
-  }, {
-    "Id": "378",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "ComplicationMain",
-    "Title": "Ускладення основного:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Ускладення основного діагнозу",
-    "Mode": null
-  }, {
-    "Id": "379",
-    "Owner": null,
-    "Page": "7",
-    "IsParent": false,
-    "IsChild": false,
-    "Name": "ConcomitantDiagnosis",
-    "Title": "Супутній:",
-    "Value": "",
-    "TextBefore": "",
-    "TextAfter": "",
-    "InLine": null,
-    "Width": null,
-    "Padding": null,
-    "Checked": false,
-    "Type": "textarea",
-    "Placeholder": "Супутній діагноз",
-    "Mode": null
-  }]
-};
-var _default = testData;
-var _default2 = _default;
-exports.default = _default2;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(testData, "testData", "E:/projects/med.aux/med_form/src/helpers/testData.js");
-  reactHotLoader.register(_default, "default", "E:/projects/med.aux/med_form/src/helpers/testData.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();
 },{"react-hot-loader":"node_modules/react-hot-loader/index.js"}],"src/redux/ui.js":[function(require,module,exports) {
 "use strict";
 
@@ -41769,11 +34682,7 @@ exports.default = void 0;
 
 var _types = require("./types");
 
-var _testData = _interopRequireDefault(require("../helpers/testData"));
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
   var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
@@ -41782,13 +34691,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var initState = {
   isInit: false,
-  formData: _testData.default.Data,
-  // FOR TEST ONLY. NEEDED VALUE IS []
-  formOptions: _testData.default.Options,
-  // FOR TEST ONLY. NEEDED VALUE IS []
-  formErrors: _testData.default.Error,
-  // FOR TEST ONLY. NEEDED VALUE IS []
+  formData: [],
+  formOptions: [],
   currentPage: 1,
+  isDataLoaded: false,
   isSubmitted: false,
   isPopupVisible: false,
   nextPage: null,
@@ -41804,8 +34710,18 @@ var _default = function _default() {
       return _extends({}, state, {
         formData: action.payload.Data,
         formOptions: action.payload.Options,
-        formErrors: action.payload.Error,
+        isDataLoaded: true,
         isInit: true
+      });
+
+    case _types.typesUI.LOAD_ERROR:
+      return _extends({}, state, {
+        isDataLoaded: false
+      });
+
+    case _types.typesUI.SUBMIT_ERROR:
+      return _extends({}, state, {
+        isSubmitted: false
       });
 
     case _types.typesUI.DATE_UPDATE:
@@ -41897,7 +34813,8 @@ var _default = function _default() {
 
     case _types.typesUI.PAGINATION_UPDATE:
       return _extends({}, state, {
-        currentPage: action.payload
+        currentPage: action.payload,
+        isFormActivated: false
       });
 
     default:
@@ -41926,7 +34843,7 @@ exports.default = _default2;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"react-hot-loader":"node_modules/react-hot-loader/index.js","./types":"src/redux/types.js","../helpers/testData":"src/helpers/testData.js"}],"src/redux/reducers.js":[function(require,module,exports) {
+},{"react-hot-loader":"node_modules/react-hot-loader/index.js","./types":"src/redux/types.js"}],"src/redux/reducers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66026,7 +58943,519 @@ Popconfirm.defaultProps = {
 (0, _reactLifecyclesCompat.polyfill)(Popconfirm);
 var _default = Popconfirm;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-lifecycles-compat":"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js","../tooltip":"node_modules/antd/es/tooltip/index.js","../icon":"node_modules/antd/es/icon/index.js","../button":"node_modules/antd/es/button/index.js","../locale-provider/LocaleReceiver":"node_modules/antd/es/locale-provider/LocaleReceiver.js","../locale-provider/default":"node_modules/antd/es/locale-provider/default.js","../config-provider":"node_modules/antd/es/config-provider/index.js"}],"node_modules/lodash/_baseHas.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-lifecycles-compat":"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js","../tooltip":"node_modules/antd/es/tooltip/index.js","../icon":"node_modules/antd/es/icon/index.js","../button":"node_modules/antd/es/button/index.js","../locale-provider/LocaleReceiver":"node_modules/antd/es/locale-provider/LocaleReceiver.js","../locale-provider/default":"node_modules/antd/es/locale-provider/default.js","../config-provider":"node_modules/antd/es/config-provider/index.js"}],"node_modules/rc-notification/es/Notice.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("babel-runtime/helpers/defineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("babel-runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("babel-runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("babel-runtime/helpers/possibleConstructorReturn"));
+
+var _inherits2 = _interopRequireDefault(require("babel-runtime/helpers/inherits"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Notice = function (_Component) {
+  (0, _inherits2.default)(Notice, _Component);
+
+  function Notice() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck2.default)(this, Notice);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn2.default)(this, (_ref = Notice.__proto__ || Object.getPrototypeOf(Notice)).call.apply(_ref, [this].concat(args))), _this), _this.close = function (e) {
+      if (e) {
+        e.stopPropagation();
+      }
+
+      _this.clearCloseTimer();
+
+      _this.props.onClose();
+    }, _this.startCloseTimer = function () {
+      if (_this.props.duration) {
+        _this.closeTimer = setTimeout(function () {
+          _this.close();
+        }, _this.props.duration * 1000);
+      }
+    }, _this.clearCloseTimer = function () {
+      if (_this.closeTimer) {
+        clearTimeout(_this.closeTimer);
+        _this.closeTimer = null;
+      }
+    }, _temp), (0, _possibleConstructorReturn2.default)(_this, _ret);
+  }
+
+  (0, _createClass2.default)(Notice, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.startCloseTimer();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.duration !== prevProps.duration || this.props.update) {
+        this.restartCloseTimer();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.clearCloseTimer();
+    }
+  }, {
+    key: 'restartCloseTimer',
+    value: function restartCloseTimer() {
+      this.clearCloseTimer();
+      this.startCloseTimer();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _className;
+
+      var props = this.props;
+      var componentClass = props.prefixCls + '-notice';
+      var className = (_className = {}, (0, _defineProperty2.default)(_className, '' + componentClass, 1), (0, _defineProperty2.default)(_className, componentClass + '-closable', props.closable), (0, _defineProperty2.default)(_className, props.className, !!props.className), _className);
+      return _react.default.createElement('div', {
+        className: (0, _classnames.default)(className),
+        style: props.style,
+        onMouseEnter: this.clearCloseTimer,
+        onMouseLeave: this.startCloseTimer,
+        onClick: props.onClick
+      }, _react.default.createElement('div', {
+        className: componentClass + '-content'
+      }, props.children), props.closable ? _react.default.createElement('a', {
+        tabIndex: '0',
+        onClick: this.close,
+        className: componentClass + '-close'
+      }, props.closeIcon || _react.default.createElement('span', {
+        className: componentClass + '-close-x'
+      })) : null);
+    }
+  }]);
+  return Notice;
+}(_react.Component);
+
+Notice.propTypes = {
+  duration: _propTypes.default.number,
+  onClose: _propTypes.default.func,
+  children: _propTypes.default.any,
+  update: _propTypes.default.bool,
+  closeIcon: _propTypes.default.node
+};
+Notice.defaultProps = {
+  onEnd: function onEnd() {},
+  onClose: function onClose() {},
+  duration: 1.5,
+  style: {
+    right: '50%'
+  }
+};
+var _default = Notice;
+exports.default = _default;
+},{"babel-runtime/helpers/defineProperty":"node_modules/babel-runtime/helpers/defineProperty.js","babel-runtime/helpers/classCallCheck":"node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"node_modules/babel-runtime/helpers/inherits.js","react":"node_modules/react/index.js","classnames":"node_modules/classnames/index.js","prop-types":"node_modules/prop-types/index.js"}],"node_modules/rc-notification/es/Notification.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("babel-runtime/helpers/objectWithoutProperties"));
+
+var _defineProperty2 = _interopRequireDefault(require("babel-runtime/helpers/defineProperty"));
+
+var _extends2 = _interopRequireDefault(require("babel-runtime/helpers/extends"));
+
+var _classCallCheck2 = _interopRequireDefault(require("babel-runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("babel-runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("babel-runtime/helpers/possibleConstructorReturn"));
+
+var _inherits2 = _interopRequireDefault(require("babel-runtime/helpers/inherits"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _rcAnimate = _interopRequireDefault(require("rc-animate"));
+
+var _createChainedFunction = _interopRequireDefault(require("rc-util/es/createChainedFunction"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _Notice = _interopRequireDefault(require("./Notice"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var seed = 0;
+var now = Date.now();
+
+function getUuid() {
+  return 'rcNotification_' + now + '_' + seed++;
+}
+
+var Notification = function (_Component) {
+  (0, _inherits2.default)(Notification, _Component);
+
+  function Notification() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck2.default)(this, Notification);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn2.default)(this, (_ref = Notification.__proto__ || Object.getPrototypeOf(Notification)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      notices: []
+    }, _this.add = function (notice) {
+      var key = notice.key = notice.key || getUuid();
+      var maxCount = _this.props.maxCount;
+
+      _this.setState(function (previousState) {
+        var notices = previousState.notices;
+        var noticeIndex = notices.map(function (v) {
+          return v.key;
+        }).indexOf(key);
+        var updatedNotices = notices.concat();
+
+        if (noticeIndex !== -1) {
+          updatedNotices.splice(noticeIndex, 1, notice);
+        } else {
+          if (maxCount && notices.length >= maxCount) {
+            notice.updateKey = updatedNotices[0].updateKey || updatedNotices[0].key;
+            updatedNotices.shift();
+          }
+
+          updatedNotices.push(notice);
+        }
+
+        return {
+          notices: updatedNotices
+        };
+      });
+    }, _this.remove = function (key) {
+      _this.setState(function (previousState) {
+        return {
+          notices: previousState.notices.filter(function (notice) {
+            return notice.key !== key;
+          })
+        };
+      });
+    }, _temp), (0, _possibleConstructorReturn2.default)(_this, _ret);
+  }
+
+  (0, _createClass2.default)(Notification, [{
+    key: 'getTransitionName',
+    value: function getTransitionName() {
+      var props = this.props;
+      var transitionName = props.transitionName;
+
+      if (!transitionName && props.animation) {
+        transitionName = props.prefixCls + '-' + props.animation;
+      }
+
+      return transitionName;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this,
+          _className;
+
+      var props = this.props;
+      var notices = this.state.notices;
+      var noticeNodes = notices.map(function (notice, index) {
+        var update = Boolean(index === notices.length - 1 && notice.updateKey);
+        var key = notice.updateKey ? notice.updateKey : notice.key;
+        var onClose = (0, _createChainedFunction.default)(_this2.remove.bind(_this2, notice.key), notice.onClose);
+        return _react.default.createElement(_Notice.default, (0, _extends2.default)({
+          prefixCls: props.prefixCls
+        }, notice, {
+          key: key,
+          update: update,
+          onClose: onClose,
+          onClick: notice.onClick,
+          closeIcon: props.closeIcon
+        }), notice.content);
+      });
+      var className = (_className = {}, (0, _defineProperty2.default)(_className, props.prefixCls, 1), (0, _defineProperty2.default)(_className, props.className, !!props.className), _className);
+      return _react.default.createElement('div', {
+        className: (0, _classnames.default)(className),
+        style: props.style
+      }, _react.default.createElement(_rcAnimate.default, {
+        transitionName: this.getTransitionName()
+      }, noticeNodes));
+    }
+  }]);
+  return Notification;
+}(_react.Component);
+
+Notification.propTypes = {
+  prefixCls: _propTypes.default.string,
+  transitionName: _propTypes.default.string,
+  animation: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  style: _propTypes.default.object,
+  maxCount: _propTypes.default.number,
+  closeIcon: _propTypes.default.node
+};
+Notification.defaultProps = {
+  prefixCls: 'rc-notification',
+  animation: 'fade',
+  style: {
+    top: 65,
+    left: '50%'
+  }
+};
+
+Notification.newInstance = function newNotificationInstance(properties, callback) {
+  var _ref2 = properties || {},
+      getContainer = _ref2.getContainer,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ['getContainer']);
+
+  var div = document.createElement('div');
+
+  if (getContainer) {
+    var root = getContainer();
+    root.appendChild(div);
+  } else {
+    document.body.appendChild(div);
+  }
+
+  var called = false;
+
+  function ref(notification) {
+    if (called) {
+      return;
+    }
+
+    called = true;
+    callback({
+      notice: function notice(noticeProps) {
+        notification.add(noticeProps);
+      },
+      removeNotice: function removeNotice(key) {
+        notification.remove(key);
+      },
+      component: notification,
+      destroy: function destroy() {
+        _reactDom.default.unmountComponentAtNode(div);
+
+        div.parentNode.removeChild(div);
+      }
+    });
+  }
+
+  _reactDom.default.render(_react.default.createElement(Notification, (0, _extends2.default)({}, props, {
+    ref: ref
+  })), div);
+};
+
+var _default = Notification;
+exports.default = _default;
+},{"babel-runtime/helpers/objectWithoutProperties":"node_modules/babel-runtime/helpers/objectWithoutProperties.js","babel-runtime/helpers/defineProperty":"node_modules/babel-runtime/helpers/defineProperty.js","babel-runtime/helpers/extends":"node_modules/babel-runtime/helpers/extends.js","babel-runtime/helpers/classCallCheck":"node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"node_modules/babel-runtime/helpers/inherits.js","react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-dom":"node_modules/react-dom/index.js","rc-animate":"node_modules/rc-animate/es/Animate.js","rc-util/es/createChainedFunction":"node_modules/rc-util/es/createChainedFunction.js","classnames":"node_modules/classnames/index.js","./Notice":"node_modules/rc-notification/es/Notice.js"}],"node_modules/rc-notification/es/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _Notification = _interopRequireDefault(require("./Notification"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _Notification.default;
+exports.default = _default;
+},{"./Notification":"node_modules/rc-notification/es/Notification.js"}],"node_modules/antd/es/message/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _rcNotification = _interopRequireDefault(require("rc-notification"));
+
+var _icon = _interopRequireDefault(require("../icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+/* global Promise */
+var defaultDuration = 3;
+var defaultTop;
+var messageInstance;
+var key = 1;
+var prefixCls = 'ant-message';
+var transitionName = 'move-up';
+var getContainer;
+var maxCount;
+
+function getMessageInstance(callback) {
+  if (messageInstance) {
+    callback(messageInstance);
+    return;
+  }
+
+  _rcNotification.default.newInstance({
+    prefixCls: prefixCls,
+    transitionName: transitionName,
+    style: {
+      top: defaultTop
+    },
+    getContainer: getContainer,
+    maxCount: maxCount
+  }, function (instance) {
+    if (messageInstance) {
+      callback(messageInstance);
+      return;
+    }
+
+    messageInstance = instance;
+    callback(instance);
+  });
+}
+
+function notice(args) {
+  var duration = args.duration !== undefined ? args.duration : defaultDuration;
+  var iconType = {
+    info: 'info-circle',
+    success: 'check-circle',
+    error: 'close-circle',
+    warning: 'exclamation-circle',
+    loading: 'loading'
+  }[args.type];
+  var target = key++;
+  var closePromise = new Promise(function (resolve) {
+    var callback = function callback() {
+      if (typeof args.onClose === 'function') {
+        args.onClose();
+      }
+
+      return resolve(true);
+    };
+
+    getMessageInstance(function (instance) {
+      var iconNode = React.createElement(_icon.default, {
+        type: iconType,
+        theme: iconType === 'loading' ? 'outlined' : 'filled'
+      });
+      instance.notice({
+        key: target,
+        duration: duration,
+        style: {},
+        content: React.createElement("div", {
+          className: "".concat(prefixCls, "-custom-content").concat(args.type ? " ".concat(prefixCls, "-").concat(args.type) : '')
+        }, args.icon ? args.icon : iconType ? iconNode : '', React.createElement("span", null, args.content)),
+        onClose: callback
+      });
+    });
+  });
+
+  var result = function result() {
+    if (messageInstance) {
+      messageInstance.removeNotice(target);
+    }
+  };
+
+  result.then = function (filled, rejected) {
+    return closePromise.then(filled, rejected);
+  };
+
+  result.promise = closePromise;
+  return result;
+}
+
+var api = {
+  open: notice,
+  config: function config(options) {
+    if (options.top !== undefined) {
+      defaultTop = options.top;
+      messageInstance = null; // delete messageInstance for new defaultTop
+    }
+
+    if (options.duration !== undefined) {
+      defaultDuration = options.duration;
+    }
+
+    if (options.prefixCls !== undefined) {
+      prefixCls = options.prefixCls;
+    }
+
+    if (options.getContainer !== undefined) {
+      getContainer = options.getContainer;
+    }
+
+    if (options.transitionName !== undefined) {
+      transitionName = options.transitionName;
+      messageInstance = null; // delete messageInstance for new transitionName
+    }
+
+    if (options.maxCount !== undefined) {
+      maxCount = options.maxCount;
+      messageInstance = null;
+    }
+  },
+  destroy: function destroy() {
+    if (messageInstance) {
+      messageInstance.destroy();
+      messageInstance = null;
+    }
+  }
+};
+['success', 'info', 'warning', 'error', 'loading'].forEach(function (type) {
+  api[type] = function (content, duration, onClose) {
+    if (typeof duration === 'function') {
+      onClose = duration;
+      duration = undefined;
+    }
+
+    return api.open({
+      content: content,
+      duration: duration,
+      type: type,
+      onClose: onClose
+    });
+  };
+});
+api.warn = api.warning;
+var _default = api;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","rc-notification":"node_modules/rc-notification/es/index.js","../icon":"node_modules/antd/es/icon/index.js"}],"node_modules/lodash/_baseHas.js":[function(require,module,exports) {
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -72568,6 +65997,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.loadData = loadData;
+exports.loadError = loadError;
+exports.submitError = submitError;
 exports.dateUpdate = dateUpdate;
 exports.formUpdate = formUpdate;
 exports.numberUpdate = numberUpdate;
@@ -72589,6 +66020,28 @@ function loadData(payload) {
     dispatch({
       type: _types.typesUI.LOAD_DATA,
       payload: payload
+    });
+  };
+}
+
+;
+
+function loadError(text) {
+  return function (dispatch) {
+    dispatch({
+      type: _types.typesUI.LOAD_ERROR,
+      payload: text
+    });
+  };
+}
+
+;
+
+function submitError(text) {
+  return function (dispatch) {
+    dispatch({
+      type: _types.typesUI.SUBMIT_ERROR,
+      payload: text
     });
   };
 }
@@ -72693,6 +66146,8 @@ function paginationUpdate(payload) {
   }
 
   reactHotLoader.register(loadData, "loadData", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
+  reactHotLoader.register(loadError, "loadError", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
+  reactHotLoader.register(submitError, "submitError", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
   reactHotLoader.register(dateUpdate, "dateUpdate", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
   reactHotLoader.register(formUpdate, "formUpdate", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
   reactHotLoader.register(numberUpdate, "numberUpdate", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
@@ -72709,7 +66164,10 @@ function paginationUpdate(payload) {
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"react-hot-loader":"node_modules/react-hot-loader/index.js","./types":"src/redux/types.js"}],"src/helpers/api.js":[function(require,module,exports) {
+},{"react-hot-loader":"node_modules/react-hot-loader/index.js","./types":"src/redux/types.js"}],"node_modules/react-preloading-component/build/index.js":[function(require,module,exports) {
+var define;
+!function(e,n){if("object"===typeof exports&&"object"===typeof module)module.exports=n(require("react"));else if("function"===typeof define&&define.amd)define(["react"],n);else{var t=n("object"===typeof exports?require("react"):e.react);for(var r in t)("object"===typeof exports?exports:e)[r]=t[r]}}(this,function(e){return function(e){function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}var t={};return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="",n(n.s=9)}([function(n,t){n.exports=e},function(e,n,t){(function(n){if("production"!==n.env.NODE_ENV){var r="function"===typeof Symbol&&Symbol.for&&Symbol.for("react.element")||60103,o=function(e){return"object"===typeof e&&null!==e&&e.$$typeof===r};e.exports=t(11)(o,!0)}else e.exports=t(14)()}).call(n,t(4))},function(e,n){function t(e,n){var t=e[1]||"",o=e[3];if(!o)return t;if(n&&"function"===typeof btoa){var i=r(o);return[t].concat(o.sources.map(function(e){return"/*# sourceURL="+o.sourceRoot+e+" */"})).concat([i]).join("\n")}return[t].join("\n")}function r(e){return""}e.exports=function(e){var n=[];return n.toString=function(){return this.map(function(n){var r=t(n,e);return n[2]?"@media "+n[2]+"{"+r+"}":r}).join("")},n.i=function(e,t){"string"===typeof e&&(e=[[null,e,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"===typeof i&&(r[i]=!0)}for(o=0;o<e.length;o++){var a=e[o];"number"===typeof a[0]&&r[a[0]]||(t&&!a[2]?a[2]=t:t&&(a[2]="("+a[2]+") and ("+t+")"),n.push(a))}},n}},function(e,n,t){function r(e,n){for(var t=0;t<e.length;t++){var r=e[t],o=y[r.id];if(o){o.refs++;for(var i=0;i<o.parts.length;i++)o.parts[i](r.parts[i]);for(;i<r.parts.length;i++)o.parts.push(f(r.parts[i],n))}else{for(var a=[],i=0;i<r.parts.length;i++)a.push(f(r.parts[i],n));y[r.id]={id:r.id,refs:1,parts:a}}}}function o(e,n){for(var t=[],r={},o=0;o<e.length;o++){var i=e[o],a=n.base?i[0]+n.base:i[0],s=i[1],c=i[2],l=i[3],f={css:s,media:c,sourceMap:l};r[a]?r[a].parts.push(f):t.push(r[a]={id:a,parts:[f]})}return t}function i(e,n){var t=b(e.insertInto);if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r=w[w.length-1];if("top"===e.insertAt)r?r.nextSibling?t.insertBefore(n,r.nextSibling):t.appendChild(n):t.insertBefore(n,t.firstChild),w.push(n);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");t.appendChild(n)}}function a(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e);var n=w.indexOf(e);n>=0&&w.splice(n,1)}function s(e){var n=document.createElement("style");return e.attrs.type="text/css",l(n,e.attrs),i(e,n),n}function c(e){var n=document.createElement("link");return e.attrs.type="text/css",e.attrs.rel="stylesheet",l(n,e.attrs),i(e,n),n}function l(e,n){Object.keys(n).forEach(function(t){e.setAttribute(t,n[t])})}function f(e,n){var t,r,o,i;if(n.transform&&e.css){if(!(i=n.transform(e.css)))return function(){};e.css=i}if(n.singleton){var l=g++;t=h||(h=s(n)),r=u.bind(null,t,l,!1),o=u.bind(null,t,l,!0)}else e.sourceMap&&"function"===typeof URL&&"function"===typeof URL.createObjectURL&&"function"===typeof URL.revokeObjectURL&&"function"===typeof Blob&&"function"===typeof btoa?(t=c(n),r=d.bind(null,t,n),o=function(){a(t),t.href&&URL.revokeObjectURL(t.href)}):(t=s(n),r=p.bind(null,t),o=function(){a(t)});return r(e),function(n){if(n){if(n.css===e.css&&n.media===e.media&&n.sourceMap===e.sourceMap)return;r(e=n)}else o()}}function u(e,n,t,r){var o=t?"":r.css;if(e.styleSheet)e.styleSheet.cssText=x(n,o);else{var i=document.createTextNode(o),a=e.childNodes;a[n]&&e.removeChild(a[n]),a.length?e.insertBefore(i,a[n]):e.appendChild(i)}}function p(e,n){var t=n.css,r=n.media;if(r&&e.setAttribute("media",r),e.styleSheet)e.styleSheet.cssText=t;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(t))}}function d(e,n,t){var r=t.css,o=t.sourceMap,i=void 0===n.convertToAbsoluteUrls&&o;(n.convertToAbsoluteUrls||i)&&(r=v(r)),o&&(r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */");var a=new Blob([r],{type:"text/css"}),s=e.href;e.href=URL.createObjectURL(a),s&&URL.revokeObjectURL(s)}var y={},m=function(e){var n;return function(){return"undefined"===typeof n&&(n=e.apply(this,arguments)),n}}(function(){return window&&document&&document.all&&!window.atob}),b=function(e){var n={};return function(t){return"undefined"===typeof n[t]&&(n[t]=e.call(this,t)),n[t]}}(function(e){return document.querySelector(e)}),h=null,g=0,w=[],v=t(17);e.exports=function(e,n){if("undefined"!==typeof DEBUG&&DEBUG&&"object"!==typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");n=n||{},n.attrs="object"===typeof n.attrs?n.attrs:{},n.singleton||(n.singleton=m()),n.insertInto||(n.insertInto="head"),n.insertAt||(n.insertAt="bottom");var t=o(e,n);return r(t,n),function(e){for(var i=[],a=0;a<t.length;a++){var s=t[a],c=y[s.id];c.refs--,i.push(c)}if(e){r(o(e,n),n)}for(var a=0;a<i.length;a++){var c=i[a];if(0===c.refs){for(var l=0;l<c.parts.length;l++)c.parts[l]();delete y[c.id]}}}};var x=function(){var e=[];return function(n,t){return e[n]=t,e.filter(Boolean).join("\n")}}()},function(e,n){function t(){throw new Error("setTimeout has not been defined")}function r(){throw new Error("clearTimeout has not been defined")}function o(e){if(f===setTimeout)return setTimeout(e,0);if((f===t||!f)&&setTimeout)return f=setTimeout,setTimeout(e,0);try{return f(e,0)}catch(n){try{return f.call(null,e,0)}catch(n){return f.call(this,e,0)}}}function i(e){if(u===clearTimeout)return clearTimeout(e);if((u===r||!u)&&clearTimeout)return u=clearTimeout,clearTimeout(e);try{return u(e)}catch(n){try{return u.call(null,e)}catch(n){return u.call(this,e)}}}function a(){m&&d&&(m=!1,d.length?y=d.concat(y):b=-1,y.length&&s())}function s(){if(!m){var e=o(a);m=!0;for(var n=y.length;n;){for(d=y,y=[];++b<n;)d&&d[b].run();b=-1,n=y.length}d=null,m=!1,i(e)}}function c(e,n){this.fun=e,this.array=n}function l(){}var f,u,p=e.exports={};!function(){try{f="function"===typeof setTimeout?setTimeout:t}catch(e){f=t}try{u="function"===typeof clearTimeout?clearTimeout:r}catch(e){u=r}}();var d,y=[],m=!1,b=-1;p.nextTick=function(e){var n=new Array(arguments.length-1);if(arguments.length>1)for(var t=1;t<arguments.length;t++)n[t-1]=arguments[t];y.push(new c(e,n)),1!==y.length||m||o(s)},c.prototype.run=function(){this.fun.apply(null,this.array)},p.title="browser",p.browser=!0,p.env={},p.argv=[],p.version="",p.versions={},p.on=l,p.addListener=l,p.once=l,p.off=l,p.removeListener=l,p.removeAllListeners=l,p.emit=l,p.prependListener=l,p.prependOnceListener=l,p.listeners=function(e){return[]},p.binding=function(e){throw new Error("process.binding is not supported")},p.cwd=function(){return"/"},p.chdir=function(e){throw new Error("process.chdir is not supported")},p.umask=function(){return 0}},function(e,n,t){"use strict";function r(e){return function(){return e}}var o=function(){};o.thatReturns=r,o.thatReturnsFalse=r(!1),o.thatReturnsTrue=r(!0),o.thatReturnsNull=r(null),o.thatReturnsThis=function(){return this},o.thatReturnsArgument=function(e){return e},e.exports=o},function(e,n,t){"use strict";(function(n){function t(e,n,t,o,i,a,s,c){if(r(n),!e){var l;if(void 0===n)l=new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var f=[t,o,i,a,s,c],u=0;l=new Error(n.replace(/%s/g,function(){return f[u++]})),l.name="Invariant Violation"}throw l.framesToPop=1,l}}var r=function(e){};"production"!==n.env.NODE_ENV&&(r=function(e){if(void 0===e)throw new Error("invariant requires an error message argument")}),e.exports=t}).call(n,t(4))},function(e,n,t){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},function(e,n,t){"use strict";(function(n){var r=t(5),o=r;if("production"!==n.env.NODE_ENV){var i=function(e){for(var n=arguments.length,t=Array(n>1?n-1:0),r=1;r<n;r++)t[r-1]=arguments[r];var o=0,i="Warning: "+e.replace(/%s/g,function(){return t[o++]});"undefined"!==typeof console&&console.error(i);try{throw new Error(i)}catch(e){}};o=function(e,n){if(void 0===n)throw new Error("`warning(condition, format, ...args)` requires a warning message argument");if(0!==n.indexOf("Failed Composite propType: ")&&!e){for(var t=arguments.length,r=Array(t>2?t-2:0),o=2;o<t;o++)r[o-2]=arguments[o];i.apply(void 0,[n].concat(r))}}}e.exports=o}).call(n,t(4))},function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=t(10),o=t(18),i=t(21),a=t(24),s=t(27),c=t(30),l=t(33),f=t(36),u=t(39),p=t(42),d=t(45),y=t(48),m=t(51),b=t(54),h=t(57);t.d(n,"Wave",function(){return r.a}),t.d(n,"Pulse",function(){return o.a}),t.d(n,"Pop",function(){return i.a}),t.d(n,"Spinner",function(){return a.a}),t.d(n,"Grow",function(){return s.a}),t.d(n,"Bounce",function(){return c.a}),t.d(n,"Grid",function(){return l.a}),t.d(n,"Scan",function(){return f.a}),t.d(n,"Lines",function(){return u.a}),t.d(n,"Progress",function(){return p.a}),t.d(n,"Triple",function(){return d.a}),t.d(n,"Text",function(){return y.a}),t.d(n,"Flag",function(){return m.a}),t.d(n,"Eye",function(){return b.a}),t.d(n,"Third",function(){return h.a})},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(15),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size,margin:this.props.size/3};return s.a.createElement("div",{className:"PreLoading-Wave"},s.a.createElement("span",{style:e,className:"Wave-circle"}),s.a.createElement("span",{style:e,className:"Wave-circle"}),s.a.createElement("span",{style:e,className:"Wave-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:12},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){"use strict";(function(n){var r=t(5),o=t(6),i=t(8),a=t(12),s=t(7),c=t(13);e.exports=function(e,t){function l(e){var n=e&&(_&&e[_]||e[T]);if("function"===typeof n)return n}function f(e,n){return e===n?0!==e||1/e===1/n:e!==e&&n!==n}function u(e){this.message=e,this.stack=""}function p(e){function r(r,l,f,p,d,y,m){if(p=p||N,y=y||f,m!==s)if(t)o(!1,"Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");else if("production"!==n.env.NODE_ENV&&"undefined"!==typeof console){var b=p+":"+f;!a[b]&&c<3&&(i(!1,"You are manually calling a React.PropTypes validation function for the `%s` prop on `%s`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.",y,p),a[b]=!0,c++)}return null==l[f]?r?new u(null===l[f]?"The "+d+" `"+y+"` is marked as required in `"+p+"`, but its value is `null`.":"The "+d+" `"+y+"` is marked as required in `"+p+"`, but its value is `undefined`."):null:e(l,f,p,d,y)}if("production"!==n.env.NODE_ENV)var a={},c=0;var l=r.bind(null,!1);return l.isRequired=r.bind(null,!0),l}function d(e){function n(n,t,r,o,i,a){var s=n[t];if(O(s)!==e)return new u("Invalid "+o+" `"+i+"` of type `"+P(s)+"` supplied to `"+r+"`, expected `"+e+"`.");return null}return p(n)}function y(e){function n(n,t,r,o,i){if("function"!==typeof e)return new u("Property `"+i+"` of component `"+r+"` has invalid PropType notation inside arrayOf.");var a=n[t];if(!Array.isArray(a)){return new u("Invalid "+o+" `"+i+"` of type `"+O(a)+"` supplied to `"+r+"`, expected an array.")}for(var c=0;c<a.length;c++){var l=e(a,c,r,o,i+"["+c+"]",s);if(l instanceof Error)return l}return null}return p(n)}function m(e){function n(n,t,r,o,i){if(!(n[t]instanceof e)){var a=e.name||N;return new u("Invalid "+o+" `"+i+"` of type `"+j(n[t])+"` supplied to `"+r+"`, expected instance of `"+a+"`.")}return null}return p(n)}function b(e){function t(n,t,r,o,i){for(var a=n[t],s=0;s<e.length;s++)if(f(a,e[s]))return null;return new u("Invalid "+o+" `"+i+"` of value `"+a+"` supplied to `"+r+"`, expected one of "+JSON.stringify(e)+".")}return Array.isArray(e)?p(t):("production"!==n.env.NODE_ENV&&i(!1,"Invalid argument supplied to oneOf, expected an instance of array."),r.thatReturnsNull)}function h(e){function n(n,t,r,o,i){if("function"!==typeof e)return new u("Property `"+i+"` of component `"+r+"` has invalid PropType notation inside objectOf.");var a=n[t],c=O(a);if("object"!==c)return new u("Invalid "+o+" `"+i+"` of type `"+c+"` supplied to `"+r+"`, expected an object.");for(var l in a)if(a.hasOwnProperty(l)){var f=e(a,l,r,o,i+"."+l,s);if(f instanceof Error)return f}return null}return p(n)}function g(e){function t(n,t,r,o,i){for(var a=0;a<e.length;a++){if(null==(0,e[a])(n,t,r,o,i,s))return null}return new u("Invalid "+o+" `"+i+"` supplied to `"+r+"`.")}if(!Array.isArray(e))return"production"!==n.env.NODE_ENV&&i(!1,"Invalid argument supplied to oneOfType, expected an instance of array."),r.thatReturnsNull;for(var o=0;o<e.length;o++){var a=e[o];if("function"!==typeof a)return i(!1,"Invalid argument supplied to oneOfType. Expected an array of check functions, but received %s at index %s.",E(a),o),r.thatReturnsNull}return p(t)}function w(e){function n(n,t,r,o,i){var a=n[t],c=O(a);if("object"!==c)return new u("Invalid "+o+" `"+i+"` of type `"+c+"` supplied to `"+r+"`, expected `object`.");for(var l in e){var f=e[l];if(f){var p=f(a,l,r,o,i+"."+l,s);if(p)return p}}return null}return p(n)}function v(e){function n(n,t,r,o,i){var c=n[t],l=O(c);if("object"!==l)return new u("Invalid "+o+" `"+i+"` of type `"+l+"` supplied to `"+r+"`, expected `object`.");var f=a({},n[t],e);for(var p in f){var d=e[p];if(!d)return new u("Invalid "+o+" `"+i+"` key `"+p+"` supplied to `"+r+"`.\nBad object: "+JSON.stringify(n[t],null,"  ")+"\nValid keys: "+JSON.stringify(Object.keys(e),null,"  "));var y=d(c,p,r,o,i+"."+p,s);if(y)return y}return null}return p(n)}function x(n){switch(typeof n){case"number":case"string":case"undefined":return!0;case"boolean":return!n;case"object":if(Array.isArray(n))return n.every(x);if(null===n||e(n))return!0;var t=l(n);if(!t)return!1;var r,o=t.call(n);if(t!==n.entries){for(;!(r=o.next()).done;)if(!x(r.value))return!1}else for(;!(r=o.next()).done;){var i=r.value;if(i&&!x(i[1]))return!1}return!0;default:return!1}}function k(e,n){return"symbol"===e||("Symbol"===n["@@toStringTag"]||"function"===typeof Symbol&&n instanceof Symbol)}function O(e){var n=typeof e;return Array.isArray(e)?"array":e instanceof RegExp?"object":k(n,e)?"symbol":n}function P(e){if("undefined"===typeof e||null===e)return""+e;var n=O(e);if("object"===n){if(e instanceof Date)return"date";if(e instanceof RegExp)return"regexp"}return n}function E(e){var n=P(e);switch(n){case"array":case"object":return"an "+n;case"boolean":case"date":case"regexp":return"a "+n;default:return n}}function j(e){return e.constructor&&e.constructor.name?e.constructor.name:N}var _="function"===typeof Symbol&&Symbol.iterator,T="@@iterator",N="<<anonymous>>",z={array:d("array"),bool:d("boolean"),func:d("function"),number:d("number"),object:d("object"),string:d("string"),symbol:d("symbol"),any:function(){return p(r.thatReturnsNull)}(),arrayOf:y,element:function(){function n(n,t,r,o,i){var a=n[t];if(!e(a)){return new u("Invalid "+o+" `"+i+"` of type `"+O(a)+"` supplied to `"+r+"`, expected a single ReactElement.")}return null}return p(n)}(),instanceOf:m,node:function(){function e(e,n,t,r,o){return x(e[n])?null:new u("Invalid "+r+" `"+o+"` supplied to `"+t+"`, expected a ReactNode.")}return p(e)}(),objectOf:h,oneOf:b,oneOfType:g,shape:w,exact:v};return u.prototype=Error.prototype,z.checkPropTypes=c,z.PropTypes=z,z}}).call(n,t(4))},function(e,n,t){"use strict";function r(e){if(null===e||void 0===e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}var o=Object.getOwnPropertySymbols,i=Object.prototype.hasOwnProperty,a=Object.prototype.propertyIsEnumerable;e.exports=function(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de","5"===Object.getOwnPropertyNames(e)[0])return!1;for(var n={},t=0;t<10;t++)n["_"+String.fromCharCode(t)]=t;if("0123456789"!==Object.getOwnPropertyNames(n).map(function(e){return n[e]}).join(""))return!1;var r={};return"abcdefghijklmnopqrst".split("").forEach(function(e){r[e]=e}),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},r)).join("")}catch(e){return!1}}()?Object.assign:function(e,n){for(var t,s,c=r(e),l=1;l<arguments.length;l++){t=Object(arguments[l]);for(var f in t)i.call(t,f)&&(c[f]=t[f]);if(o){s=o(t);for(var u=0;u<s.length;u++)a.call(t,s[u])&&(c[s[u]]=t[s[u]])}}return c}},function(e,n,t){"use strict";(function(n){function r(e,t,r,c,l){if("production"!==n.env.NODE_ENV)for(var f in e)if(e.hasOwnProperty(f)){var u;try{o("function"===typeof e[f],"%s: %s type `%s` is invalid; it must be a function, usually from the `prop-types` package, but received `%s`.",c||"React class",r,f,typeof e[f]),u=e[f](t,f,c,r,null,a)}catch(e){u=e}if(i(!u||u instanceof Error,"%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).",c||"React class",r,f,typeof u),u instanceof Error&&!(u.message in s)){s[u.message]=!0;var p=l?l():"";i(!1,"Failed %s type: %s%s",r,u.message,null!=p?p:"")}}}if("production"!==n.env.NODE_ENV)var o=t(6),i=t(8),a=t(7),s={};e.exports=r}).call(n,t(4))},function(e,n,t){"use strict";var r=t(5),o=t(6),i=t(7);e.exports=function(){function e(e,n,t,r,a,s){s!==i&&o(!1,"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")}function n(){return e}e.isRequired=e;var t={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:n,element:e,instanceOf:n,node:e,objectOf:n,oneOf:n,oneOfType:n,shape:n,exact:n};return t.checkPropTypes=r,t.PropTypes=t,t}},function(e,n,t){var r=t(16);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Wave {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  height: 100%;\n  width: 100%; }\n\n.Wave-circle {\n  -webkit-animation: Wave 1.2s ease-in-out infinite;\n  animation: Wave 1.2s ease-in-out infinite;\n  border-radius: 100%; }\n\n.Wave-circle:nth-child(1) {\n  animation-delay: 0s;\n  -webkit-animation-delay: 0s; }\n\n.Wave-circle:nth-child(2) {\n  animation-delay: .2s;\n  -webkit-animation-delay: .2s; }\n\n.Wave-circle:nth-child(3) {\n  animation-delay: .4s;\n  -webkit-animation-delay: .4s; }\n\n@-webkit-keyframes Wave {\n  0% {\n    -webkit-transform: translateY(0px);\n    transform: translateY(0px); }\n  50% {\n    -webkit-transform: translateY(-20px);\n    transform: translateY(-20px); } }\n\n@keyframes Wave {\n  0% {\n    -webkit-transform: translateY(0px);\n    transform: translateY(0px); }\n  50% {\n    -webkit-transform: translateY(-20px);\n    transform: translateY(-20px); } }\n",""])},function(e,n){e.exports=function(e){var n="undefined"!==typeof window&&window.location;if(!n)throw new Error("fixUrls requires window.location");if(!e||"string"!==typeof e)return e;var t=n.protocol+"//"+n.host,r=t+n.pathname.replace(/\/[^\/]*$/,"/");return e.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,function(e,n){var o=n.trim().replace(/^"(.*)"$/,function(e,n){return n}).replace(/^'(.*)'$/,function(e,n){return n});if(/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(o))return e;var i;return i=0===o.indexOf("//")?o:0===o.indexOf("/")?t+o:r+o.replace(/^\.\//,""),"url("+JSON.stringify(i)+")"})}},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(19),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size,margin:this.props.size/2};return s.a.createElement("div",{className:"PreLoading-Pulse"},s.a.createElement("span",{style:e,className:"Pulse-circle"}),s.a.createElement("span",{style:e,className:"Pulse-circle"}),s.a.createElement("span",{style:e,className:"Pulse-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:10},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(20);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Pulse {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  height: 100%;\n  width: 100%; }\n\n.Pulse-circle {\n  -webkit-animation: Pulse 1.2s ease-in-out infinite;\n  animation: Pulse 1.2s ease-in-out infinite;\n  border-radius: 100%; }\n\n.Pulse-circle:nth-child(1) {\n  animation-delay: 0s;\n  -webkit-animation-delay: 0s; }\n\n.Pulse-circle:nth-child(2) {\n  animation-delay: .2s;\n  -webkit-animation-delay: .2s; }\n\n.Pulse-circle:nth-child(3) {\n  animation-delay: .4s;\n  -webkit-animation-delay: .4s; }\n\n@-webkit-keyframes Pulse {\n  0% {\n    -webkit-transform: rotate(0.001deg) scale(1);\n    transform: rotate(0.001deg) scale(1); }\n  40% {\n    -webkit-transform: rotate(0.001deg) scale(1.2);\n    transform: rotate(0.001deg) scale(1.2); }\n  70% {\n    -webkit-transform: rotate(0.001deg) scale(0);\n    transform: rotate(0.001deg) scale(0); } }\n\n@keyframes Pulse {\n  0% {\n    -webkit-transform: rotate(0.001deg) scale(1);\n    transform: rotate(0.001deg) scale(1); }\n  40% {\n    -webkit-transform: rotate(0.001deg) scale(1.2);\n    transform: rotate(0.001deg) scale(1.2); }\n  70% {\n    -webkit-transform: rotate(0.001deg) scale(0);\n    transform: rotate(0.001deg) scale(0); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(22),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size,margin:this.props.size/2};return s.a.createElement("div",{className:"PreLoading-Pop"},s.a.createElement("span",{style:e,className:"Pop-circle"}),s.a.createElement("span",{style:e,className:"Pop-circle"}),s.a.createElement("span",{style:e,className:"Pop-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:10},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(23);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Pop {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  height: 100%;\n  width: 100%; }\n\n.Pop-circle {\n  -webkit-animation: Pop 1.5s ease infinite;\n  animation: Pop 1.5s ease infinite;\n  border-radius: 100%; }\n\n.Pop-circle:nth-child(1) {\n  animation-delay: 0s;\n  -webkit-animation-delay: 0s; }\n\n.Pop-circle:nth-child(2) {\n  animation-delay: .5s;\n  -webkit-animation-delay: .5s; }\n\n.Pop-circle:nth-child(3) {\n  animation-delay: 1.1s;\n  -webkit-animation-delay: 1.1s; }\n\n@-webkit-keyframes Pop {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1); }\n  20% {\n    -webkit-transform: rotate(0.001deg) scale(1.8);\n    transform: rotate(0.001deg) scale(1.8); } }\n\n@keyframes Pop {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1); }\n  20% {\n    -webkit-transform: rotate(0.001deg) scale(1.8);\n    transform: rotate(0.001deg) scale(1.8); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(25),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={border:this.props.size/6.6+"px solid transparent",borderColor:this.props.secondaryColor,borderTopColor:this.props.color,borderSize:this.props.size/6.6,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Spinner"},s.a.createElement("span",{style:e,className:"Spinner-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",secondaryColor:"#e6e6e6",size:40},p.propTypes={color:l.a.string.isRequired,secondaryColor:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(26);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Spinner {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  height: 100%;\n  width: 100%; }\n\n.Spinner-circle {\n  -webkit-animation: Spinner .8s ease infinite;\n  animation: Spinner .8s ease infinite;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box; }\n\n@-webkit-keyframes Spinner {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes Spinner {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(28),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Grow"},s.a.createElement("span",{style:e,className:"Grow-circle"}),s.a.createElement("span",{style:e,className:"Grow-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:40},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(29);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Grow {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  position: relative;\n  height: 100%;\n  width: 100%; }\n\n.Grow-circle {\n  border-radius: 100%;\n  position: absolute;\n  opacity: .5;\n  -webkit-animation: Grow 2s cubic-bezier(0, 0.91, 0.72, 0.91) infinite;\n  animation: Grow 2s cubic-bezier(0, 0.91, 0.72, 0.91) infinite;\n  /* -moz-animation: Grow 2s ease-in-out infinite; */ }\n\n.Grow-circle:nth-of-type(2) {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s; }\n\n@-webkit-keyframes Grow {\n  0%, 100% {\n    -webkit-transform: rotate(0.001deg) scale(0);\n    transform: rotate(0.001deg) scale(0); }\n  50% {\n    -webkit-transform: rotate(0.001deg) scale(1);\n    transform: rotate(0.001deg) scale(1); } }\n\n@keyframes Grow {\n  0%, 100% {\n    -webkit-transform: rotate(0.001deg) scale(0);\n    transform: rotate(0.001deg) scale(0); }\n  50% {\n    -webkit-transform: rotate(0.001deg) scale(1);\n    transform: rotate(0.001deg) scale(1); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(31),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Bounce"},s.a.createElement("span",{style:e,className:"Bounce-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:40},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(32);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Bounce {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.Bounce-circle {\n  border-radius: 50%;\n  position: absolute;\n  -webkit-animation: Bounce 1s ease infinite;\n  animation: Bounce 1s ease infinite; }\n\n@-webkit-keyframes Bounce {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1); }\n  50% {\n    -webkit-transform: scale(1.4);\n    transform: scale(1.4); }\n  60% {\n    -webkit-transform: scale(0.6);\n    transform: scale(0.6); }\n  80% {\n    -webkit-transform: scale(0.95);\n    transform: scale(0.95); }\n  100% {\n    -webkit-transform: scale(0.9);\n    transform: scale(0.9); } }\n\n@keyframes Bounce {\n  0% {\n    -webkit-transform: scale(1);\n    transform: scale(1); }\n  50% {\n    -webkit-transform: scale(1.4);\n    transform: scale(1.4); }\n  60% {\n    -webkit-transform: scale(0.6);\n    transform: scale(0.6); }\n  80% {\n    -webkit-transform: scale(0.95);\n    transform: scale(0.95); }\n  100% {\n    -webkit-transform: scale(0.9);\n    transform: scale(0.9); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(34),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,margin:this.props.size/10,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Grid"},s.a.createElement("div",{className:"Grid-row"},s.a.createElement("span",{style:e,className:"Grid-square G1"}),s.a.createElement("span",{style:e,className:"Grid-square G2"})),s.a.createElement("div",{className:"Grid-row"},s.a.createElement("span",{style:e,className:"Grid-square G3"}),s.a.createElement("span",{style:e,className:"Grid-square G4"})))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:20},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(35);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Grid {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.Grid-row {\n  display: -ms-flexbox;\n  display: flex; }\n\n.Grid-square {\n  -webkit-animation: Grid 1.6s ease-in-out infinite;\n  animation: Grid 1.6s ease-in-out infinite; }\n\n.G2 {\n  -webkit-animation-delay: .4s;\n  animation-delay: .4s; }\n\n.G3 {\n  -webkit-animation-delay: .8s;\n  animation-delay: .8s; }\n\n.G4 {\n  -webkit-animation-delay: 1.2s;\n  animation-delay: 1.2s; }\n\n@-webkit-keyframes Grid {\n  from {\n    opacity: .2; }\n  to {\n    opacity: 1; } }\n\n@keyframes Grid {\n  from {\n    opacity: .2; }\n  to {\n    opacity: 1; } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(37),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,margin:this.props.size/10,height:this.props.size,width:this.props.size/2.5},n={background:this.props.color,margin:this.props.size/10,height:1.25*this.props.size,width:this.props.size/2.5};return s.a.createElement("div",{className:"PreLoading-Scan"},s.a.createElement("span",{style:e,className:"Scan-shape"}),s.a.createElement("span",{style:n,className:"Scan-shape"}),s.a.createElement("span",{style:e,className:"Scan-shape"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:25},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(38);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Scan {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.Scan-shape {\n  border-radius: 10%;\n  -webkit-animation: Grid .9s linear infinite;\n  animation: Grid .9s linear infinite; }\n\n.Scan-shape:nth-of-type(2) {\n  -webkit-animation-delay: .3s;\n  animation-delay: .3s; }\n\n.Scan-shape:nth-of-type(3) {\n  -webkit-animation-delay: .6s;\n  animation-delay: .6s; }\n\n@-webkit-keyframes Scan {\n  from {\n    opacity: .5; }\n  to {\n    opacity: 1; } }\n\n@keyframes Scan {\n  from {\n    opacity: .5; }\n  to {\n    opacity: 1; } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(40),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,margin:this.props.size/15,height:this.props.size,width:this.props.size/4};return s.a.createElement("div",{className:"PreLoading-Lines"},s.a.createElement("span",{style:e,className:"Lines-shape"}),s.a.createElement("span",{style:e,className:"Lines-shape"}),s.a.createElement("span",{style:e,className:"Lines-shape"}),s.a.createElement("span",{style:e,className:"Lines-shape"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:30},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(41);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Lines {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.Lines-shape {\n  -webkit-animation: Lines 1.2s ease-in-out infinite;\n  animation: Lines 1.2s ease-in-out infinite; }\n\n.Lines-shape:nth-of-type(2) {\n  -webkit-animation-delay: .2s;\n  animation-delay: .2s; }\n\n.Lines-shape:nth-of-type(3) {\n  -webkit-animation-delay: .4s;\n  animation-delay: .4s; }\n\n.Lines-shape:nth-of-type(4) {\n  -webkit-animation-delay: .6s;\n  animation-delay: .6s; }\n\n@-webkit-keyframes Lines {\n  0% {\n    -webkit-transform: scaleY(1.2);\n    transform: scaleY(1.2); }\n  50% {\n    -webkit-transform: scaleY(0.5);\n    transform: scaleY(0.5);\n    opacity: .5; }\n  100% {\n    -webkit-transform: scaleY(1.2);\n    transform: scaleY(1.2); } }\n\n@keyframes Lines {\n  0% {\n    -webkit-transform: scaleY(1.2);\n    transform: scaleY(1.2); }\n  50% {\n    -webkit-transform: scaleY(0.5);\n    transform: scaleY(0.5);\n    opacity: .5; }\n  100% {\n    -webkit-transform: scaleY(1.2);\n    transform: scaleY(1.2); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(43),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.background},n={background:this.props.color,animationDuration:this.props.speed};return s.a.createElement("div",{className:"PreLoading-Progress"},s.a.createElement("div",{style:e,className:"Progress-wrapper"},s.a.createElement("div",{style:n,className:"Progress-bar"})))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",background:"#EEEEEE",speed:"12s"},p.propTypes={color:l.a.string.isRequired,background:l.a.string.isRequired,speed:l.a.string.isRequired},n.a=p},function(e,n,t){var r=t(44);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Progress {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.Progress-wrapper {\n  width: 75%;\n  max-width: 400px;\n  height: 6px;\n  border-radius: 3px;\n  background: #eeeeee;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -ms-flex-align: center;\n  align-items: center; }\n\n.Progress-bar {\n  display: block;\n  width: 100%;\n  height: 6px;\n  border-radius: 3px;\n  -webkit-animation: Progress linear forwards;\n  animation: Progress linear forwards; }\n\n@-webkit-keyframes Progress {\n  from {\n    width: 0%; }\n  to {\n    width: 100%; } }\n\n@keyframes Progress {\n  from {\n    width: 0%; }\n  to {\n    width: 100%; } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(46),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={borderColor:this.props.color,height:this.props.size/2,width:this.props.size/2},n={borderColor:this.props.color,height:this.props.size/1.333,width:this.props.size/1.333},t={borderColor:this.props.color,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Triple"},s.a.createElement("div",{style:t,className:"PreLoading-Circle C1"},s.a.createElement("div",{style:n,className:"PreLoading-Circle C2"},s.a.createElement("div",{style:e,className:"PreLoading-Circle C3"}))))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:40},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(47);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Triple {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.PreLoading-Circle {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  border-radius: 50%;\n  background: transparent;\n  border-bottom: 2px solid;\n  -webkit-animation: Triple 1.6s ease-in-out infinite;\n  animation: Triple 1.6s ease-in-out infinite; }\n\n.C2 {\n  -webkit-animation-delay: .4s;\n  animation-delay: .4s; }\n\n.C3 {\n  -webkit-animation-delay: .8s;\n  animation-delay: .8s; }\n\n@-webkit-keyframes Triple {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes Triple {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(49),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={color:this.props.color,fontSize:this.props.fontSize};return s.a.createElement("div",{className:"PreLoading-Text"},s.a.createElement("div",{style:e,className:"PreLoading-Text-wrapper"},this.props.text,s.a.createElement("span",null,"."),s.a.createElement("span",null,"."),s.a.createElement("span",null,".")))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",text:"Loading",fontSize:"1.5em"},p.propTypes={color:l.a.string.isRequired,text:l.a.string.isRequired,fontSize:l.a.string.isRequired},n.a=p},function(e,n,t){var r=t(50);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Text {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%; }\n\n.PreLoading-Text-wrapper span {\n  -webkit-animation: Text 1.6s linear infinite;\n  animation: Text 1.6s linear infinite; }\n\n.PreLoading-Text-wrapper span:nth-child(2) {\n  -webkit-animation-delay: .4s;\n  animation-delay: .4s; }\n\n.PreLoading-Text-wrapper span:nth-child(3) {\n  -webkit-animation-delay: .8s;\n  animation-delay: .8s; }\n\n@-webkit-keyframes Text {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\n@keyframes Text {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(52),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,margin:this.props.size/2.5,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Flag"},s.a.createElement("div",{className:"PreLoading-row"},s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"})),s.a.createElement("div",{className:"PreLoading-row"},s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"})),s.a.createElement("div",{className:"PreLoading-row"},s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"}),s.a.createElement("span",{style:e,className:"Flag-circle"})))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:10},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(53);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Flag {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  height: 100%;\n  width: 100%; }\n\n.PreLoading-row {\n  display: -ms-flexbox;\n  display: flex; }\n\n.Flag-circle {\n  border-radius: 100%;\n  -webkit-animation: Flag 1.4s ease-in-out infinite;\n  animation: Flag 1.4s ease-in-out infinite; }\n\n.PreLoading-row:nth-of-type(1) .Flag-circle:nth-of-type(2) {\n  -webkit-animation-delay: .2s;\n  animation-delay: .2s; }\n\n.PreLoading-row:nth-of-type(1) .Flag-circle:nth-of-type(3) {\n  -webkit-animation-delay: .4s;\n  animation-delay: .4s; }\n\n.PreLoading-row:nth-of-type(2) .Flag-circle:nth-of-type(1) {\n  -webkit-animation-delay: .1s;\n  animation-delay: .1s; }\n\n.PreLoading-row:nth-of-type(2) .Flag-circle:nth-of-type(2) {\n  -webkit-animation-delay: .3s;\n  animation-delay: .3s; }\n\n.PreLoading-row:nth-of-type(2) .Flag-circle:nth-of-type(3) {\n  -webkit-animation-delay: .5s;\n  animation-delay: .5s; }\n\n.PreLoading-row:nth-of-type(3) .Flag-circle:nth-of-type(1) {\n  -webkit-animation-delay: .3s;\n  animation-delay: .3s; }\n\n.PreLoading-row:nth-of-type(3) .Flag-circle:nth-of-type(2) {\n  -webkit-animation-delay: .5s;\n  animation-delay: .5s; }\n\n.PreLoading-row:nth-of-type(3) .Flag-circle:nth-of-type(3) {\n  -webkit-animation-delay: .7s;\n  animation-delay: .7s; }\n\n@-webkit-keyframes Flag {\n  0% {\n    -webkit-transform: rotate(0.001deg) scale(1.2);\n    transform: rotate(0.001deg) scale(1.2); }\n  80% {\n    -webkit-transform: rotate(0.001deg) scale(0.8);\n    transform: rotate(0.001deg) scale(0.8);\n    opacity: .72; } }\n\n@keyframes Flag {\n  0% {\n    -webkit-transform: rotate(0.001deg) scale(1.2);\n    transform: rotate(0.001deg) scale(1.2); }\n  80% {\n    -webkit-transform: rotate(0.001deg) scale(0.8);\n    transform: rotate(0.001deg) scale(0.8);\n    opacity: .72; } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(55),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={background:this.props.color,height:this.props.size,width:this.props.size},n={borderLeft:"1px solid "+this.props.color,borderRight:"1px solid "+this.props.color,height:1.5*this.props.size,width:1.5*this.props.size};return s.a.createElement("div",{className:"PreLoading-Eye"},s.a.createElement("span",{style:e,className:"Eye-circle"}),s.a.createElement("span",{style:n,className:"Eye-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:20},p.propTypes={color:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(56);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Eye {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  height: 100%;\n  width: 100%; }\n\n.Eye-circle {\n  border-radius: 100%;\n  position: absolute;\n  border: 1px solid transparent; }\n\n.Eye-circle:nth-of-type(1) {\n  -webkit-animation: EyeInner 1.3s ease-in-out infinite;\n  animation: EyeInner 1.3s ease-in-out infinite; }\n\n.Eye-circle:nth-of-type(2) {\n  -webkit-animation: EyeOuter 1.3s ease-in-out infinite;\n  animation: EyeOuter 1.3s ease-in-out infinite; }\n\n@-webkit-keyframes EyeInner {\n  0%, 100% {\n    -webkit-transform: rotate(0.001deg) scale(0.6);\n    transform: rotate(0.001deg) scale(0.6); }\n  70% {\n    -webkit-transform: rotate(0.001deg) scale(0.9);\n    transform: rotate(0.001deg) scale(0.9); } }\n\n@keyframes EyeInner {\n  0%, 100% {\n    -webkit-transform: rotate(0.001deg) scale(0.6);\n    transform: rotate(0.001deg) scale(0.6); }\n  70% {\n    -webkit-transform: rotate(0.001deg) scale(0.9);\n    transform: rotate(0.001deg) scale(0.9); } }\n\n@-webkit-keyframes EyeOuter {\n  0% {\n    -webkit-transform: rotate(0deg) scale(1);\n    transform: rotate(0deg) scale(1); }\n  70% {\n    -webkit-transform: rotate(540deg) scale(1.4);\n    transform: rotate(540deg) scale(1.4); }\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1); } }\n\n@keyframes EyeOuter {\n  0% {\n    -webkit-transform: rotate(0deg) scale(1);\n    transform: rotate(0deg) scale(1); }\n  70% {\n    -webkit-transform: rotate(540deg) scale(1.4);\n    transform: rotate(540deg) scale(1.4); }\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1); } }\n",""])},function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function o(e,n){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!n||"object"!==typeof n&&"function"!==typeof n?e:n}function i(e,n){if("function"!==typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function, not "+typeof n);e.prototype=Object.create(n&&n.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),n&&(Object.setPrototypeOf?Object.setPrototypeOf(e,n):e.__proto__=n)}var a=t(0),s=t.n(a),c=t(1),l=t.n(c),f=t(58),u=(t.n(f),function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}()),p=function(e){function n(){return r(this,n),o(this,(n.__proto__||Object.getPrototypeOf(n)).apply(this,arguments))}return i(n,e),u(n,[{key:"render",value:function(){var e={border:this.props.size/6.6+"px solid transparent",borderTopColor:this.props.color,borderRightColor:this.props.color,borderBottomColor:this.props.color,borderSize:this.props.size/6.6,height:this.props.size,width:this.props.size};return s.a.createElement("div",{className:"PreLoading-Third"},s.a.createElement("span",{style:e,className:"Third-circle"}))}}]),n}(a.Component);p.defaultProps={color:"#FF4601",size:40},p.propTypes={color:l.a.string.isRequired,secondaryColor:l.a.string.isRequired,size:l.a.number.isRequired},n.a=p},function(e,n,t){var r=t(59);"string"===typeof r&&(r=[[e.i,r,""]]);var o={};o.transform=void 0;t(3)(r,o);r.locals&&(e.exports=r.locals)},function(e,n,t){n=e.exports=t(2)(void 0),n.push([e.i,".PreLoading-Third {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -ms-flex-align: center;\n  align-items: center;\n  height: 100%;\n  width: 100%; }\n\n.Third-circle {\n  -webkit-animation: Third .7s linear infinite;\n  animation: Third .7s linear infinite;\n  border-radius: 50%;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box; }\n\n@-webkit-keyframes Third {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes Third {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n",""])}])});
+},{"react":"node_modules/react/index.js"}],"src/helpers/api.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -93886,6 +87344,8 @@ var _button = _interopRequireDefault(require("antd/es/button"));
 
 var _icon = _interopRequireDefault(require("antd/es/icon"));
 
+var _message2 = _interopRequireDefault(require("antd/es/message"));
+
 var _form = _interopRequireDefault(require("antd/es/form"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -93895,6 +87355,8 @@ var _redux = require("redux");
 var _reactRedux = require("react-redux");
 
 var UI_ACTIONS = _interopRequireWildcard(require("../../redux/ui_actions"));
+
+var _reactPreloadingComponent = require("react-preloading-component");
 
 var _helpers = require("../../helpers");
 
@@ -93926,6 +87388,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 })();
 
 var FormItem = _form.default.Item;
+var successLoadText = "Дані успішно завантажені!";
+var errorLoadText = "Помилка з'єднання! Дані не завантажені!";
+var successSaveText = "Дані успішно збережені!";
+var errorSaveText = "Помилка з'єднання! Дані не були збережені!";
 
 var HospitalizationForm =
 /*#__PURE__*/
@@ -93963,9 +87429,8 @@ function (_Component) {
   _createClass(HospitalizationForm, [{
     key: "loadAllData",
     value: function loadAllData() {
-      var _this2 = this;
+      var uiActions = this.props.uiActions; // Формируем список параметров для передачи на сервер
 
-      // Формируем список параметров для передачи на сервер
       var data = {
         'Hospital': document.getElementById("Hospital").value,
         'Patient': document.getElementById("Patient").value,
@@ -93979,14 +87444,23 @@ function (_Component) {
         headers: {
           "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
-        //body: requestBody(data)
         body: 'RequestData=' + JSON.stringify(data)
       }).then(function (response) {
-        return response.json();
+        if (response.ok && response.status === 200) {
+          _message2.default.success(successLoadText);
+
+          return response.json();
+        } else {
+          _message2.default.error(errorLoadText);
+
+          uiActions.loadError();
+        }
+
+        ;
       }).then(function (data) {
-        _this2.props.uiActions.loadData(data);
+        return uiActions.loadData(data);
       }).catch(function (error) {
-        console.warn('main fetch error: ', error);
+        return _message2.default.error(error);
       });
     }
   }, {
@@ -94007,14 +87481,13 @@ function (_Component) {
     }
   }, {
     key: "formSubmit",
-    value: function formSubmit(newData, requestData) {
+    value: function formSubmit(newData) {
       var _this$props2 = this.props,
           uiActions = _this$props2.uiActions,
           ui = _this$props2.ui;
       var currentPageData = newData.filter(function (item) {
         return item.Page == ui.currentPage;
-      });
-      console.info("currentPageData - object for submit: ", currentPageData); // Формируем список параметров для передачи на сервер
+      }); // Формируем список параметров для передачи на сервер
 
       var data = {
         'Hospital': document.getElementById("Hospital").value,
@@ -94032,13 +87505,23 @@ function (_Component) {
         headers: {
           "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
-        body: 'Request=' + JSON.stringify(request) //'FormData='+JSON.stringify(currentPageData)
-
+        body: 'Request=' + JSON.stringify(request)
       }).then(function (response) {
-        console.info(response);
-        uiActions.formSubmit(currentPageData);
+        if (response.ok && response.status === 200) {
+          uiActions.formSubmit();
+
+          _message2.default.success(successSaveText);
+
+          return response.json();
+        } else {
+          _message2.default.error(errorSaveText);
+
+          uiActions.submitError(response.status);
+        }
+      }).then(function (data) {
+        return console.info(data);
       }).catch(function (error) {
-        console.warn("formSubmit error: ", error);
+        return _message2.default.error(error);
       });
     }
   }, {
@@ -94069,15 +87552,25 @@ function (_Component) {
           formOptions = _this$props$ui.formOptions,
           isSubmitted = _this$props$ui.isSubmitted,
           isPopupVisible = _this$props$ui.isPopupVisible,
-          isFormActivated = _this$props$ui.isFormActivated;
+          isFormActivated = _this$props$ui.isFormActivated,
+          isInit = _this$props$ui.isInit;
       var uiActions = this.props.uiActions; // Filtering inputs by current value of pagination component
 
       var dataFilteredByPage = formData.filter(function (item) {
         return item.Page == currentPage;
-      });
+      }); // render
+
       return _react.default.createElement("div", {
-        className: "flex-container"
-      }, _react.default.createElement(_form.default, {
+        className: "flex-container",
+        style: isInit === false ? {
+          height: '100%'
+        } : {
+          height: 'auto'
+        }
+      }, isInit === false ? _react.default.createElement(_reactPreloadingComponent.Wave, {
+        color: "#1890ff"
+      }) : // preloader
+      _react.default.createElement(_form.default, {
         className: "HospitalizationForm",
         onSubmit: this.onFormSubmit,
         onChange: uiActions.formUpdate
@@ -94168,6 +87661,10 @@ exports.default = _default2;
   }
 
   reactHotLoader.register(FormItem, "FormItem", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
+  reactHotLoader.register(successLoadText, "successLoadText", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
+  reactHotLoader.register(errorLoadText, "errorLoadText", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
+  reactHotLoader.register(successSaveText, "successSaveText", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
+  reactHotLoader.register(errorSaveText, "errorSaveText", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
   reactHotLoader.register(HospitalizationForm, "HospitalizationForm", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
   reactHotLoader.register(mapDispatchToProps, "mapDispatchToProps", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
   reactHotLoader.register(mapStateToProps, "mapStateToProps", "E:/projects/med.aux/med_form/src/components/HospitalizationForm/HospitalizationForm.js");
@@ -94180,7 +87677,7 @@ exports.default = _default2;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/popconfirm":"node_modules/antd/es/popconfirm/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
+},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/popconfirm":"node_modules/antd/es/popconfirm/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/message":"node_modules/antd/es/message/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","react-preloading-component":"node_modules/react-preloading-component/build/index.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -94382,7 +87879,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50882" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53995" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
