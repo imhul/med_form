@@ -56929,440 +56929,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _default = _Pagination.default;
 exports.default = _default;
-},{"./Pagination":"node_modules/antd/es/pagination/Pagination.js"}],"node_modules/rc-tooltip/es/placements.js":[function(require,module,exports) {
+},{"./Pagination":"node_modules/antd/es/pagination/Pagination.js"}],"node_modules/antd/es/_util/getDataOrAriaProps.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.placements = void 0;
-var autoAdjustOverflow = {
-  adjustX: 1,
-  adjustY: 1
-};
-var targetOffset = [0, 0];
-var placements = {
-  left: {
-    points: ['cr', 'cl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  right: {
-    points: ['cl', 'cr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  top: {
-    points: ['bc', 'tc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  bottom: {
-    points: ['tc', 'bc'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  topLeft: {
-    points: ['bl', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  leftTop: {
-    points: ['tr', 'tl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  },
-  topRight: {
-    points: ['br', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [0, -4],
-    targetOffset: targetOffset
-  },
-  rightTop: {
-    points: ['tl', 'tr'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomRight: {
-    points: ['tr', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  rightBottom: {
-    points: ['bl', 'br'],
-    overflow: autoAdjustOverflow,
-    offset: [4, 0],
-    targetOffset: targetOffset
-  },
-  bottomLeft: {
-    points: ['tl', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [0, 4],
-    targetOffset: targetOffset
-  },
-  leftBottom: {
-    points: ['br', 'bl'],
-    overflow: autoAdjustOverflow,
-    offset: [-4, 0],
-    targetOffset: targetOffset
-  }
-};
-exports.placements = placements;
-var _default = placements;
-exports.default = _default;
-},{}],"node_modules/rc-tooltip/es/Content.js":[function(require,module,exports) {
-"use strict";
+exports.default = getDataOrAriaProps;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(require("babel-runtime/helpers/classCallCheck"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("babel-runtime/helpers/possibleConstructorReturn"));
-
-var _inherits2 = _interopRequireDefault(require("babel-runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Content = function (_React$Component) {
-  (0, _inherits2.default)(Content, _React$Component);
-
-  function Content() {
-    (0, _classCallCheck2.default)(this, Content);
-    return (0, _possibleConstructorReturn2.default)(this, _React$Component.apply(this, arguments));
-  }
-
-  Content.prototype.componentDidUpdate = function componentDidUpdate() {
-    var trigger = this.props.trigger;
-
-    if (trigger) {
-      trigger.forcePopupAlign();
-    }
-  };
-
-  Content.prototype.render = function render() {
-    var _props = this.props,
-        overlay = _props.overlay,
-        prefixCls = _props.prefixCls,
-        id = _props.id;
-    return _react.default.createElement('div', {
-      className: prefixCls + '-inner',
-      id: id,
-      role: 'tooltip'
-    }, typeof overlay === 'function' ? overlay() : overlay);
-  };
-
-  return Content;
-}(_react.default.Component);
-
-Content.propTypes = {
-  prefixCls: _propTypes.default.string,
-  overlay: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.func]).isRequired,
-  id: _propTypes.default.string,
-  trigger: _propTypes.default.any
-};
-var _default = Content;
-exports.default = _default;
-},{"babel-runtime/helpers/classCallCheck":"node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/possibleConstructorReturn":"node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"node_modules/babel-runtime/helpers/inherits.js","react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js"}],"node_modules/rc-tooltip/es/Tooltip.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _extends2 = _interopRequireDefault(require("babel-runtime/helpers/extends"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("babel-runtime/helpers/objectWithoutProperties"));
-
-var _classCallCheck2 = _interopRequireDefault(require("babel-runtime/helpers/classCallCheck"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("babel-runtime/helpers/possibleConstructorReturn"));
-
-var _inherits2 = _interopRequireDefault(require("babel-runtime/helpers/inherits"));
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _rcTrigger = _interopRequireDefault(require("rc-trigger"));
-
-var _placements = require("./placements");
-
-var _Content = _interopRequireDefault(require("./Content"));
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Tooltip = function (_Component) {
-  (0, _inherits2.default)(Tooltip, _Component);
-
-  function Tooltip() {
-    var _temp, _this, _ret;
-
-    (0, _classCallCheck2.default)(this, Tooltip);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+function getDataOrAriaProps(props) {
+  return Object.keys(props).reduce(function (prev, key) {
+    if ((key.substr(0, 5) === 'data-' || key.substr(0, 5) === 'aria-' || key === 'role') && key.substr(0, 7) !== 'data-__') {
+      prev[key] = props[key];
     }
 
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn2.default)(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.getPopupElement = function () {
-      var _this$props = _this.props,
-          arrowContent = _this$props.arrowContent,
-          overlay = _this$props.overlay,
-          prefixCls = _this$props.prefixCls,
-          id = _this$props.id;
-      return [_react.default.createElement('div', {
-        className: prefixCls + '-arrow',
-        key: 'arrow'
-      }, arrowContent), _react.default.createElement(_Content.default, {
-        key: 'content',
-        trigger: _this.trigger,
-        prefixCls: prefixCls,
-        id: id,
-        overlay: overlay
-      })];
-    }, _this.saveTrigger = function (node) {
-      _this.trigger = node;
-    }, _temp), (0, _possibleConstructorReturn2.default)(_this, _ret);
-  }
-
-  Tooltip.prototype.getPopupDomNode = function getPopupDomNode() {
-    return this.trigger.getPopupDomNode();
-  };
-
-  Tooltip.prototype.render = function render() {
-    var _props = this.props,
-        overlayClassName = _props.overlayClassName,
-        trigger = _props.trigger,
-        mouseEnterDelay = _props.mouseEnterDelay,
-        mouseLeaveDelay = _props.mouseLeaveDelay,
-        overlayStyle = _props.overlayStyle,
-        prefixCls = _props.prefixCls,
-        children = _props.children,
-        onVisibleChange = _props.onVisibleChange,
-        afterVisibleChange = _props.afterVisibleChange,
-        transitionName = _props.transitionName,
-        animation = _props.animation,
-        placement = _props.placement,
-        align = _props.align,
-        destroyTooltipOnHide = _props.destroyTooltipOnHide,
-        defaultVisible = _props.defaultVisible,
-        getTooltipContainer = _props.getTooltipContainer,
-        restProps = (0, _objectWithoutProperties2.default)(_props, ['overlayClassName', 'trigger', 'mouseEnterDelay', 'mouseLeaveDelay', 'overlayStyle', 'prefixCls', 'children', 'onVisibleChange', 'afterVisibleChange', 'transitionName', 'animation', 'placement', 'align', 'destroyTooltipOnHide', 'defaultVisible', 'getTooltipContainer']);
-    var extraProps = (0, _extends2.default)({}, restProps);
-
-    if ('visible' in this.props) {
-      extraProps.popupVisible = this.props.visible;
-    }
-
-    return _react.default.createElement(_rcTrigger.default, (0, _extends2.default)({
-      popupClassName: overlayClassName,
-      ref: this.saveTrigger,
-      prefixCls: prefixCls,
-      popup: this.getPopupElement,
-      action: trigger,
-      builtinPlacements: _placements.placements,
-      popupPlacement: placement,
-      popupAlign: align,
-      getPopupContainer: getTooltipContainer,
-      onPopupVisibleChange: onVisibleChange,
-      afterPopupVisibleChange: afterVisibleChange,
-      popupTransitionName: transitionName,
-      popupAnimation: animation,
-      defaultPopupVisible: defaultVisible,
-      destroyPopupOnHide: destroyTooltipOnHide,
-      mouseLeaveDelay: mouseLeaveDelay,
-      popupStyle: overlayStyle,
-      mouseEnterDelay: mouseEnterDelay
-    }, extraProps), children);
-  };
-
-  return Tooltip;
-}(_react.Component);
-
-Tooltip.propTypes = {
-  trigger: _propTypes.default.any,
-  children: _propTypes.default.any,
-  defaultVisible: _propTypes.default.bool,
-  visible: _propTypes.default.bool,
-  placement: _propTypes.default.string,
-  transitionName: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
-  animation: _propTypes.default.any,
-  onVisibleChange: _propTypes.default.func,
-  afterVisibleChange: _propTypes.default.func,
-  overlay: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.func]).isRequired,
-  overlayStyle: _propTypes.default.object,
-  overlayClassName: _propTypes.default.string,
-  prefixCls: _propTypes.default.string,
-  mouseEnterDelay: _propTypes.default.number,
-  mouseLeaveDelay: _propTypes.default.number,
-  getTooltipContainer: _propTypes.default.func,
-  destroyTooltipOnHide: _propTypes.default.bool,
-  align: _propTypes.default.object,
-  arrowContent: _propTypes.default.any,
-  id: _propTypes.default.string
-};
-Tooltip.defaultProps = {
-  prefixCls: 'rc-tooltip',
-  mouseEnterDelay: 0,
-  destroyTooltipOnHide: false,
-  mouseLeaveDelay: 0.1,
-  align: {},
-  placement: 'right',
-  trigger: ['hover'],
-  arrowContent: null
-};
-var _default = Tooltip;
-exports.default = _default;
-},{"babel-runtime/helpers/extends":"node_modules/babel-runtime/helpers/extends.js","babel-runtime/helpers/objectWithoutProperties":"node_modules/babel-runtime/helpers/objectWithoutProperties.js","babel-runtime/helpers/classCallCheck":"node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/possibleConstructorReturn":"node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"node_modules/babel-runtime/helpers/inherits.js","react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","rc-trigger":"node_modules/rc-trigger/es/index.js","./placements":"node_modules/rc-tooltip/es/placements.js","./Content":"node_modules/rc-tooltip/es/Content.js"}],"node_modules/rc-tooltip/es/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Tooltip = _interopRequireDefault(require("./Tooltip"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = _Tooltip.default;
-exports.default = _default;
-},{"./Tooltip":"node_modules/rc-tooltip/es/Tooltip.js"}],"node_modules/antd/es/tooltip/placements.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getOverflowOptions = getOverflowOptions;
-exports.default = getPlacements;
-
-var _placements = require("rc-tooltip/es/placements");
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
+    return prev;
+  }, {});
 }
-
-var autoAdjustOverflowEnabled = {
-  adjustX: 1,
-  adjustY: 1
-};
-var autoAdjustOverflowDisabled = {
-  adjustX: 0,
-  adjustY: 0
-};
-var targetOffset = [0, 0];
-
-function getOverflowOptions(autoAdjustOverflow) {
-  if (typeof autoAdjustOverflow === 'boolean') {
-    return autoAdjustOverflow ? autoAdjustOverflowEnabled : autoAdjustOverflowDisabled;
-  }
-
-  return _extends({}, autoAdjustOverflowDisabled, autoAdjustOverflow);
-}
-
-function getPlacements() {
-  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var _config$arrowWidth = config.arrowWidth,
-      arrowWidth = _config$arrowWidth === void 0 ? 5 : _config$arrowWidth,
-      _config$horizontalArr = config.horizontalArrowShift,
-      horizontalArrowShift = _config$horizontalArr === void 0 ? 16 : _config$horizontalArr,
-      _config$verticalArrow = config.verticalArrowShift,
-      verticalArrowShift = _config$verticalArrow === void 0 ? 12 : _config$verticalArrow,
-      _config$autoAdjustOve = config.autoAdjustOverflow,
-      autoAdjustOverflow = _config$autoAdjustOve === void 0 ? true : _config$autoAdjustOve;
-  var placementMap = {
-    left: {
-      points: ['cr', 'cl'],
-      offset: [-4, 0]
-    },
-    right: {
-      points: ['cl', 'cr'],
-      offset: [4, 0]
-    },
-    top: {
-      points: ['bc', 'tc'],
-      offset: [0, -4]
-    },
-    bottom: {
-      points: ['tc', 'bc'],
-      offset: [0, 4]
-    },
-    topLeft: {
-      points: ['bl', 'tc'],
-      offset: [-(horizontalArrowShift + arrowWidth), -4]
-    },
-    leftTop: {
-      points: ['tr', 'cl'],
-      offset: [-4, -(verticalArrowShift + arrowWidth)]
-    },
-    topRight: {
-      points: ['br', 'tc'],
-      offset: [horizontalArrowShift + arrowWidth, -4]
-    },
-    rightTop: {
-      points: ['tl', 'cr'],
-      offset: [4, -(verticalArrowShift + arrowWidth)]
-    },
-    bottomRight: {
-      points: ['tr', 'bc'],
-      offset: [horizontalArrowShift + arrowWidth, 4]
-    },
-    rightBottom: {
-      points: ['bl', 'cr'],
-      offset: [4, verticalArrowShift + arrowWidth]
-    },
-    bottomLeft: {
-      points: ['tl', 'bc'],
-      offset: [-(horizontalArrowShift + arrowWidth), 4]
-    },
-    leftBottom: {
-      points: ['br', 'cl'],
-      offset: [-4, verticalArrowShift + arrowWidth]
-    }
-  };
-  Object.keys(placementMap).forEach(function (key) {
-    placementMap[key] = config.arrowPointAtCenter ? _extends({}, placementMap[key], {
-      overflow: getOverflowOptions(autoAdjustOverflow),
-      targetOffset: targetOffset
-    }) : _extends({}, _placements.placements[key], {
-      overflow: getOverflowOptions(autoAdjustOverflow)
-    });
-    placementMap[key].ignoreShake = true;
-  });
-  return placementMap;
-}
-},{"rc-tooltip/es/placements":"node_modules/rc-tooltip/es/placements.js"}],"node_modules/antd/es/tooltip/index.js":[function(require,module,exports) {
+},{}],"node_modules/antd/es/alert/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -57372,15 +56956,17 @@ exports.default = void 0;
 
 var React = _interopRequireWildcard(require("react"));
 
-var _reactLifecyclesCompat = require("react-lifecycles-compat");
+var ReactDOM = _interopRequireWildcard(require("react-dom"));
 
-var _rcTooltip = _interopRequireDefault(require("rc-tooltip"));
+var _rcAnimate = _interopRequireDefault(require("rc-animate"));
+
+var _icon = _interopRequireDefault(require("../icon"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _placements = _interopRequireDefault(require("./placements"));
-
 var _configProvider = require("../config-provider");
+
+var _getDataOrAriaProps = _interopRequireDefault(require("../_util/getDataOrAriaProps"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57398,6 +56984,24 @@ function _typeof(obj) {
   }
 
   return _typeof(obj);
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 function _defineProperty(obj, key, value) {
@@ -57484,247 +57088,156 @@ function _setPrototypeOf(o, p) {
   return _setPrototypeOf(o, p);
 }
 
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
+function noop() {}
 
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-var splitObject = function splitObject(obj, keys) {
-  var picked = {};
-
-  var omitted = _extends({}, obj);
-
-  keys.forEach(function (key) {
-    if (obj && key in obj) {
-      picked[key] = obj[key];
-      delete omitted[key];
-    }
-  });
-  return {
-    picked: picked,
-    omitted: omitted
-  };
-};
-
-var Tooltip =
+var Alert =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Tooltip, _React$Component);
+  _inherits(Alert, _React$Component);
 
-  function Tooltip(props) {
+  function Alert() {
     var _this;
 
-    _classCallCheck(this, Tooltip);
+    _classCallCheck(this, Alert);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Tooltip).call(this, props));
-
-    _this.onVisibleChange = function (visible) {
-      var onVisibleChange = _this.props.onVisibleChange;
-
-      if (!('visible' in _this.props)) {
-        _this.setState({
-          visible: _this.isNoTitle() ? false : visible
-        });
-      }
-
-      if (onVisibleChange && !_this.isNoTitle()) {
-        onVisibleChange(visible);
-      }
-    }; // 动态设置动画点
-
-
-    _this.onPopupAlign = function (domNode, align) {
-      var placements = _this.getPlacements(); // 当前返回的位置
-
-
-      var placement = Object.keys(placements).filter(function (key) {
-        return placements[key].points[0] === align.points[0] && placements[key].points[1] === align.points[1];
-      })[0];
-
-      if (!placement) {
-        return;
-      } // 根据当前坐标设置动画点
-
-
-      var rect = domNode.getBoundingClientRect();
-      var transformOrigin = {
-        top: '50%',
-        left: '50%'
-      };
-
-      if (placement.indexOf('top') >= 0 || placement.indexOf('Bottom') >= 0) {
-        transformOrigin.top = "".concat(rect.height - align.offset[1], "px");
-      } else if (placement.indexOf('Top') >= 0 || placement.indexOf('bottom') >= 0) {
-        transformOrigin.top = "".concat(-align.offset[1], "px");
-      }
-
-      if (placement.indexOf('left') >= 0 || placement.indexOf('Right') >= 0) {
-        transformOrigin.left = "".concat(rect.width - align.offset[0], "px");
-      } else if (placement.indexOf('right') >= 0 || placement.indexOf('Left') >= 0) {
-        transformOrigin.left = "".concat(-align.offset[0], "px");
-      }
-
-      domNode.style.transformOrigin = "".concat(transformOrigin.left, " ").concat(transformOrigin.top);
-    };
-
-    _this.saveTooltip = function (node) {
-      _this.tooltip = node;
-    };
-
-    _this.renderTooltip = function (_ref) {
-      var getContextPopupContainer = _ref.getPopupContainer,
-          getPrefixCls = _ref.getPrefixCls;
-
-      var _assertThisInitialize = _assertThisInitialized(_this),
-          props = _assertThisInitialize.props,
-          state = _assertThisInitialize.state;
-
-      var customizePrefixCls = props.prefixCls,
-          title = props.title,
-          overlay = props.overlay,
-          openClassName = props.openClassName,
-          getPopupContainer = props.getPopupContainer,
-          getTooltipContainer = props.getTooltipContainer;
-      var children = props.children;
-      var prefixCls = getPrefixCls('tooltip', customizePrefixCls);
-      var visible = state.visible; // Hide tooltip when there is no title
-
-      if (!('visible' in props) && _this.isNoTitle()) {
-        visible = false;
-      }
-
-      var child = _this.getDisabledCompatibleChildren(React.isValidElement(children) ? children : React.createElement("span", null, children));
-
-      var childProps = child.props;
-      var childCls = (0, _classnames.default)(childProps.className, _defineProperty({}, openClassName || "".concat(prefixCls, "-open"), true));
-      return React.createElement(_rcTooltip.default, _extends({}, _this.props, {
-        prefixCls: prefixCls,
-        getTooltipContainer: getPopupContainer || getTooltipContainer || getContextPopupContainer,
-        ref: _this.saveTooltip,
-        builtinPlacements: _this.getPlacements(),
-        overlay: overlay || title || '',
-        visible: visible,
-        onVisibleChange: _this.onVisibleChange,
-        onPopupAlign: _this.onPopupAlign
-      }), visible ? (0, React.cloneElement)(child, {
-        className: childCls
-      }) : child);
-    };
-
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Alert).apply(this, arguments));
     _this.state = {
-      visible: !!props.visible || !!props.defaultVisible
+      closing: true,
+      closed: false
     };
+
+    _this.handleClose = function (e) {
+      e.preventDefault();
+      var dom = ReactDOM.findDOMNode(_assertThisInitialized(_this));
+      dom.style.height = "".concat(dom.offsetHeight, "px"); // Magic code
+      // 重复一次后才能正确设置 height
+
+      dom.style.height = "".concat(dom.offsetHeight, "px");
+
+      _this.setState({
+        closing: false
+      });
+
+      (_this.props.onClose || noop)(e);
+    };
+
+    _this.animationEnd = function () {
+      _this.setState({
+        closed: true,
+        closing: true
+      });
+
+      (_this.props.afterClose || noop)();
+    };
+
+    _this.renderAlert = function (_ref) {
+      var _classNames, _classNames2;
+
+      var getPrefixCls = _ref.getPrefixCls;
+      var _this$props = _this.props,
+          description = _this$props.description,
+          customizePrefixCls = _this$props.prefixCls,
+          message = _this$props.message,
+          closeText = _this$props.closeText,
+          banner = _this$props.banner,
+          _this$props$className = _this$props.className,
+          className = _this$props$className === void 0 ? '' : _this$props$className,
+          style = _this$props.style,
+          icon = _this$props.icon;
+      var _this$props2 = _this.props,
+          closable = _this$props2.closable,
+          type = _this$props2.type,
+          showIcon = _this$props2.showIcon,
+          iconType = _this$props2.iconType;
+      var prefixCls = getPrefixCls('alert', customizePrefixCls); // banner模式默认有 Icon
+
+      showIcon = banner && showIcon === undefined ? true : showIcon; // banner模式默认为警告
+
+      type = banner && type === undefined ? 'warning' : type || 'info';
+      var iconTheme = 'filled'; // should we give a warning?
+      // warning(!iconType, `The property 'iconType' is deprecated. Use the property 'icon' instead.`);
+
+      if (!iconType) {
+        switch (type) {
+          case 'success':
+            iconType = 'check-circle';
+            break;
+
+          case 'info':
+            iconType = 'info-circle';
+            break;
+
+          case 'error':
+            iconType = 'close-circle';
+            break;
+
+          case 'warning':
+            iconType = 'exclamation-circle';
+            break;
+
+          default:
+            iconType = 'default';
+        } // use outline icon in alert with description
+
+
+        if (!!description) {
+          iconTheme = 'outlined';
+        }
+      } // closeable when closeText is assigned
+
+
+      if (closeText) {
+        closable = true;
+      }
+
+      var alertCls = (0, _classnames.default)(prefixCls, "".concat(prefixCls, "-").concat(type), (_classNames = {}, _defineProperty(_classNames, "".concat(prefixCls, "-close"), !_this.state.closing), _defineProperty(_classNames, "".concat(prefixCls, "-with-description"), !!description), _defineProperty(_classNames, "".concat(prefixCls, "-no-icon"), !showIcon), _defineProperty(_classNames, "".concat(prefixCls, "-banner"), !!banner), _defineProperty(_classNames, "".concat(prefixCls, "-closable"), closable), _classNames), className);
+      var closeIcon = closable ? React.createElement("a", {
+        onClick: _this.handleClose,
+        className: "".concat(prefixCls, "-close-icon")
+      }, closeText || React.createElement(_icon.default, {
+        type: "close"
+      })) : null;
+      var dataOrAriaProps = (0, _getDataOrAriaProps.default)(_this.props);
+      var iconNode = icon && (React.isValidElement(icon) ? React.cloneElement(icon, {
+        className: (0, _classnames.default)((_classNames2 = {}, _defineProperty(_classNames2, icon.props.className, icon.props.className), _defineProperty(_classNames2, "".concat(prefixCls, "-icon"), true), _classNames2))
+      }) : React.createElement("span", {
+        className: "".concat(prefixCls, "-icon")
+      }, icon)) || React.createElement(_icon.default, {
+        className: "".concat(prefixCls, "-icon"),
+        type: iconType,
+        theme: iconTheme
+      });
+      return _this.state.closed ? null : React.createElement(_rcAnimate.default, {
+        component: "",
+        showProp: "data-show",
+        transitionName: "".concat(prefixCls, "-slide-up"),
+        onEnd: _this.animationEnd
+      }, React.createElement("div", _extends({
+        "data-show": _this.state.closing,
+        className: alertCls,
+        style: style
+      }, dataOrAriaProps), showIcon ? iconNode : null, React.createElement("span", {
+        className: "".concat(prefixCls, "-message")
+      }, message), React.createElement("span", {
+        className: "".concat(prefixCls, "-description")
+      }, description), closeIcon));
+    };
+
     return _this;
   }
 
-  _createClass(Tooltip, [{
-    key: "getPopupDomNode",
-    value: function getPopupDomNode() {
-      return this.tooltip.getPopupDomNode();
-    }
-  }, {
-    key: "getPlacements",
-    value: function getPlacements() {
-      var _this$props = this.props,
-          builtinPlacements = _this$props.builtinPlacements,
-          arrowPointAtCenter = _this$props.arrowPointAtCenter,
-          autoAdjustOverflow = _this$props.autoAdjustOverflow;
-      return builtinPlacements || (0, _placements.default)({
-        arrowPointAtCenter: arrowPointAtCenter,
-        verticalArrowShift: 8,
-        autoAdjustOverflow: autoAdjustOverflow
-      });
-    } // Fix Tooltip won't hide at disabled button
-    // mouse events don't trigger at disabled button in Chrome
-    // https://github.com/react-component/tooltip/issues/18
-
-  }, {
-    key: "getDisabledCompatibleChildren",
-    value: function getDisabledCompatibleChildren(element) {
-      if ((element.type.__ANT_BUTTON || element.type === 'button') && element.props.disabled) {
-        // Pick some layout related style properties up to span
-        // Prevent layout bugs like https://github.com/ant-design/ant-design/issues/5254
-        var _splitObject = splitObject(element.props.style, ['position', 'left', 'right', 'top', 'bottom', 'float', 'display', 'zIndex']),
-            picked = _splitObject.picked,
-            omitted = _splitObject.omitted;
-
-        var spanStyle = _extends({
-          display: 'inline-block'
-        }, picked, {
-          cursor: 'not-allowed',
-          width: element.props.block ? '100%' : null
-        });
-
-        var buttonStyle = _extends({}, omitted, {
-          pointerEvents: 'none'
-        });
-
-        var child = (0, React.cloneElement)(element, {
-          style: buttonStyle,
-          className: null
-        });
-        return React.createElement("span", {
-          style: spanStyle,
-          className: element.props.className
-        }, child);
-      }
-
-      return element;
-    }
-  }, {
-    key: "isNoTitle",
-    value: function isNoTitle() {
-      var _this$props2 = this.props,
-          title = _this$props2.title,
-          overlay = _this$props2.overlay;
-      return !title && !overlay; // overlay for old version compatibility
-    }
-  }, {
+  _createClass(Alert, [{
     key: "render",
     value: function render() {
-      return React.createElement(_configProvider.ConfigConsumer, null, this.renderTooltip);
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps) {
-      if ('visible' in nextProps) {
-        return {
-          visible: nextProps.visible
-        };
-      }
-
-      return null;
+      return React.createElement(_configProvider.ConfigConsumer, null, this.renderAlert);
     }
   }]);
 
-  return Tooltip;
+  return Alert;
 }(React.Component);
 
-Tooltip.defaultProps = {
-  placement: 'top',
-  transitionName: 'zoom-big-fast',
-  mouseEnterDelay: 0.1,
-  mouseLeaveDelay: 0.1,
-  arrowPointAtCenter: false,
-  autoAdjustOverflow: true
-};
-(0, _reactLifecyclesCompat.polyfill)(Tooltip);
-var _default = Tooltip;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-lifecycles-compat":"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js","rc-tooltip":"node_modules/rc-tooltip/es/index.js","classnames":"node_modules/classnames/index.js","./placements":"node_modules/antd/es/tooltip/placements.js","../config-provider":"node_modules/antd/es/config-provider/index.js"}],"node_modules/antd/es/_util/raf.js":[function(require,module,exports) {
+exports.default = Alert;
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","rc-animate":"node_modules/rc-animate/es/Animate.js","../icon":"node_modules/antd/es/icon/index.js","classnames":"node_modules/classnames/index.js","../config-provider":"node_modules/antd/es/config-provider/index.js","../_util/getDataOrAriaProps":"node_modules/antd/es/_util/getDataOrAriaProps.js"}],"node_modules/antd/es/_util/raf.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -58643,307 +58156,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _button.default.Group = _buttonGroup.default;
 var _default = _button.default;
 exports.default = _default;
-},{"./button":"node_modules/antd/es/button/button.js","./button-group":"node_modules/antd/es/button/button-group.js"}],"node_modules/antd/es/popconfirm/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var _reactLifecyclesCompat = require("react-lifecycles-compat");
-
-var _tooltip = _interopRequireDefault(require("../tooltip"));
-
-var _icon = _interopRequireDefault(require("../icon"));
-
-var _button = _interopRequireDefault(require("../button"));
-
-var _LocaleReceiver = _interopRequireDefault(require("../locale-provider/LocaleReceiver"));
-
-var _default2 = _interopRequireDefault(require("../locale-provider/default"));
-
-var _configProvider = require("../config-provider");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-var __rest = void 0 && (void 0).__rest || function (s, e) {
-  var t = {};
-
-  for (var p in s) {
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  }
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-  }
-  return t;
-};
-
-var Popconfirm =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Popconfirm, _React$Component);
-
-  function Popconfirm(props) {
-    var _this;
-
-    _classCallCheck(this, Popconfirm);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Popconfirm).call(this, props));
-
-    _this.onConfirm = function (e) {
-      _this.setVisible(false, e);
-
-      var onConfirm = _this.props.onConfirm;
-
-      if (onConfirm) {
-        onConfirm.call(_assertThisInitialized(_this), e);
-      }
-    };
-
-    _this.onCancel = function (e) {
-      _this.setVisible(false, e);
-
-      var onCancel = _this.props.onCancel;
-
-      if (onCancel) {
-        onCancel.call(_assertThisInitialized(_this), e);
-      }
-    };
-
-    _this.onVisibleChange = function (visible) {
-      _this.setVisible(visible);
-    };
-
-    _this.saveTooltip = function (node) {
-      _this.tooltip = node;
-    };
-
-    _this.renderOverlay = function (prefixCls, popconfirmLocale) {
-      var _this$props = _this.props,
-          okButtonProps = _this$props.okButtonProps,
-          cancelButtonProps = _this$props.cancelButtonProps,
-          title = _this$props.title,
-          cancelText = _this$props.cancelText,
-          okText = _this$props.okText,
-          okType = _this$props.okType,
-          icon = _this$props.icon;
-      return React.createElement("div", null, React.createElement("div", {
-        className: "".concat(prefixCls, "-inner-content")
-      }, React.createElement("div", {
-        className: "".concat(prefixCls, "-message")
-      }, icon, React.createElement("div", {
-        className: "".concat(prefixCls, "-message-title")
-      }, title)), React.createElement("div", {
-        className: "".concat(prefixCls, "-buttons")
-      }, React.createElement(_button.default, _extends({
-        onClick: _this.onCancel,
-        size: "small"
-      }, cancelButtonProps), cancelText || popconfirmLocale.cancelText), React.createElement(_button.default, _extends({
-        onClick: _this.onConfirm,
-        type: okType,
-        size: "small"
-      }, okButtonProps), okText || popconfirmLocale.okText))));
-    };
-
-    _this.renderConfirm = function (_ref) {
-      var getPrefixCls = _ref.getPrefixCls;
-
-      var _a = _this.props,
-          customizePrefixCls = _a.prefixCls,
-          placement = _a.placement,
-          restProps = __rest(_a, ["prefixCls", "placement"]);
-
-      var prefixCls = getPrefixCls('popover', customizePrefixCls);
-      var overlay = React.createElement(_LocaleReceiver.default, {
-        componentName: "Popconfirm",
-        defaultLocale: _default2.default.Popconfirm
-      }, function (popconfirmLocale) {
-        return _this.renderOverlay(prefixCls, popconfirmLocale);
-      });
-      return React.createElement(_tooltip.default, _extends({}, restProps, {
-        prefixCls: prefixCls,
-        placement: placement,
-        onVisibleChange: _this.onVisibleChange,
-        visible: _this.state.visible,
-        overlay: overlay,
-        ref: _this.saveTooltip
-      }));
-    };
-
-    _this.state = {
-      visible: props.visible
-    };
-    return _this;
-  }
-
-  _createClass(Popconfirm, [{
-    key: "getPopupDomNode",
-    value: function getPopupDomNode() {
-      return this.tooltip.getPopupDomNode();
-    }
-  }, {
-    key: "setVisible",
-    value: function setVisible(visible, e) {
-      var props = this.props;
-
-      if (!('visible' in props)) {
-        this.setState({
-          visible: visible
-        });
-      }
-
-      var onVisibleChange = props.onVisibleChange;
-
-      if (onVisibleChange) {
-        onVisibleChange(visible, e);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return React.createElement(_configProvider.ConfigConsumer, null, this.renderConfirm);
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps) {
-      if ('visible' in nextProps) {
-        return {
-          visible: nextProps.visible
-        };
-      } else if ('defaultVisible' in nextProps) {
-        return {
-          visible: nextProps.defaultVisible
-        };
-      }
-
-      return null;
-    }
-  }]);
-
-  return Popconfirm;
-}(React.Component);
-
-Popconfirm.defaultProps = {
-  transitionName: 'zoom-big',
-  placement: 'top',
-  trigger: 'click',
-  okType: 'primary',
-  icon: React.createElement(_icon.default, {
-    type: "exclamation-circle",
-    theme: "filled"
-  })
-};
-(0, _reactLifecyclesCompat.polyfill)(Popconfirm);
-var _default = Popconfirm;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-lifecycles-compat":"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js","../tooltip":"node_modules/antd/es/tooltip/index.js","../icon":"node_modules/antd/es/icon/index.js","../button":"node_modules/antd/es/button/index.js","../locale-provider/LocaleReceiver":"node_modules/antd/es/locale-provider/LocaleReceiver.js","../locale-provider/default":"node_modules/antd/es/locale-provider/default.js","../config-provider":"node_modules/antd/es/config-provider/index.js"}],"node_modules/rc-notification/es/Notice.js":[function(require,module,exports) {
+},{"./button":"node_modules/antd/es/button/button.js","./button-group":"node_modules/antd/es/button/button-group.js"}],"node_modules/rc-notification/es/Notice.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -74738,23 +73951,6 @@ exports.default = interopDefault;
 function interopDefault(m) {
   return m["default"] || m;
 }
-},{}],"node_modules/antd/es/_util/getDataOrAriaProps.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getDataOrAriaProps;
-
-function getDataOrAriaProps(props) {
-  return Object.keys(props).reduce(function (prev, key) {
-    if ((key.substr(0, 5) === 'data-' || key.substr(0, 5) === 'aria-' || key === 'role') && key.substr(0, 7) !== 'data-__') {
-      prev[key] = props[key];
-    }
-
-    return prev;
-  }, {});
-}
 },{}],"node_modules/antd/es/date-picker/utils.js":[function(require,module,exports) {
 "use strict";
 
@@ -87330,7 +86526,7 @@ exports.default = void 0;
 
 var _pagination = _interopRequireDefault(require("antd/es/pagination"));
 
-var _popconfirm = _interopRequireDefault(require("antd/es/popconfirm"));
+var _alert = _interopRequireDefault(require("antd/es/alert"));
 
 var _button = _interopRequireDefault(require("antd/es/button"));
 
@@ -87576,13 +86772,16 @@ function (_Component) {
       }, "\u0417\u0431\u0435\u0440\u0435\u0433\u0442\u0438 ", _react.default.createElement(_icon.default, {
         theme: "filled",
         type: "save"
-      }))), _react.default.createElement(_popconfirm.default, {
-        title: "\u0412\u043D\u0435\u0441\u0435\u043D\u0456 \u0434\u0430\u043D\u0456 \u043D\u0435 \u0431\u0443\u043B\u0438 \u0437\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0456. \u0412\u0438 \u0432\u043F\u0435\u0432\u043D\u0435\u043D\u0456, \u0449\u043E \u0445\u043E\u0447\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0456\u043D\u0448\u0443 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0443?",
-        onConfirm: this.onPopupConfirm,
-        onCancel: this.onPopupCancel,
-        okText: "\u0422\u0430\u043A",
-        cancelText: "H\u0456",
-        visible: !isSubmitted && isPopupVisible,
+      }))), !isSubmitted && isPopupVisible ? _react.default.createElement(_alert.default, {
+        message: "\u0412\u043D\u0435\u0441\u0435\u043D\u0456 \u0434\u0430\u043D\u0456 \u043D\u0435 \u0431\u0443\u043B\u0438 \u0437\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0456! \u0412\u0438 \u0432\u043F\u0435\u0432\u043D\u0435\u043D\u0456, \u0449\u043E \u0445\u043E\u0447\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0456\u043D\u0448\u0443 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0443?",
+        description: _react.default.createElement(_button.default, {
+          onClick: this.onPopupConfirm,
+          size: "small"
+        }, "Ok"),
+        type: "warning",
+        onClose: this.onPopupCancel,
+        closable: true,
+        showIcon: true,
         icon: _react.default.createElement(_icon.default, {
           type: "alert",
           theme: "twoTone",
@@ -87591,7 +86790,7 @@ function (_Component) {
             fontSize: '40px'
           }
         })
-      }), _react.default.createElement(_pagination.default, {
+      }) : null, _react.default.createElement(_pagination.default, {
         current: currentPage,
         total: formOptions.TotalParent,
         pageSize: 10,
@@ -87661,7 +86860,7 @@ exports.default = _default2;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/popconfirm":"node_modules/antd/es/popconfirm/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/message":"node_modules/antd/es/message/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","react-preloading-component":"node_modules/react-preloading-component/build/index.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
+},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/alert":"node_modules/antd/es/alert/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/message":"node_modules/antd/es/message/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","react-preloading-component":"node_modules/react-preloading-component/build/index.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

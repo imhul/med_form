@@ -151,7 +151,7 @@ class HospitalizationForm extends Component {
                             </Button>
                         </FormItem>
 
-                        <Popconfirm 
+                        {/* <Popconfirm 
                             title="Внесені дані не були збережені. Ви впевнені, що хочете перейти на іншу сторінку?" 
                             onConfirm={ this.onPopupConfirm } 
                             onCancel={ this.onPopupCancel }
@@ -164,7 +164,25 @@ class HospitalizationForm extends Component {
                                 twoToneColor="#faad14" 
                                 style={{fontSize: '40px'}} 
                             />}
-                        />
+                        /> */}
+                        { !isSubmitted && isPopupVisible ? <Alert
+                            message="Внесені дані не були збережені! Ви впевнені, що хочете перейти на іншу сторінку?"
+                            description={ 
+                                <Button onClick={this.onPopupConfirm} size="small">
+                                    Ok
+                                </Button> 
+                            }
+                            type="warning"
+                            onClose={ this.onPopupCancel }
+                            closable
+                            showIcon
+                            icon={<Icon
+                                type="alert" 
+                                theme="twoTone" 
+                                twoToneColor="#faad14" 
+                                style={{fontSize: '40px'}} 
+                            />}
+                        /> : null }
                         <Pagination
                             current={ currentPage }
                             total={ formOptions.TotalParent }
