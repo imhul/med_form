@@ -74,23 +74,6 @@ export function formSubmit() {
   }
 };
 
-export function confirmPopupShow(nextPage) {
-  return (dispatch) => {
-    dispatch({
-      type: types.CONFIRM_POPUP_SHOW,
-      payload: nextPage,
-    })
-  }
-};
-
-export function confirmPopupHide() {
-  return (dispatch) => {
-    dispatch({
-      type: types.CONFIRM_POPUP_HIDE,
-    })
-  }
-};
-
 export function paginationUpdate(payload) {
   return (dispatch) => {
     dispatch({

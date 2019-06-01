@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, Button, Pagination, Icon, Alert, message, } from 'antd';
+import { Form, Button, Pagination, Icon, message, } from 'antd';
 import { Wave } from 'react-preloading-component';
 
 // Helpers
