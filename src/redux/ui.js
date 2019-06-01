@@ -7,9 +7,8 @@ const initState = {
     currentPage: 1,
     isDataLoaded: false,
     isSubmitted: false,
-    isPopupVisible: false,
-    nextPage: null,
     isFormActivated: false,
+    isPageUpdated: false,
 };
 
 export default (state = initState, action) => {
@@ -102,24 +101,18 @@ export default (state = initState, action) => {
                 isSubmitted: true,
             };
 
-        case type.CONFIRM_POPUP_SHOW:
-            return {
-                ...state,
-                isPopupVisible: true,
-                nextPage: action.payload,
-            };
-
-        case type.CONFIRM_POPUP_HIDE:
-            return {
-                ...state,
-                isPopupVisible: false,
-            };
-
         case type.PAGINATION_UPDATE:
             return { 
                 ...state,
                 currentPage: action.payload,
+                isPageUpdated: true,
+            };
+
+        case type.RESET_PAGE:
+            return {
+                ...state,
                 isFormActivated: false,
+                isSubmitted: false,
             };
 
         default:

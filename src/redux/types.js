@@ -14,6 +14,7 @@ export const typesUI = {
     FORM_UPDATE:          'FORM_UPDATE',
     FORM_SUBMIT:          'FORM_SUBMIT',
     DATE_UPDATE:          'DATE_UPDATE',
+    RESET_PAGE:           'RESET_PAGE',
     LOAD_ERROR:           'LOAD_ERROR',
     LOAD_DATA:            'LOAD_DATA',
 

@@ -34650,6 +34650,7 @@ var typesUI = {
   FORM_UPDATE: 'FORM_UPDATE',
   FORM_SUBMIT: 'FORM_SUBMIT',
   DATE_UPDATE: 'DATE_UPDATE',
+  RESET_PAGE: 'RESET_PAGE',
   LOAD_ERROR: 'LOAD_ERROR',
   LOAD_DATA: 'LOAD_DATA'
 };
@@ -34696,9 +34697,8 @@ var initState = {
   currentPage: 1,
   isDataLoaded: false,
   isSubmitted: false,
-  isPopupVisible: false,
-  nextPage: null,
-  isFormActivated: false
+  isFormActivated: false,
+  isPageUpdated: false
 };
 
 var _default = function _default() {
@@ -34800,21 +34800,16 @@ var _default = function _default() {
         isSubmitted: true
       });
 
-    case _types.typesUI.CONFIRM_POPUP_SHOW:
-      return _extends({}, state, {
-        isPopupVisible: true,
-        nextPage: action.payload
-      });
-
-    case _types.typesUI.CONFIRM_POPUP_HIDE:
-      return _extends({}, state, {
-        isPopupVisible: false
-      });
-
     case _types.typesUI.PAGINATION_UPDATE:
       return _extends({}, state, {
         currentPage: action.payload,
-        isFormActivated: false
+        isPageUpdated: true
+      });
+
+    case _types.typesUI.RESET_PAGE:
+      return _extends({}, state, {
+        isFormActivated: false,
+        isSubmitted: false
       });
 
     default:
@@ -56929,315 +56924,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _default = _Pagination.default;
 exports.default = _default;
-},{"./Pagination":"node_modules/antd/es/pagination/Pagination.js"}],"node_modules/antd/es/_util/getDataOrAriaProps.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getDataOrAriaProps;
-
-function getDataOrAriaProps(props) {
-  return Object.keys(props).reduce(function (prev, key) {
-    if ((key.substr(0, 5) === 'data-' || key.substr(0, 5) === 'aria-' || key === 'role') && key.substr(0, 7) !== 'data-__') {
-      prev[key] = props[key];
-    }
-
-    return prev;
-  }, {});
-}
-},{}],"node_modules/antd/es/alert/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var ReactDOM = _interopRequireWildcard(require("react-dom"));
-
-var _rcAnimate = _interopRequireDefault(require("rc-animate"));
-
-var _icon = _interopRequireDefault(require("../icon"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _configProvider = require("../config-provider");
-
-var _getDataOrAriaProps = _interopRequireDefault(require("../_util/getDataOrAriaProps"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-function noop() {}
-
-var Alert =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Alert, _React$Component);
-
-  function Alert() {
-    var _this;
-
-    _classCallCheck(this, Alert);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Alert).apply(this, arguments));
-    _this.state = {
-      closing: true,
-      closed: false
-    };
-
-    _this.handleClose = function (e) {
-      e.preventDefault();
-      var dom = ReactDOM.findDOMNode(_assertThisInitialized(_this));
-      dom.style.height = "".concat(dom.offsetHeight, "px"); // Magic code
-      // 重复一次后才能正确设置 height
-
-      dom.style.height = "".concat(dom.offsetHeight, "px");
-
-      _this.setState({
-        closing: false
-      });
-
-      (_this.props.onClose || noop)(e);
-    };
-
-    _this.animationEnd = function () {
-      _this.setState({
-        closed: true,
-        closing: true
-      });
-
-      (_this.props.afterClose || noop)();
-    };
-
-    _this.renderAlert = function (_ref) {
-      var _classNames, _classNames2;
-
-      var getPrefixCls = _ref.getPrefixCls;
-      var _this$props = _this.props,
-          description = _this$props.description,
-          customizePrefixCls = _this$props.prefixCls,
-          message = _this$props.message,
-          closeText = _this$props.closeText,
-          banner = _this$props.banner,
-          _this$props$className = _this$props.className,
-          className = _this$props$className === void 0 ? '' : _this$props$className,
-          style = _this$props.style,
-          icon = _this$props.icon;
-      var _this$props2 = _this.props,
-          closable = _this$props2.closable,
-          type = _this$props2.type,
-          showIcon = _this$props2.showIcon,
-          iconType = _this$props2.iconType;
-      var prefixCls = getPrefixCls('alert', customizePrefixCls); // banner模式默认有 Icon
-
-      showIcon = banner && showIcon === undefined ? true : showIcon; // banner模式默认为警告
-
-      type = banner && type === undefined ? 'warning' : type || 'info';
-      var iconTheme = 'filled'; // should we give a warning?
-      // warning(!iconType, `The property 'iconType' is deprecated. Use the property 'icon' instead.`);
-
-      if (!iconType) {
-        switch (type) {
-          case 'success':
-            iconType = 'check-circle';
-            break;
-
-          case 'info':
-            iconType = 'info-circle';
-            break;
-
-          case 'error':
-            iconType = 'close-circle';
-            break;
-
-          case 'warning':
-            iconType = 'exclamation-circle';
-            break;
-
-          default:
-            iconType = 'default';
-        } // use outline icon in alert with description
-
-
-        if (!!description) {
-          iconTheme = 'outlined';
-        }
-      } // closeable when closeText is assigned
-
-
-      if (closeText) {
-        closable = true;
-      }
-
-      var alertCls = (0, _classnames.default)(prefixCls, "".concat(prefixCls, "-").concat(type), (_classNames = {}, _defineProperty(_classNames, "".concat(prefixCls, "-close"), !_this.state.closing), _defineProperty(_classNames, "".concat(prefixCls, "-with-description"), !!description), _defineProperty(_classNames, "".concat(prefixCls, "-no-icon"), !showIcon), _defineProperty(_classNames, "".concat(prefixCls, "-banner"), !!banner), _defineProperty(_classNames, "".concat(prefixCls, "-closable"), closable), _classNames), className);
-      var closeIcon = closable ? React.createElement("a", {
-        onClick: _this.handleClose,
-        className: "".concat(prefixCls, "-close-icon")
-      }, closeText || React.createElement(_icon.default, {
-        type: "close"
-      })) : null;
-      var dataOrAriaProps = (0, _getDataOrAriaProps.default)(_this.props);
-      var iconNode = icon && (React.isValidElement(icon) ? React.cloneElement(icon, {
-        className: (0, _classnames.default)((_classNames2 = {}, _defineProperty(_classNames2, icon.props.className, icon.props.className), _defineProperty(_classNames2, "".concat(prefixCls, "-icon"), true), _classNames2))
-      }) : React.createElement("span", {
-        className: "".concat(prefixCls, "-icon")
-      }, icon)) || React.createElement(_icon.default, {
-        className: "".concat(prefixCls, "-icon"),
-        type: iconType,
-        theme: iconTheme
-      });
-      return _this.state.closed ? null : React.createElement(_rcAnimate.default, {
-        component: "",
-        showProp: "data-show",
-        transitionName: "".concat(prefixCls, "-slide-up"),
-        onEnd: _this.animationEnd
-      }, React.createElement("div", _extends({
-        "data-show": _this.state.closing,
-        className: alertCls,
-        style: style
-      }, dataOrAriaProps), showIcon ? iconNode : null, React.createElement("span", {
-        className: "".concat(prefixCls, "-message")
-      }, message), React.createElement("span", {
-        className: "".concat(prefixCls, "-description")
-      }, description), closeIcon));
-    };
-
-    return _this;
-  }
-
-  _createClass(Alert, [{
-    key: "render",
-    value: function render() {
-      return React.createElement(_configProvider.ConfigConsumer, null, this.renderAlert);
-    }
-  }]);
-
-  return Alert;
-}(React.Component);
-
-exports.default = Alert;
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","rc-animate":"node_modules/rc-animate/es/Animate.js","../icon":"node_modules/antd/es/icon/index.js","classnames":"node_modules/classnames/index.js","../config-provider":"node_modules/antd/es/config-provider/index.js","../_util/getDataOrAriaProps":"node_modules/antd/es/_util/getDataOrAriaProps.js"}],"node_modules/antd/es/_util/raf.js":[function(require,module,exports) {
+},{"./Pagination":"node_modules/antd/es/pagination/Pagination.js"}],"node_modules/antd/es/_util/raf.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65220,6 +64907,7 @@ exports.formSubmit = formSubmit;
 exports.confirmPopupShow = confirmPopupShow;
 exports.confirmPopupHide = confirmPopupHide;
 exports.paginationUpdate = paginationUpdate;
+exports.pageReset = pageReset;
 
 var _types = require("./types");
 
@@ -65349,6 +65037,16 @@ function paginationUpdate(payload) {
 }
 
 ;
+
+function pageReset() {
+  return function (dispatch) {
+    dispatch({
+      type: _types.typesUI.RESET_PAGE
+    });
+  };
+}
+
+;
 ;
 
 (function () {
@@ -65369,6 +65067,7 @@ function paginationUpdate(payload) {
   reactHotLoader.register(confirmPopupShow, "confirmPopupShow", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
   reactHotLoader.register(confirmPopupHide, "confirmPopupHide", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
   reactHotLoader.register(paginationUpdate, "paginationUpdate", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
+  reactHotLoader.register(pageReset, "pageReset", "E:/projects/med.aux/med_form/src/redux/ui_actions.js");
 })();
 
 ;
@@ -73950,6 +73649,23 @@ exports.default = interopDefault;
 // https://github.com/moment/moment/issues/3650
 function interopDefault(m) {
   return m["default"] || m;
+}
+},{}],"node_modules/antd/es/_util/getDataOrAriaProps.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getDataOrAriaProps;
+
+function getDataOrAriaProps(props) {
+  return Object.keys(props).reduce(function (prev, key) {
+    if ((key.substr(0, 5) === 'data-' || key.substr(0, 5) === 'aria-' || key === 'role') && key.substr(0, 7) !== 'data-__') {
+      prev[key] = props[key];
+    }
+
+    return prev;
+  }, {});
 }
 },{}],"node_modules/antd/es/date-picker/utils.js":[function(require,module,exports) {
 "use strict";
@@ -86526,8 +86242,6 @@ exports.default = void 0;
 
 var _pagination = _interopRequireDefault(require("antd/es/pagination"));
 
-var _alert = _interopRequireDefault(require("antd/es/alert"));
-
 var _button = _interopRequireDefault(require("antd/es/button"));
 
 var _icon = _interopRequireDefault(require("antd/es/icon"));
@@ -86600,17 +86314,9 @@ function (_Component) {
     }
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(HospitalizationForm)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.onPaginationUpdate = function (page) {
-      var _this$props = _this.props,
-          uiActions = _this$props.uiActions,
-          ui = _this$props.ui;
-
-      switch (ui.isSubmitted) {
-        case true:
-          uiActions.paginationUpdate(page);
-
-        case false:
-          uiActions.confirmPopupShow(page);
-      }
+      var uiActions = _this.props.uiActions;
+      uiActions.paginationUpdate(page);
+      uiActions.pageReset();
     }, _temp));
   }
 
@@ -86651,8 +86357,6 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.loadAllData = this.loadAllData.bind(this);
-      this.onPopupConfirm = this.onPopupConfirm.bind(this);
-      this.onPopupCancel = this.onPopupCancel.bind(this);
       this.onFormSubmit = this.onFormSubmit.bind(this);
       this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
       this.loadAllData(); // First data loading
@@ -86666,9 +86370,9 @@ function (_Component) {
   }, {
     key: "formSubmit",
     value: function formSubmit(newData) {
-      var _this$props2 = this.props,
-          uiActions = _this$props2.uiActions,
-          ui = _this$props2.ui;
+      var _this$props = this.props,
+          uiActions = _this$props.uiActions,
+          ui = _this$props.ui;
       var currentPageData = newData.filter(function (item) {
         return item.Page == ui.currentPage;
       }); // Формируем список параметров для передачи на сервер
@@ -86705,35 +86409,17 @@ function (_Component) {
       });
     }
   }, {
-    key: "onPopupCancel",
-    value: function onPopupCancel() {
-      var _this$props3 = this.props,
-          uiActions = _this$props3.uiActions,
-          ui = _this$props3.ui;
-      uiActions.confirmPopupHide();
-      uiActions.paginationUpdate(ui.currentPage);
-    }
-  }, {
-    key: "onPopupConfirm",
-    value: function onPopupConfirm() {
-      var _this$props4 = this.props,
-          uiActions = _this$props4.uiActions,
-          ui = _this$props4.ui;
-      uiActions.confirmPopupHide();
-      uiActions.paginationUpdate(ui.nextPage);
-    }
-  }, {
     key: "render",
     value: function render() {
       // Props to constants
       var _this$props$ui = this.props.ui,
+          isInit = _this$props$ui.isInit,
           formData = _this$props$ui.formData,
           currentPage = _this$props$ui.currentPage,
           formOptions = _this$props$ui.formOptions,
           isSubmitted = _this$props$ui.isSubmitted,
-          isPopupVisible = _this$props$ui.isPopupVisible,
-          isFormActivated = _this$props$ui.isFormActivated,
-          isInit = _this$props$ui.isInit;
+          isPageUpdated = _this$props$ui.isPageUpdated,
+          isFormActivated = _this$props$ui.isFormActivated;
       var uiActions = this.props.uiActions; // Filtering inputs by current value of pagination component
 
       var dataFilteredByPage = formData.filter(function (item) {
@@ -86772,31 +86458,18 @@ function (_Component) {
       }, "\u0417\u0431\u0435\u0440\u0435\u0433\u0442\u0438 ", _react.default.createElement(_icon.default, {
         theme: "filled",
         type: "save"
-      }))), !isSubmitted && isPopupVisible ? _react.default.createElement(_alert.default, {
-        message: "\u0412\u043D\u0435\u0441\u0435\u043D\u0456 \u0434\u0430\u043D\u0456 \u043D\u0435 \u0431\u0443\u043B\u0438 \u0437\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0456! \u0412\u0438 \u0432\u043F\u0435\u0432\u043D\u0435\u043D\u0456, \u0449\u043E \u0445\u043E\u0447\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0456\u043D\u0448\u0443 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0443?",
-        description: _react.default.createElement(_button.default, {
-          onClick: this.onPopupConfirm,
-          size: "small"
-        }, "Ok"),
-        type: "warning",
-        onClose: this.onPopupCancel,
-        closable: true,
-        showIcon: true,
-        icon: _react.default.createElement(_icon.default, {
-          type: "alert",
-          theme: "twoTone",
-          twoToneColor: "#faad14",
-          style: {
-            fontSize: '40px'
-          }
-        })
-      }) : null, _react.default.createElement(_pagination.default, {
+      }))), _react.default.createElement(_pagination.default, {
+        pageSize: 10,
         current: currentPage,
         total: formOptions.TotalParent,
-        pageSize: 10,
         onChange: this.onPaginationUpdate,
+        disabled: isPageUpdated && !isSubmitted && isFormActivated || !isSubmitted && isFormActivated,
         showTotal: function showTotal(total) {
-          return "\u0412\u0441\u044C\u043E\u0433\u043E ".concat(total, " \u043F\u0438\u0442\u0430\u043D\u044C");
+          return _react.default.createElement("div", null, "\u0412\u0441\u044C\u043E\u0433\u043E \u043F\u0438\u0442\u0430\u043D\u044C ", _react.default.createElement(_button.default, {
+            disabled: true,
+            className: "question-count",
+            type: "primary"
+          }, total));
         }
       })));
     }
@@ -86860,7 +86533,7 @@ exports.default = _default2;
   var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
   leaveModule && leaveModule(module);
 })();
-},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/alert":"node_modules/antd/es/alert/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/message":"node_modules/antd/es/message/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","react-preloading-component":"node_modules/react-preloading-component/build/index.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
+},{"antd/es/pagination":"node_modules/antd/es/pagination/index.js","antd/es/button":"node_modules/antd/es/button/index.js","antd/es/icon":"node_modules/antd/es/icon/index.js","antd/es/message":"node_modules/antd/es/message/index.js","antd/es/form":"node_modules/antd/es/form/index.js","react-hot-loader":"node_modules/react-hot-loader/index.js","react":"node_modules/react/index.js","redux":"node_modules/redux/es/redux.js","react-redux":"node_modules/react-redux/es/index.js","../../redux/ui_actions":"src/redux/ui_actions.js","react-preloading-component":"node_modules/react-preloading-component/build/index.js","../../helpers":"src/helpers/index.js"}],"src/components/HospitalizationForm/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -87062,7 +86735,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53995" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49944" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

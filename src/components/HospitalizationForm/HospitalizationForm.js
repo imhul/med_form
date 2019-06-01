@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UI_ACTIONS from '../../redux/ui_actions';
-import { Form, Button, Pagination, Popconfirm, Icon, Alert, message, } from 'antd';
+import { Form, Button, Pagination, Icon, Alert, message, } from 'antd';
 import { Wave } from 'react-preloading-component';
 
 // Helpers
@@ -56,19 +56,15 @@ class HospitalizationForm extends Component {
 
     componentDidMount() {
         this.loadAllData = this.loadAllData.bind(this);
-        this.onPopupConfirm = this.onPopupConfirm.bind(this);
-        this.onPopupCancel = this.onPopupCancel.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
         this.onPaginationUpdate = this.onPaginationUpdate.bind(this);
         this.loadAllData();  // First data loading
     };
 
     onPaginationUpdate = (page) => {
-        const { uiActions, ui } = this.props;
-        switch(ui.isSubmitted) {
-            case true: uiActions.paginationUpdate(page);
-            case false: uiActions.confirmPopupShow(page);
-        }
+        const { uiActions } = this.props;
+        uiActions.paginationUpdate(page);
+        uiActions.pageReset();
     };
 
     onFormSubmit(e) {
@@ -112,21 +108,18 @@ class HospitalizationForm extends Component {
         .catch(error => message.error(error))
     };
 
-    onPopupCancel() {
-        const { uiActions, ui } = this.props;
-        uiActions.confirmPopupHide();
-        uiActions.paginationUpdate(ui.currentPage);
-    };
-
-    onPopupConfirm() {
-        const { uiActions, ui } = this.props;
-        uiActions.confirmPopupHide();
-        uiActions.paginationUpdate(ui.nextPage);
-    };
-
     render() {
         // Props to constants
-        const { formData, currentPage, formOptions, isSubmitted, isPopupVisible, isFormActivated, isInit } = this.props.ui;
+        const { 
+            isInit,
+            formData, 
+            currentPage, 
+            formOptions, 
+            isSubmitted, 
+            isPageUpdated,
+            isFormActivated, 
+        } = this.props.ui;
+        
         const { uiActions } = this.props;
         // Filtering inputs by current value of pagination component
         const dataFilteredByPage = formData.filter(item => item.Page == currentPage);
@@ -151,44 +144,24 @@ class HospitalizationForm extends Component {
                             </Button>
                         </FormItem>
 
-                        {/* <Popconfirm 
-                            title="Внесені дані не були збережені. Ви впевнені, що хочете перейти на іншу сторінку?" 
-                            onConfirm={ this.onPopupConfirm } 
-                            onCancel={ this.onPopupCancel }
-                            okText="Так" 
-                            cancelText="Hі"
-                            visible={ !isSubmitted && isPopupVisible }
-                            icon={<Icon
-                                type="alert" 
-                                theme="twoTone" 
-                                twoToneColor="#faad14" 
-                                style={{fontSize: '40px'}} 
-                            />}
-                        /> */}
-                        { !isSubmitted && isPopupVisible ? <Alert
-                            message="Внесені дані не були збережені! Ви впевнені, що хочете перейти на іншу сторінку?"
-                            description={ 
-                                <Button onClick={this.onPopupConfirm} size="small">
-                                    Ok
-                                </Button> 
-                            }
-                            type="warning"
-                            onClose={ this.onPopupCancel }
-                            closable
-                            showIcon
-                            icon={<Icon
-                                type="alert" 
-                                theme="twoTone" 
-                                twoToneColor="#faad14" 
-                                style={{fontSize: '40px'}} 
-                            />}
-                        /> : null }
                         <Pagination
+                            pageSize={ 10 }
                             current={ currentPage }
                             total={ formOptions.TotalParent }
-                            pageSize={ 10 }
                             onChange={ this.onPaginationUpdate }
-                            showTotal={ total => `Всього ${ total } питань` }
+                            disabled ={ (isPageUpdated && !isSubmitted && isFormActivated) || (!isSubmitted && isFormActivated) }
+                            showTotal={ total => (
+                                <div>
+                                    {`Всього питань `}
+                                    <Button 
+                                        disabled
+                                        className="question-count"
+                                        type="primary"
+                                    >
+                                        { total }
+                                    </Button>
+                                </div>
+                            )}
                         />
                     </Form>
                 ) }

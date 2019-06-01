@@ -99,3 +99,11 @@ export function paginationUpdate(payload) {
     })
   }
 };
+
+export function pageReset() {
+  return (dispatch) => {
+    dispatch({
+      type: types.RESET_PAGE,
+    })
+  }
+};
