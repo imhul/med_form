@@ -23249,6 +23249,13 @@ body {
     width: 0; }
   .HospitalizationForm .ant-radio-button-wrapper {
     border-left: 1px solid #d9d9d9; }
+  .HospitalizationForm .ant-alert-warning {
+    margin-bottom: 25px;
+    text-align: center; }
+  .HospitalizationForm .question-count {
+    background-color: #1890ff;
+    color: #fff;
+    padding: 0 8px; }
 
 .ant-popover .ant-popover-message-title {
   padding-left: 60px; }
